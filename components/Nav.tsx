@@ -20,19 +20,25 @@ const Nav = () => ((
     </nav>
     <style jsx>{`
       img {
-        width: 250px;
+        width: 210px;
       }
 
       #menuToggle {
         display: block;
         position: absolute;
-        top: 44px;
+        top: 42px;
         right: 32px;
         
         z-index: 1;
         
         -webkit-user-select: none;
         user-select: none;
+      }
+
+      @media only screen and (min-width: 600px) {
+        img {
+          width: 269px;
+        }
       }
 
       #menuToggle input {
