@@ -2,6 +2,7 @@
 const Member = ({ name, title, avatar }: { name: string; title: string; avatar: string }) => ((
   <div className="container">
     <div className="avatar-container">
+      <img src={avatar}/>
     </div>
     <div className="content">
       <h6>{ title }</h6>
