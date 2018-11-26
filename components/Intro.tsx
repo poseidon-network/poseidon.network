@@ -1,0 +1,41 @@
+import { Fragment } from 'react';
+import Layout from './Layout';
+import Content from './Content';
+import { intro } from '../data';
+
+const Intro = () => ((
+  <Layout bgColor="#222633" color="#fff" padding="0 32px 40px">
+    <Content>
+      {
+        intro.map(({ title, description }) => ((
+          <Fragment>
+            <p className="title">{ title }</p>
+            <p className="description">{ description }</p>
+          </Fragment>
+        )))
+      }
+
+      <style jsx>{`
+        .title {
+          font-size: 20px;
+          font-weight: bold;
+          margin: 0 0 15px;
+          line-height: 1.35;
+          text-align: center;
+          white-space: pre-line;
+        }
+
+        .description {
+          font-size: 16px;
+          color: #90cfbe;
+          line-height: 1.31;
+          margin-bottom: 40px;
+          text-align: center;
+          white-space: pre-line;
+        }
+      `}</style>
+    </Content>
+  </Layout>
+));
+
+export default Intro;
