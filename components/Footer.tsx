@@ -10,7 +10,7 @@ const Footer = () => ((
       ))}
     </div>
     <div className="row">
-      <img className="logo" alt="logo" src="/static/Logo.png" />
+      <img className="logo" alt="logo" src="./static/Logo.png" />
     </div>
     <div className="row">
       <a href="mailto:hi@poseidon.network">{ footer.email }</a>

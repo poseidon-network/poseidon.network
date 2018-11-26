@@ -38,44 +38,44 @@ export const intro = [
 
 export const features = [
   {
-    imageUri: '/static/img-1.png',
+    imageUri: './static/img-1.png',
     title: 'Build Sharing  Economy',
     description: 'Utilized unused bandwidth and storage\nfrom any NAS, desktop, or mobile\ndevices around the world. It’s distributed, efficient, and integrates perfectly with existing internet and blockchain infrastructure',
   },
   {
-    imageUri: '/static/img-2.png',
+    imageUri: './static/img-2.png',
     title: 'Faster',
     description: 'Benefit from Fog Computing\ntechnology.',
   },
   {
-    imageUri: '/static/img-3.png',
+    imageUri: './static/img-3.png',
     title: 'Cheaper',
     description: 'With Fog Computing technology. We provide a cheaper content\nacceleration Layer incentivized by PSD Token.  “$0.01 USD/GB, almost ten times cheaper than AWS cloudfront”.',
   },
   {
-    imageUri: '/static/img-4.png',
+    imageUri: './static/img-4.png',
     title: 'Production Ready',
     description: 'Real customers delivering\nand storing content.',
   },
   {
-    imageUri: '/static/img-5.png',
+    imageUri: './static/img-5.png',
     title: 'Layer 2 Solution',
     description: 'NOT putting data on blockchain to ensure\nperformance,\nscalability, and feasibility. ',
   },
   {
-    imageUri: '/static/img-6.png',
+    imageUri: './static/img-6.png',
     title: 'Multipurpose',
     description: 'Data storage, bandwidth,\nand computation.',
   },
 ]
 
 export const partners = [
-  { logoUri: '/static/img-aba.png', alt: 'ABA' },
-  { logoUri: '/static/group-4.png', alt: 'ACE' },
-  { logoUri: '/static/img-nem.png', alt: 'nem' },
-  { logoUri: '/static/img-gcp.png', alt: 'GCP' },
-  { logoUri: '/static/img-joyso.png', alt: 'JOYSO' },
-  { logoUri: '/static/img-longhash.png', alt: 'LONGHASH' },
+  { logoUri: './static/img-aba.png', alt: 'ABA' },
+  { logoUri: './static/group-4.png', alt: 'ACE' },
+  { logoUri: './static/img-nem.png', alt: 'nem' },
+  { logoUri: './static/img-gcp.png', alt: 'GCP' },
+  { logoUri: './static/img-joyso.png', alt: 'JOYSO' },
+  { logoUri: './static/img-longhash.png', alt: 'LONGHASH' },
 ];
 
 export const roadmap = [
@@ -125,9 +125,9 @@ export const contact = {
 
 export const footer = {
   socialMediaList: [
-    { imgUri: '/static/ic-telegram.png', link: '/', alt: 'Telegram' },
-    { imgUri: '/static/ic-twitter.png', link: '/', alt: 'Twitter' },
-    { imgUri: '/static/ic-medium.png', link: '/', alt: 'Medium' },
+    { imgUri: './static/ic-telegram.png', link: '/', alt: 'Telegram' },
+    { imgUri: './static/ic-twitter.png', link: '/', alt: 'Twitter' },
+    { imgUri: './static/ic-medium.png', link: '/', alt: 'Medium' },
   ],
   email: 'hi@poseidon.network',
   copyright: 'POSEIDON NETWORK © 2018 All rights reserved.',

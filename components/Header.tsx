@@ -8,7 +8,7 @@ const Header = () => ((
       <p>
         { header.description }
       </p>
-      <img alt="world map" src="/static/img-map@3x.png" />
+      <img alt="world map" src="./static/img-map@3x.png" />
 
       <style jsx>{`
         p {
