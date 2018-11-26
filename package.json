@@ -3,7 +3,8 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "export": "next export"
+    "export": "next export",
+    "deploy": "gh-pages -d out"
   },
   "dependencies": {
     "@zeit/next-typescript": "^1.1.1",
@@ -16,6 +17,7 @@
     "@types/react": "^16.7.7",
     "@types/react-dom": "^16.0.10",
     "@types/styled-jsx": "^2.2.7",
+    "gh-pages": "^2.0.1",
     "tslint": "^5.11.0"
   }
 }
