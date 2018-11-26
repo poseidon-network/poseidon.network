@@ -105,17 +105,17 @@ export const roadmap = [
 
 export const team = [
   { name: 'Light Lin', title: 'CEO', avatar: '' },
-  { name: 'Milke Lin', title: 'CEO', avatar: '' },
+  { name: 'Milke Lin', title: 'COO', avatar: '' },
 ];
 
 export const techCoreTeam = [
-  { name: 'Light Lin', title: 'CEO', avatar: '' },
-  { name: 'Milke Lin', title: 'CEO', avatar: '' },
+  { name: 'Raymond', title: 'Senior Architect', avatar: '' },
+  { name: 'ST Wang', title: 'Senior Embedded', avatar: '' },
 ];
 
 export const advisors = [
-  { name: 'Light Lin', title: 'CEO', avatar: '' },
-  { name: 'Milke Lin', title: 'CEO', avatar: '' },
+  { name: 'Andy Tian', title: 'Blockchain Advisors', avatar: '' },
+  { name: 'Jason Hsu', title: 'Jason Hsu', avatar: '' },
 ];
 
 export const contact = {
