@@ -6,7 +6,7 @@ import { contact } from '../data';
 const Contact = () => ((
   <Layout bgColor="#d7f2ee" color="#222633">
     <H2 id="contact" color="#222633" center>{ contact.title }</H2>
-    <div className="content"> 
+    <div className="content">
       <p className="description">{ contact.description }</p>
       <ContactForm />
     </div>

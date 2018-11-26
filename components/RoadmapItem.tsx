@@ -90,4 +90,4 @@ const RoadmapItem = ({ time, title, description, done, active, lastone }: IProps
   </div>
 ));
 
-export default RoadmapItem
+export default RoadmapItem;

@@ -34,7 +34,7 @@ const Member = ({ name, title, avatar }: { name: string; title: string; avatar: 
         margin: 0;
         font-size: 19px;
       }
-      
+
       h6 {
         margin: 0 0 8px;
         color: #90cfbe;

@@ -1,5 +1,5 @@
 interface IProps {
-  children: React.ReactNode,
+  children: React.ReactNode;
   direction?: string;
 }
 
@@ -21,4 +21,3 @@ const Content = ({ children, direction = 'column' }: IProps) => ((
 ));
 
 export default Content;
-

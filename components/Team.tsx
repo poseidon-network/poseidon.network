@@ -5,7 +5,7 @@ import Content from './Content';
 import {
   team,
   techCoreTeam,
-  advisors
+  advisors,
 } from '../data';
 
 const Team = () => ((

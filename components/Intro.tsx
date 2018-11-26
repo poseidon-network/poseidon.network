@@ -8,7 +8,7 @@ const Intro = () => ((
     <Content>
       {
         intro.map(({ title, description }) => ((
-          <Fragment>
+          <Fragment key={title}>
             <p className="title">{ title }</p>
             <p className="description">{ description }</p>
           </Fragment>

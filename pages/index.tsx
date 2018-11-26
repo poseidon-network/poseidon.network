@@ -12,7 +12,6 @@ import Team from '../components/Team';
 import Contact from '../components/Contact';
 import Footer from '../components/Footer';
 
-
 const Index = () => ((
   <Page>
     <Head>

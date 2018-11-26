@@ -10,7 +10,7 @@ const Roadmap = () => ((
       <H2 id="roadmap" center>Roadmap</H2>
       <div className="content">
         {
-          roadmap.map((props) => (
+          roadmap.map(props => (
             <RoadmapItem key={props.time} {...props} />
           ))
         }

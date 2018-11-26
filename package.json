@@ -5,7 +5,7 @@
     "dev": "next",
     "deploy": "npm run export && gh-pages -d out",
     "export": "npm run build && next export",
-    "lint": "tslint --force --format verbose \"./components/**/*.ts\"",
+    "lint": "tslint --force --format verbose \"./components/**/*.tsx\"",
     "start": "next start",
     "tsc": "tsc"
   },

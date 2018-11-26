@@ -29,7 +29,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => ((
       #__next {
         width: 100%;
         position: relative;
-        overflow: hidden;  
+        overflow: hidden;
       }
     `}</style>
   </div>

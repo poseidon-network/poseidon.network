@@ -28,9 +28,7 @@ const Nav = () => ((
         position: absolute;
         top: 42px;
         right: 32px;
-        
         z-index: 1;
-        
         -webkit-user-select: none;
         user-select: none;
       }
@@ -48,12 +46,9 @@ const Nav = () => ((
         position: absolute;
         top: -7px;
         left: -5px;
-        
         cursor: pointer;
-        
         opacity: 0; /* hide this */
         z-index: 2; /* and place it over the hamburger */
-        
         -webkit-touch-callout: none;
       }
 
@@ -66,14 +61,10 @@ const Nav = () => ((
         height: 3px;
         margin-bottom: 5px;
         position: relative;
-        
         background: #90cfbe;
         border-radius: 1px;
-        
         z-index: 1;
-        
         transform-origin: 4px 0px;
-        
         transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
                     background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
                     opacity 0.55s ease;
@@ -87,7 +78,7 @@ const Nav = () => ((
         transform-origin: 0% 100%;
       }
 
-      /* 
+      /*
       * Transform all the slices of hamburger
       * into a crossmark.
       */
@@ -115,15 +106,15 @@ const Nav = () => ((
         top: -50px;
         width: 300px;
         padding: 50px;
-        
+
         background: #222633f7;
         list-style-type: none;
         -webkit-font-smoothing: antialiased;
         /* to stop flickering of text in safari */
-        
+
         transform-origin: 0% 0%;
         transform: translate(120%, 0);
-        
+
         transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
       }
 
