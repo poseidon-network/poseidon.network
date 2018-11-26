@@ -6,7 +6,7 @@ class ContactForm extends React.Component {
     name: '',
     email: '',
     message: '',
-    receiveUpdate: false,
+    receiveEmail: false,
   };
 
   handleChangeInput = ({ target: { name, value  } }: { target: { name: string; value: string  } }) => {
@@ -23,15 +23,14 @@ class ContactForm extends React.Component {
 
   handleSubmit = async (event: React.SyntheticEvent) => {
     event.preventDefault();
-    const data = {
-      name: this.state.name,
-      email: this.state.email,
-      message: this.state.message,
-      receiveUpdate: this.state.receiveUpdate,
-    };
+    const formData = new FormData();
+    formData.append('name', this.state.name);
+    formData.append('email', this.state.email);
+    formData.append('message', this.state.message);
+    formData.append('receiveEmail', String(this.state.receiveEmail));
     try {
-      await fetch('https://script.google.com/macros/s/AKfycbzrn9HjWirz3EcZt7-XWlxWN8oNGiA3VwPOVTpSWfceWO-26DTl/exec', {
-        body: JSON.stringify(data),
+      await fetch('https://script.google.com/macros/s/AKfycbwVfb9acsqEuPnYZlgRBOUng74nnNd6a4NGmJPCRXtp5HOBTMeJ/exec', {
+        body: formData,
         method: 'POST',
       });
       console.log('success');
@@ -73,8 +72,8 @@ class ContactForm extends React.Component {
             <input
               id="checkbox"
               type="checkbox"
-              name="receiveUpdate"
-              checked={this.state.receiveUpdate}
+              name="receiveEmail"
+              checked={this.state.receiveEmail}
               onChange={this.handleChangeCheckBox}
             />
             <span className="checkmark"></span>
