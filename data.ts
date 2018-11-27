@@ -1,5 +1,5 @@
 export const header = {
-  description: `World’s First\nDecentralized Content\nAcceleration Network\n`,
+  description: 'World’s First\nDecentralized Content\nAcceleration Network\n',
 };
 
 export const indicators = [
@@ -67,7 +67,7 @@ export const features = [
     title: 'Multipurpose',
     description: 'Data storage, bandwidth,\nand computation.',
   },
-]
+];
 
 export const partners = [
   { logoUri: './static/img-aba.png', alt: 'ABA' },
@@ -150,4 +150,3 @@ export const footer = {
   email: 'hi@poseidon.network',
   copyright: 'POSEIDON NETWORK © 2018 All rights reserved.',
 };
-
