@@ -106,16 +106,34 @@ export const roadmap = [
 export const team = [
   { name: 'Light Lin', title: 'CEO', avatar: '' },
   { name: 'Milke Lin', title: 'COO', avatar: '' },
+  { name: 'Qing Wang', title: 'CTO', avatar: '' },
+  { name: 'Chi Hsuan', title: 'Prototype', avatar: '' },
+  { name: 'GT Lin', title: 'Production', avatar: '' },
+  { name: 'Jocelyn', title: 'Marketing', avatar: '' },
+  { name: 'Cindy', title: 'Community', avatar: '' },
+  { name: 'Bee Li', title: 'Product Design', avatar: '' },
+  { name: 'Elsa', title: 'Office Mangager', avatar: '' },
 ];
 
 export const techCoreTeam = [
   { name: 'Raymond', title: 'Senior Architect', avatar: '' },
   { name: 'ST Wang', title: 'Senior Embedded', avatar: '' },
+  { name: 'Wu Sing', title: 'Senior DevOps', avatar: '' },
+  { name: 'Ju Quyang', title: 'Embedded Engineer', avatar: '' },
 ];
 
 export const advisors = [
   { name: 'Andy Tian', title: 'Blockchain Advisors', avatar: '' },
-  { name: 'Jason Hsu', title: 'Jason Hsu', avatar: '' },
+  { name: 'Jason Hsu', title: 'Blockchain Advisors', avatar: '' },
+  { name: 'Celeste Kwon', title: 'Blockchain Advisors', avatar: '' },
+  { name: 'Kenny Hsia', title: 'Blockchain Advisors', avatar: '' },
+  { name: 'Daniel Yeh', title: 'Blockchain Advisors', avatar: '' },
+  { name: 'Jaclyn Tsai', title: 'Tech Advisors', avatar: '' },
+  { name: 'Lman Chu', title: 'Jason Hsu', avatar: '' },
+  { name: 'Jserv Huang', title: 'Tech Advisors', avatar: '' },
+  { name: 'Tom Soong', title: 'Tech Advisors', avatar: '' },
+  { name: 'Sega Cheng', title: 'Tech Advisors', avatar: '' },
+  { name: 'Mark Sung', title: 'Tech Advisors', avatar: '' },
 ];
 
 export const contact = {
