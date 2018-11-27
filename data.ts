@@ -98,7 +98,21 @@ export const roadmap = [
   {
     time: 'Q1 2019',
     title: 'Public Sale on ACE',
+    description: 'Decentralized Qontroller\nDistributed Edges',
+  },
+  {
+    time: 'Q2 2019',
+    title: 'Public Sale on ACE',
     description: 'Distributed Qontroller\nDistributed Edges',
+  },
+  {
+    time: 'Q3 2019',
+    title: 'Monthly Revenue - 9M USD',
+    description: 'Decentralized Qontroller\nDistributed Edges',
+  },
+  {
+    time: 'WHERE WE ARE GOING',
+    description: 'Open-sourced, Decentralized, Distributed, Autonomous Content Acceleration Layer incentivized by PSD Token',
     lastone: true,
   },
 ];
