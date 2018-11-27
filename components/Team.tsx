@@ -38,6 +38,13 @@ const Team = () => ((
           justify-content: space-between;
           min-width: 317px;
         }
+
+        @media only screen and (min-width: 600px) {
+          .members {
+            justify-content: start;
+            width: 100%;
+          }
+        }
       `}</style>
     </Content>
   </Layout>

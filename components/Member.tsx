@@ -40,6 +40,12 @@ const Member = ({ name, title, avatar }: { name: string; title: string; avatar: 
         color: #90cfbe;
         font-size: 11px;
       }
+
+      @media only screen and (min-width: 600px) {
+        .container {
+          margin-right: 17px;
+        }
+      }
     `}</style>
   </div>
 ));
