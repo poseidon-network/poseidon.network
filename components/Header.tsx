@@ -66,11 +66,11 @@ const Header = () => ((
           .bg-rect:nth-child(1) {
             top: 45px;
           }
-  
+
           .bg-rect:nth-child(2) {
             top: 82px;
           }
-  
+
           .bg-rect:nth-child(3) {
             top: 118px;
           }
