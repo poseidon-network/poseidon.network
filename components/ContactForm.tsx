@@ -6,6 +6,8 @@ class ContactForm extends React.Component {
     email: '',
     message: '',
     receiveEmail: false,
+    isFailed: false,
+    isSucceed: false,
   };
 
   handleChangeInput = ({ target: { name, value  } }: { target: { name: string; value: string  } }) => {
@@ -27,14 +29,27 @@ class ContactForm extends React.Component {
     formData.append('email', this.state.email);
     formData.append('message', this.state.message);
     formData.append('receiveEmail', String(this.state.receiveEmail));
+    this.setState({
+      isFailed: false,
+      isSucceed: false,
+    });
     try {
       await fetch('https://script.google.com/macros/s/AKfycbwVfb9acsqEuPnYZlgRBOUng74nnNd6a4NGmJPCRXtp5HOBTMeJ/exec', {
         body: formData,
         method: 'POST',
       });
-      console.log('success');
+      this.setState({
+        name: '',
+        email: '',
+        message: '',
+        receiveEmail: false,
+        isSucceed: true,
+      });
     } catch (err) {
       console.log(err);
+      this.setState({
+        isFailed: true,
+      });
     }
   }
 
@@ -79,6 +94,13 @@ class ContactForm extends React.Component {
             I want to receive occasional e-mail updates from POSEIDON NETWORK
           </label>
         </div>
+
+        { this.state.isSucceed &&
+          <p className="msg success">Sent successfully!</p>
+        }
+        { this.state.isFailed &&
+          <p className="msg error">Something went wrong, please try again later.</p>
+        }
 
         <input className="submit" type="submit" value="Send" />
 
@@ -188,7 +210,22 @@ class ContactForm extends React.Component {
           }
 
           .submit:hover {
-            opacity: 0.8;
+            opacity: 0.4;
+          }
+
+          .msg {
+            font-size: 13px;
+            font-weight: 600;
+            margin-top: 3px;
+            position: absolute;
+          }
+
+          .success {
+            color: #90cfbe;
+          }
+
+          .error {
+            color: #ef5757;
           }
         `}</style>
       </form>
