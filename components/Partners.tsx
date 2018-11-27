@@ -22,6 +22,7 @@ const Partners = () => ((
           margin-top: 37px;
           display: flex;
           flex-wrap: wrap;
+          max-width: 400px;
         }
       `}</style>
     </Content>

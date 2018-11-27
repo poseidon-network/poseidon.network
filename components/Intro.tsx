@@ -32,6 +32,13 @@ const Intro = () => ((
           margin-bottom: 40px;
           text-align: center;
           white-space: pre-line;
+          max-width: 560px;
+        }
+
+        @media only screen and (min-width: 600px) {
+          .description {
+            line-height: 1.41;
+          }
         }
       `}</style>
     </Content>
