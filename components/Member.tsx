@@ -30,6 +30,12 @@ const Member = ({ name, title, avatar }: { name: string; title: string; avatar: 
         padding: 16px;
       }
 
+      img {
+        width: 150px;
+        height: 100px;
+        object-fit: contain;
+      }
+
       h5 {
         margin: 0;
         font-size: 19px;

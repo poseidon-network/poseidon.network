@@ -118,36 +118,36 @@ export const roadmap = [
 ];
 
 export const team = [
-  { name: 'Light Lin', title: 'CEO', avatar: '' },
-  { name: 'Milke Lin', title: 'COO', avatar: '' },
-  { name: 'Qing Wang', title: 'CTO', avatar: '' },
-  { name: 'Chi Hsuan', title: 'Prototype', avatar: '' },
-  { name: 'GT Lin', title: 'Production', avatar: '' },
-  { name: 'Jocelyn', title: 'Marketing', avatar: '' },
-  { name: 'Cindy', title: 'Community', avatar: '' },
-  { name: 'Bee Li', title: 'Product Design', avatar: '' },
-  { name: 'Elsa', title: 'Office Mangager', avatar: '' },
+  { name: 'Light Lin', title: 'CEO', avatar: './static/img-light@2x.jpg' },
+  { name: 'Milke Lin', title: 'COO', avatar: './static/img-mark-lin@2x.jpg' },
+  { name: 'Qing Wang', title: 'CTO', avatar: './static/img-qing@2x.jpg' },
+  { name: 'Chi Hsuan', title: 'Prototype', avatar: './static/img-chi-hsuan@2x.jpg' },
+  { name: 'GT Lin', title: 'Production', avatar: './static/img-gt-lin@2x.jpg' },
+  { name: 'Jocelyn', title: 'Marketing', avatar: './static/img-jocelyn@2x.jpg' },
+  { name: 'Cindy', title: 'Community', avatar: './static/img-cindy@2x.jpg' },
+  { name: 'Bee Li', title: 'Product Design', avatar: './static/img-bee@2x.jpg' },
+  { name: 'Elsa', title: 'Office Mangager', avatar: './static/img-elsa@2x.jpg' },
 ];
 
 export const techCoreTeam = [
-  { name: 'Raymond', title: 'Senior Architect', avatar: '' },
-  { name: 'ST Wang', title: 'Senior Embedded', avatar: '' },
-  { name: 'Wu Sing', title: 'Senior DevOps', avatar: '' },
-  { name: 'Ju Quyang', title: 'Embedded Engineer', avatar: '' },
+  { name: 'Raymond', title: 'Senior Architect', avatar: './static/img-raymond@2x.jpg' },
+  { name: 'ST Wang', title: 'Senior Embedded', avatar: './static/img-st@2x.jpg' },
+  { name: 'Wu Sing', title: 'Senior DevOps', avatar: './static/img-wu@2x.jpg' },
+  { name: 'Ju Quyang', title: 'Embedded Engineer', avatar: './static/img-ju@2x.jpg' },
 ];
 
 export const advisors = [
-  { name: 'Andy Tian', title: 'Blockchain Advisors', avatar: '' },
-  { name: 'Jason Hsu', title: 'Blockchain Advisors', avatar: '' },
-  { name: 'Celeste Kwon', title: 'Blockchain Advisors', avatar: '' },
-  { name: 'Kenny Hsia', title: 'Blockchain Advisors', avatar: '' },
-  { name: 'Daniel Yeh', title: 'Blockchain Advisors', avatar: '' },
-  { name: 'Jaclyn Tsai', title: 'Tech Advisors', avatar: '' },
-  { name: 'Lman Chu', title: 'Jason Hsu', avatar: '' },
-  { name: 'Jserv Huang', title: 'Tech Advisors', avatar: '' },
-  { name: 'Tom Soong', title: 'Tech Advisors', avatar: '' },
-  { name: 'Sega Cheng', title: 'Tech Advisors', avatar: '' },
-  { name: 'Mark Sung', title: 'Tech Advisors', avatar: '' },
+  { name: 'Andy Tian', title: 'Blockchain Advisors', avatar: './static/img-andy@2x.jpg' },
+  { name: 'Jason Hsu', title: 'Blockchain Advisors', avatar: './static/img-jason@2x.jpg' },
+  { name: 'Celeste Kwon', title: 'Blockchain Advisors', avatar: './static/img-celeste@2x.jpg' },
+  { name: 'Kenny Hsia', title: 'Blockchain Advisors', avatar: './static/img-kenny@2x.jpg' },
+  { name: 'Daniel Yeh', title: 'Blockchain Advisors', avatar: './static/img-daniel@2x.jpg' },
+  { name: 'Jaclyn Tsai', title: 'Tech Advisors', avatar: './static/img-jaclyn-tsai@2x.jpg' },
+  { name: 'Lman Chu', title: 'Jason Hsu', avatar: './static/img-lman@2x.jpg' },
+  { name: 'Jserv Huang', title: 'Tech Advisors', avatar: './static/img-jserv@2x.jpg' },
+  { name: 'Tom Soong', title: 'Tech Advisors', avatar: './static/img-tom@2x.jpg' },
+  { name: 'Sega Cheng', title: 'Tech Advisors', avatar: './static/img-sega@2x.jpg' },
+  { name: 'Mark Sung', title: 'Tech Advisors', avatar: './static/img-mark-sung@2x.jpg' },
 ];
 
 export const contact = {
