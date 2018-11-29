@@ -157,9 +157,7 @@ export const contact = {
 
 export const footer = {
   socialMediaList: [
-    { imgUri: './static/ic-telegram.png', link: '/', alt: 'Telegram' },
-    { imgUri: './static/ic-twitter.png', link: '/', alt: 'Twitter' },
-    { imgUri: './static/ic-medium.png', link: '/', alt: 'Medium' },
+    { imgUri: './static/ic-medium.png', link: 'https://medium.com/poseidonnetwork', alt: 'Medium' },
   ],
   email: 'hi@poseidon.network',
   copyright: 'POSEIDON NETWORK © 2018 All rights reserved.',
