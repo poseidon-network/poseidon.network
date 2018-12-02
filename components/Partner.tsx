@@ -1,6 +1,8 @@
-const Partner = ({ alt, logoUri }: { alt: string, logoUri: string }) => ((
+const Partner = ({ alt, logoUri, link }: { alt: string, logoUri: string, link: string }) => ((
   <div>
-    <img alt={alt} src={logoUri} />
+    <a href={link} target="_blank">
+      <img alt={alt} src={logoUri} />
+    </a>
     <style jsx>{`
       div {
         height: 24px;

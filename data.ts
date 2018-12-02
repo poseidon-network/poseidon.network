@@ -70,12 +70,12 @@ export const features = [
 ];
 
 export const partners = [
-  { logoUri: './static/img-aba.png', alt: 'ABA' },
-  { logoUri: './static/group-4.png', alt: 'ACE' },
-  { logoUri: './static/img-nem.png', alt: 'nem' },
-  { logoUri: './static/img-gcp.png', alt: 'GCP' },
-  { logoUri: './static/img-joyso.png', alt: 'JOYSO' },
-  { logoUri: './static/img-longhash.png', alt: 'LONGHASH' },
+  { logoUri: './static/img-aba.png', alt: 'ABA', link: 'https://www.abatw.io/' },
+  { logoUri: './static/group-4.png', alt: 'ACE', link: 'https://ace.io/home' },
+  { logoUri: './static/img-nem.png', alt: 'nem', link: 'https://nem.io/' },
+  { logoUri: './static/img-gcp.png', alt: 'GCP', link: 'https://gcp.expert/' },
+  { logoUri: './static/img-joyso.png', alt: 'JOYSO', link: 'https://joyso.io/' },
+  { logoUri: './static/img-longhash.png', alt: 'LONGHASH', link: 'https://www.longhash.com/' },
 ];
 
 export const roadmap = [

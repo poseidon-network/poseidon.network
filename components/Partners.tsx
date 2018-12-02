@@ -11,8 +11,8 @@ const Partners = () => ((
       <H2 id="partners" center>Partners</H2>
       <div>
         {
-          partners.map(({ alt, logoUri }, index) => ((
-            <Partner key={`${index}`} alt={alt} logoUri={logoUri} />
+          partners.map(({ alt, logoUri, link }, index) => ((
+            <Partner key={`${index}`} alt={alt} logoUri={logoUri} link={link} />
           )))
         }
       </div>
