@@ -33,6 +33,7 @@ const Member = ({ name, title, avatar }: { name: string; title: string; avatar: 
       img {
         width: 150px;
         height: 100px;
+        border-radius: 4px 4px 0 0;
         object-fit: contain;
       }
 

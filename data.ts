@@ -119,7 +119,7 @@ export const roadmap = [
 
 export const team = [
   { name: 'Light Lin', title: 'CEO', avatar: './static/img-light@2x.jpg' },
-  { name: 'Milke Lin', title: 'COO', avatar: './static/img-mark-lin@2x.jpg' },
+  { name: 'Milke Lin', title: 'COO', avatar: './static/img-mike@2x.jpg' },
   { name: 'Qing Wang', title: 'CTO', avatar: './static/img-qing@2x.jpg' },
   { name: 'Chi Hsuan', title: 'Prototype', avatar: './static/img-chi-hsuan@2x.jpg' },
   { name: 'GT Lin', title: 'Production', avatar: './static/img-gt-lin@2x.jpg' },
