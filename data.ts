@@ -32,7 +32,7 @@ export const intro = [
   },
   {
     title: 'What is\nPOSEIDON NETWORK',
-    description: 'Next-Generation Content Acceleration Layer (CDN + DSN), incentivized by Token Economy, it’s cheaper yet faster.\nUtilized unused bandwidth and storage from any NAS, desktop, or mobile devices around the world. It’s distributed, efficient, and integrates perfectly with existing internet and blockchain infrastructure\nServed as a bandwidth optimization mechanism for every type of web content (static file / video on demand / live streaming)',
+    description: 'Next-Generation Content Acceleration Layer (CDN + DSN), incentivized by Token Economy, it’s cheaper yet faster. Utilized unused bandwidth and storage from any NAS, desktop, or mobile devices around the world. It’s distributed, efficient, and integrates perfectly with existing internet and blockchain infrastructure Served as a bandwidth optimization mechanism for every type of web content (static file / video on demand / live streaming)',
   },
 ];
 
@@ -40,32 +40,32 @@ export const features = [
   {
     imageUri: './static/img-1.png',
     title: 'Build Sharing  Economy',
-    description: 'Utilized unused bandwidth and storage\nfrom any NAS, desktop, or mobile\ndevices around the world. It’s distributed, efficient, and integrates perfectly with existing internet and blockchain infrastructure',
+    description: 'Utilized unused bandwidth and storage from any NAS, desktop, or mobile devices around the world. It’s distributed, efficient, and integrates perfectly with existing internet and blockchain infrastructure',
   },
   {
     imageUri: './static/img-2.png',
     title: 'Faster',
-    description: 'Benefit from Fog Computing\ntechnology.',
+    description: 'Benefit from Fog Computing technology.',
   },
   {
     imageUri: './static/img-3.png',
     title: 'Cheaper',
-    description: 'With Fog Computing technology. We provide a cheaper content\nacceleration Layer incentivized by PSD Token.  “$0.01 USD/GB, almost ten times cheaper than AWS cloudfront”.',
+    description: 'With Fog Computing technology. We provide a cheaper content acceleration Layer incentivized by PSD Token.  “$0.01 USD/GB, almost ten times cheaper than AWS cloudfront”.',
   },
   {
     imageUri: './static/img-4.png',
     title: 'Production Ready',
-    description: 'Real customers delivering\nand storing content.',
+    description: 'Real customers delivering and storing content.',
   },
   {
     imageUri: './static/img-5.png',
     title: 'Layer 2 Solution',
-    description: 'NOT putting data on blockchain to ensure\nperformance,\nscalability, and feasibility. ',
+    description: 'NOT putting data on blockchain to ensure performance, scalability, and feasibility. ',
   },
   {
     imageUri: './static/img-6.png',
     title: 'Multipurpose',
-    description: 'Data storage, bandwidth,\nand computation.',
+    description: 'Data storage, bandwidth, and computation.',
   },
 ];
 
@@ -92,23 +92,23 @@ export const roadmap = [
   {
     time: 'Q4 2018',
     title: 'EQUITY Round',
-    description: 'Centralized dispatcher\nDistributed Edges',
+    description: 'Centralized dispatcher Distributed Edges',
     active: true,
   },
   {
     time: 'Q1 2019',
     title: 'Public Sale on ACE',
-    description: 'Decentralized Qontroller\nDistributed Edges',
+    description: 'Decentralized Qontroller Distributed Edges',
   },
   {
     time: 'Q2 2019',
     title: 'Public Sale on ACE',
-    description: 'Distributed Qontroller\nDistributed Edges',
+    description: 'Decentralized Qontroller Distributed Edges',
   },
   {
     time: 'Q3-Q4 2019',
     title: 'Monthly Revenue - 9M USD',
-    description: 'Decentralized Qontroller\nDistributed Edges',
+    description: 'Decentralized Qontroller Distributed Edges',
   },
   {
     time: 'WHERE WE ARE GOING',
