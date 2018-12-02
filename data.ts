@@ -106,7 +106,7 @@ export const roadmap = [
     description: 'Distributed Qontroller\nDistributed Edges',
   },
   {
-    time: 'Q3 2019',
+    time: 'Q3-Q4 2019',
     title: 'Monthly Revenue - 9M USD',
     description: 'Decentralized Qontroller\nDistributed Edges',
   },
