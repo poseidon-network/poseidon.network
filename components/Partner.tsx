@@ -7,7 +7,7 @@ const Partner = ({ alt, logoUri }: { alt: string, logoUri: string }) => ((
         flex: 50%;
         display: flex;
         justify-content: center;
-        margin-bottom: 27px;
+        margin-bottom: 60px;
       }
 
       img {

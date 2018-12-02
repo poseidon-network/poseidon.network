@@ -4,7 +4,7 @@ import Content from './Content';
 import { indicators } from '../data';
 
 const Indicators = () => ((
-  <Layout bgColor="#222633" color="#fff" padding="32px 32px 0">
+  <Layout bgColor="#222633" color="#fff" padding="12px 32px 0">
     <Content direction="row">
       {
         indicators.map(({ value, unit, description }) => (
