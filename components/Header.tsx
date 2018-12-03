@@ -13,7 +13,7 @@ const Header = () => ((
           { header.description }
         </p>
       </div>
-      <img alt="world map" src="./static/img-map@3x.png" />
+      <img alt="world map" src="/static/img-map@3x.png" />
 
       <style jsx>{`
         p {

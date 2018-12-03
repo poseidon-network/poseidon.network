@@ -3,7 +3,7 @@ import Layout from './Layout';
 
 const Nav = () => ((
   <Layout bgColor="#222633" color="#fff">
-    <a href="/"><img alt="logo" src="./static/img-logo.png" /></a>
+    <a href="/"><img alt="logo" src="/static/img-logo.png" /></a>
 
     {
       typeof window === 'object' && Router.asPath === '/' &&
