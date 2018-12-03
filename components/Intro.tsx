@@ -37,7 +37,7 @@ const Intro = () => ((
 
         @media only screen and (min-width: 600px) {
           .description {
-            line-height: 1.41;
+            line-height: 1.6em;
           }
         }
       `}</style>
