@@ -9,21 +9,21 @@ import {
 } from '../data';
 
 const Team = () => ((
-  <Layout bgColor="#90cfbe" color="#222633">
+  <Layout bgColor="#222633" color="#222633">
     <Content>
-      <H2 id="team" color="#222633" center>TEAM</H2>
+      <H2 id="team" color="#fff" center>TEAM</H2>
         <div className="members">
           { team.map(({ name, title, avatar }) => (
             <Member key={name} name={name} title={title} avatar={avatar} />
           ))}
         </div>
-      <H2 color="#222633" center>Tech Core Team</H2>
+      <H2 color="#fff" center>Tech Core Team</H2>
         <div className="members">
           { techCoreTeam.map(({ name, title, avatar }) => (
             <Member key={name} name={name} title={title} avatar={avatar} />
           ))}
         </div>
-      <H2 color="#222633" center>Advisors</H2>
+      <H2 color="#fff" center>Advisors</H2>
         <div className="members">
           { advisors.map(({ name, title, avatar }) => (
             <Member key={name} name={name} title={title} avatar={avatar} />

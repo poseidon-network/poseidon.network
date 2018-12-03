@@ -28,7 +28,7 @@ const Header = () => ((
         img {
           width: 100%;
           margin-bottom: 0px;
-          max-width: 933px;
+          max-width: 920px;
           margin: auto;
         }
 

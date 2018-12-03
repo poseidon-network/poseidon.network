@@ -5,7 +5,7 @@ import Content from './Content';
 import { roadmap } from '../data';
 
 const Roadmap = () => ((
-  <Layout bgColor="#222633" color="#fff">
+  <Layout bgColor="#90cfbe" color="#1c1c1d">
     <Content>
       <H2 id="roadmap" center>Roadmap</H2>
       <div className="content">
@@ -19,6 +19,7 @@ const Roadmap = () => ((
       <style jsx>{`
         h2 {
           margin-bottom: 28px;
+          color: #fff;
         }
 
         .content {

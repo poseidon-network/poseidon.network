@@ -41,7 +41,7 @@ const RoadmapItem = ({ time, title, description, done, active, lastone }: IProps
         -moz-border-radius: 10px;
         -webkit-border-radius: 10px;
         border-radius: 50%;
-        background-color: ${ (done || active) ? '#90cfbe' : '#3f4350'};
+        background-color: #fff;
         opacity: ${ active ? 0.2 : 0};
       }
 
@@ -53,7 +53,8 @@ const RoadmapItem = ({ time, title, description, done, active, lastone }: IProps
         -moz-border-radius: 10px;
         -webkit-border-radius: 10px;
         border-radius: 10px;
-        background-color: ${ (done || active) ? '#90cfbe' : '#3f4350'};
+        background-color: #fff;
+        opacity: ${ (done || active) ? 1 : 0.32 };
         margin-right: 22px
       }
 
@@ -65,7 +66,8 @@ const RoadmapItem = ({ time, title, description, done, active, lastone }: IProps
         content: '';
         display: inline-block;
         width: 4px;
-        background-color: ${ (done) ? '#90cfbe' : '#3f4350'};
+        background-color: #fff;
+        opacity: ${ (done) ? 1 : 0.32 };
         margin: -3px 22px 0 8px;
         ${ lastone && 'opacity: 0' };
       }
@@ -77,12 +79,14 @@ const RoadmapItem = ({ time, title, description, done, active, lastone }: IProps
       .title {
         font-size: 16px;
         padding: 0 0 0 10px;
+        color: #222633;
       }
 
       .description {
         line-height: 1.31;
-        color: #90cfbe;
+        color: #222633;
         font-size: 16px;
+        opacity: 0.64;
         margin: 10px 0 0;
         padding: 0 0 32px 10px;
       }

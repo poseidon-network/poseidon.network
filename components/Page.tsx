@@ -14,6 +14,8 @@ const Layout = ({ children }: { children: React.ReactNode }) => ((
     <style global jsx>{`
       body {
         font-family: 'Lato';
+        -webkit-font-smoothing: antialiased;
+        text-rendering: optimizeLegibility;
       }
 
       a {
