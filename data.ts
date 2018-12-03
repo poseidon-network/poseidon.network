@@ -159,7 +159,7 @@ export const footer = {
   socialMediaList: [
     { imgUri: './static/ic-medium.png', link: 'https://medium.com/poseidonnetwork', alt: 'Medium' },
     { imgUri: './static/ic-twitter.png', link: ' https://twitter.com/NetworkPoseidon', alt: 'Twitter' },
-    // { imgUri: '', link: 'https://www.facebook.com/psd.token/' },
+    { imgUri: './static/ic-facebook.png', link: 'https://www.facebook.com/psd.token/', alt: 'Facebook' },
   ],
   email: 'hi@poseidon.network',
   copyright: 'POSEIDON NETWORK © 2018 All rights reserved.',
