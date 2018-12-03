@@ -5,6 +5,8 @@ import ipfsClient from 'ipfs-http-client';
 // @ts-ignore
 import IpfsApi from 'ipfs-api';
 const Buffer = require('buffer/').Buffer;
+const protocol = process.env.IPFS_HOST ? 'https' : 'http';
+const port = process.env.IPFS_HOST ? 5002 : 5001;
 
 interface IState {
   file?: File;
@@ -15,7 +17,7 @@ class UploadFileForm extends React.Component {
     file: undefined,
     hash: undefined,
   };
-  ipfsAPI = IpfsApi(process.env.IPFS_HOST || 'localhost', 5001);
+  ipfsAPI = IpfsApi(process.env.IPFS_HOST || 'localhost', port, { protocol });
 
   onDrop = (files: File[]) => {
     const reader = new FileReader();
