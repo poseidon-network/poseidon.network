@@ -16,7 +16,7 @@ script:
 - npm run tsc
 - npm run lint
 - npm run export
-- cp CNAME ./out/
+- echo $CNAME > ./out/CNAME
 deploy:
   provider: pages
   skip-cleanup: true
