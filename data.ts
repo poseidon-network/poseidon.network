@@ -143,7 +143,7 @@ export const advisors = [
   { name: 'Kenny Hsia', title: 'Blockchain Advisors', avatar: './static/img-kenny@2x.jpg' },
   { name: 'Daniel Yeh', title: 'Blockchain Advisors', avatar: './static/img-daniel@2x.jpg' },
   { name: 'Jaclyn Tsai', title: 'Tech Advisors', avatar: './static/img-jaclyn-tsai@2x.jpg' },
-  { name: 'Lman Chu', title: 'Jason Hsu', avatar: './static/img-lman@2x.jpg' },
+  { name: 'Lman Chu', title: 'Tech Advisors', avatar: './static/img-lman@2x.jpg' },
   { name: 'Jserv Huang', title: 'Tech Advisors', avatar: './static/img-jserv@2x.jpg' },
   { name: 'Tom Soong', title: 'Tech Advisors', avatar: './static/img-tom@2x.jpg' },
   { name: 'Sega Cheng', title: 'Tech Advisors', avatar: './static/img-sega@2x.jpg' },
