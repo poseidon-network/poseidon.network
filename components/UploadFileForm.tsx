@@ -78,7 +78,7 @@ class UploadFileForm extends React.Component {
           </Dropzone>
         </div>
 
-        <div>
+        <div className="hash-result">
           <a target="_blank" href={`https://ipfs.io/ipfs/${this.state.hash}`}>
             { this.state.hash }
           </a>
@@ -109,6 +109,12 @@ class UploadFileForm extends React.Component {
             font-size: 16px;
             line-height: 1.31;
             text-align: center;
+          }
+
+          .hash-result {
+            margin-top: 10px;
+            width: 80%;
+            max-width: 500px;
           }
         `}</style>
 
