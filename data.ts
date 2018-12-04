@@ -152,7 +152,7 @@ export const advisors = [
 
 export const contact = {
   title: 'Follow Our Journey',
-  description: 'Bootstrapping Qinfra from 2 co-founders Qing & Mike, target to disrupt cloud infra …',
+  description: 'Bootstrapping Qinfra from 2 co-founders, Qing & Mike, target to disrupt cloud infra …',
 };
 
 export const footer = {
