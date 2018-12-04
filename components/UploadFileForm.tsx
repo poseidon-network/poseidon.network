@@ -98,7 +98,7 @@ class UploadFileForm extends React.Component {
             border-radius: 3px;
             padding: 10px;
             display: flex;
-            width: 80%;
+            width: 90%;
             max-width: 600px;
             height: 150px;
           }
@@ -113,10 +113,11 @@ class UploadFileForm extends React.Component {
 
           .hash-result {
             margin-top: 10px;
-            width: 80%;
+            width: 90%;
             max-width: 500px;
             white-space: nowrap;
             overflow: hidden;
+            text-align: center;
           }
         `}</style>
 
