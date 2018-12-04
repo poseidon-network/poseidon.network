@@ -80,7 +80,7 @@ class UploadFileForm extends React.Component {
 
         <div className="hash-result">
           <a target="_blank" href={`https://ipfs.io/ipfs/${this.state.hash}`}>
-            { this.state.hash }
+            { this.state.hash }dejwiojfioejfioejiofjeoijfeoijfoiejroifjeroifjeiorjfioejroij
           </a>
         </div>
         { spinResolveCSS.styles  }
@@ -115,6 +115,8 @@ class UploadFileForm extends React.Component {
             margin-top: 10px;
             width: 80%;
             max-width: 500px;
+            white-space: nowrap;
+            overflow: hidden;
           }
         `}</style>
 
