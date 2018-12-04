@@ -80,7 +80,7 @@ class UploadFileForm extends React.Component {
 
         <div className="hash-result">
           <a target="_blank" href={`https://ipfs.io/ipfs/${this.state.hash}`}>
-            { this.state.hash }dejwiojfioejfioejiofjeoijfeoijfoiejroifjeroifjeiorjfioejroij
+            { this.state.hash }
           </a>
         </div>
         { spinResolveCSS.styles  }
