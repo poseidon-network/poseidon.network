@@ -3,7 +3,7 @@ import Content from './Content';
 import UploadFileForm from './UploadFileForm';
 
 const Demo = () => ((
-  <Layout bgColor="#d7f2ee" color="#222633">
+  <Layout bgColor="#222633" color="#90cfbe">
     <Content>
       <UploadFileForm />
     </Content>

@@ -4,39 +4,37 @@ import Dropzone from 'react-dropzone';
 import ipfsClient from 'ipfs-http-client';
 // @ts-ignore
 import IpfsApi from 'ipfs-api';
+import { FaCloudUploadAlt, FaSpinner } from 'react-icons/fa';
 const Buffer = require('buffer/').Buffer;
 const protocol = process.env.IPFS_HOST ? 'https' : 'http';
 const port = process.env.IPFS_HOST ? 5002 : 5001;
+import css from 'styled-jsx/css';
 
 interface IState {
-  file?: File;
   hash?: string;
+  isLoading: boolean;
+  hasError: boolean;
 }
 class UploadFileForm extends React.Component {
   state: IState  = {
-    file: undefined,
     hash: undefined,
+    isLoading: false,
+    hasError: false,
   };
   ipfsAPI = IpfsApi(process.env.IPFS_HOST || 'localhost', port, { protocol });
 
-  onDrop = (files: File[]) => {
+  onDrop = async (files: File[]) => {
     const reader = new FileReader();
-    reader.onloadend = () => {
-      const buf = Buffer(reader.result);
-      this.ipfsAPI.files.add(buf, (err: any, result: any) => {
-        if (err) {
-          console.error(err);
-          return;
-        }
-        console.log(result);
-        this.setState({ hash: result[0].hash });
-      });
-    };
-
-    reader.readAsArrayBuffer(files[0]);
     this.setState({
-      file: files[0],
+      isLoading: true,
+      hasError: false,
     });
+
+    reader.onloadend = async () => {
+      const buf = Buffer(reader.result);
+      this.uploadToIpfs(buf);
+    };
+    reader.readAsArrayBuffer(files[0]);
   }
 
   onCancel = () => {
@@ -45,17 +43,38 @@ class UploadFileForm extends React.Component {
     });
   }
 
+  uploadToIpfs = async (buf: ArrayBuffer) => {
+    try {
+      const response = await this.ipfsAPI.files.add(buf, { progress: (prog: any) => console.log(`received: ${prog}`) });
+      console.log(response);
+      this.setState({
+        hash: response[0].hash,
+        isLoading: false,
+      });
+    } catch (err) {
+      console.error(err);
+      this.setState({
+        isLoading: false,
+        hasError: true,
+      });
+    }
+  }
+
   render() {
     return (
       <section>
         <div className="dropzone-wrapper">
           <Dropzone
             style={styles.dropzone}
-            activeClassName="dropzone-active"
-            onDrop={this.onDrop.bind(this)}
-            onFileDialogCancel={this.onCancel.bind(this)}
+            acceptStyle={styles.dropzoneActive}
+            onDrop={this.onDrop}
+            onFileDialogCancel={this.onCancel}
           >
             <p>Click or drag file to this area to upload</p>
+            { this.state.isLoading
+              ? <FaSpinner className={spinResolveCSS.className} />
+              : <FaCloudUploadAlt size={50} style={styles.icon} />
+            }
           </Dropzone>
         </div>
 
@@ -64,7 +83,7 @@ class UploadFileForm extends React.Component {
             { this.state.hash }
           </a>
         </div>
-
+        { spinResolveCSS.styles  }
         <style jsx>{`
           section {
             width: 100%;
@@ -75,19 +94,20 @@ class UploadFileForm extends React.Component {
           }
 
           .dropzone-wrapper {
-            background-color: #fff;
-            border-radius: 4px;
-            padding: 15px;
+            background-color: #d7f2ee;
+            border-radius: 3px;
+            padding: 10px;
             display: flex;
             width: 80%;
-            max-width: 800px;
+            max-width: 600px;
+            height: 150px;
           }
 
           p {
             color: #222633;
             opacity: 0.64;
-            font-size: 18px;
-            line-height: 1.5;
+            font-size: 16px;
+            line-height: 1.31;
             text-align: center;
           }
         `}</style>
@@ -97,12 +117,52 @@ class UploadFileForm extends React.Component {
   }
 }
 
+const spinResolveCSS = css.resolve`
+svg {
+  -webkit-animation: icon-spin 2s infinite linear;
+          animation: icon-spin 2s infinite linear;
+}
+
+@-webkit-keyframes icon-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+            transform: rotate(359deg);
+  }
+}
+
+@keyframes icon-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+            transform: rotate(359deg);
+  }
+}
+`;
+
 const styles = {
   dropzone: {
-    height: '200px',
+    border: '1px dashed #90cfbe',
+    display: 'flex',
+    flexDirection: 'column' as 'column',
+    height: '100%',
     width: '100%',
-    maxWidth: '700px',
     cursor: 'pointer',
+    alignItems: 'center',
+    padding: '0 10px',
+  },
+  dropzoneActive: {
+    opacity: 0.7,
+    borderColor: 'rgb(49, 167, 135)',
+  },
+  icon: {
+
   },
 };
 
