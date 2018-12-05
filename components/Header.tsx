@@ -13,9 +13,17 @@ const Header = () => ((
           { header.description }
         </p>
       </div>
-      <video className="map" loop muted autoPlay>
+      <video
+        className="map"
+        controls={false}
+        preload="yes"
+        poster="/static/img-map@3x.png"
+        loop
+        muted
+        autoPlay
+      >
         <source src="/static/map.mp4" type="video/mp4" />
-        Sorry, your browser doesn't support embedded videos.
+        <img src="/static/img-map@3x.png" alt="map" />
       </video>
       <style jsx>{`
         p {
@@ -30,8 +38,8 @@ const Header = () => ((
         .map {
           width: 100%;
           margin-bottom: 0px;
+          height: 100%;
           max-width: 920px;
-          margin: auto;
         }
 
         .description-container {
