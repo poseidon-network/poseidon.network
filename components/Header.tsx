@@ -13,7 +13,7 @@ const Header = () => ((
           { header.description }
         </p>
       </div>
-      <video className="map" loop autoPlay>
+      <video className="map" loop muted autoPlay>
         <source src="/static/map.mp4" type="video/mp4" />
         Sorry, your browser doesn't support embedded videos.
       </video>
