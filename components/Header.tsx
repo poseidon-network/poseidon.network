@@ -13,8 +13,10 @@ const Header = () => ((
           { header.description }
         </p>
       </div>
-      <img alt="world map" src="/static/img-map@3x.png" />
-
+      <video className="map" loop autoPlay>
+        <source src="/static/map.mp4" type="video/mp4" />
+        Sorry, your browser doesn't support embedded videos.
+      </video>
       <style jsx>{`
         p {
           text-align: center;
@@ -25,7 +27,7 @@ const Header = () => ((
           white-space: pre-line;
         }
 
-        img {
+        .map {
           width: 100%;
           margin-bottom: 0px;
           max-width: 920px;
