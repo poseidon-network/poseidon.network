@@ -6,7 +6,7 @@ import { features } from '../data';
 const Features = () => ((
   <Layout bgColor="#d7f2ee" color="#222633">
     <Content>
-      <img id="feature" alt="POSEIDON NETWORK" src="./static/img-logotype@2x.png" />
+      <img id="feature" alt="POSEIDON NETWORK" src="/static/img-logotype@2x.png" />
       <div className="item-container">
         {
           features.map(({ imageUri, title, description }, index) => (
