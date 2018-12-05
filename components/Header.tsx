@@ -23,7 +23,6 @@ const Header = () => ((
         autoPlay
       >
         <source src="/static/map.mp4" type="video/mp4" />
-        <img src="/static/img-map@3x.png" alt="map" />
       </video>
       <style jsx>{`
         p {
