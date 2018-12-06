@@ -13,17 +13,7 @@ const Header = () => ((
           { header.description }
         </p>
       </div>
-      <video
-        className="map"
-        controls={false}
-        preload="yes"
-        poster="/static/img-map@3x.png"
-        loop
-        muted
-        autoPlay
-      >
-        <source src="/static/map.mp4" type="video/mp4" />
-      </video>
+      <img className="map" src="/static/map.gif" />
       <style jsx>{`
         p {
           text-align: center;
