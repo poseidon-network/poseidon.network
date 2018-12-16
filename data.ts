@@ -162,6 +162,6 @@ export const footer = {
     { imgUri: '/static/ic-medium.png', link: 'https://medium.com/poseidonnetwork', alt: 'Medium' },
     { imgUri: '/static/ic-twitter.png', link: ' https://twitter.com/NetworkPoseidon', alt: 'Twitter' },
   ],
-  email: 'hi@poseidon.network',
+  email: 'service@poseidon.network',
   copyright: 'POSEIDON NETWORK © 2018 All rights reserved.',
 };
