@@ -1,8 +1,6 @@
 import React from 'react';
 import Dropzone from 'react-dropzone';
 // @ts-ignore
-import ipfsClient from 'ipfs-http-client';
-// @ts-ignore
 import IpfsApi from 'ipfs-api';
 import { FaCloudUploadAlt, FaSpinner } from 'react-icons/fa';
 const Buffer = require('buffer/').Buffer;
@@ -79,7 +77,7 @@ class UploadFileForm extends React.Component {
         </div>
 
         <div className="hash-result">
-          <a target="_blank" href={`https://ipfs.io/ipfs/${this.state.hash}`}>
+          <a target="_blank" href={`http://network.poseidon.one/ipfs/${this.state.hash}`}>
             { this.state.hash }
           </a>
         </div>
