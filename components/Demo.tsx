@@ -29,7 +29,7 @@ export default class Demo extends React.Component<{}, IState> {
         query: '{files {    name    size    uri   hash  }}',
       });
       this.setState({
-        fileList: response.data.data.files,
+        fileList: response.data.data.files.reverse(),
       });
     } catch (error) {
       console.log(error);
