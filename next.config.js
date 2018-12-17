@@ -8,7 +8,7 @@ module.exports = withTypescript({
   }),
   webpack(config) {
     config.plugins.push(new webpack.EnvironmentPlugin({
-      IPFS_HOST: process.env.IPFS_HOST,
+      GRAPHQL_URI: process.env.GRAPHQL_URI || 'http://localhost:4000/graphql',
     }));
     return config;
   },
