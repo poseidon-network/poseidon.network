@@ -6,6 +6,7 @@ import IpfsApi from 'ipfs-api';
 import { FaCloudUploadAlt, FaSpinner } from 'react-icons/fa';
 import css from 'styled-jsx/css';
 import { Line } from 'rc-progress';
+import SocialShareList from './SocialShareList';
 
 interface IState {
   hash?: string;
@@ -92,11 +93,14 @@ class UploadFileForm extends React.Component<{}, IState> {
           </Dropzone>
         </div>
 
-        <div className="hash-result">
-          <a target="_blank" href={this.state.uri}>
-            { this.state.uri }
-          </a>
-        </div>
+        { this.state.uri &&
+          <div className="hash-result">
+            <a target="_blank" href={this.state.uri}>
+              { this.state.uri }
+            </a>
+            <SocialShareList link={this.state.uri} />
+          </div>
+        }
         { spinResolveCSS.styles  }
         <style jsx>{`
           .dropzone-wrapper {
