@@ -1,53 +1,66 @@
 import React from 'react';
 import Dropzone from 'react-dropzone';
+import axios from 'axios';
 // @ts-ignore
 import IpfsApi from 'ipfs-api';
 import { FaCloudUploadAlt, FaSpinner } from 'react-icons/fa';
-const Buffer = require('buffer/').Buffer;
-const protocol = process.env.IPFS_HOST ? 'https' : 'http';
-const port = process.env.IPFS_HOST ? 5002 : 5001;
 import css from 'styled-jsx/css';
+import { Line } from 'rc-progress';
 
 interface IState {
   hash?: string;
   isLoading: boolean;
   hasError: boolean;
+  percentCompleted?: number;
+  uri?: string;
 }
-class UploadFileForm extends React.Component {
+class UploadFileForm extends React.Component<{}, IState> {
   state: IState  = {
     hash: undefined,
     isLoading: false,
     hasError: false,
   };
-  ipfsAPI = IpfsApi(process.env.IPFS_HOST || 'localhost', port, { protocol });
 
   onDrop = async (files: File[]) => {
-    const reader = new FileReader();
-    this.setState({
-      isLoading: true,
-      hasError: false,
-    });
-
-    reader.onloadend = async () => {
-      const buf = Buffer(reader.result);
-      this.uploadToIpfs(buf);
-    };
-    reader.readAsArrayBuffer(files[0]);
+    if (this.state.isLoading) {
+      return;
+    }
+    const formData = new FormData();
+    console.log(files[0]);
+    formData.append('operations', '{"operationName":null,"variables":{"file":null},"query":"mutation ($file: Upload!) {  file: uploadPublicFile(file: $file) {    uri    __typename  }}"}');
+    formData.append('map', '{ "0": ["variables.file"] }');
+    formData.append('0', files[0]);
+    this.uploadToIpfs(formData);
   }
 
   onCancel = () => {
-    this.setState({
-      file: undefined,
-    });
   }
 
-  uploadToIpfs = async (buf: ArrayBuffer) => {
+  uploadToIpfs = async (formData: FormData) => {
+    this.setState({
+      isLoading: true,
+      percentCompleted: 0,
+      hasError: false,
+    });
     try {
-      const response = await this.ipfsAPI.files.add(buf, { progress: (prog: any) => console.log(`received: ${prog}`) });
-      console.log(response);
+      const response = await axios({
+        method: 'post',
+        url: `${process.env.GRAPHQL_URI}`,
+        data: formData,
+        headers: {
+          'Content-Type': 'multipart/form-data',
+        },
+        onUploadProgress: (progressEvent) => {
+          const percentCompleted = Math.floor((progressEvent.loaded * 100) / progressEvent.total);
+          this.setState({
+            percentCompleted: percentCompleted >= 95 ? 95 : percentCompleted,
+          });
+        },
+      });
       this.setState({
-        hash: response[0].hash,
+        uri: response.data.data.file.uri,
         isLoading: false,
+        percentCompleted: 100,
       });
     } catch (err) {
       console.error(err);
@@ -60,7 +73,7 @@ class UploadFileForm extends React.Component {
 
   render() {
     return (
-      <section>
+      <React.Fragment>
         <div className="dropzone-wrapper">
           <Dropzone
             style={styles.dropzone}
@@ -70,27 +83,22 @@ class UploadFileForm extends React.Component {
           >
             <p>Click or drag file to this area to upload</p>
             { this.state.isLoading
-              ? <FaSpinner className={spinResolveCSS.className} />
+              ? <React.Fragment>
+                  <FaSpinner className={spinResolveCSS.className} />
+                  <Line percent={this.state.percentCompleted} strokeWidth="1" strokeColor="#90cfbe" />
+                </React.Fragment>
               : <FaCloudUploadAlt size={50} style={styles.icon} />
             }
           </Dropzone>
         </div>
 
         <div className="hash-result">
-          <a target="_blank" href={`http://network.poseidon.one/ipfs/${this.state.hash}`}>
-            { this.state.hash }
+          <a target="_blank" href={this.state.uri}>
+            { this.state.uri }
           </a>
         </div>
         { spinResolveCSS.styles  }
         <style jsx>{`
-          section {
-            width: 100%;
-            min-height: 500px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-          }
-
           .dropzone-wrapper {
             background-color: #d7f2ee;
             border-radius: 3px;
@@ -118,14 +126,14 @@ class UploadFileForm extends React.Component {
             text-align: center;
           }
         `}</style>
-
-      </section>
+      </React.Fragment>
     );
   }
 }
 
 const spinResolveCSS = css.resolve`
 svg {
+  margin-bottom: 27px;
   -webkit-animation: icon-spin 2s infinite linear;
           animation: icon-spin 2s infinite linear;
 }
@@ -169,7 +177,7 @@ const styles = {
     borderColor: 'rgb(49, 167, 135)',
   },
   icon: {
-
+    marginBottom: 15,
   },
 };
 
