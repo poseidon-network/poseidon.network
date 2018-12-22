@@ -1,139 +1,124 @@
 import React from 'react';
 import Dropzone from 'react-dropzone';
-import axios from 'axios';
 // @ts-ignore
 import IpfsApi from 'ipfs-api';
-import { FaCloudUploadAlt, FaSpinner } from 'react-icons/fa';
+import { FaSpinner } from 'react-icons/fa';
 import css from 'styled-jsx/css';
 import { Line } from 'rc-progress';
-import SocialShareList from './SocialShareList';
 
-interface IState {
-  hash?: string;
+interface IProps {
+  onDrop: (files: File[]) => void;
   isLoading: boolean;
-  hasError: boolean;
   percentCompleted?: number;
-  uri?: string;
 }
-class UploadFileForm extends React.Component<{}, IState> {
-  state: IState  = {
-    hash: undefined,
-    isLoading: false,
-    hasError: false,
-  };
-
-  onDrop = async (files: File[]) => {
-    if (this.state.isLoading) {
-      return;
-    }
-    const formData = new FormData();
-    console.log(files[0]);
-    formData.append('operations', '{"operationName":null,"variables":{"file":null},"query":"mutation ($file: Upload!) {  file: uploadPublicFile(file: $file) {    uri    __typename  }}"}');
-    formData.append('map', '{ "0": ["variables.file"] }');
-    formData.append('0', files[0]);
-    this.uploadToIpfs(formData);
-  }
-
-  onCancel = () => {
-  }
-
-  uploadToIpfs = async (formData: FormData) => {
-    this.setState({
-      isLoading: true,
-      percentCompleted: 0,
-      hasError: false,
-    });
-    try {
-      const response = await axios({
-        method: 'post',
-        url: `${process.env.GRAPHQL_URI}`,
-        data: formData,
-        headers: {
-          'Content-Type': 'multipart/form-data',
-        },
-        onUploadProgress: (progressEvent) => {
-          const percentCompleted = Math.floor((progressEvent.loaded * 100) / progressEvent.total);
-          this.setState({
-            percentCompleted: percentCompleted >= 95 ? 95 : percentCompleted,
-          });
-        },
-      });
-      this.setState({
-        uri: response.data.data.file.uri,
-        isLoading: false,
-        percentCompleted: 100,
-      });
-    } catch (err) {
-      console.error(err);
-      this.setState({
-        isLoading: false,
-        hasError: true,
-      });
-    }
-  }
-
-  render() {
-    return (
-      <React.Fragment>
-        <div className="dropzone-wrapper">
-          <Dropzone
-            style={styles.dropzone}
-            acceptStyle={styles.dropzoneActive}
-            onDrop={this.onDrop}
-            onFileDialogCancel={this.onCancel}
-          >
-            <p>Click or drag file to this area to upload</p>
-            { this.state.isLoading
-              ? <React.Fragment>
-                  <FaSpinner className={spinResolveCSS.className} />
-                  <Line percent={this.state.percentCompleted} strokeWidth="1" strokeColor="#90cfbe" />
-                </React.Fragment>
-              : <FaCloudUploadAlt size={50} style={styles.icon} />
-            }
-          </Dropzone>
+const UploadFileForm = ({ onDrop, isLoading, percentCompleted  }: IProps) => (
+  <div className="container">
+    <div className="header">
+      <div className="col-title">Add file</div>
+    </div>
+    <div className="dropzone-wrapper">
+      <Dropzone
+        style={styles.dropzone}
+        acceptStyle={styles.dropzoneActive}
+        onDrop={onDrop}
+      >
+        <div className="upload-hint">
+          { isLoading
+            ? <React.Fragment>
+                <FaSpinner className={spinResolveCSS.className} />
+                <Line percent={percentCompleted} strokeWidth="1" strokeColor="#90cfbe" />
+              </React.Fragment>
+            : <img className="upload-icon" src="./static/img-upload-file@3x.png" alt="upload icon" />
+          }
+          <p>You can click button or drag file to this area to add file</p>
         </div>
+        <button className="button">
+          Add file
+        </button>
+      </Dropzone>
+    </div>
 
-        { this.state.uri &&
-          <div className="hash-result">
-            <a target="_blank" href={this.state.uri}>
-              { this.state.uri }
-            </a>
-            <SocialShareList link={this.state.uri} />
-          </div>
+    { spinResolveCSS.styles  }
+    <style jsx>{`
+      .container {
+        z-index: 0;
+      }
+      .dropzone-wrapper {
+        border-radius: 3px;
+        padding: 10px;
+        display: flex;
+        margin-left: 32px;
+        width: 349px;
+        height: 600px;
+        border: 1px dashed #90cfbe;
+      }
+
+      p {
+        font-family: Montserrat;
+        font-size: 15px;
+        font-weight: 500;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: -0.1px;
+        text-align: center;
+        color: #ffffff;
+      }
+
+      .hash-result {
+        margin-top: 10px;
+        width: 90%;
+        max-width: 500px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-align: center;
+      }
+
+      .header {
+        display: flex;
+        padding: 12px 20px 12px 30px;
+        width: 100%;
+      }
+
+      .col-title {
+        font-family: Montserrat;
+        font-size: 12px;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: -0.1px;
+        color: #fff;
+      }
+
+      .upload-hint {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .upload-icon {
+        width: 125px;
+      }
+
+      .button {
+        width: 285px;
+        height: 50px;
+        border-radius: 4px;
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+        background-color: #90cfbe;
+        align-self: flex-end;
+        border: 0;
+      }
+
+      @media only screen and (max-width: 600px) {
+        .dropzone-wrapper {
+          margin-left: 0;
         }
-        { spinResolveCSS.styles  }
-        <style jsx>{`
-          .dropzone-wrapper {
-            background-color: #d7f2ee;
-            border-radius: 3px;
-            padding: 10px;
-            display: flex;
-            width: 90%;
-            max-width: 600px;
-            height: 150px;
-          }
-
-          p {
-            color: #222633;
-            opacity: 0.64;
-            font-size: 16px;
-            line-height: 1.31;
-            text-align: center;
-          }
-
-          .hash-result {
-            margin-top: 10px;
-            width: 90%;
-            max-width: 500px;
-            white-space: nowrap;
-            overflow: hidden;
-            text-align: center;
-          }
-        `}</style>
-      </React.Fragment>
-    );
-  }
-}
+      }
+    `}</style>
+  </div>
+);
 
 const spinResolveCSS = css.resolve`
 svg {
@@ -167,14 +152,15 @@ svg {
 
 const styles = {
   dropzone: {
-    border: '1px dashed #90cfbe',
+    border: 0,
     display: 'flex',
-    flexDirection: 'column' as 'column',
+    flexWrap: 'wrap' as 'wrap',
     height: '100%',
     width: '100%',
     cursor: 'pointer',
     alignItems: 'center',
-    padding: '0 10px',
+    padding: '153px 32px 32px',
+    justifyContent: 'center',
   },
   dropzoneActive: {
     opacity: 0.7,

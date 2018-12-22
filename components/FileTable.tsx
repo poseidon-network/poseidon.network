@@ -1,4 +1,7 @@
 import React from 'react';
+import FileContentLoading from './FileContentLoading';
+import fileStyle from './fileStyle';
+import FileRow from './FileRow';
 
 interface IFile {
   name: string;
@@ -7,90 +10,71 @@ interface IFile {
   hash: string;
 }
 
+interface IState {
+  activeItemHash?: string;
+}
+
 interface IProps {
   fileList: IFile[];
+  isLoading: boolean;
 }
-const FileTable = ({ fileList }: IProps) => ((
-  <table>
-    <thead>
-      <tr>
-        <th className="th-name"><div>Name</div></th>
-        <th className="th-size"><div>Size</div></th>
-        <th className="th-hash"><div>Hash</div></th>
-      </tr>
-    </thead>
-    <tbody>
-      {
-        fileList.map(({ name, size, hash, uri }) => (
-          <tr>
-            <td><div>{ name }</div></td><td><div>{ size }</div></td><td><a target="_blank" href={uri}>{ hash }</a></td>
-          </tr>
-        ))
-      }
-    </tbody>
-    <style jsx>{`
-      table {
-        margin-top: 20px;
-        width: 90%;
-        max-width: 600px;
-        font-size: 14px;
-        border: 1px solid;
-        border-radius: 5px;
-        padding: 10px;
-        table-layout: fixed;
-      }
+class FileTable extends React.Component<IProps, IState> {
+  state = {
+    activeItemHash: undefined,
+  };
 
-      thead tr{
-        display: flex;
-      }
+  componentDidMount() {
+    document.body.addEventListener('click', () => {
+      this.setState({
+        activeItemHash: undefined,
+      });
+    });
+  }
 
-      .th-name {
-        width: 80px;
-      }
+  handleClickAction = (activeItemHash: string) => {
+    this.setState({
+      activeItemHash,
+    });
+  }
 
-      .th-size {
-        width: 80px;
-      }
+  getFileImage = (name: string) => {
+    const ext = name.split('.').pop() || '';
+    if (['jpg', 'png', 'gif', 'svg'].includes(ext)) {
+      return './static/ic-img@2x.png';
+    }
+    if (['mp4', 'mov', 'wmv', 'avi', 'mpeg'].includes(ext)) {
+      return './static/ic-mov@2x.png';
+    }
+    return './static/ic-placholder@2x.png';
+  }
 
-      .th-hash {
-        flex: 1;
-      }
-
-      tbody {
-        display: block;
-        overflow: auto;
-        height: 200px;
-      }
-
-      th {
-        border-bottom: 1px solid;
-        color: #fff;
-        padding-bottom: 7px;
-      }
-
-      td {
-        word-break: break-word;
-        padding: 5px;
-        min-width: 80px;
-      }
-
-      @media only screen and (min-width: 600px) {
-        td {
-          word-break: break-word;
-          padding: 16px;
-          min-width: 120px;
-        }
-
-        .th-name {
-          width: 120px;
-        }
-
-        .th-size {
-          width: 120px;
-        }
-      }
-    `}</style>
-  </table>
-));
+  render () {
+    return (
+      <div className="container">
+        <div className="header">
+          <div className="col1-title">Recent file</div>
+          <div className="col2-title">Hash</div>
+        </div>
+        <div className="table">
+          { this.props.isLoading && <FileContentLoading /> }
+          { this.props.fileList.map(({ name, size, hash, uri }, index) => (
+            <FileRow
+              key={`${hash}${index}`}
+              name={name}
+              size={size}
+              hash={hash}
+              uri={uri}
+              fileID={`${hash}${index}`}
+              activeItemHash={this.state.activeItemHash}
+              getFileImage={this.getFileImage}
+              handleClickAction={this.handleClickAction}
+            />
+          ))}
+        </div>
+        { fileStyle }
+      </div>
+    );
+  }
+}
 
 export default FileTable;
