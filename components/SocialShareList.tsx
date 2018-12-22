@@ -5,17 +5,17 @@ import { CopyToClipboard } from 'react-copy-to-clipboard';
 const SocialShareList = ({ link }: { link: string }) => ((
   <div className="container">
     <a href={`mailto:?subject=&body=${link}`}>
-      <img src="./static/ic-mail@2x.png" />
+      <img src="/static/ic-mail@2x.png" />
     </a>
     <a href={`https://facebook.com/sharer/sharer.php?u=${link}`}>
-      <img src="./static/ic-facebook@2x.png" />
+      <img src="/static/ic-facebook@2x.png" />
     </a>
     <a href={`https://twitter.com/intent/tweet/?text=&url=${link}`}>
-      <img src="./static/ic-twitter@2x.png" />
+      <img src="/static/ic-twitter@2x.png" />
     </a>
     <div className="clipboard" onClick={(event: SyntheticEvent) => event.stopPropagation()}>
       <CopyToClipboard text={link}>
-        <img src="./static/ic-copylink@2x.png" />
+        <img src="/static/ic-copylink@2x.png" />
       </CopyToClipboard>
     </div>
     <style jsx>{`
