@@ -40,12 +40,12 @@ class FileTable extends React.Component<IProps, IState> {
   getFileImage = (name: string) => {
     const ext = name.split('.').pop() || '';
     if (['jpg', 'png', 'gif', 'svg'].includes(ext)) {
-      return './static/ic-img@2x.png';
+      return '/static/ic-img@2x.png';
     }
     if (['mp4', 'mov', 'wmv', 'avi', 'mpeg'].includes(ext)) {
-      return './static/ic-mov@2x.png';
+      return '/static/ic-mov@2x.png';
     }
-    return './static/ic-placholder@2x.png';
+    return '/static/ic-placholder@2x.png';
   }
 
   render () {

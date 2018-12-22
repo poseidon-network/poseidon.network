@@ -28,7 +28,7 @@ const UploadFileForm = ({ onDrop, isLoading, percentCompleted  }: IProps) => (
                 <FaSpinner className={spinResolveCSS.className} />
                 <Line percent={percentCompleted} strokeWidth="1" strokeColor="#90cfbe" />
               </React.Fragment>
-            : <img className="upload-icon" src="./static/img-upload-file@3x.png" alt="upload icon" />
+            : <img className="upload-icon" src="/static/img-upload-file@3x.png" alt="upload icon" />
           }
           <p>You can click button or drag file to this area to add file</p>
         </div>
