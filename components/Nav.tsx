@@ -10,7 +10,7 @@ const Nav = () => ((
         <span></span>
         <span></span>
         <ul id="menu">
-        <a href="/demo"><li>demo</li></a>
+        <a href="/demo"><li>Demo</li></a>
           <a href="#feature"><li>Feature</li></a>
           <a href="#partners"><li>Partners</li></a>
           <a href="#roadmap"><li>Roadmap</li></a>
