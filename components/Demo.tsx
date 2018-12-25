@@ -25,7 +25,7 @@ export default class Demo extends React.Component<{}, IState> {
   state:IState = {
     fileList: [],
     hash: undefined,
-    isLoading: false,
+    isLoading: true,
     hasError: false,
   };
 
@@ -46,6 +46,9 @@ export default class Demo extends React.Component<{}, IState> {
     } catch (error) {
       console.log(error);
     }
+    this.setState({
+      isLoading: false,
+    });
   }
 
   onDrop = async (files: File[]) => {
