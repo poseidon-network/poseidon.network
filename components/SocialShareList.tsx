@@ -1,6 +1,5 @@
-import React, { SyntheticEvent } from 'react';
-// @ts-ignore
-import { CopyToClipboard } from 'react-copy-to-clipboard';
+import React from 'react';
+import CopyToClipboard from 'react-copy-to-clipboard';
 
 const SocialShareList = ({ link }: { link: string }) => ((
   <div className="container">
@@ -13,11 +12,13 @@ const SocialShareList = ({ link }: { link: string }) => ((
     <a href={`https://twitter.com/intent/tweet/?text=&url=${link}`}>
       <img src="/static/ic-twitter@2x.png" />
     </a>
-    <div className="clipboard" onClick={(event: SyntheticEvent) => event.stopPropagation()}>
+
+    <div className="clipboard">
       <CopyToClipboard text={link}>
         <img src="/static/ic-copylink@2x.png" />
       </CopyToClipboard>
     </div>
+
     <style jsx>{`
       .container {
         position: absolute;
