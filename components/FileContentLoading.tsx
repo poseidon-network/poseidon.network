@@ -62,7 +62,9 @@ const FileCotentLoading = () => (
       </ContentLoader>
     </div>
   </div>
-  { fileStyle }
+  <style jsx>
+    { fileStyle }
+  </style>
 </React.Fragment>
 );
 

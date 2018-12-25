@@ -24,11 +24,13 @@ class FileTable extends React.Component<IProps, IState> {
   };
 
   componentDidMount() {
-    document.body.addEventListener('click', () => {
-      this.setState({
-        activeItemHash: undefined,
-      });
-    });
+    document.body.addEventListener('click', ({ target }: any) => {
+      if (target.tagName !== 'IMG') {
+        this.setState({
+          activeItemHash: undefined,
+        });
+      }
+    }, false);
   }
 
   handleClickAction = (activeItemHash: string) => {
@@ -71,7 +73,9 @@ class FileTable extends React.Component<IProps, IState> {
             />
           ))}
         </div>
+        <style jsx>
         { fileStyle }
+        </style>
       </div>
     );
   }

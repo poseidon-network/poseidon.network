@@ -41,7 +41,9 @@ const FileRow = ({
     </div>
   </div>
   <div className="line"/>
-  { fileStyle }
+  <style jsx>
+    { fileStyle }
+  </style>
 </React.Fragment>
 );
 

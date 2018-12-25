@@ -1,4 +1,6 @@
-const style = <style jsx>{`
+import css from 'styled-jsx/css';
+
+const style = css`
 .container {
   z-index: 1;
 }
@@ -159,6 +161,6 @@ const style = <style jsx>{`
     margin-right: 29px;
   }
 }
-`}</style>;
+`;
 
 export default style;
