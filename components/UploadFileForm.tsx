@@ -13,9 +13,6 @@ interface IProps {
 }
 const UploadFileForm = ({ onDrop, isLoading, percentCompleted  }: IProps) => (
   <div className="container">
-    <div className="header">
-      <div className="col-title">Add file</div>
-    </div>
     <div className="dropzone-wrapper">
       <Dropzone
         style={styles.dropzone}
@@ -24,17 +21,14 @@ const UploadFileForm = ({ onDrop, isLoading, percentCompleted  }: IProps) => (
       >
         <div className="upload-hint">
           { isLoading
-            ? <React.Fragment>
+            && <React.Fragment>
                 <FaSpinner className={spinResolveCSS.className} />
                 <Line percent={percentCompleted} strokeWidth="1" strokeColor="#90cfbe" />
               </React.Fragment>
-            : <img className="upload-icon" src="/static/img-upload-file@3x.png" alt="upload icon" />
           }
-          <p>You can click button or drag file to this area to add file</p>
+          <p>Firstly, try to drag and drop your file here!</p>
+          <small>Onee you...</small>
         </div>
-        <button className="button">
-          Add file
-        </button>
       </Dropzone>
     </div>
 
@@ -42,14 +36,15 @@ const UploadFileForm = ({ onDrop, isLoading, percentCompleted  }: IProps) => (
     <style jsx>{`
       .container {
         z-index: 0;
+        height: 256px;
+        width: 100%;
+        margin-bottom: 87px;
       }
       .dropzone-wrapper {
         border-radius: 3px;
         padding: 10px;
         display: flex;
         margin-left: 32px;
-        width: 349px;
-        height: 600px;
         border: 1px dashed #90cfbe;
       }
 
@@ -63,6 +58,16 @@ const UploadFileForm = ({ onDrop, isLoading, percentCompleted  }: IProps) => (
         letter-spacing: -0.1px;
         text-align: center;
         color: #ffffff;
+        font-size: 21px;
+      }
+
+      small {
+        font-family: Montserrat;
+        font-size: 16px;
+        font-weight: 500;
+        letter-spacing: -0.1px;
+        text-align: center;
+        color: #fff;
       }
 
       .hash-result {

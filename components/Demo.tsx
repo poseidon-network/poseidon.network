@@ -104,14 +104,14 @@ export default class Demo extends React.Component<{}, IState> {
       <Layout bgColor="#222633" color="#90cfbe">
         <Content>
           <section>
-            <FileTable
-              isLoading={this.state.isLoading}
-              fileList={this.state.fileList}
-            />
             <UploadFileForm
               onDrop={this.onDrop}
               percentCompleted={this.state.percentCompleted}
               isLoading={this.state.isLoading}
+            />
+            <FileTable
+              isLoading={this.state.isLoading}
+              fileList={this.state.fileList}
             />
           </section>
           <style jsx>{`
@@ -121,12 +121,6 @@ export default class Demo extends React.Component<{}, IState> {
               display: flex;
               flex-direction: column;
               align-items: center;
-            }
-
-            @media only screen and (min-width: 1200px) {
-              section {
-                flex-direction: row;
-              }
             }
           `}</style>
         </Content>

@@ -3,6 +3,10 @@ import css from 'styled-jsx/css';
 const style = css`
 .container {
   z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
 }
 
 .header {
@@ -121,6 +125,10 @@ const style = css`
 
 
 @media only screen and (min-width: 600px) {
+  .container {
+    width: initial;
+  }
+
   .table {
     width: 728px;
     height: 600px;
