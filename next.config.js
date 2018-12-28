@@ -5,6 +5,7 @@ module.exports = withTypescript({
   exportPathMap: () => ({
     '/': { page: '/' },
     '/demo': { page: '/demo' },
+    '/preview': { page: '/preview' },
   }),
   webpack(config) {
     config.plugins.push(new webpack.EnvironmentPlugin({
