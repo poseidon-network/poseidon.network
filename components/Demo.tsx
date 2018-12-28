@@ -7,9 +7,9 @@ import UploadFileForm from './UploadFileForm';
 import FileTable from './FileTable';
 
 interface IFile {
+  id: string;
   name: string;
   size: number;
-  uri: string;
   hash: string;
 }
 
@@ -17,9 +17,8 @@ interface IState {
   fileList: IFile[];
   isLoading: boolean;
   hasError: boolean;
-  hash?: string;
   percentCompleted?: number;
-  uri?: string;
+  hash?: string;
 }
 export default class Demo extends React.Component<{}, IState> {
   state:IState = {
@@ -38,7 +37,7 @@ export default class Demo extends React.Component<{}, IState> {
       const response = await axios.post(`${process.env.GRAPHQL_URI}`, {
         operationName:null,
         variables:{},
-        query: '{files {    name    size    uri   hash  }}',
+        query: '{files {  id    name    size    hash  }}',
       });
       this.setState({
         fileList: response.data.data.files.reverse(),
@@ -56,7 +55,6 @@ export default class Demo extends React.Component<{}, IState> {
       return;
     }
     const formData = new FormData();
-    console.log(files[0]);
     formData.append('operations', '{"operationName":null,"variables":{"file":null},"query":"mutation ($file: Upload!) {  file: uploadPublicFile(file: $file) {    uri    __typename  }}"}');
     formData.append('map', '{ "0": ["variables.file"] }');
     formData.append('0', files[0]);
@@ -71,7 +69,7 @@ export default class Demo extends React.Component<{}, IState> {
       hasError: false,
     });
     try {
-      const response = await axios({
+      await axios({
         method: 'post',
         url: `${process.env.GRAPHQL_URI}`,
         data: formData,
@@ -86,7 +84,6 @@ export default class Demo extends React.Component<{}, IState> {
         },
       });
       this.setState({
-        uri: response.data.data.file.uri,
         isLoading: false,
         percentCompleted: 100,
       });

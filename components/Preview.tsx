@@ -2,13 +2,14 @@ import React from 'react';
 import axios from 'axios';
 
 interface IProps {
-  videoID?: string | string[] | undefined;
+  fileID?: string | string[] | undefined;
 }
 
 interface IState {
   file?: {
     name: string;
     uri: string;
+    mimetype: string;
   };
 }
 
@@ -18,12 +19,12 @@ export default class Video extends React.Component<IProps, IState> {
   };
 
   async componentDidMount() {
-    const { videoID } = this.props;
-    if (videoID) {
+    const { fileID } = this.props;
+    if (fileID) {
       const { data: { data } } = await axios.post(`${process.env.GRAPHQL_URI}`, {
         operationName:null,
         variables:{},
-        query: `{ file(id: "${videoID}") {    name    uri  }}`,
+        query: `{ file(id: "${fileID}") {    name    uri   mimetype}}`,
       });
 
       if (data.file) {
@@ -36,14 +37,21 @@ export default class Video extends React.Component<IProps, IState> {
 
   render() {
     const { file } = this.state;
+    if (!file) {
+      return null;
+    }
     return (
       <div>
         {
-          file &&
-          <video controls controlsList="nodownload">
-            <source src={file.uri} type="video/mp4" />
-          </video>
-        }
+          file.mimetype === 'video/mp4' ? (
+            <video controls controlsList="nodownload">
+              <source src={file.uri} type="video/mp4" />
+            </video>
+          )
+          : ['image/png', 'image/jpg'].includes(file.mimetype)
+          ? <img src={file.uri} />
+          : <iframe src={file.uri} />
+      }
 
       <style jsx>{`
         div {
@@ -55,7 +63,7 @@ export default class Video extends React.Component<IProps, IState> {
           justify-content: center;
         }
 
-        video {
+        video, img, iframe {
           width: 90%;
           max-width: 920px;
         }

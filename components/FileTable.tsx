@@ -4,9 +4,9 @@ import fileStyle from './fileStyle';
 import FileRow from './FileRow';
 
 interface IFile {
+  id: string;
   name: string;
   size: number;
-  uri: string;
   hash: string;
 }
 
@@ -59,13 +59,13 @@ class FileTable extends React.Component<IProps, IState> {
         </div>
         <div className="table">
           { this.props.isLoading && <FileContentLoading /> }
-          { this.props.fileList.map(({ name, size, hash, uri }, index) => (
+          { this.props.fileList.map(({ id, name, size, hash }, index) => (
             <FileRow
               key={`${hash}${index}`}
               name={name}
               size={size}
               hash={hash}
-              uri={uri}
+              uri={`${window.location.protocol}//${window.location.host}/preview?q=${id}`}
               fileID={`${hash}${index}`}
               activeItemHash={this.state.activeItemHash}
               getFileImage={this.getFileImage}
