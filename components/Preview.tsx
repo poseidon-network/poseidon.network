@@ -59,6 +59,7 @@ export default class Video extends React.Component<IProps, IState> {
           display: flex;
           align-items: center;
           justify-content: center;
+          min-height: 80vh;
         }
 
         video, img, iframe {

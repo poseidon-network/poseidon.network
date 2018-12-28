@@ -10,7 +10,7 @@ const Index = () => ((
       <title>Poseidon Network</title>
     </Head>
     <Nav />
-    <Preview fileID={(router.query || {}).q} />
+    <Preview />
     <Footer />
   </Page>
 ));
