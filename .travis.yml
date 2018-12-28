@@ -16,7 +16,7 @@ script:
 - npm run tsc
 - npm run lint
 - npm run export
-- touch ./out/.nojekyll && echo $CNAME > ./out/CNAME
+- npm run pre-deploy
 deploy:
   provider: pages
   skip-cleanup: true
