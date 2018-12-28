@@ -4,7 +4,7 @@
         "details": [
             {
                 "appID": "9UPSH9943Q.network.poseidon.poseidon",
-                "paths": [ "/video/*" ]
+                "paths": [ "/preview/*" ]
             }
         ]
     }
