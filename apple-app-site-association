@@ -1,0 +1,11 @@
+{
+    "applinks": {
+        "apps": [],
+        "details": [
+            {
+                "appID": "network.poseidon.poseidon",
+                "paths": [ "/video/*" ]
+            }
+        ]
+    }
+}
