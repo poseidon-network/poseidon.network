@@ -1,9 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 
-interface IProps {
-  fileID?: string | string[] | undefined;
-}
+interface IProps {}
 
 interface IState {
   file?: {
@@ -19,7 +17,7 @@ export default class Video extends React.Component<IProps, IState> {
   };
 
   async componentDidMount() {
-    const { fileID } = this.props;
+    const fileID = new URLSearchParams(window.location.search).get('q');
     if (fileID) {
       const { data: { data } } = await axios.post(`${process.env.GRAPHQL_URI}`, {
         operationName:null,
