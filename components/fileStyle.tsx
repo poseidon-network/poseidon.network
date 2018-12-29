@@ -112,7 +112,7 @@ const style = css`
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  cursor: pointer;
+  min-width: 28px;
   position: relative;
 }
 
@@ -168,6 +168,14 @@ const style = css`
     background-color: #222633;
     align-self: flex-end;
     margin-right: 29px;
+  }
+
+  .row {
+    overflow: auto;
+  }
+
+  .action {
+    position: initial;
   }
 }
 `;

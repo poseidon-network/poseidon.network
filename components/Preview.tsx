@@ -9,11 +9,13 @@ interface IState {
     uri: string;
     mimetype: string;
   };
+  isLoading: boolean;
 }
 
 export default class Video extends React.Component<IProps, IState> {
   state: IState = {
     file: undefined,
+    isLoading: true,
   };
 
   async componentDidMount() {
@@ -31,10 +33,13 @@ export default class Video extends React.Component<IProps, IState> {
         });
       }
     }
+    this.setState({
+      isLoading: false,
+    });
   }
 
   render() {
-    const { file } = this.state;
+    const { file, isLoading } = this.state;
     return (
       <div>
         {
@@ -47,7 +52,7 @@ export default class Video extends React.Component<IProps, IState> {
             : ['image/png', 'image/jpg'].includes(file.mimetype)
               ? <img src={file.uri} />
               : <iframe src={file.uri} />
-          ) : <p>FILE NOT FOUND！</p>
+          ) : <p>{ isLoading ? '' : 'FILE NOT FOUND！' }</p>
       }
 
       <style jsx>{`

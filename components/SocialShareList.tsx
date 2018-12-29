@@ -13,17 +13,16 @@ const SocialShareList = ({ link }: { link: string }) => ((
       <img src="/static/ic-twitter@2x.png" />
     </a>
 
-    <div className="clipboard">
-      <CopyToClipboard text={link}>
+    <CopyToClipboard text={link}>
+      <div className="clipboard">
         <img src="/static/ic-copylink@2x.png" />
-      </CopyToClipboard>
-    </div>
+      </div>
+    </CopyToClipboard>
 
     <style jsx>{`
       .container {
         position: absolute;
         background-color: #fff;
-        padding: 11px 20px;
         width: 236px;
         display: flex;
         justify-content: space-between;
@@ -33,11 +32,10 @@ const SocialShareList = ({ link }: { link: string }) => ((
         width: 22px;
         height: 22px;
         opacity: 0.32;
-      }
-
-      .clipboard {
+        margin: 11px 15px;
         cursor: pointer;
       }
+
 
       .clipboard > img {
         opacity: 1;
