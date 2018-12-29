@@ -49,7 +49,7 @@ export default class Video extends React.Component<IProps, IState> {
                 <source src={file.uri} type="video/mp4" />
               </video>
             )
-            : ['image/png', 'image/jpg'].includes(file.mimetype)
+            : ['image/png', 'image/jpg', 'image/jpeg', 'image/gif'].includes(file.mimetype)
               ? <img src={file.uri} />
               : <iframe src={file.uri} />
           ) : <p>{ isLoading ? '' : 'FILE NOT FOUND！' }</p>
