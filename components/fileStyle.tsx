@@ -162,6 +162,7 @@ const style = css`
   .file-name {
     width: 100%;
     font-size: 15px;
+    max-width: 395px;
   }
 
   .line {
