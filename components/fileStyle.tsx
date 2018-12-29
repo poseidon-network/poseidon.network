@@ -113,6 +113,7 @@ const style = css`
   justify-content: space-evenly;
   align-items: center;
   cursor: pointer;
+  position: relative;
 }
 
 .bs-circle {
