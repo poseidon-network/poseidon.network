@@ -27,7 +27,7 @@ const UploadFileForm = ({ onDrop, isLoading, percentCompleted  }: IProps) => (
               </React.Fragment>
           }
           <p>Firstly, try to drag and drop your file here!</p>
-          <small>Onee you...</small>
+          <small>Once you...</small>
         </div>
       </Dropzone>
     </div>
