@@ -40,7 +40,7 @@ export default class Demo extends React.Component<{}, IState> {
         query: '{files(filter: { take: 9  }) {  id    name    size    hash  }}',
       });
       this.setState({
-        fileList: response.data.data.files.reverse(),
+        fileList: response.data.data.files,
       });
     } catch (error) {
       console.log(error);
