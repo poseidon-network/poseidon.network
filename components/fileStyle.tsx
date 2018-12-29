@@ -74,6 +74,10 @@ const style = css`
   letter-spacing: -0.1px;
   color: #222633;
   margin-bottom: 8px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-right: 10px;
 }
 
 .hash {

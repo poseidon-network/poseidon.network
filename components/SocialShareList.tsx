@@ -36,7 +36,6 @@ const SocialShareList = ({ link }: { link: string }) => ((
         cursor: pointer;
       }
 
-
       .clipboard > img {
         opacity: 1;
       }
