@@ -35,20 +35,19 @@ export default class Video extends React.Component<IProps, IState> {
 
   render() {
     const { file } = this.state;
-    if (!file) {
-      return null;
-    }
     return (
       <div>
         {
-          file.mimetype === 'video/mp4' ? (
-            <video controls controlsList="nodownload">
-              <source src={file.uri} type="video/mp4" />
-            </video>
-          )
-          : ['image/png', 'image/jpg'].includes(file.mimetype)
-          ? <img src={file.uri} />
-          : <iframe src={file.uri} />
+          file ? (
+            file.mimetype === 'video/mp4' ? (
+              <video controls controlsList="nodownload">
+                <source src={file.uri} type="video/mp4" />
+              </video>
+            )
+            : ['image/png', 'image/jpg'].includes(file.mimetype)
+              ? <img src={file.uri} />
+              : <iframe src={file.uri} />
+          ) : <p>FILE NOT FOUND！</p>
       }
 
       <style jsx>{`
@@ -65,6 +64,10 @@ export default class Video extends React.Component<IProps, IState> {
         video, img, iframe {
           width: 90%;
           max-width: 920px;
+        }
+
+        p {
+          color: #fff;
         }
       `}</style>
       </div>
