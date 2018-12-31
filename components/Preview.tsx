@@ -113,7 +113,7 @@ export default class Video extends React.Component<IProps, IState> {
 
         .modal-text {
           color: #fff;
-          font-size: 20;
+          font-size: 20px;
           background: #070707c2;
           padding: 16px 24px;
           border-radius: 10px;
