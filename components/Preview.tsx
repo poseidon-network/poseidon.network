@@ -10,13 +10,16 @@ interface IState {
     mimetype: string;
   };
   isLoading: boolean;
+  isExceedPreviewQuta: boolean;
 }
 
 export default class Video extends React.Component<IProps, IState> {
   state: IState = {
     file: undefined,
     isLoading: true,
+    isExceedPreviewQuta: false,
   };
+  myVideo: React.RefObject<HTMLVideoElement> = React.createRef();
 
   async componentDidMount() {
     const fileID = new URLSearchParams(window.location.search).get('q');
@@ -38,14 +41,31 @@ export default class Video extends React.Component<IProps, IState> {
     });
   }
 
+  handleUpdateTime = () => {
+    const video = this.myVideo.current;
+    if (video) {
+      if (video.currentTime >= (video.duration) / 10) {
+        video.pause();
+        this.setState({
+          isExceedPreviewQuta: true,
+        });
+      }
+    }
+  }
+
   render() {
     const { file, isLoading } = this.state;
     return (
-      <div>
+      <div className="container">
         {
           file ? (
             file.mimetype === 'video/mp4' ? (
-              <video controls controlsList="nodownload">
+              <video
+                ref={this.myVideo}
+                controls={!this.state.isExceedPreviewQuta}
+                controlsList="nodownload"
+                onTimeUpdate={this.handleUpdateTime}
+              >
                 <source src={file.uri} type="video/mp4" />
               </video>
             )
@@ -53,10 +73,15 @@ export default class Video extends React.Component<IProps, IState> {
               ? <img src={file.uri} />
               : <iframe src={file.uri} />
           ) : <p>{ isLoading ? '' : 'FILE NOT FOUND！' }</p>
-      }
-
+        }
+        {
+          this.state.isExceedPreviewQuta &&
+          <div className="modal">
+            <p className="modal-text">To continue watch this video, please pay and watch in the APP!</p>
+          </div>
+        }
       <style jsx>{`
-        div {
+        .container {
           background-color: #222633;
           padding: 50px 0;
           margin: 0;
@@ -73,6 +98,25 @@ export default class Video extends React.Component<IProps, IState> {
 
         p {
           color: #fff;
+        }
+
+        .modal {
+          position: fixed;
+          width: 100%;
+          height: 100%;
+          background-color: #00000063;
+          top: 0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        .modal-text {
+          color: #fff;
+          font-size: 20;
+          background: #070707c2;
+          padding: 16px 24px;
+          border-radius: 10px;
         }
       `}</style>
       </div>
