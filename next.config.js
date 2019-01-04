@@ -6,7 +6,7 @@ module.exports = withTypescript({
     '/': { page: '/' },
     '/demo': { page: '/demo' },
     '/preview': { page: '/preview', query: { q: '' } },
-    '/torn-dapp': { page: '/tron-dapp' },
+    '/tron-dapp': { page: '/tron-dapp' },
   }),
   webpack(config) {
     config.plugins.push(new webpack.EnvironmentPlugin({
