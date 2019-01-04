@@ -4,7 +4,7 @@ import FeatureItem from './FeatureItem';
 
 const Features = () => (
   <Layout
-    backgroundImage="/static/img-bg-3@2x.png"
+    backgroundImage="/static/img-bg-3@2x.jpg"
     bgColor="#1d202b"
     color="#d7f2ee"
     padding="0"
@@ -33,6 +33,7 @@ const Features = () => (
         .main {
           height: 100vh;
           display: flex;
+          align-items: center;
         }
 
         @media only screen and (max-width: 1120px) {
@@ -40,7 +41,6 @@ const Features = () => (
             flex-direction: column;
             height: 100%;
             padding: 30px;
-            align-items: center;
           }
         }
       `}</style>

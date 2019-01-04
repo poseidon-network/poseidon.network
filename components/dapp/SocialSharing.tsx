@@ -3,7 +3,7 @@ import Content from '../Content';
 
 const SocialSharing = () => (
   <Layout
-    backgroundImage="/static/img-bg-2@2x.png"
+    backgroundImage="/static/img-bg-2@2x.jpg"
     bgColor="#1d202b"
     color="#d7f2ee"
     padding="0"
