@@ -19,13 +19,13 @@ const Features = () => (
         <FeatureItem
           icon="/static/img-2.png"
           title="Faster "
-          description={`- the edges at fog are closer to the users, so that latency is lower than the edges at cloud
+          description={`- the edges at fog are closer to the users, so that latency is lower than the edges at cloud\n
           - Benefit from Edge Computing technology, it’s much faster than cloud infrastructure`}
         />
         <FeatureItem
           icon="/static/img-3.png"
           title="Extra Money"
-          description={`- for anyone wants to utilize their unused resources to make passive income, no matter how little it is
+          description={`- for anyone wants to utilize their unused resources to make passive income, no matter how little it is\n
           - you already pay for the resources you shared, why not make money with idle hardware, no strings attached`}
         />
       </div>
