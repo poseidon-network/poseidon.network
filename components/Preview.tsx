@@ -77,7 +77,10 @@ export default class Video extends React.Component<IProps, IState> {
         {
           this.state.isExceedPreviewQuta &&
           <div className="modal">
-            <p className="modal-text">To continue watch this video, please pay and watch in the APP!</p>
+            <div className="modal-text">
+              <p>To continue watch this video, please pay and watch in the APP!</p>
+              <a className="app-link" href="https://www.pgyer.com/SszB">Download the APP</a>
+            </div>
           </div>
         }
       <style jsx>{`
@@ -117,6 +120,7 @@ export default class Video extends React.Component<IProps, IState> {
           background: #070707c2;
           padding: 16px 24px;
           border-radius: 10px;
+          text-align: center;
         }
       `}</style>
       </div>
