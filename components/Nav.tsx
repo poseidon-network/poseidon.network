@@ -2,25 +2,31 @@ import Layout from './Layout';
 
 const Nav = () => ((
   <Layout bgColor="#222633" color="#fff">
-    <a href="/"><img alt="logo" src="/static/img-logo.png" /></a>
-
-    <nav role="navigation">
-      <div id="menuToggle">
-        <input type="checkbox" />
-        <span></span>
-        <span></span>
-        <ul id="menu">
-        <a href="/demo"><li>Demo</li></a>
-          <a href="#feature"><li>Feature</li></a>
-          <a href="#partners"><li>Partners</li></a>
-          <a href="#roadmap"><li>Roadmap</li></a>
-          <a href="#team"><li>Team</li></a>
-          <a href="#contact"><li>Contact</li></a>
-        </ul>
-      </div>
-    </nav>
+    <div className="container">
+      <a href="/"><img alt="logo" src="/static/img-logo.png" /></a>
+      <nav role="navigation">
+        <div id="menuToggle">
+          <input type="checkbox" />
+          <span></span>
+          <span></span>
+          <ul id="menu">
+          <a href="/demo"><li>Demo</li></a>
+            <a href="#feature"><li>Feature</li></a>
+            <a href="#partners"><li>Partners</li></a>
+            <a href="#roadmap"><li>Roadmap</li></a>
+            <a href="#team"><li>Team</li></a>
+            <a href="#contact"><li>Contact</li></a>
+          </ul>
+        </div>
+      </nav>
+    </div>
 
     <style jsx>{`
+      .container {
+        width: 92%;
+        margin: auto;
+      }
+
       img {
         width: 210px;
       }
@@ -29,7 +35,7 @@ const Nav = () => ((
         display: block;
         position: absolute;
         top: 42px;
-        right: 32px;
+        right: 50px;
         z-index: 1;
         -webkit-user-select: none;
         user-select: none;

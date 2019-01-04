@@ -11,7 +11,7 @@ const Content = ({ children, direction = 'column' }: IProps) => ((
         align-items: center;
         display: flex;
         flex-wrap: wrap;
-        max-width: 1024px;
+        max-width: 88%;
         flex-direction: ${ direction };
         margin: 0 auto;
         padding: 0;
