@@ -20,7 +20,7 @@ const AdvancedTech = () => (
             <ListItem>Decentralized CDN for content delivering</ListItem>
             <ListItem>Support AWS S3、IPFS (decentralized storage)</ListItem>
           </ul>
-          <a href="/" className="btn">
+          <a href="https://www.pgyer.com/SszB" className="btn">
             Try it out
           </a>
         </div>
@@ -40,10 +40,6 @@ const AdvancedTech = () => (
           font-family: Montserrat;
           font-size: 64px;
           font-weight: bold;
-          font-style: normal;
-          font-stretch: normal;
-          line-height: normal;
-          letter-spacing: normal;
           color: #222633;
         }
 

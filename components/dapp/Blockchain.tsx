@@ -19,7 +19,7 @@ const Blockchain = () => (
             <ListItem>TRON smart contract and TRX Wallets</ListItem>
             <ListItem>layer 2 solution, NOT putting data on blockchain to ensure performance, scalability, and feasibility</ListItem>
           </ul>
-          <a href="/" className="btn">
+          <a href="https://www.pgyer.com/SszB" className="btn">
             Try it out
           </a>
         </div>
