@@ -17,6 +17,7 @@ const SocialSharing = () => (
           <p className="description">You can share your friends contents, and you can also get a cut</p>
         </div>
         <div className="col">
+          <img src="/static/img-trident.svg" />
         </div>
         <div className="col right">
           <p className="title">Miner</p>
@@ -73,6 +74,10 @@ const SocialSharing = () => (
             height: 100%;
             flex-direction: column;
             align-items: center;
+          }
+
+          img {
+            display: none;
           }
 
           .left, .right {
