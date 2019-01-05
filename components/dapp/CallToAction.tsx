@@ -14,16 +14,16 @@ const CallToAction = () => (
           <a href="https://www.pgyer.com/SszB" className="btn">Get the App</a>
         </div>
         <div>
+          <img className="logo-dollar" src="/static/img-logo-dollar.png" />
         </div>
       </div>
       <style jsx>{`
         .main {
           height: 100vh;
           display: flex;
-        }
-
-        .left {
-          padding-top: 147px;
+          align-items: center;
+          justify-content: space-around;
+          width: 100%;
         }
 
         .title {
@@ -61,6 +61,10 @@ const CallToAction = () => (
           color: #fff;
           display: block;
           margin-top: 48px;
+        }
+
+        .logo-dollar {
+          width: 200px;
         }
 
         @media only screen and (max-width: 1120px) {
