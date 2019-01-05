@@ -15,9 +15,9 @@ const Blockchain = () => (
             Blockchain Integration
           </p>
           <ul className="description">
-            <ListItem>atlas, good game.</ListItem>
+            <ListItem>Atlas, good move.</ListItem>
             <ListItem>TRON smart contract and TRX Wallets</ListItem>
-            <ListItem>layer 2 solution, NOT putting data on blockchain to ensure performance, scalability, and feasibility</ListItem>
+            <ListItem>Layer 2 solution, NOT putting data on blockchain to ensure performance, scalability, and feasibility</ListItem>
           </ul>
           <a href="https://www.pgyer.com/SszB" className="btn">
             Try it out
