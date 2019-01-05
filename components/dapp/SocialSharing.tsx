@@ -12,9 +12,9 @@ const SocialSharing = () => (
       <div className="main">
         <div className="col left">
           <p className="title">Social Sharing</p>
-          <p className="description">Share your life, tag a price, your fans could pay to join your life and you can receive extra income</p>
-          <p className="description">Photo, video and also live streaming</p>
-          <p className="description">You can share your friends contents, and you can also get a cut</p>
+          <p className="description">Share your life, tag a price, your fans can pay to join your life and you can receive extra income.</p>
+          <p className="description">Photo, video and live streaming</p>
+          <p className="description">Share your friends contents, and you can get a cut</p>
         </div>
         <div className="col center">
           <img className="phone" src="/static/phone.png" />
@@ -23,7 +23,7 @@ const SocialSharing = () => (
         <div className="col right">
           <p className="title">Miner</p>
           <p className="description">Share unused resources to earn passive income</p>
-          <p className="description">5G is about to come, mobile edge is going to be TRUE</p>
+          <p className="description">5G is arriving, and mobile edge is going to be a reality</p>
         </div>
       </div>
       <style jsx>{`
