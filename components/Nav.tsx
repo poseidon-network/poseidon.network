@@ -137,6 +137,16 @@ const Nav = () => ((
       #menuToggle input:checked ~ ul {
         transform: none;
       }
+
+      @media only screen and (max-width: 600px) {
+        .container {
+          width: 100%;
+        }
+
+        #menuToggle {
+          right: 15px;
+        }
+      }
     `}</style>
   </Layout>
 ));
