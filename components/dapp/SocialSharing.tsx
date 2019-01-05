@@ -16,7 +16,8 @@ const SocialSharing = () => (
           <p className="description">Photo, video and also live streaming</p>
           <p className="description">You can share your friends contents, and you can also get a cut</p>
         </div>
-        <div className="col">
+        <div className="col center">
+          <img className="phone" src="/static/phone.png" />
           <img src="/static/img-trident.svg" />
         </div>
         <div className="col right">
@@ -57,6 +58,18 @@ const SocialSharing = () => (
           color: #d7f2ee;
           margin-bottom: 24px;
           margin-top: 0;
+        }
+
+        .center {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        .phone {
+          width: 300px;
+          height: 600px;
+          position absolute;
         }
 
         @media only screen and (max-width: 1120px) {
