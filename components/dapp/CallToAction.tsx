@@ -10,7 +10,7 @@ const CallToAction = () => (
       <div className="main">
         <div className="left">
           <p className="title">Start earning TRX, TODAY!</p>
-          <p className="description">share your life or share your unused resources, it's not a question, you can do both. (and earn twice)</p>
+          <p className="description">share your life or share your unused resources. Do both and double your earnings!</p>
           <a href="https://www.pgyer.com/SszB" className="btn">Get the App</a>
         </div>
         <div>
