@@ -13,7 +13,7 @@ const Intro = () => (
         <div className="col">
           <p className="small-title">Build Sharing Economy</p>
           <h1 className="title">TRON's First Decentralized Content Network</h1>
-          <p className="description">Next-Generation Content Layer (CDN + DSN), incentivized by TRX. Utilized unused bandwidth and storage from any NAS, desktop, or mobile devices around the world. It’s distributed, efficient, and integrates perfectly with existing internet and blockchain infrastructure. </p>
+          <p className="description">Next-Generation Content Layer (CDN + DSN), incentivized by TRX. Utilized unused bandwidth and storage from NAS, desktop, and mobile devices around the world. It’s distributed, efficient, and integrates perfectly with existing internet and blockchain infrastructure. </p>
           <div className="btn-area">
             <a className="btn" href="https://www.pgyer.com/SszB">
               Download the App
