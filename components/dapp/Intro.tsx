@@ -3,7 +3,7 @@ import Content from '../Content';
 
 const Intro = () => (
   <Layout
-    backgroundImage="/static/img-bg-1@2x.jpg"
+    backgroundImage="/static/img-bg-1.svg"
     bgColor="#1d202b"
     color="#d7f2ee"
     padding="0"
