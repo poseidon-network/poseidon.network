@@ -53,6 +53,16 @@ export default class Video extends React.Component<IProps, IState> {
     }
   }
 
+  handleClickApp = () => {
+    const clickedAt = +new Date;
+    setTimeout(() => {
+      // To avoid failing on return to MobileSafari, ensure freshness!
+      if ((+new Date - clickedAt) < 12000) {
+        window.location.href = 'https://www.pgyer.com/SszB';
+      }
+    }, 3000);
+  }
+
   render() {
     const { file, isLoading } = this.state;
     return (
@@ -79,7 +89,8 @@ export default class Video extends React.Component<IProps, IState> {
           <div className="modal">
             <div className="modal-text">
               <p>To continue watch this video, please pay and watch in the APP!</p>
-              <a className="app-link" href="https://www.pgyer.com/SszB">Download the APP</a>
+              <a onClick={this.handleClickApp} className="app-link" href={`poseidon://preview${window.location.search
+}`}>Open the APP</a>
             </div>
           </div>
         }
