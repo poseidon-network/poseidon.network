@@ -10,12 +10,13 @@ const Nav = () => ((
           <span></span>
           <span></span>
           <ul id="menu">
-          <a href="/demo"><li>Demo</li></a>
+            <a href="/demo"><li>Demo</li></a>
+            <a href="/tron-dapp"><li>Download</li></a>
             <a href="/#feature"><li>Feature</li></a>
             <a href="/#partners"><li>Partners</li></a>
             <a href="/#roadmap"><li>Roadmap</li></a>
             <a href="/#team"><li>Team</li></a>
-            <a href="/#contact"><li>Contact</li></a>
+            <a href="/  #contact"><li>Contact</li></a>
           </ul>
         </div>
       </nav>
