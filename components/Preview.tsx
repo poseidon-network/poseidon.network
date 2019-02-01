@@ -166,7 +166,7 @@ export default class Video extends React.Component<IProps, IState> {
               </p>
               <a className="app-link" href={`poseidon://preview${window.location.search}`} onClick={this.handleClickApp}>Open the APP</a>
               { !this.token &&
-                <small>Already pay?&nbsp;
+                <small>Already paid?&nbsp;
                   {/*
                     // @ts-ignore */}
                   <FacebookLogin
