@@ -33,6 +33,11 @@ export default class Video extends React.Component<IProps, IState> {
 
   async componentDidMount() {
     const fileID = new URLSearchParams(window.location.search).get('q');
+    const tokenExpiredAt = window.localStorage.getItem('tokenExpiredAt');
+    if (tokenExpiredAt && new Date(tokenExpiredAt).getTime() < Date.now()) {
+      window.localStorage.removeItem('authToken');
+      window.localStorage.removeItem('tokenExpiredAt');
+    }
     this.token = window.localStorage.getItem('authToken');
 
     if (fileID) {
@@ -93,6 +98,9 @@ export default class Video extends React.Component<IProps, IState> {
     });
     if (data.socialLogin) {
       window.localStorage.setItem('authToken', data.socialLogin.token);
+      const tokenExpiredAt = new Date();
+      tokenExpiredAt.setDate(tokenExpiredAt.getDate() + 30);
+      window.localStorage.setItem('tokenExpiredAt', tokenExpiredAt.toISOString());
       window.location.reload();
     }
   }
