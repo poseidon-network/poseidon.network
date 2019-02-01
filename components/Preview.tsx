@@ -260,4 +260,10 @@ const style = css`
     color: #fff;
     font-size: 18px;
   }
+
+  @media only screen and (min-width: 600px) {
+    video {
+      min-width: 700px;
+    }
+  }
 `;
