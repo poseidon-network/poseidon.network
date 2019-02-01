@@ -11,6 +11,7 @@ module.exports = withTypescript({
   webpack(config) {
     config.plugins.push(new webpack.EnvironmentPlugin({
       GRAPHQL_URI: process.env.GRAPHQL_URI || 'http://localhost:4000/graphql',
+      FACEBOOK_APP_ID: process.env.FACEBOOK_APP_ID,
     }));
     return config;
   },
