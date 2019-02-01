@@ -88,7 +88,7 @@ export default class Video extends React.Component<IProps, IState> {
           this.state.isExceedPreviewQuta &&
           <div className="modal">
             <div className="modal-text">
-              <p>To continue watch this video, please pay and watch in the APP!</p>
+              <p>To continue to watch this video, please pay first</p>
               <a onClick={this.handleClickApp} className="app-link" href={`poseidon://preview${window.location.search
 }`}>Open the APP</a>
             </div>
@@ -108,6 +108,7 @@ export default class Video extends React.Component<IProps, IState> {
         video, img, iframe {
           width: 90%;
           max-width: 920px;
+          max-height: 400px;
         }
 
         p {
