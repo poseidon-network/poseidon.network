@@ -1,4 +1,6 @@
 import React from 'react';
+import { FaRegPlayCircle } from 'react-icons/fa';
+
 import Layout from './Layout';
 import Content from './Content';
 import { header } from '../data';
@@ -15,12 +17,25 @@ const loadImage = (src: string) => (
 class Header extends React.Component {
   state = {
     mapSrc: '/static/img-map@3x.png',
+    playVideo: false,
   };
 
   async componentDidMount() {
     await loadImage('/static/map.gif');
     this.setState({
       mapSrc: '/static/map.gif',
+    });
+  }
+
+  handleClickPlay = () => {
+    this.setState({
+      playVideo: true,
+    });
+  }
+
+  handleEnd = () => {
+    this.setState({
+      playVideo: false,
     });
   }
 
@@ -36,7 +51,23 @@ class Header extends React.Component {
               { header.description }
             </p>
           </div>
-          <img alt="our nodes in the world map" className="map" src={this.state.mapSrc} />
+          <div className="media">
+            { this.state.playVideo ?
+              <video
+                autoPlay
+                className="map"
+                onEnded={this.handleEnd}
+                src="https://s3-ap-northeast-1.amazonaws.com/static.poseidon.network/poseidon.mp4"
+              />
+            :
+              <React.Fragment>
+                <div className="play-icon">
+                  <FaRegPlayCircle onClick={this.handleClickPlay} color="#ff9300" size="60" />
+                </div>
+                <img className="map" alt="our nodes in the world map" src={this.state.mapSrc} />
+              </React.Fragment>
+            }
+          </div>
           <style jsx>{`
             p {
               text-align: center;
@@ -47,11 +78,22 @@ class Header extends React.Component {
               white-space: pre-line;
             }
 
+            .media {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+            }
+
             .map {
               width: 100%;
               margin-bottom: 0px;
               height: 100%;
               max-width: 920px;
+            }
+
+            .play-icon {
+              position: absolute;
+              cursor: pointer;
             }
 
             .description-container {
