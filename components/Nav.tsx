@@ -17,7 +17,7 @@ const Nav = () => ((
             <a href="/#roadmap"><li>Roadmap</li></a>
             <a href="/#team"><li>Team</li></a>
             <a href="/#contact"><li>Contact</li></a>
-            <a href="https://poseidon.zendesk.com/hc/zh-tw">FAQ</a>
+            <a href="https://poseidon.zendesk.com/hc/zh-tw"><li>FAQ</li></a>
           </ul>
         </div>
       </nav>
