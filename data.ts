@@ -132,7 +132,7 @@ export const team = [
 export const techCoreTeam = [
   { name: 'Raymond', title: 'Senior Architect', avatar: '/static/img-raymond@2x.jpg' },
   { name: 'ST Wang', title: 'Senior Embedded', avatar: '/static/img-st@2x.jpg' },
-  { name: 'Wu Sing', title: 'Senior DevOps', avatar: '/static/img-wu@2x.jpg' },
+  { name: 'Peng Wu Sung', title: 'Senior DevOps', avatar: '/static/img-wu@2x.jpg' },
   { name: 'Ju Quyang', title: 'Embedded Engineer', avatar: '/static/img-ju@2x.jpg' },
 ];
 
