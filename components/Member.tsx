@@ -39,7 +39,7 @@ const Member = ({ name, title, avatar }: { name: string; title: string; avatar: 
 
       h5 {
         margin: 0;
-        font-size: 19px;
+        font-size: 18px;
       }
 
       h6 {
