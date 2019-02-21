@@ -32,7 +32,6 @@ class Index extends React.Component<{}, IState> {
   componentDidMount() {
     const user = getUser();
     if (user) {
-      console.log(user);
       this.setState({
         user,
         isLogin: true,

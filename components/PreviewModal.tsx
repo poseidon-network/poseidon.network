@@ -20,9 +20,8 @@ const PreviewModal = ({ isLogin, onClickLogin, onClickApp }: IProps) => (
       <a className="app-link" href={`poseidon://preview${window.location.search}`} onClick={onClickApp}>Open the APP</a>
       { !isLogin &&
         <small>Already paid?&nbsp;
-          {/*
-            // @ts-ignore */}
           <FacebookLogin
+            autoLoad
             appId={FACEBOOK_APP_ID}
             scope="public_profile, email"
             callback={onClickLogin}

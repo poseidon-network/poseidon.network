@@ -5,7 +5,7 @@ const Nav = ({ avatar, logout }: { avatar?: string, logout?: () => void }) => (
     <div className="container">
       <a href="/"><img className="logo" alt="logo" src="/static/img-logo.png" /></a>
       <nav role="navigation">
-        { avatar && <img className="avatar" src="s" /> }
+        { avatar && <img className="avatar" src={avatar} /> }
         <div id="menuToggle">
           <input type="checkbox" />
           <span></span>
@@ -19,7 +19,7 @@ const Nav = ({ avatar, logout }: { avatar?: string, logout?: () => void }) => (
             <a href="/#team"><li>Team</li></a>
             <a href="/#contact"><li>Contact</li></a>
             <a href="https://poseidon.zendesk.com/hc/zh-tw"><li>FAQ</li></a>
-            { avatar && <a onClick={logout} href="/#logout"><li>Logout</li></a> }
+            { avatar && <a onClick={(e) => { e.preventDefault(); logout && logout(); }} href="/#logout"><li>Logout</li></a> }
           </ul>
         </div>
       </nav>
