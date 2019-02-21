@@ -1,3 +1,4 @@
+import React from 'react';
 import Head from 'next/head';
 import Page from '../components/Page';
 import Nav from '../components/Nav';
@@ -7,22 +8,52 @@ import { ApolloProvider } from 'react-apollo';
 
 import { GRAPHQL_URI } from '../constants';
 import CustomApolloClient from '../utils/CustomApolloClient';
+import { getUser, logout } from '../utils/auth';
 
 const client = new CustomApolloClient({
   uri: GRAPHQL_URI,
 });
 
-const Index = () => ((
-  <ApolloProvider client={client}>
-    <Page>
-      <Head>
-        <title>Poseidon Network</title>
-      </Head>
-      <Nav />
-      <Preview />
-      <Footer />
-    </Page>
-  </ApolloProvider>
-));
+interface IState {
+  user: {
+    id?: string;
+    token?: string;
+    avatar?: string;
+  };
+  isLogin: boolean;
+}
+
+class Index extends React.Component<{}, IState> {
+  state: IState = {
+    user: {},
+    isLogin: false,
+  };
+
+  componentDidMount() {
+    const user = getUser();
+    if (user) {
+      console.log(user);
+      this.setState({
+        user,
+        isLogin: true,
+      });
+    }
+  }
+
+  render() {
+    return (
+      <ApolloProvider client={client}>
+        <Page>
+          <Head>
+            <title>Poseidon Network</title>
+          </Head>
+          <Nav avatar={this.state.user.avatar} logout={logout} />
+          <Preview isLogin={this.state.isLogin} />
+          <Footer />
+        </Page>
+      </ApolloProvider>
+    );
+  }
+}
 
 export default Index;

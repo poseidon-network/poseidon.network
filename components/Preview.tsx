@@ -6,17 +6,19 @@ import FacebookLogin from 'react-facebook-login/dist/facebook-login-render-props
 import gql from 'graphql-tag';
 import { withApollo } from 'react-apollo';
 
-import { login, getToken } from '../utils/auth';
+import { saveLoginData } from '../utils/auth';
 import { APP_URL } from '../constants';
 import CustomApolloClient from '../utils/CustomApolloClient';
 
 import PreviewModal from './PreviewModal';
 import Video from './Video';
+import { ReactFacebookLoginInfo } from 'react-facebook-login';
 
 const REDIRECT_TIMEOUT_MS = 3000;
 
 interface IProps {
   client: CustomApolloClient<{}>;
+  isLogin: boolean;
 }
 interface IState {
   file?: {
@@ -27,7 +29,6 @@ interface IState {
     price: number;
     viewCount: number;
   };
-  isLogin: boolean;
   isLoading: boolean;
   isExceedPreviewQuta: boolean;
 }
@@ -37,7 +38,6 @@ export class Preview extends React.Component<IProps, IState> {
     file: undefined,
     isLoading: true,
     isExceedPreviewQuta: false,
-    isLogin: false,
   };
   myVideo: React.RefObject<HTMLVideoElement> = React.createRef();
 
@@ -47,7 +47,6 @@ export class Preview extends React.Component<IProps, IState> {
       await this.fetchFile(fileID);
       this.setState({
         isLoading: false,
-        isLogin: getToken() ? true : false,
       });
     }
   }
@@ -63,6 +62,19 @@ export class Preview extends React.Component<IProps, IState> {
       this.setState({
         file: data.file,
       });
+    }
+  }
+
+  handleLogin = async ({ accessToken }: ReactFacebookLoginInfo) => {
+    const { data } = await this.props.client.mutate<{ socialLogin: any }>({
+      mutation: SOCIAL_LOGIN,
+      variables: {
+        accessToken,
+        service: 'facebook',
+      },
+    });
+    if (data && data.socialLogin) {
+      saveLoginData(data.socialLogin);
     }
   }
 
@@ -125,8 +137,8 @@ export class Preview extends React.Component<IProps, IState> {
         {
           this.state.isExceedPreviewQuta &&
           <PreviewModal
-            isLogin={this.state.isLogin ? true : false}
-            onClickLogin={login}
+            isLogin={this.props.isLogin}
+            onClickLogin={this.handleLogin}
             onClickApp={this.handleClickApp}
           />
         }
@@ -170,4 +182,25 @@ query ($id: String!) {
 }
 `;
 
-export default withApollo<{}>(Preview);
+export const SOCIAL_LOGIN = gql`
+  mutation socialLogin(
+    $service: String
+    $accessToken: String
+    $idToken: String
+    $displayname: String
+  ) {
+    socialLogin (
+      service: $service
+      accessToken: $accessToken
+      idToken: $idToken
+      displayname: $displayname
+    ) {
+      id
+      token
+      name
+      avatar
+    }
+  }
+`;
+
+export default withApollo<{ isLogin: boolean }>(Preview);

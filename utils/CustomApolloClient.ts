@@ -56,7 +56,7 @@ const PRESET_CONFIG_KEYS = [
 
 const defaultRequest = async (operation: Operation) => {
   try {
-    const token = '';
+    const token = window.localStorage.getItem('authToken');
     if (token) {
       operation.setContext({
         headers: {
