@@ -1,14 +1,23 @@
 import React from 'react';
-import axios from 'axios';
-import { ReactFacebookLoginInfo } from 'react-facebook-login';
 import css from 'styled-jsx/css';
 // @ts-ignore
 import FacebookLogin from 'react-facebook-login/dist/facebook-login-render-props';
 
-const FACEBOOK_APP_ID = process.env.FACEBOOK_APP_ID;
+import gql from 'graphql-tag';
+import { withApollo } from 'react-apollo';
 
-interface IProps {}
+import { login, getToken } from '../utils/auth';
+import { APP_URL } from '../constants';
+import CustomApolloClient from '../utils/CustomApolloClient';
 
+import PreviewModal from './PreviewModal';
+import Video from './Video';
+
+const REDIRECT_TIMEOUT_MS = 3000;
+
+interface IProps {
+  client: CustomApolloClient<{}>;
+}
 interface IState {
   file?: {
     name: string;
@@ -18,48 +27,39 @@ interface IState {
     price: number;
     viewCount: number;
   };
+  isLogin: boolean;
   isLoading: boolean;
   isExceedPreviewQuta: boolean;
 }
 
-export default class Video extends React.Component<IProps, IState> {
+export class Preview extends React.Component<IProps, IState> {
   state: IState = {
     file: undefined,
     isLoading: true,
     isExceedPreviewQuta: false,
+    isLogin: false,
   };
-  token?: string | null;
   myVideo: React.RefObject<HTMLVideoElement> = React.createRef();
 
   async componentDidMount() {
     const fileID = new URLSearchParams(window.location.search).get('q');
-    const tokenExpiredAt = window.localStorage.getItem('tokenExpiredAt');
-    if (tokenExpiredAt && new Date(tokenExpiredAt).getTime() < Date.now()) {
-      window.localStorage.removeItem('authToken');
-      window.localStorage.removeItem('tokenExpiredAt');
-    }
-    this.token = window.localStorage.getItem('authToken');
-
     if (fileID) {
-      await this.fetchVideo(fileID);
+      await this.fetchFile(fileID);
       this.setState({
         isLoading: false,
+        isLogin: getToken() ? true : false,
       });
     }
   }
 
-  fetchVideo = async (fileID: string) => {
-    const { data: { data } } = await axios.post(`${process.env.GRAPHQL_URI}`, {
-      operationName: null,
-      variables:{},
-      query: `{ file(id: "${fileID}") { name uri mimetype price isPaid viewCount }}`,
-    }, {
-      headers: {
-        Authorization: `Bearer ${this.token}`,
+  fetchFile = async (fileID: string) => {
+    const { data } = await this.props.client.query<{ file: any }>({
+      query: loadFileGQL,
+      variables: {
+        id: fileID,
       },
     });
-
-    if (data.file) {
+    if (data && data.file) {
       this.setState({
         file: data.file,
       });
@@ -84,25 +84,9 @@ export default class Video extends React.Component<IProps, IState> {
     setTimeout(() => {
       // To avoid failing on return to MobileSafari, ensure freshness!
       if ((+new Date - clickedAt) < 12000) {
-        window.location.href = 'https://www.pgyer.com/SszB';
+        window.location.href = APP_URL;
       }
-    }, 3000);
-  }
-
-  handleLogin = async (userInfo: ReactFacebookLoginInfo) => {
-    const { accessToken } = userInfo;
-    const { data: { data } } = await axios.post(`${process.env.GRAPHQL_URI}`, {
-      operationName:null,
-      variables:{},
-      query: `mutation {  socialLogin(service: "facebook", accessToken: "${accessToken}") { token } }`,
-    });
-    if (data.socialLogin) {
-      window.localStorage.setItem('authToken', data.socialLogin.token);
-      const tokenExpiredAt = new Date();
-      tokenExpiredAt.setDate(tokenExpiredAt.getDate() + 30);
-      window.localStorage.setItem('tokenExpiredAt', tokenExpiredAt.toISOString());
-      window.location.reload();
-    }
+    }, REDIRECT_TIMEOUT_MS);
   }
 
   renderFile = () => {
@@ -110,41 +94,22 @@ export default class Video extends React.Component<IProps, IState> {
     if (!file) {
       return null;
     }
-    const {
-      mimetype,
-      name,
-      uri,
-      price,
-      viewCount,
-    } = file;
 
-    if (mimetype === 'video/mp4') {
+    if (file.mimetype === 'video/mp4') {
       return (
-        <div>
-          <video
-            ref={this.myVideo}
-            controls={!this.state.isExceedPreviewQuta}
-            controlsList="nodownload"
-            onTimeUpdate={this.handleUpdateTime}
-          >
-            <source src={uri} type="video/mp4" />
-          </video>
-          <p className="name">{ name }</p>
-          <div className="file-meta">
-            <p className="view">{ viewCount } views</p>
-            <p className="price">{price > 0 ? `Price ${price} USD` : 'Free'}</p>
-          </div>
-          <style jsx>
-            { style }
-          </style>
-        </div>
+        <Video
+          videoRef={this.myVideo}
+          video={file}
+          isExceedPreviewQuta={this.state.isExceedPreviewQuta}
+          onTimeUpdate={this.handleUpdateTime}
+        />
       );
     }
 
-    if (['image/png', 'image/jpg', 'image/jpeg', 'image/gif'].includes(mimetype)) {
+    if (['image/png', 'image/jpg', 'image/jpeg', 'image/gif'].includes(file.mimetype)) {
       return (
         <div>
-          <img src={uri} />
+          <img src={file.uri} />
           <style jsx>
             { style }
           </style>
@@ -159,31 +124,11 @@ export default class Video extends React.Component<IProps, IState> {
         { this.renderFile() }
         {
           this.state.isExceedPreviewQuta &&
-          <div className="modal">
-            <div className="modal-content">
-              <p className="modal-text">
-                To continue to watch this video, please pay first.
-              </p>
-              <a className="app-link" href={`poseidon://preview${window.location.search}`} onClick={this.handleClickApp}>Open the APP</a>
-              { !this.token &&
-                <small>Already paid?&nbsp;
-                  {/*
-                    // @ts-ignore */}
-                  <FacebookLogin
-                    appId={FACEBOOK_APP_ID}
-                    scope="public_profile, email"
-                    callback={this.handleLogin}
-                    render={(renderProps: any) => (
-                      <a href="" onClick={(event: React.SyntheticEvent) => {
-                        event.preventDefault();
-                        renderProps.onClick();
-                      }}>login here</a>
-                    )}
-                  />
-                </small>
-              }
-            </div>
-          </div>
+          <PreviewModal
+            isLogin={this.state.isLogin ? true : false}
+            onClickLogin={login}
+            onClickApp={this.handleClickApp}
+          />
         }
         <style jsx>
           { style }
@@ -204,74 +149,25 @@ const style = css`
     min-height: 80vh;
   }
 
-  p {
-    font-size: 18px;
-    margin: 0;
-  }
 
-  video, img, iframe {
+  img, iframe {
     width: 100%;
     max-width: 920px;
     max-height: 400px;
   }
-
-  small {
-    font-size: 14px;
-  }
-
-  .modal {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    background-color: #00000063;
-    top: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .modal-content {
-    color: #fff;
-    background: #070707c2;
-    padding: 16px 24px;
-    border-radius: 10px;
-    text-align: center;
-  }
-
-  .modal-text {
-    color: #fff;
-    margin: 10px;
-    font-size: 18px;
-  }
-
-  .app-link {
-    font-size: 18px;
-    display: block;
-  }
-
-  .file-meta {
-    padding: 0px;
-    height: 40px;
-    color: #fff;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .name {
-    color: #fff;
-    font-size: 24px;
-    padding-top: 20px;
-  }
-
-  .price {
-    color: #fff;
-    font-size: 18px;
-  }
-
-  @media only screen and (min-width: 600px) {
-    video {
-      min-width: 700px;
-    }
-  }
 `;
+
+const loadFileGQL = gql`
+query ($id: String!) {
+  file(id: $id) {
+    name
+    uri
+    mimetype
+    price
+    isPaid
+    viewCount
+  }
+}
+`;
+
+export default withApollo<{}>(Preview);
