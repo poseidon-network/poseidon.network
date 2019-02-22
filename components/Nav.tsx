@@ -1,10 +1,24 @@
 import Layout from './Layout';
 
-const Nav = () => ((
+interface IProps {
+  user: {
+    id?: string;
+    token?: string;
+    avatar?: string;
+    name?: string;
+  };
+  logout: () => void;
+}
+
+const Nav = ({ user: { avatar, name } = {}, logout }:  IProps) => (
   <Layout bgColor="#222633" color="#fff">
     <div className="container">
-      <a href="/"><img alt="logo" src="/static/img-logo.png" /></a>
+      <a href="/"><img className="logo" alt="logo" src="/static/img-logo.png" /></a>
       <nav role="navigation">
+        <div id="profile">
+          { avatar && <img className="avatar" src={avatar} /> }
+          <span className="username">{ name }</span>
+        </div>
         <div id="menuToggle">
           <input type="checkbox" />
           <span></span>
@@ -18,6 +32,7 @@ const Nav = () => ((
             <a href="/#team"><li>Team</li></a>
             <a href="/#contact"><li>Contact</li></a>
             <a href="https://poseidon.zendesk.com/hc/zh-tw"><li>FAQ</li></a>
+            { avatar && <a onClick={(e) => { e.preventDefault(); logout && logout(); }} href="/#logout"><li>Logout</li></a> }
           </ul>
         </div>
       </nav>
@@ -27,10 +42,37 @@ const Nav = () => ((
       .container {
         width: 92%;
         margin: auto;
+        display: flex;
       }
 
-      img {
+      nav {
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+        justify-content: flex-end;
+      }
+
+      .logo {
         width: 210px;
+      }
+
+      #profile {
+        top: 36px;
+        right: 110px;
+        position: absolute;
+        display: flex;
+        align-items: center;
+      }
+
+      .username {
+        font-size: 14px;
+      }
+
+      .avatar {
+        border-radius: 50%;
+        width: 25px;
+        height: 25px;
+        margin-right: 10px;
       }
 
       #menuToggle {
@@ -44,7 +86,7 @@ const Nav = () => ((
       }
 
       @media only screen and (min-width: 600px) {
-        img {
+        .logo {
           width: 269px;
         }
       }
@@ -151,6 +193,6 @@ const Nav = () => ((
       }
     `}</style>
   </Layout>
-));
+);
 
 export default Nav;
