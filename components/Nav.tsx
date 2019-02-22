@@ -17,7 +17,7 @@ const Nav = ({ user = {}, logout }:  IProps) => (
       <nav role="navigation">
         <div id="profile">
           { user.avatar && <img className="avatar" src={user.avatar} /> }
-          <span className="username">{ name }</span>
+          <span className="username">{ user.name }</span>
         </div>
         <div id="menuToggle">
           <input type="checkbox" />
