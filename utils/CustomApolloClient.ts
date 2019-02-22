@@ -88,10 +88,6 @@ export default class DefaultClient<TCache> extends ApolloClient<TCache> {
     const {
       request = defaultRequest,
       uri,
-      credentials,
-      headers,
-      fetch,
-      fetchOptions,
       clientState,
       cacheRedirects,
       onError: errorCallback,
