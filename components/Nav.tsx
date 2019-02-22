@@ -1,22 +1,22 @@
 import Layout from './Layout';
 
 interface IProps {
-  user: {
+  user?: {
     id?: string;
     token?: string;
     avatar?: string;
     name?: string;
   };
-  logout: () => void;
+  logout?: () => void;
 }
 
-const Nav = ({ user: { avatar, name } = {}, logout }:  IProps) => (
+const Nav = ({ user = {}, logout }:  IProps) => (
   <Layout bgColor="#222633" color="#fff">
     <div className="container">
       <a href="/"><img className="logo" alt="logo" src="/static/img-logo.png" /></a>
       <nav role="navigation">
         <div id="profile">
-          { avatar && <img className="avatar" src={avatar} /> }
+          { user.avatar && <img className="avatar" src={user.avatar} /> }
           <span className="username">{ name }</span>
         </div>
         <div id="menuToggle">
@@ -32,7 +32,7 @@ const Nav = ({ user: { avatar, name } = {}, logout }:  IProps) => (
             <a href="/#team"><li>Team</li></a>
             <a href="/#contact"><li>Contact</li></a>
             <a href="https://poseidon.zendesk.com/hc/zh-tw"><li>FAQ</li></a>
-            { avatar && <a onClick={(e) => { e.preventDefault(); logout && logout(); }} href="/#logout"><li>Logout</li></a> }
+            { user.token && <a onClick={(e) => { e.preventDefault(); logout && logout(); }} href="/#logout"><li>Logout</li></a> }
           </ul>
         </div>
       </nav>
