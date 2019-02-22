@@ -168,22 +168,11 @@ export default class DefaultClient<TCache> extends ApolloClient<TCache> {
       })),
     });
 
-    const httpLink = new HttpLink({
-      fetch: fetch || buildAxiosFetch(axios, (config: any, _: any) => ({
-        ...config,
-      })),
-      uri: uri || '/graphql',
-      fetchOptions: fetchOptions || {},
-      credentials: credentials || 'same-origin',
-      headers: headers || {},
-    });
-
     const link = ApolloLink.from([
       errorLink,
       requestHandler,
       stateLink,
       uploadLink,
-      httpLink,
     ].filter(x => !!x) as ApolloLink[]);
 
     // super hacky, we will fix the types eventually

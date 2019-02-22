@@ -46,7 +46,7 @@ class Index extends React.Component<{}, IState> {
           <Head>
             <title>Poseidon Network</title>
           </Head>
-          <Nav avatar={this.state.user.avatar} logout={logout} />
+          <Nav user={this.state.user} logout={logout} />
           <Preview isLogin={this.state.isLogin} />
           <Footer />
         </Page>

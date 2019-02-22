@@ -1,11 +1,24 @@
 import Layout from './Layout';
 
-const Nav = ({ avatar, logout }: { avatar?: string, logout?: () => void }) => (
+interface IProps {
+  user: {
+    id?: string;
+    token?: string;
+    avatar?: string;
+    name?: string;
+  };
+  logout: () => void;
+}
+
+const Nav = ({ user: { avatar, name } = {}, logout }:  IProps) => (
   <Layout bgColor="#222633" color="#fff">
     <div className="container">
       <a href="/"><img className="logo" alt="logo" src="/static/img-logo.png" /></a>
       <nav role="navigation">
-        { avatar && <img className="avatar" src={avatar} /> }
+        <div id="profile">
+          { avatar && <img className="avatar" src={avatar} /> }
+          <span className="username">{ name }</span>
+        </div>
         <div id="menuToggle">
           <input type="checkbox" />
           <span></span>
@@ -43,13 +56,23 @@ const Nav = ({ avatar, logout }: { avatar?: string, logout?: () => void }) => (
         width: 210px;
       }
 
-      .avatar {
+      #profile {
         top: 36px;
         right: 110px;
         position: absolute;
+        display: flex;
+        align-items: center;
+      }
+
+      .username {
+        font-size: 14px;
+      }
+
+      .avatar {
         border-radius: 50%;
         width: 25px;
         height: 25px;
+        margin-right: 10px;
       }
 
       #menuToggle {
