@@ -93,6 +93,7 @@ export const roadmap = [
     time: 'Q4 2018',
     title: 'EQUITY Round',
     description: 'Centralized dispatcher Distributed Edges',
+    done: true,
   },
   {
     time: 'Q1 2019',
