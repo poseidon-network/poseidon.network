@@ -137,7 +137,7 @@ export class Preview extends React.Component<IProps, IState> {
         {
           this.state.isExceedPreviewQuta &&
           <PreviewModal
-            isLogin={this.props.user !== null}
+            isLogin={this.props.user.isLogin}
             onClickLogin={this.handleLogin}
             onClickApp={this.handleClickApp}
           />
