@@ -36,7 +36,7 @@ class Layout extends React.Component<IProps, { user: IUser }> {
           <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500" rel="stylesheet" />
         </Head>
         <UserContext.Provider value={this.state.user}>
-          <Nav logout={logout} />
+          <Nav user={this.state.user} logout={logout} />
           { this.props.children }
           <Footer />
         </UserContext.Provider>
