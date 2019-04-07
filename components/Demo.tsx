@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 
-import Layout from './Layout';
+import Section from './Section';
 import Content from './Content';
 import UploadFileForm from './UploadFileForm';
 import FileTable from './FileTable';
@@ -98,7 +98,7 @@ export default class Demo extends React.Component<{}, IState> {
 
   render() {
     return (
-      <Layout bgColor="#222633" color="#90cfbe">
+      <Section bgColor="#222633" color="#90cfbe">
         <Content>
           <section>
             <UploadFileForm
@@ -121,7 +121,7 @@ export default class Demo extends React.Component<{}, IState> {
             }
           `}</style>
         </Content>
-      </Layout>
+      </Section>
     );
   }
 }

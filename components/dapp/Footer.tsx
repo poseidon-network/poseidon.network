@@ -1,10 +1,10 @@
-import Layout from '../Layout';
+import Section from '../Section';
 import Content from '../Content';
 import SocialMedia from '../SocialMedia';
 import { footer } from '../../data';
 
 const Footer = () => (
-  <Layout
+  <Section
     bgColor="#232634"
     color="#fff"
   >
@@ -76,7 +76,7 @@ const Footer = () => (
         }
       `}</style>
     </Content>
-  </Layout>
+  </Section>
 );
 
 export default Footer;

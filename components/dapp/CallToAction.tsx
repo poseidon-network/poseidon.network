@@ -1,8 +1,8 @@
-import Layout from '../Layout';
+import Section from '../Section';
 import Content from '../Content';
 
 const CallToAction = () => (
-  <Layout
+  <Section
     bgColor="#1d202b"
     color="#fff"
   >
@@ -86,7 +86,7 @@ const CallToAction = () => (
         }
       `}</style>
     </Content>
-  </Layout>
+  </Section>
 );
 
 export default CallToAction;

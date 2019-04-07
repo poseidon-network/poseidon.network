@@ -1,11 +1,11 @@
-import Layout from './Layout';
+import Section from './Section';
 import RoadmapItem from './RoadmapItem';
 import H2 from './H2';
 import Content from './Content';
 import { roadmap } from '../data';
 
 const Roadmap = () => ((
-  <Layout bgColor="#90cfbe" color="#1c1c1d">
+  <Section bgColor="#90cfbe" color="#1c1c1d">
     <Content>
       <H2 id="roadmap" center>Roadmap</H2>
       <div className="content">
@@ -37,7 +37,7 @@ const Roadmap = () => ((
         }
       `}</style>
     </Content>
-  </Layout>
+  </Section>
 ));
 
 export default Roadmap;

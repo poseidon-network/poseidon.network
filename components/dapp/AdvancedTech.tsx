@@ -1,9 +1,9 @@
-import Layout from '../Layout';
+import Section from '../Section';
 import Content from '../Content';
 import ListItem from './ListItem';
 
 const AdvancedTech = () => (
-  <Layout
+  <Section
     bgColor="#d7f2ee"
     color="#222633"
     padding="0"
@@ -108,7 +108,7 @@ const AdvancedTech = () => (
         }
       `}</style>
     </Content>
-  </Layout>
+  </Section>
 );
 
 export default AdvancedTech;

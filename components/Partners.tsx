@@ -1,4 +1,4 @@
-import Layout from './Layout';
+import Section from './Section';
 import H2 from './H2';
 import Partner from './Partner';
 import Content from './Content';
@@ -6,7 +6,7 @@ import Content from './Content';
 import { partners } from '../data';
 
 const Partners = () => ((
-  <Layout bgColor="#222633" color="#fff">
+  <Section bgColor="#222633" color="#fff">
     <Content>
       <H2 id="partners" center>Partners</H2>
       <div>
@@ -26,7 +26,7 @@ const Partners = () => ((
         }
       `}</style>
     </Content>
-  </Layout>
+  </Section>
 ));
 
 export default Partners;

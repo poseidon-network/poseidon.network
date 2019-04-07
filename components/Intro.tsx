@@ -1,10 +1,10 @@
 import { Fragment } from 'react';
-import Layout from './Layout';
+import Section from './Section';
 import Content from './Content';
 import { intro } from '../data';
 
 const Intro = () => ((
-  <Layout bgColor="#222633" color="#fff" padding="0 32px 40px">
+  <Section bgColor="#222633" color="#fff" padding="0 32px 40px">
     <Content>
       {
         intro.map(({ title, description }) => ((
@@ -42,7 +42,7 @@ const Intro = () => ((
         }
       `}</style>
     </Content>
-  </Layout>
+  </Section>
 ));
 
 export default Intro;

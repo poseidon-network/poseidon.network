@@ -1,8 +1,8 @@
-import Layout from '../Layout';
+import Section from '../Section';
 import Content from '../Content';
 
 const Intro = () => (
-  <Layout
+  <Section
     backgroundImage="/static/img-bg-1@2x.png"
     bgColor="#1d202b"
     color="#d7f2ee"
@@ -120,7 +120,7 @@ const Intro = () => (
         }
       `}</style>
     </Content>
-  </Layout>
+  </Section>
 );
 
 export default Intro;

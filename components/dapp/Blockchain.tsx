@@ -1,9 +1,9 @@
-import Layout from '../Layout';
+import Section from '../Section';
 import Content from '../Content';
 import ListItem from './ListItem';
 
 const Blockchain = () => (
-  <Layout
+  <Section
     bgColor="#d7f2ee"
     color="#222633"
     padding="0"
@@ -122,7 +122,7 @@ const Blockchain = () => (
         }
       `}</style>
     </Content>
-  </Layout>
+  </Section>
 );
 
 export default Blockchain;

@@ -1,7 +1,7 @@
 import React from 'react';
 import { FaRegPlayCircle } from 'react-icons/fa';
 
-import Layout from './Layout';
+import Section from './Section';
 import Content from './Content';
 import { header } from '../data';
 
@@ -41,7 +41,7 @@ class Header extends React.Component {
 
   render() {
     return (
-      <Layout bgColor="#222633" color="#fff">
+      <Section bgColor="#222633" color="#fff">
         <Content>
           <div className="description-container">
             <div className="bg-rect" />
@@ -141,7 +141,7 @@ class Header extends React.Component {
             }
           `}</style>
         </Content>
-      </Layout>
+      </Section>
     );
   }
 }
