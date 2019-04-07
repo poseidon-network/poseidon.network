@@ -1,4 +1,4 @@
-import Page from '../Layout/Page';
+import Page from '../layout/Page';
 import Intro from '../components/dapp/Intro';
 import SocialSharing from '../components/dapp/SocialSharing';
 import BlockChain from '../components/dapp/Blockchain';

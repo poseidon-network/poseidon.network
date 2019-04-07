@@ -1,4 +1,4 @@
-import Page from '../Layout/Page';
+import Page from '../layout/Page';
 import Header from '../components/Header';
 import Indicators from '../components/Indicators';
 import Intro from '../components/Intro';

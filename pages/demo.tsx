@@ -1,4 +1,4 @@
-import Page from '../Layout/Page';
+import Page from '../layout/Page';
 import Demo from '../components/Demo';
 import Intro from '../components/dapp/Intro';
 

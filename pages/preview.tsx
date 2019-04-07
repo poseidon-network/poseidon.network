@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Page, { UserContext } from '../Layout/Page';
+import Page, { UserContext } from '../layout/Page';
 import Preview from '../components/Preview';
 import { ApolloProvider } from 'react-apollo';
 import { GRAPHQL_URI } from '../constants';
