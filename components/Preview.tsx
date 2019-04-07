@@ -114,17 +114,28 @@ export class Preview extends React.Component<IProps, IState> {
     if (file && this.props.user.isLogin) {
       const tronWeb = (window as any).tronWeb;
       if (tronWeb) {
-        const contract = await tronWeb.trx.getContract(CONTRACT_ADDRESS);
-        const instance = tronWeb.contract(contract.abi.entrys, CONTRACT_ADDRESS);
-        const fileHexID = tronWeb.toHex(translator.fromUUID(file.id));
-        const f = await instance.files(fileHexID).call();
-        const price = f.price.toNumber();
-        const trxToUSDPrice = await instance.trxPrice().call();
-        const trxPrice = price / (trxToUSDPrice.toNumber() / 100000);
-        const sharerAdddress = this.state.sharerAdddress || '410000000000000000000000000000000000000000';
-        await instance.pay(fileHexID, sharerAdddress).send({
-          callValue: tronWeb.toSun(Math.round(trxPrice)),
-        });
+        try {
+          const contract = await tronWeb.trx.getContract(CONTRACT_ADDRESS);
+          const instance = tronWeb.contract(contract.abi.entrys, CONTRACT_ADDRESS);
+          const fileHexID = tronWeb.toHex(translator.fromUUID(file.id));
+          const f = await instance.files(fileHexID).call();
+          const price = f.price.toNumber();
+          const trxToUSDPrice = await instance.trxPrice().call();
+          const trxPrice = price / (trxToUSDPrice.toNumber() / 100000);
+          const sharerAdddress = this.state.sharerAdddress || '410000000000000000000000000000000000000000';
+          await instance.pay(fileHexID, sharerAdddress).send({
+            callValue: tronWeb.toSun(Math.round(trxPrice)),
+          });
+          await this.props.client.mutate({
+            mutation: payGQL,
+            variables: {
+              fileID: file.id,
+            },
+          });
+          window.location.reload();
+        } catch (error) {
+          console.log(error);
+        }
       } else {
         this.setState({
           showTronLinkMsg: true,
@@ -227,6 +238,14 @@ query ($id: String!) {
     price
     isPaid
     viewCount
+  }
+}
+`;
+
+const payGQL = gql`
+mutation ($fileID: String) {
+  pay(fileID: $fileID) {
+    id
   }
 }
 `;

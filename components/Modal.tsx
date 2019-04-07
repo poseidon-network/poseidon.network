@@ -15,10 +15,7 @@ const Modal = ({ children }: { children: React.ReactNode }) => (
 const style = css`
   .modal {
     position: fixed;
-    width: 100%;
-    height: 100%;
-    background-color: #00000063;
-    top: 0;
+    top: 40%;
     display: flex;
     align-items: center;
     justify-content: center;
