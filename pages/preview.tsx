@@ -42,10 +42,7 @@ class Index extends React.Component<{}, IState> {
   render() {
     return (
       <ApolloProvider client={client}>
-        <Page>
-          <Head>
-            <title>Poseidon Network</title>
-          </Head>
+        <Page title="Poseidon Network | Preview">
           <Nav user={this.state.user} logout={logout} />
           <Preview isLogin={this.state.isLogin} />
           <Footer />

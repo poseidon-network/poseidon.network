@@ -1,5 +1,3 @@
-import Head from 'next/head';
-
 import Page from '../components/Page';
 import Nav from '../components/Nav';
 import Intro from '../components/dapp/Intro';
@@ -11,11 +9,7 @@ import CallToAction from '../components/dapp/CallToAction';
 import Footer from '../components/dapp/Footer';
 
 const TronApp = () => ((
-  <Page>
-    <Head>
-      <title>Poseidon Network DApp</title>
-      <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500" rel="stylesheet" />
-    </Head>
+  <Page title="Poseidon Network | DApp">
     <Nav />
     <Intro />
     <SocialSharing />
