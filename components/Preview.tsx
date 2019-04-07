@@ -18,7 +18,7 @@ const REDIRECT_TIMEOUT_MS = 3000;
 
 interface IProps {
   client: CustomApolloClient<{}>;
-  isLogin: boolean;
+  user: IUser;
 }
 interface IState {
   file?: {
@@ -137,7 +137,7 @@ export class Preview extends React.Component<IProps, IState> {
         {
           this.state.isExceedPreviewQuta &&
           <PreviewModal
-            isLogin={this.props.isLogin}
+            isLogin={this.props.user !== null}
             onClickLogin={this.handleLogin}
             onClickApp={this.handleClickApp}
           />
@@ -203,4 +203,4 @@ export const SOCIAL_LOGIN = gql`
   }
 `;
 
-export default withApollo<{ isLogin: boolean }>(Preview);
+export default withApollo<{ user: IUser }>(Preview);

@@ -4,7 +4,7 @@ import FacebookLogin from 'react-facebook-login/dist/facebook-login-render-props
 import css from 'styled-jsx/css';
 
 interface IProps {
-  isLogin: boolean;
+  isLogin?: boolean;
   onClickLogin: (info: any) => void;
   onClickApp: () => void;
 }

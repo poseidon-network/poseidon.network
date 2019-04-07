@@ -1,5 +1,4 @@
-import Page from '../components/Page';
-import Nav from '../components/Nav';
+import Page from '../Layout/Page';
 import Header from '../components/Header';
 import Indicators from '../components/Indicators';
 import Intro from '../components/Intro';
@@ -8,11 +7,9 @@ import Partners from '../components/Partners';
 import Roadmap from '../components/Roadmap';
 import Team from '../components/Team';
 import Contact from '../components/Contact';
-import Footer from '../components/Footer';
 
 const Index = () => ((
   <Page title="Poseidon Network">
-    <Nav />
     <Header />
     <Indicators />
     <Intro />
@@ -21,7 +18,6 @@ const Index = () => ((
     <Roadmap />
     <Team />
     <Contact />
-    <Footer />
   </Page>
 ));
 
