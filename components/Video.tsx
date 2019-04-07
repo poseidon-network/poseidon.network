@@ -3,8 +3,9 @@ import css from 'styled-jsx/css';
 
 interface IProps {
   videoRef: React.RefObject<HTMLVideoElement>;
-  isExceedPreviewQuta: boolean;
+  isModalOpened: boolean;
   video: {
+    id: string;
     name: string;
     uri: string;
     mimetype: string;
@@ -13,22 +14,31 @@ interface IProps {
     viewCount: number;
   };
   onTimeUpdate: () => void;
+  onDownload: (event: React.SyntheticEvent) => void;
 }
 
-const Video = (props: IProps) => (
+const Video = ({ video, isModalOpened, videoRef, onTimeUpdate, onDownload }: IProps) => (
   <div>
     <video
-      ref={props.videoRef}
-      controls={!props.isExceedPreviewQuta}
+      ref={videoRef}
+      controls={!isModalOpened}
       controlsList="nodownload"
-      onTimeUpdate={props.onTimeUpdate}
+      onTimeUpdate={onTimeUpdate}
     >
-      <source src={props.video.uri} type="video/mp4" />
+      <source src={video.uri} type="video/mp4" />
     </video>
     <p className="name">{ name }</p>
     <div className="file-meta">
-      <p className="view">{ props.video.viewCount } views</p>
-      <p className="price">{ props.video.price > 0 ? `Price ${props.video.price} USD` : 'Free' }</p>
+      <p className="view">{ video.viewCount } views</p>
+      <div className="right-meta">
+        <p className="price">{ video.price > 0 ? `Price ${video.price} USD` : 'Free' }</p>
+        { video.price > 0 && (
+            video.isPaid
+            ? <span>(Paid)</span>
+            : <a href="" className="download" onClick={onDownload}>Pay</a>
+          )
+        }
+      </div>
     </div>
     <style jsx>
       { style }
@@ -61,14 +71,25 @@ const style = css`
     align-items: center;
   }
 
+  .right-meta {
+    display: flex;
+    flex-directon: row;
+    align-items: center;
+    font-size: 18px;
+  }
+
   .name {
     color: #fff;
-    font-size: 24px;
     padding-top: 20px;
   }
 
   .price {
     color: #fff;
+    margin-right: 10px;
+  }
+
+  .download {
+    cursor: pointer;
     font-size: 18px;
   }
 
