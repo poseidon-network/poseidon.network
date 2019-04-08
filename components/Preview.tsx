@@ -122,7 +122,7 @@ export class Preview extends React.Component<IProps, IState> {
           const price = f.price.toNumber();
           const trxToUSDPrice = await instance.trxPrice().call();
           const trxPrice = price / (trxToUSDPrice.toNumber() / 100000);
-          const isBalanceEnough = await this.checkBalance(100000);
+          const isBalanceEnough = await this.checkBalance(trxPrice);
           if (isBalanceEnough) {
             const sharerAdddress = this.state.sharerAdddress || '410000000000000000000000000000000000000000';
             await instance.pay(fileHexID, sharerAdddress).send({
