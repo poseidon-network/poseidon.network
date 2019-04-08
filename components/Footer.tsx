@@ -1,9 +1,9 @@
-import Layout from './Layout';
+import Section from './Section';
 import SocialMedia from './SocialMedia';
 import { footer } from '../data';
 
 const Footer = () => ((
-  <Layout bgColor="#222633" color="#fff">
+  <Section bgColor="#222633" color="#fff">
     <div className="socialMedia-container">
       { footer.socialMediaList.map(({ imgUri, link, alt }) => (
         <SocialMedia key={imgUri} imgUri={imgUri} link={link} alt={alt} />
@@ -41,7 +41,7 @@ const Footer = () => ((
         font-size: 13px;
       }
     `}</style>
-  </Layout>
+  </Section>
 ));
 
 export default Footer;

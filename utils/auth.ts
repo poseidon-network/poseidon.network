@@ -8,12 +8,15 @@ const checkExpire = () => {
 export const getUser = () => {
   checkExpire();
   const payload = window.localStorage.getItem('user');
-  return payload ? JSON.parse(payload) : null;
+  return payload ? JSON.parse(payload) : {};
 };
 
 export const saveLoginData = async (data: any) => {
   window.localStorage.setItem('authToken', data.token);
-  window.localStorage.setItem('user', JSON.stringify(data));
+  window.localStorage.setItem('user', JSON.stringify({
+    ...data,
+    isLogin: true,
+  }));
 
   // expire time
   const userExpiredAt = new Date();

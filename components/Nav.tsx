@@ -1,4 +1,4 @@
-import Layout from './Layout';
+import Section from './Section';
 
 interface IProps {
   user?: {
@@ -11,7 +11,7 @@ interface IProps {
 }
 
 const Nav = ({ user = {}, logout }:  IProps) => (
-  <Layout bgColor="#222633" color="#fff">
+  <Section bgColor="#222633" color="#fff">
     <div className="container">
       <a href="/"><img className="logo" alt="logo" src="/static/img-logo.png" /></a>
       <nav role="navigation">
@@ -192,7 +192,7 @@ const Nav = ({ user = {}, logout }:  IProps) => (
         }
       }
     `}</style>
-  </Layout>
+  </Section>
 );
 
 export default Nav;

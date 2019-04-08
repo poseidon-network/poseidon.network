@@ -2,26 +2,29 @@ import React from 'react';
 import css from 'styled-jsx/css';
 // @ts-ignore
 import FacebookLogin from 'react-facebook-login/dist/facebook-login-render-props';
-
 import gql from 'graphql-tag';
 import { withApollo } from 'react-apollo';
+import { ReactFacebookLoginInfo } from 'react-facebook-login';
+import short from 'short-uuid';
 
 import { saveLoginData } from '../utils/auth';
-import { APP_URL } from '../constants';
+import { APP_URL, CONTRACT_ADDRESS } from '../constants';
 import CustomApolloClient from '../utils/CustomApolloClient';
-
 import PreviewModal from './PreviewModal';
 import Video from './Video';
-import { ReactFacebookLoginInfo } from 'react-facebook-login';
+import Modal from './Modal';
 
 const REDIRECT_TIMEOUT_MS = 3000;
+const translator = short();
 
 interface IProps {
   client: CustomApolloClient<{}>;
-  isLogin: boolean;
+  user: IUser;
 }
 interface IState {
+  sharerAdddress?: string | null;
   file?: {
+    id: string;
     name: string;
     uri: string;
     mimetype: string;
@@ -30,22 +33,26 @@ interface IState {
     viewCount: number;
   };
   isLoading: boolean;
-  isExceedPreviewQuta: boolean;
+  isModalOpened: boolean;
+  showTronLinkMsg: boolean;
 }
 
 export class Preview extends React.Component<IProps, IState> {
   state: IState = {
     file: undefined,
     isLoading: true,
-    isExceedPreviewQuta: false,
+    isModalOpened: false,
+    showTronLinkMsg: false,
   };
   myVideo: React.RefObject<HTMLVideoElement> = React.createRef();
 
   async componentDidMount() {
     const fileID = new URLSearchParams(window.location.search).get('q');
+    const sharerAdddress = new URLSearchParams(window.location.search).get('s');
     if (fileID) {
       await this.fetchFile(fileID);
       this.setState({
+        sharerAdddress,
         isLoading: false,
       });
     }
@@ -85,13 +92,13 @@ export class Preview extends React.Component<IProps, IState> {
       if (video.currentTime >= (video.duration) / 10) {
         video.pause();
         this.setState({
-          isExceedPreviewQuta: true,
+          isModalOpened: true,
         });
       }
     }
   }
 
-  handleClickApp = () => {
+  handleClickOpenApp = () => {
     const clickedAt = +new Date;
     setTimeout(() => {
       // To avoid failing on return to MobileSafari, ensure freshness!
@@ -99,6 +106,62 @@ export class Preview extends React.Component<IProps, IState> {
         window.location.href = APP_URL;
       }
     }, REDIRECT_TIMEOUT_MS);
+  }
+
+  handlePay = async (event: React.SyntheticEvent) => {
+    event.preventDefault();
+    const { file } = this.state;
+    if (file && this.props.user.isLogin) {
+      const tronWeb = (window as any).tronWeb;
+      if (tronWeb) {
+        try {
+          const contract = await tronWeb.trx.getContract(CONTRACT_ADDRESS);
+          const instance = tronWeb.contract(contract.abi.entrys, CONTRACT_ADDRESS);
+          const fileHexID = tronWeb.toHex(translator.fromUUID(file.id));
+          const f = await instance.files(fileHexID).call();
+          const price = f.price.toNumber();
+          const trxToUSDPrice = await instance.trxPrice().call();
+          const trxPrice = price / (trxToUSDPrice.toNumber() / 100000);
+          const isBalanceEnough = await this.checkBalance(trxPrice);
+          if (isBalanceEnough) {
+            const sharerAdddress = this.state.sharerAdddress || '410000000000000000000000000000000000000000';
+            await instance.pay(fileHexID, sharerAdddress).send({
+              callValue: tronWeb.toSun(Math.round(trxPrice)),
+            });
+            await this.props.client.mutate({
+              mutation: payGQL,
+              variables: {
+                fileID: file.id,
+              },
+            });
+            window.location.reload();
+          } else {
+            window.alert('TronLink shows insufficient balance');
+          }
+        } catch (error) {
+          console.log(error);
+        }
+      } else {
+        this.setState({
+          showTronLinkMsg: true,
+        });
+      }
+    } else {
+      this.setState({ isModalOpened: true });
+    }
+  }
+
+  checkBalance = async (balanceNeeded: number) => {
+    const tronWeb = (window as any).tronWeb;
+    try {
+      const { balance } = await tronWeb.trx.getAccount();
+      if (balance && balance > Number(tronWeb.toSun(balanceNeeded))) {
+        return true;
+      }
+    } catch (error) {
+      return false;
+    }
+    return false;
   }
 
   renderFile = () => {
@@ -112,8 +175,9 @@ export class Preview extends React.Component<IProps, IState> {
         <Video
           videoRef={this.myVideo}
           video={file}
-          isExceedPreviewQuta={this.state.isExceedPreviewQuta}
+          isModalOpened={this.state.isModalOpened}
           onTimeUpdate={this.handleUpdateTime}
+          onDownload={this.handlePay}
         />
       );
     }
@@ -134,13 +198,21 @@ export class Preview extends React.Component<IProps, IState> {
     return (
       <div className="container">
         { this.renderFile() }
-        {
-          this.state.isExceedPreviewQuta &&
+        { this.state.isModalOpened &&
           <PreviewModal
-            isLogin={this.props.isLogin}
+            isLogin={this.props.user.isLogin}
             onClickLogin={this.handleLogin}
-            onClickApp={this.handleClickApp}
+            onClickApp={this.handleClickOpenApp}
           />
+        }
+        { this.state.showTronLinkMsg &&
+          <Modal>
+            <p>Could not find the Tron wallet. Please install the
+              <a href="https://chrome.google.com/webstore/detail/tronlink/ibnejdfjmmkpcnlpebklmnkoeoihofec">
+                TronLink
+              </a>
+            </p>
+          </Modal>
         }
         <style jsx>
           { style }
@@ -167,17 +239,31 @@ const style = css`
     max-width: 920px;
     max-height: 400px;
   }
+
+  a {
+    font-size: 18px;
+    margin-left: 5px;
+  }
 `;
 
 const loadFileGQL = gql`
 query ($id: String!) {
   file(id: $id) {
+    id
     name
     uri
     mimetype
     price
     isPaid
     viewCount
+  }
+}
+`;
+
+const payGQL = gql`
+mutation ($fileID: String) {
+  pay(fileID: $fileID) {
+    id
   }
 }
 `;
@@ -203,4 +289,4 @@ export const SOCIAL_LOGIN = gql`
   }
 `;
 
-export default withApollo<{ isLogin: boolean }>(Preview);
+export default withApollo<{ user: IUser }>(Preview);

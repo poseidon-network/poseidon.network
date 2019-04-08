@@ -1,4 +1,4 @@
-import Layout from './Layout';
+import Section from './Section';
 import H2 from './H2';
 import Member from './Member';
 import Content from './Content';
@@ -9,7 +9,7 @@ import {
 } from '../data';
 
 const Team = () => ((
-  <Layout bgColor="#222633" color="#222633">
+  <Section bgColor="#222633" color="#222633">
     <Content>
       <H2 id="team" color="#fff" center>TEAM</H2>
         <div className="members">
@@ -47,7 +47,7 @@ const Team = () => ((
         }
       `}</style>
     </Content>
-  </Layout>
+  </Section>
 ));
 
 export default Team;

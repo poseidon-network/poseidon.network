@@ -1,10 +1,10 @@
-import Layout from './Layout';
+import Section from './Section';
 import Indicator from './Indicator';
 import Content from './Content';
 import { indicators } from '../data';
 
 const Indicators = () => ((
-  <Layout bgColor="#222633" color="#fff" padding="12px 32px 0">
+  <Section bgColor="#222633" color="#fff" padding="12px 32px 0">
     <Content direction="row">
       {
         indicators.map(({ value, unit, description }) => (
@@ -12,7 +12,7 @@ const Indicators = () => ((
         ))
       }
     </Content>
-  </Layout>
+  </Section>
 ));
 
 export default Indicators;

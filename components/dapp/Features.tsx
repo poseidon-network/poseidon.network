@@ -1,9 +1,9 @@
-import Layout from '../Layout';
+import Section from '../Section';
 import Content from '../Content';
 import FeatureItem from './FeatureItem';
 
 const Features = () => (
-  <Layout
+  <Section
     backgroundImage="/static/img-bg-3@2x.jpg"
     bgColor="#1d202b"
     color="#d7f2ee"
@@ -19,12 +19,12 @@ const Features = () => (
         <FeatureItem
           icon="/static/img-2.png"
           title="Faster "
-          description={`The edges on fog are closer to the users, hence lower latency than the edges on cloud. Benefit from Edge Computing technology, it’s much faster than cloud infrastructure.`}
+          description="The edges on fog are closer to the users, hence lower latency than the edges on cloud. Benefit from Edge Computing technology, it’s much faster than cloud infrastructure."
         />
         <FeatureItem
           icon="/static/img-3.png"
           title="Extra Money"
-          description={`For anyone who wants to utilize unused resources to make passive income, no matter how little it is. You already paid for the resources you used, why not make money with idle bandwidth and hardware, no strings attached.`}
+          description="For anyone who wants to utilize unused resources to make passive income, no matter how little it is. You already paid for the resources you used, why not make money with idle bandwidth and hardware, no strings attached."
         />
       </div>
       <style jsx>{`
@@ -43,7 +43,7 @@ const Features = () => (
         }
       `}</style>
     </Content>
-  </Layout>
+  </Section>
 );
 
 export default Features;

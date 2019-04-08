@@ -1,10 +1,10 @@
-import Layout from './Layout';
+import Section from './Section';
 import FeatureItem from './FeatureItem';
 import Content from './Content';
 import { features } from '../data';
 
 const Features = () => ((
-  <Layout bgColor="#d7f2ee" color="#222633">
+  <Section bgColor="#d7f2ee" color="#222633">
     <Content>
       <img id="feature" alt="POSEIDON NETWORK" src="/static/img-logotype@2x.png" />
       <div className="item-container">
@@ -32,7 +32,7 @@ const Features = () => ((
         }
       `}</style>
     </Content>
-  </Layout>
+  </Section>
 ));
 
 export default Features;
