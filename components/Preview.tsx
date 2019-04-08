@@ -122,17 +122,22 @@ export class Preview extends React.Component<IProps, IState> {
           const price = f.price.toNumber();
           const trxToUSDPrice = await instance.trxPrice().call();
           const trxPrice = price / (trxToUSDPrice.toNumber() / 100000);
-          const sharerAdddress = this.state.sharerAdddress || '410000000000000000000000000000000000000000';
-          await instance.pay(fileHexID, sharerAdddress).send({
-            callValue: tronWeb.toSun(Math.round(trxPrice)),
-          });
-          await this.props.client.mutate({
-            mutation: payGQL,
-            variables: {
-              fileID: file.id,
-            },
-          });
-          window.location.reload();
+          const isBalanceEnough = await this.checkBalance(100000);
+          if (isBalanceEnough) {
+            const sharerAdddress = this.state.sharerAdddress || '410000000000000000000000000000000000000000';
+            await instance.pay(fileHexID, sharerAdddress).send({
+              callValue: tronWeb.toSun(Math.round(trxPrice)),
+            });
+            await this.props.client.mutate({
+              mutation: payGQL,
+              variables: {
+                fileID: file.id,
+              },
+            });
+            window.location.reload();
+          } else {
+            window.alert('TronLink shows insufficient balance');
+          }
         } catch (error) {
           console.log(error);
         }
@@ -144,6 +149,19 @@ export class Preview extends React.Component<IProps, IState> {
     } else {
       this.setState({ isModalOpened: true });
     }
+  }
+
+  checkBalance = async (balanceNeeded: number) => {
+    const tronWeb = (window as any).tronWeb;
+    try {
+      const { balance } = await tronWeb.trx.getAccount();
+      if (balance && balance > Number(tronWeb.toSun(balanceNeeded))) {
+        return true;
+      }
+    } catch (error) {
+      return false;
+    }
+    return false;
   }
 
   renderFile = () => {
