@@ -50,7 +50,7 @@ export const features = [
   {
     imageUri: '/static/img-3.png',
     title: 'Cheaper',
-    description: 'With Fog Computing technology. We provide a cheaper content acceleration Layer incentivized by PSD Token.  “$0.01 USD/GB, almost ten times cheaper than AWS cloudfront”.',
+    description: 'With Fog Computing technology. We provide a cheaper content acceleration Layer incentivized by QQQ Token.  “$0.01 USD/GB, almost ten times cheaper than AWS cloudfront”.',
   },
   {
     imageUri: '/static/img-4.png',
@@ -113,7 +113,7 @@ export const roadmap = [
   },
   {
     time: 'WHERE WE ARE GOING',
-    description: 'Open-sourced, Decentralized, Distributed, Autonomous Content Acceleration Layer incentivized by PSD Token',
+    description: 'Open-sourced, Decentralized, Distributed, Autonomous Content Acceleration Layer incentivized by QQQ Token',
     lastone: true,
   },
 ];
@@ -164,5 +164,5 @@ export const footer = {
     { imgUri: '/static/ic-twitter.png', link: ' https://twitter.com/NetworkPoseidon', alt: 'Twitter' },
   ],
   email: 'service@poseidon.network',
-  copyright: 'POSEIDON NETWORK © 2018 All rights reserved.',
+  copyright: 'POSEIDON NETWORK © 2018-2019 All rights reserved.',
 };
