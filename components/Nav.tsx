@@ -12,7 +12,7 @@ interface IProps {
   logout?: () => void;
 }
 
-const Nav = ({ user = {}, logout, bgColor = '#222633' }:  IProps) => {
+const Nav = ({ bgColor = '#222633' }:  IProps) => {
   const [isLangVisiable, setLangVisiable] = useState<boolean>(false);
   const [isMoreVisiable, setMoreVisiable] = useState<boolean>(false);
 

@@ -7,7 +7,7 @@ interface IPerson {
   backgroundColor?: string;
 }
 
-const Person = ({ name, title, avatar, backgroundColor = '#90cfbe' }: IPerson) => ((
+const Person = ({ name, title, backgroundColor = '#90cfbe' }: IPerson) => ((
   <div className="container">
     <div className="avatar">
       {/* <img alt={name} src={avatar}/> */}

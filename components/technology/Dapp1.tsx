@@ -1,6 +1,5 @@
 import Section from '../Section';
 import Content from '../Content';
-import H2 from '../H2';
 import P from '../P';
 import Col from '../Col';
 

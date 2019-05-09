@@ -18,7 +18,7 @@ const Team = () => ((
         A Strong Team Determined On Things Happen
       </H2>
       <div className="members">
-        { team.map(({ name, title, avatar }) => (
+        { team.map(({ name, title }) => (
           <Person key={name} name={name} title={title} avatar={''} />
         ))}
       </div>
