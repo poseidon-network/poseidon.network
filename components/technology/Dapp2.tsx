@@ -13,7 +13,7 @@ const Dapp2 = () => {
       color={styles.primaryColor}
       padding="120px"
     >
-      <H2>Poseidon Network Dapps</H2>
+      <H2 margin="0 0 60px" center>Poseidon Network Dapps</H2>
       <Content direction="row" style="justify-content: space-between;">
         <div className="block">
           <H3 color={styles.lightColor} margin="0 0 16px" center>QCDN</H3>
