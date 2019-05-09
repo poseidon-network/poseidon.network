@@ -1,5 +1,5 @@
 import Section from './Section';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 interface IProps {
   user?: {
@@ -14,10 +14,14 @@ interface IProps {
 
 const Nav = ({ user = {}, logout, bgColor = '#222633' }:  IProps) => {
   const [isLangVisiable, setLangVisiable] = useState<boolean>(false);
+  const [isMoreVisiable, setMoreVisiable] = useState<boolean>(false);
 
-  const toggleLang = () => {
-    setLangVisiable(!isLangVisiable);
-  };
+  useEffect(() => {
+    document.body.addEventListener('click', () => {
+      setLangVisiable(false);
+      setMoreVisiable(false);
+    });
+  });
 
   return (
     <Section bgColor={bgColor} color="#fff" padding="20px">
@@ -26,13 +30,23 @@ const Nav = ({ user = {}, logout, bgColor = '#222633' }:  IProps) => {
 
         <nav className="navigation" role="navigation">
           <ul>
-            <li className="item"><a>Technology</a></li>
+            <li className="item"><a href="/technology">Technology</a></li>
             <li className="item"><a>Solutions</a></li>
             <li className="item"><a>Developer</a></li>
             <li className="item"><a>Pricing</a></li>
-            <li className="item"><a>More</a></li>
             <li className="item">
-              <a onClick={toggleLang}>Language</a>
+              <a onClick={() => setMoreVisiable(!isMoreVisiable)}>More</a>
+              { isMoreVisiable &&
+                <ul className="dropdown">
+                  <li><a href="/community">Community</a></li>
+                  <li><a href="/token">Token</a></li>
+                  <li>Company</li>
+                  <li>Help Center</li>
+                </ul>
+              }
+            </li>
+            <li className="item">
+              <a onClick={() => setLangVisiable(!isLangVisiable)}>Language</a>
               { isLangVisiable &&
                 <ul className="dropdown">
                   <li>English</li>
@@ -75,6 +89,10 @@ const Nav = ({ user = {}, logout, bgColor = '#222633' }:  IProps) => {
           margin: auto;
           display: flex;
           max-width: 1440px;
+        }
+
+        a {
+          cursor: pointer;
         }
 
         .logo {
@@ -135,15 +153,13 @@ const Nav = ({ user = {}, logout, bgColor = '#222633' }:  IProps) => {
 
         .dropdown {
           display: flex;
-          width: 150px;
-          height: 151px;
           border-radius: 2px;
           box-shadow: 0 5px 15px 0 #1d202b;
           background-color: #d7f2ee;
           flex-direction: column;
           margin: 8px 10px 0;
           padding: 15px 37px;
-          transform: translateX(-34px);
+          transform: translateX(-50px);
           position: absolute;
         }
 
@@ -157,6 +173,10 @@ const Nav = ({ user = {}, logout, bgColor = '#222633' }:  IProps) => {
           color: #1d202b;
           list-style-type: none;
           margin: 0 0 13px;
+        }
+
+        .dropdown a {
+          color: #1d202b;
         }
 
         @media only screen and (min-width: 600px) {

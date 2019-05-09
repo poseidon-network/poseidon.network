@@ -56,6 +56,7 @@ class Layout extends React.Component<IProps, { user: IUser }> {
             line-height: normal;
             letter-spacing: normal;
             color: #90cfbe;
+            text-decoration: none;
           }
 
           * {
