@@ -8,10 +8,11 @@ interface IProps {
     avatar?: string;
     name?: string;
   };
+  bgColor?: string;
   logout?: () => void;
 }
 
-const Nav = ({ user = {}, logout }:  IProps) => {
+const Nav = ({ user = {}, logout, bgColor = '#222633' }:  IProps) => {
   const [isLangVisiable, setLangVisiable] = useState<boolean>(false);
 
   const toggleLang = () => {
@@ -19,7 +20,7 @@ const Nav = ({ user = {}, logout }:  IProps) => {
   };
 
   return (
-    <Section bgColor="#222633" color="#fff" padding="20px">
+    <Section bgColor={bgColor} color="#fff" padding="20px">
       <div className="container">
         <a href="/"><img className="logo" alt="logo" src="/static/img-logo.png" /></a>
 

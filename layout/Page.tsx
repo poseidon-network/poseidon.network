@@ -8,6 +8,7 @@ import { logout, getUser } from '../utils/auth';
 interface IProps {
   title: string;
   children: React.ReactNode;
+  navColor?: string;
 }
 
 export const UserContext = React.createContext<IUser>({});
@@ -36,7 +37,7 @@ class Layout extends React.Component<IProps, { user: IUser }> {
           <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,500" rel="stylesheet" />
         </Head>
         <UserContext.Provider value={this.state.user}>
-          <Nav user={this.state.user} logout={logout} />
+          <Nav user={this.state.user} logout={logout} bgColor={this.props.navColor} />
           { this.props.children }
           <Footer />
         </UserContext.Provider>
