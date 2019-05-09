@@ -1,4 +1,4 @@
-import H3 from './H3';
+import H3 from '../H3';
 
 interface IPerson {
   name: string;

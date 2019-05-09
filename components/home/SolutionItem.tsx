@@ -1,5 +1,5 @@
-import P from './P';
-import H3 from './H3';
+import P from '../P';
+import H3 from '../H3';
 
 interface IProps {
   imageUri: string;

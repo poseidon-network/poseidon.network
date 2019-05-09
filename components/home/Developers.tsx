@@ -1,10 +1,10 @@
 
-import Section from './Section';
-import Content from './Content';
-import H2 from './H2';
-import P from './P';
-import MoreLink from './MoreLink';
-import Col from './Col';
+import Section from '../Section';
+import Content from '../Content';
+import H2 from '../H2';
+import P from '../P';
+import MoreLink from '../MoreLink';
+import Col from '../Col';
 
 const Developers = () => ((
   <Section bgColor="#222633" color="#fff" padding="0 0 100px">

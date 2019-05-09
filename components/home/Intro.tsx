@@ -1,9 +1,9 @@
-import Section from './Section';
-import Content from './Content';
-import H2 from './H2';
-import P from './P';
-import MoreLink from './MoreLink';
-import { styles } from '../constants';
+import Section from '../Section';
+import Content from '../Content';
+import H2 from '../H2';
+import P from '../P';
+import MoreLink from '../MoreLink';
+import { styles } from '../../constants';
 
 const Intro = () => ((
   <Section bgColor={styles.dark} color="#fff" padding="122px 0 100px">

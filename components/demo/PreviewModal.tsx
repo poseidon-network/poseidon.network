@@ -3,7 +3,7 @@ import React from 'react';
 import FacebookLogin from 'react-facebook-login/dist/facebook-login-render-props';
 import css from 'styled-jsx/css';
 
-import Modal from './Modal';
+import Modal from '../Modal';
 
 interface IProps {
   isLogin?: boolean;

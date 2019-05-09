@@ -1,9 +1,9 @@
-import Section from './Section';
-import H2 from './H2';
+import Section from '../Section';
+import H2 from '../H2';
 import Person from './Person';
-import Content from './Content';
+import Content from '../Content';
 
-import { advisors } from '../data';
+import { advisors } from '../../data';
 
 const Partners = () => ((
   <Section padding="110px 0 120px" bgColor="#222633" color="#fff">

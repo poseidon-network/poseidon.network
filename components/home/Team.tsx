@@ -1,10 +1,10 @@
-import Section from './Section';
-import H2 from './H2';
+import Section from '../Section';
+import H2 from '../H2';
 import Person from './Person';
-import Content from './Content';
+import Content from '../Content';
 import {
   team,
-} from '../data';
+} from '../../data';
 
 const Team = () => ((
   <Section bgColor="#222633" color="#222633">

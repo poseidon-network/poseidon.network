@@ -1,9 +1,9 @@
-import Section from './Section';
-import Content from './Content';
-import { styles } from '../constants';
+import Section from '../Section';
+import Content from '../Content';
+import { styles } from '../../constants';
 import SolutionItem from './SolutionItem';
-import H2 from './H2';
-import { features } from '../data';
+import H2 from '../H2';
+import { features } from '../../data';
 
 const Solutions = () => ((
   <Section padding="120px 0" bgColor="#232633" color={styles.primaryColor}>

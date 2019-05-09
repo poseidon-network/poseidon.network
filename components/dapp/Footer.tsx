@@ -1,6 +1,6 @@
 import Section from '../Section';
 import Content from '../Content';
-import SocialMedia from '../SocialMedia';
+import SocialMedia from '../home/SocialMedia';
 import { footer } from '../../data';
 
 const Footer = () => (

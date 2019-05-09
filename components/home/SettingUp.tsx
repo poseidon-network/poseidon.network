@@ -1,9 +1,9 @@
-import Section from './Section';
-import Content from './Content';
-import H2 from './H2';
-import P from './P';
-import Col from './Col';
-import { styles } from '../constants';
+import Section from '../Section';
+import Content from '../Content';
+import H2 from '../H2';
+import P from '../P';
+import Col from '../Col';
+import { styles } from '../../constants';
 
 const SettingUp = () => ((
   <Section bgColor={styles.dark} color="#fff" padding="120px 0">
