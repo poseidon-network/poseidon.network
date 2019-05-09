@@ -2,10 +2,7 @@ import H4 from './H4';
 
 interface IProps {
   title: string;
-  links: [{
-    title: string;
-    uri?: string;
-  }];
+  links: [];
 }
 
 const FooterLinks = ({ title, links }: IProps) => {

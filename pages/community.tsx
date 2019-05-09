@@ -7,7 +7,7 @@ import Blog from '../components/community/Blog';
 import { styles } from '../constants';
 
 const Community = () => ((
-  <Page title="Poseidon Network" navColor={styles.dark}>
+  <Page title="Poseidon Network | Community" navColor={styles.dark}>
     <Header />
     <Miner />
     <Embassador />

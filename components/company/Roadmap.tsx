@@ -1,8 +1,8 @@
-import Section from './Section';
+import Section from '../Section';
 import RoadmapItem from './RoadmapItem';
-import H2 from './H2';
-import Content from './Content';
-import { roadmap } from '../data';
+import H2 from '../H2';
+import Content from '../Content';
+import { roadmap } from '../../data';
 
 const Roadmap = () => ((
   <Section bgColor="#90cfbe" color="#1c1c1d">
