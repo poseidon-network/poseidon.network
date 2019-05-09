@@ -30,10 +30,10 @@ class Layout extends React.Component<IProps, { user: IUser }> {
           <title>{ this.props.title }</title>
           <meta name="viewport" content="initial-scale=1.0, width=device-width" />
           <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
-          <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" />
+          <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600" rel="stylesheet" />
           <link rel="icon" type="image/png" sizes="32x32" href="/static/favicon-32x32.png" />
           <link rel="icon" type="image/png" sizes="16x16" href="/static/favicon-16x16.png" />
-          <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500" rel="stylesheet" />
+          <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,500" rel="stylesheet" />
         </Head>
         <UserContext.Provider value={this.state.user}>
           <Nav user={this.state.user} logout={logout} />
@@ -42,15 +42,19 @@ class Layout extends React.Component<IProps, { user: IUser }> {
         </UserContext.Provider>
         <style global jsx>{`
           body {
-            font-family: 'Lato';
+            font-family: 'Montserrat', sans-serif;
             -webkit-font-smoothing: antialiased;
             text-rendering: optimizeLegibility;
           }
 
           a {
+            font-size: 16px;
+            font-weight: normal;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: normal;
+            letter-spacing: normal;
             color: #90cfbe;
-            font-size: 13px;
-            text-decoration: none;
           }
 
           * {

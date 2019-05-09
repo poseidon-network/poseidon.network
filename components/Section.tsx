@@ -16,6 +16,8 @@ const Layout = ({ children, bgColor, color, padding, backgroundImage }: IProps) 
         width: 100%;
         overflow: hidden;
         padding: ${ padding || '32px'};
+        padding-left: 150px;
+        padding-right: 150px;
         ${backgroundImage ? `background-image: url(${backgroundImage});` : ''}
         background-size: cover;
         background-repeat: no-repeat;

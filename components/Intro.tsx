@@ -1,44 +1,24 @@
-import { Fragment } from 'react';
 import Section from './Section';
 import Content from './Content';
-import { intro } from '../data';
+import H2 from './H2';
+import P from './P';
+import MoreLink from './MoreLink';
+import { styles } from '../constants';
 
 const Intro = () => ((
-  <Section bgColor="#222633" color="#fff" padding="0 32px 40px">
-    <Content>
-      {
-        intro.map(({ title, description }) => ((
-          <Fragment key={title}>
-            <p className="title">{ title }</p>
-            <p className="description">{ description }</p>
-          </Fragment>
-        )))
-      }
+  <Section bgColor={styles.dark} color="#fff" padding="122px 0 100px">
+    <Content direction="row">
+      <div className="col">
+      </div>
+      <div className="col">
+        <H2 margin="0 0 15px">What is Poseidon Network</H2>
+        <P margin="0 0 30px 0">We provide decentralized CDN service, the decentralized version of GCP, AWS Cloud Service. With IoT such as NAS, we achieve fog computing,  it's closer to users than the cloud, several times faster, cheaper, and effective use of idle resources. With our variety of flexible solutions, partners have included the world's leading NAS brands, e-commerce, content industries, well-known gamer community forums, live streaming and so on.</P>
+        <MoreLink uri="" />
+      </div>
 
       <style jsx>{`
-        .title {
-          font-size: 20px;
-          font-weight: bold;
-          margin: 0 0 15px;
-          line-height: 1.35;
-          text-align: center;
-          white-space: pre-line;
-        }
-
-        .description {
-          font-size: 16px;
-          color: #90cfbe;
-          line-height: 1.31;
-          margin-bottom: 40px;
-          text-align: center;
-          white-space: pre-line;
-          max-width: 560px;
-        }
-
-        @media only screen and (min-width: 600px) {
-          .description {
-            line-height: 1.6em;
-          }
+        .col {
+          flex: 1;
         }
       `}</style>
     </Content>

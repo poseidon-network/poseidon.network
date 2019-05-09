@@ -1,44 +1,32 @@
 import Section from './Section';
-import SocialMedia from './SocialMedia';
+import H4 from './H4';
 import { footer } from '../data';
+import P from './P';
+import Content from './Content';
+import FooterLinks from './FooterLinks';
 
 const Footer = () => ((
-  <Section bgColor="#222633" color="#fff">
-    <div className="socialMedia-container">
-      { footer.socialMediaList.map(({ imgUri, link, alt }) => (
-        <SocialMedia key={imgUri} imgUri={imgUri} link={link} alt={alt} />
-      ))}
-    </div>
-    <div className="row">
-      <img className="logo" alt="logo" src="/static/Logo.png" />
-    </div>
-    <div className="row">
-      <a href="mailto:service@poseidon.network">{ footer.email }</a>
-    </div>
-    <div className="row">
-      <p>{ footer.copyright }</p>
-    </div>
+  <Section padding="77px 0 100px" bgColor="#1d202b" color="#fff">
+    <Content direction="row">
+      <div className="company-info">
+        <img className="logo" alt="logo" src="/static/Logo.png" />
+        <H4>A scalable value transfer<br/>protocol for the digital economy.</H4>
+        <P style="font-size: 13px;">
+          Privacy Policy  | Cookie Preferences<br/>
+          { footer.copyright }
+        </P>
+      </div>
+      <FooterLinks title="Getting Started" links={[]} />
+      <FooterLinks title="Company" links={[]} />
+      <FooterLinks title="Resources" links={[]} />
+      <FooterLinks title="Resources" links={[]} />
+      <FooterLinks title="Community" links={[]} />
+    </Content>
 
     <style jsx>{`
-      .socialMedia-container {
-        display: flex;
-        justify-content: center;
-        margin-top: 30px;
-        margin-bottom: 60px;
-      }
-
-      .logo {
-        height: 56px;
-      }
-
-      .row {
-        margin: 12px auto;
-        display: flex;
-        justify-content: center;
-      }
-
-      p {
-        font-size: 13px;
+      .company-info {
+        align-self: self-start;
+        flex: 1;
       }
     `}</style>
   </Section>

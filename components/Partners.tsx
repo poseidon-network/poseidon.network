@@ -1,28 +1,33 @@
 import Section from './Section';
 import H2 from './H2';
-import Partner from './Partner';
+import Person from './Person';
 import Content from './Content';
 
-import { partners } from '../data';
+import { advisors } from '../data';
 
 const Partners = () => ((
-  <Section bgColor="#222633" color="#fff">
+  <Section padding="110px 0 120px" bgColor="#222633" color="#fff">
     <Content>
-      <H2 id="partners" center>Partners</H2>
+      <H2 id="partners" margin="0 0 60px" size="32px" center>Our Strong Partners</H2>
       <div>
         {
-          partners.map(({ alt, logoUri, link }, index) => ((
-            <Partner key={`${index}`} alt={alt} logoUri={logoUri} link={link} />
+          advisors.map(({ name, title }) => ((
+            <Person
+              key={name}
+              name={name}
+              title={title}
+              avatar={''}
+              backgroundColor="#000"
+            />
           )))
         }
       </div>
 
       <style jsx>{`
         div {
-          margin-top: 37px;
-          display: flex;
-          flex-wrap: wrap;
-          max-width: 400px;
+          width: 100%;
+          display: grid;
+          grid-template-columns: 25% 25% 25% 25%;
         }
       `}</style>
     </Content>

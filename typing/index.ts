@@ -4,3 +4,11 @@ interface IUser {
   avatar?: string;
   isLogin?: boolean;
 }
+
+interface ITextBaseProps {
+  children: React.ReactNode;
+  center?: boolean;
+  margin?: string;
+  color?: string;
+  id?: string;
+}

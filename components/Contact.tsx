@@ -1,27 +1,13 @@
 import Section from './Section';
-import H2 from './H2';
 import ContactForm from './ContactForm';
-import { contact } from '../data';
+import { styles } from '../constants';
+import H3 from './H3';
 
 const Contact = () => ((
-  <Section bgColor="#d7f2ee" color="#222633">
-    <H2 id="contact" color="#222633" center>{ contact.title }</H2>
-    <div className="content">
-      <p className="description">{ contact.description }</p>
-      <ContactForm />
-    </div>
+  <Section padding="100px 0 50px" bgColor="#1d202b" color={styles.primaryColor}>
+    <H3 id="contact" margin="0 0 27px" center>Stay Informed</H3>
+    <ContactForm />
     <style jsx>{`
-      .content {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-      }
-      .description {
-        color: #222633;
-        font-size: 16px;
-        opacity: 0.64;
-        margin-bottom: 30px;
-      }
     `}</style>
   </Section>
 ));

@@ -1,26 +1,27 @@
 import { styles } from '../constants';
 
-const H2 = ({
+const H3 = ({
   children,
   center,
   margin,
-  size,
   color = styles.primaryColor,
   id = '',
-}: ITextBaseProps & { size?: string }) => ((
-  <h2 id={id}>
+}: ITextBaseProps) => ((
+  <h3 id={id}>
     { children }
+
     <style jsx>{`
-      h2 {
-        font-size: ${ size ? size : '40px;' };
+      h3 {
+        font-size: 24px;
         font-weight: 600;
-        line-height: 1.3;
+        line-height: 1.25;
+        letter-spacing: 0.3px;
         color: ${ color };
-        ${ margin ? `margin: ${margin};` : '' }
+        ${ margin ? `margin: ${margin};` : 'margin: 0;' }
         ${ center ? 'text-align: center;' : '' }
       }
     `}</style>
-  </h2>
+  </h3>
 ));
 
-export default H2;
+export default H3;

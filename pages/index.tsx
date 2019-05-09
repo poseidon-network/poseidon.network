@@ -1,22 +1,25 @@
 import Page from '../layout/Page';
 import Header from '../components/Header';
-import Indicators from '../components/Indicators';
 import Intro from '../components/Intro';
-import Features from '../components/Features';
+
+import Solutions from '../components/Solutions';
 import Partners from '../components/Partners';
-import Roadmap from '../components/Roadmap';
 import Team from '../components/Team';
 import Contact from '../components/Contact';
+import Developers from '../components/Developers';
+import HelpCompany from '../components/HelpCompany';
+import SettingUp from '../components/SettingUp';
 
 const Index = () => ((
   <Page title="Poseidon Network">
     <Header />
-    <Indicators />
     <Intro />
-    <Features />
-    <Partners />
-    <Roadmap />
+    <Solutions />
+    <Developers />
+    <HelpCompany />
+    <SettingUp />
     <Team />
+    <Partners />
     <Contact />
   </Page>
 ));
