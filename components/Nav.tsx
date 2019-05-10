@@ -1,5 +1,7 @@
 import Section from './Section';
 import { useState, useEffect } from 'react';
+import { i18n, withNamespaces } from '../i18n';
+import i18next from 'i18next';
 
 interface IProps {
   user?: {
@@ -10,18 +12,30 @@ interface IProps {
   };
   bgColor?: string;
   logout?: () => void;
+  t: i18next.TFunction;
 }
 
-const Nav = ({ bgColor = '#222633' }:  IProps) => {
+const Nav = ({ t, bgColor = '#222633' }:  IProps) => {
   const [isLangVisiable, setLangVisiable] = useState<boolean>(false);
   const [isMoreVisiable, setMoreVisiable] = useState<boolean>(false);
 
   useEffect(() => {
-    document.body.addEventListener('click', () => {
+    const hideAll = (e) => {
       setLangVisiable(false);
       setMoreVisiable(false);
-    });
-  });
+    };
+
+    document.body.addEventListener('click', hideAll);
+    return () => {
+      document.body.removeEventListener('click', hideAll);
+    };
+  }, []);
+
+  const changeLanguage = (lang: string) => {
+    return (e: React.SyntheticEvent) => {
+      i18n.changeLanguage(lang);
+    };
+  };
 
   return (
     <Section bgColor={bgColor} color="#fff" padding="20px">
@@ -30,31 +44,27 @@ const Nav = ({ bgColor = '#222633' }:  IProps) => {
 
         <nav className="navigation" role="navigation">
           <ul>
-            <li className="item"><a href="/technology">Technology</a></li>
-            <li className="item"><a>Solutions</a></li>
-            <li className="item"><a>Developer</a></li>
-            <li className="item"><a>Pricing</a></li>
+            <li className="item"><a href="/technology">{t('Technology')}</a></li>
+            <li className="item"><a>{t('Solutions')}</a></li>
+            <li className="item"><a>{t('Developer')}</a></li>
+            <li className="item"><a>{t('Pricing')}</a></li>
             <li className="item">
-              <a onClick={() => setMoreVisiable(!isMoreVisiable)}>More</a>
-              { isMoreVisiable &&
-                <ul className="dropdown">
-                  <li><a href="/community">Community</a></li>
-                  <li><a href="/token">Token</a></li>
-                  <li>Company</li>
-                  <li>Help Center</li>
+              <a onClick={() => setMoreVisiable(!isMoreVisiable)}>{t('More')}</a>
+                <ul className={`dropdown ${isMoreVisiable ? 'show' : ''}`}>
+                  <li><a href="/community">{t('Community')}</a></li>
+                  <li><a href="/token">{t('Token')}</a></li>
+                  <li>{t('Company')}</li>
+                  <li>{t('Help Center')}</li>
                 </ul>
-              }
             </li>
             <li className="item">
               <a onClick={() => setLangVisiable(!isLangVisiable)}>Language</a>
-              { isLangVisiable &&
-                <ul className="dropdown">
-                  <li>English</li>
-                  <li>繁體中文</li>
+                <ul className={`dropdown ${isLangVisiable ? 'show' : ''}`}>
+                  <li><a onClick={changeLanguage('en')}>English</a></li>
+                  <li><a onClick={changeLanguage('zh-tw')}>繁體中文</a></li>
                   <li>한국어</li>
                   <li>Việt Nam</li>
                 </ul>
-              }
             </li>
           </ul>
         </nav>
@@ -161,6 +171,12 @@ const Nav = ({ bgColor = '#222633' }:  IProps) => {
           padding: 15px 37px;
           transform: translateX(-50px);
           position: absolute;
+          transition: visibility 0.1s;
+          visibility: hidden;
+        }
+
+        .show {
+          visibility: visible;
         }
 
         .dropdown li {
@@ -290,4 +306,4 @@ const Nav = ({ bgColor = '#222633' }:  IProps) => {
   );
 };
 
-export default Nav;
+export default withNamespaces('nav')(Nav);

@@ -6,7 +6,7 @@ import H2 from '../H2';
 import { features } from '../../data';
 
 const Solutions = () => ((
-  <Section padding="120px 0" bgColor="#232633" color={styles.primaryColor}>
+  <Section padding="120px 0" bgColor={styles.darkLight} color={styles.primaryColor}>
     <H2 center margin="0 0 38px">Solutions</H2>
     <Content direction="row">
       <div className="items">

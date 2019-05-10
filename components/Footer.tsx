@@ -4,15 +4,17 @@ import { footer } from '../data';
 import P from './P';
 import Content from './Content';
 import FooterLinks from './FooterLinks';
+import { withNamespaces } from '../i18n';
+import i18next from 'i18next';
 
-const Footer = () => ((
+const Footer = ({ t }: { t: i18next.TFunction }) => ((
   <Section padding="77px 0 100px" bgColor="#1d202b" color="#fff">
     <Content direction="row">
       <div className="company-info">
         <img className="logo" alt="logo" src="/static/Logo.png" />
         <H4>A scalable value transfer<br/>protocol for the digital economy.</H4>
         <P style="font-size: 13px;">
-          Privacy Policy  | Cookie Preferences<br/>
+          {t('privacy-policy')} | {t('cookie-preferences')}<br/>
           { footer.copyright }
         </P>
       </div>
@@ -32,4 +34,4 @@ const Footer = () => ((
   </Section>
 ));
 
-export default Footer;
+export default withNamespaces('footer')(Footer);

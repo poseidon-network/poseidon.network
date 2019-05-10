@@ -1,3 +1,4 @@
+import React from 'react';
 import Page from '../layout/Page';
 import Header from '../components/Header';
 import Intro from '../components/home/Intro';
@@ -10,18 +11,28 @@ import Developers from '../components/home/Developers';
 import HelpCompany from '../components/home/HelpCompany';
 import SettingUp from '../components/home/SettingUp';
 
-const Index = () => ((
-  <Page title="Poseidon Network">
-    <Header />
-    <Intro />
-    <Solutions />
-    <Developers />
-    <HelpCompany />
-    <SettingUp />
-    <Team />
-    <Partners />
-    <Contact />
-  </Page>
-));
+class Homepage extends React.Component {
+  static async getInitialProps() {
+    return {
+      namespacesRequired: ['common', 'footer'],
+    };
+  }
 
-export default Index;
+  render() {
+    return (
+      <Page title="Poseidon Network">
+        <Header />
+        <Intro />
+        <Solutions />
+        <Developers />
+        <HelpCompany />
+        <SettingUp />
+        <Team />
+        <Partners />
+        <Contact />
+      </Page>
+    );
+  }
+}
+
+export default Homepage;
