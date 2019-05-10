@@ -4,6 +4,7 @@ import Head from 'next/head';
 import Nav from '../components/Nav';
 import Footer from '../components/Footer';
 import { logout, getUser } from '../utils/auth';
+import { styles } from '../constants';
 
 interface IProps {
   title: string;
@@ -34,7 +35,6 @@ class Layout extends React.Component<IProps, { user: IUser }> {
           <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600" rel="stylesheet" />
           <link rel="icon" type="image/png" sizes="32x32" href="/static/favicon-32x32.png" />
           <link rel="icon" type="image/png" sizes="16x16" href="/static/favicon-16x16.png" />
-          <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,500" rel="stylesheet" />
         </Head>
         <UserContext.Provider value={this.state.user}>
           <Nav user={this.state.user} logout={logout} bgColor={this.props.navColor} />
@@ -42,10 +42,11 @@ class Layout extends React.Component<IProps, { user: IUser }> {
           <Footer />
         </UserContext.Provider>
         <style global jsx>{`
-          body {
+          html, body {
             font-family: 'Montserrat', sans-serif;
             -webkit-font-smoothing: antialiased;
             text-rendering: optimizeLegibility;
+            background-color: ${ styles.darkLight };
           }
 
           a {

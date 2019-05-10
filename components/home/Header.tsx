@@ -1,12 +1,12 @@
 import React from 'react';
 
-import Section from './Section';
-import Content from './Content';
-import H2 from './H2';
-import H3 from './H3';
-import { footer } from '../data';
-import SocialMedia from './home/SocialMedia';
-import { styles } from '../constants';
+import Section from '../Section';
+import Content from '../Content';
+import H2 from '../H2';
+import H3 from '../H3';
+import { footer } from '../../data';
+import SocialMedia from './SocialMedia';
+import { styles } from '../../constants';
 
 const Header = () => {
   return (
