@@ -20,7 +20,7 @@ const Nav = ({ t, bgColor = '#222633' }:  IProps) => {
   const [isMoreVisiable, setMoreVisiable] = useState<boolean>(false);
 
   useEffect(() => {
-    const hideAll = (e) => {
+    const hideAll = () => {
       setLangVisiable(false);
       setMoreVisiable(false);
     };
@@ -32,7 +32,7 @@ const Nav = ({ t, bgColor = '#222633' }:  IProps) => {
   }, []);
 
   const changeLanguage = (lang: string) => {
-    return (e: React.SyntheticEvent) => {
+    return () => {
       i18n.changeLanguage(lang);
     };
   };

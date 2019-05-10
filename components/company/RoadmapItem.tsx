@@ -11,7 +11,7 @@ interface IProps {
   right: boolean;
 }
 
-const RoadmapItem = ({ time, description, done, active, lastone, right = false }: IProps) => ((
+const RoadmapItem = ({ time, description, done, active, right = false }: IProps) => ((
   <div className="container">
     <div className="content circle">
       <H3 margin="0 0 7px">{ time }</H3>
