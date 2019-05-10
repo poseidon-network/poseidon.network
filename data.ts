@@ -70,11 +70,6 @@ export const partners = [
 
 export const roadmap = [
   {
-    time: 'WHERE WE START',
-    description: 'Bootstrapping Qinfra from 2 co-founders Qing & Mike, target to disrupt cloud infra with innovative Edge Computing Technology',
-    done: true,
-  },
-  {
     time: 'Q2 - Q3 2018',
     title: 'Core Development',
     done: true,
@@ -100,11 +95,6 @@ export const roadmap = [
     time: 'Q3-Q4 2019',
     title: 'Monthly Revenue - 9M USD',
     description: 'Decentralized Qontroller Distributed Edges',
-  },
-  {
-    time: 'WHERE WE ARE GOING',
-    description: 'Open-sourced, Decentralized, Distributed, Autonomous Content Acceleration Layer incentivized by QQQ Token',
-    lastone: true,
   },
 ];
 

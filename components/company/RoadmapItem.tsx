@@ -1,3 +1,6 @@
+import P from '../P';
+import H3 from '../H3';
+
 interface IProps {
   time: string;
   title?: string;
@@ -5,35 +8,31 @@ interface IProps {
   active?: boolean;
   done?: boolean;
   lastone?: boolean;
+  right: boolean;
 }
 
-const RoadmapItem = ({ time, title, description, done, active, lastone }: IProps) => ((
+const RoadmapItem = ({ time, description, done, active, lastone, right = false }: IProps) => ((
   <div className="container">
-    <div className="time-wrapper">
-      <h3 className="time">{ time }</h3>
-    </div>
-    <div className="content-wrapper">
-      <div className="content">
-        <p className="title">{ title }</p>
-        <p className="description">{ description }</p>
-      </div>
+    <div className="content circle">
+      <H3 margin="0 0 7px">{ time }</H3>
+      <P>{ description }</P>
     </div>
 
     <style jsx>{`
       .container {
         padding: 0;
         position: relative;
+        width: 49%;
+        display: flex;
+        align-self: ${right ? 'flex-end' : 'flex-start'};
+        justify-content: ${right ? 'flex-end' : 'flex-start'};
       }
 
-      .time {
-        font-size: 20px;
-        margin: 0;
-      }
-
-      .time-wrapper::before{
+      .circle::before{
         position: absolute;
-        left: -10px;
-        top: -10px;
+        ${ !right ? 'right: -45px;' : '' }
+        ${ right ? 'left: -20px;' : '' }
+        top: 0px;
         content: '';
         display: inline-block;
         width: 40px;
@@ -45,7 +44,7 @@ const RoadmapItem = ({ time, title, description, done, active, lastone }: IProps
         opacity: ${ active ? 0.2 : 0};
       }
 
-      .time::before{
+      .circle::before{
         content: '';
         display: inline-block;
         width: 20px;
@@ -58,37 +57,25 @@ const RoadmapItem = ({ time, title, description, done, active, lastone }: IProps
         margin-right: 22px
       }
 
-      .content-wrapper {
-        display: flex;
-      }
-
-      .content-wrapper::before {
+      .circle::after{
+        position: absolute;
+        ${ right ? 'left: -10px;' : '' }
+        ${ !right ? 'right: -13px;' : '' }
+        top: 20px;
         content: '';
+        width: 0px;
         display: inline-block;
-        width: 4px;
-        background-color: #fff;
-        opacity: ${ (done) ? 1 : 0.32 };
-        margin: -3px 22px 0 8px;
-        ${ lastone && 'opacity: 0' };
+        border: 1px solid #fff;
+        height: 85%;
       }
 
       .content {
-        flex: 1;
-      }
-
-      .title {
-        font-size: 16px;
-        padding: 0 0 0 10px;
-        color: #222633;
-      }
-
-      .description {
-        line-height: 1.31;
-        color: #222633;
-        font-size: 16px;
-        opacity: 0.64;
-        margin: 10px 0 0;
-        padding: 0 0 32px 10px;
+        display: flex;
+        flex-direction: column;
+        border-radius: 4px;
+        border: solid 1px #90cfbe;
+        padding: 30px;
+        width: 98%;
       }
     `}</style>
   </div>

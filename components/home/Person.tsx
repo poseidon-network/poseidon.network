@@ -1,19 +1,22 @@
 import H3 from '../H3';
+import { styles } from '../../constants';
 
 interface IPerson {
   name: string;
   title: string;
   avatar: string;
   backgroundColor?: string;
+  nameColor?: string;
+  titleColor?: string;
 }
 
-const Person = ({ name, title, backgroundColor = '#90cfbe' }: IPerson) => ((
+const Person = ({ name, title, backgroundColor = styles.primaryColor, nameColor = styles.primaryColor, titleColor = styles.lightColor }: IPerson) => ((
   <div className="container">
     <div className="avatar">
       {/* <img alt={name} src={avatar}/> */}
     </div>
     <div className="content">
-      <H3 margin="0 0 10px">{ name }</H3>
+      <H3 color={nameColor} margin="0 0 10px">{ name }</H3>
       <h5>{ title }</h5>
     </div>
 
@@ -48,7 +51,7 @@ const Person = ({ name, title, backgroundColor = '#90cfbe' }: IPerson) => ((
         line-height: 1.88;
         letter-spacing: 0.3px;
         text-align: center;
-        color: #d7f2ee;
+        color: ${titleColor};
         margin: 0;
       }
     `}</style>
