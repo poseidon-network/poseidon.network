@@ -20,17 +20,18 @@ const Dapp2 = () => {
           <P center>Cellulite is fat that is caught between bands of connective tissue directly beneath the skin that creates a lumpy, bumpy orange peel appearance mostly on the hips, thighs and backsides of most women.</P>
         </div>
         <div className="block">
-          <H3 color={styles.lightColor} margin="0 0 16px" center>QCDN</H3>
+          <H3 color={styles.lightColor} margin="0 0 16px" center>DSN</H3>
           <P center>Cellulite is fat that is caught between bands of connective tissue directly beneath the skin that creates a lumpy, bumpy orange peel appearance mostly on the hips, thighs and backsides of most women.</P>
         </div>
         <div className="block">
-          <H3 color={styles.lightColor} margin="0 0 16px" center>QCDN</H3>
+          <H3 color={styles.lightColor} margin="0 0 16px" center>Blockchain</H3>
           <P center>Cellulite is fat that is caught between bands of connective tissue directly beneath the skin that creates a lumpy, bumpy orange peel appearance mostly on the hips, thighs and backsides of most women.</P>
         </div>
       </Content>
       <style jsx>{`
         .block {
-          width: 360px;
+          width: 30%;
+          min-width: 300px;
           height: 480px;
           background-color: #1d202b;
           padding: 60px 30px 30px;
