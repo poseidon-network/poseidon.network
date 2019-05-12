@@ -37,7 +37,7 @@ export default class Demo extends React.Component<{}, IState> {
       const response = await axios.post(`${process.env.GRAPHQL_URI}`, {
         operationName:null,
         variables:{},
-        query: '{files(filter: { take: 9  }) {  id    name    size    hash  }}',
+        query: '{files(filter: {take: 9, orderBy: "file.createdAt"}) {  id    name    size    hash  }}',
       });
       this.setState({
         fileList: response.data.data.files,
