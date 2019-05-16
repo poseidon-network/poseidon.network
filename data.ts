@@ -147,3 +147,11 @@ export const communities = [
   { title: 'Linkedin', uri: 'https://tw.linkedin.com/company/poseidon-network' },
   { title: 'Youtube', uri: 'https://www.youtube.com/channel/UCSWS4rhlJLonKe41JOXePJA' },
 ];
+
+export const resources = [
+  { title: 'Whitepaper', uri: 'http://ipfs.poseidon.network/ipfs/QmUzzcKXhturgVu8BgFhf7bmnf2ittC7d9T9bXwuX5NEXB' },
+];
+
+export const footerCompany = [
+  { title: 'Contract Us', uri: 'mailto:service@poseidon.network' },
+];

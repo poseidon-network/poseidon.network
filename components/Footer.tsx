@@ -5,7 +5,7 @@ import P from './P';
 import Content from './Content';
 import FooterLinks from './FooterLinks';
 import { withNamespaces } from '../i18n';
-import { footer, communities } from '../data';
+import { footer, communities, resources, footerCompany } from '../data';
 
 const Footer = ({ t }: { t: i18next.TFunction }) => ((
   <Section  padding="77px 0 100px" bgColor="#1d202b" color="#fff">
@@ -24,10 +24,9 @@ const Footer = ({ t }: { t: i18next.TFunction }) => ((
           { footer.copyright }
         </P>
       </div>
-      {/* <FooterLinks title="Getting Started" links={[]} />
-      <FooterLinks title="Company" links={[]} />
-      <FooterLinks title="Resources" links={[]} />
-      <FooterLinks title="Resources" links={[]} /> */}
+      {/* <FooterLinks title="Getting Started" links={[]} /> */}
+      <FooterLinks title="Company" links={footerCompany} />
+      <FooterLinks title="Resources" links={resources} />
       <FooterLinks title="Community" links={communities} />
     </Content>
 
