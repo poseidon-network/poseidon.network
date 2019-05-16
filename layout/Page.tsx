@@ -47,6 +47,8 @@ class Layout extends React.Component<IProps, { user: IUser }> {
             -webkit-font-smoothing: antialiased;
             text-rendering: optimizeLegibility;
             background-color: ${ styles.darkLight };
+            min-height: 100vh;
+            min-width: 100vw;
           }
 
           a {
