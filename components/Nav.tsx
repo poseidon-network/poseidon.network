@@ -40,7 +40,9 @@ const Nav = ({ t, bgColor = '#222633' }:  IProps) => {
   return (
     <Section bgColor={bgColor} color="#fff" padding="20px">
       <div className="container">
-        <a href="/"><img className="logo" alt="logo" src="/static/img-logo.png" /></a>
+        <a href="/">
+          <img className="logo" alt="logo" src="/static/poseidonnetwork.svg" />
+        </a>
 
         <nav className="navigation" role="navigation">
           <ul>
@@ -195,9 +197,13 @@ const Nav = ({ t, bgColor = '#222633' }:  IProps) => {
           color: #1d202b;
         }
 
-        @media only screen and (min-width: 600px) {
+        nav {
+          display: none;
+        }
+
+        @media only screen and (max-width: 500px) {
           .logo {
-            width: 269px;
+            width: 220px;
           }
         }
 

@@ -12,12 +12,21 @@ const Button = ({ uri, title, width, margin }: {
           width: ${ width ? width : '100%' };
           text-align: center;
           border-radius: 28px;
-          border: solid 1px #d7f2ee;
+          border: solid 1px #90cfbe;
           padding: 17px 0 15px;
           text-decoration: none;
           display: flex;
           justify-content: center;
+          font-weight: 600;
+          line-height: 1.5;
+          letter-spacing: 0.3px;
+          text-align: center;
+          color: #90cfbe;
           ${ margin ? `margin: ${margin};` : '' }
+        }
+
+        a:hover {
+          opacity: 0.8;
         }
       `}</style>
     </a>

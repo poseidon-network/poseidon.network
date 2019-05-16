@@ -4,7 +4,7 @@ const SocialMedia = ({ imgUri, link, alt }: { imgUri: string; link: string; alt:
     <style jsx>{`
       img {
         width: 24px;
-        margin: 0 34px 0 0;
+        margin: 0;
       }
     `}</style>
   </a>

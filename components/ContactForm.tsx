@@ -58,6 +58,7 @@ class ContactForm extends React.Component {
             onChange={this.handleChangeInput}
           />
           <input className="submit" type="submit" value="Send" />
+          <input className="submit sm-submit" type="submit" value="→" />
         </div>
         <style jsx>{`
           form {
@@ -133,6 +134,39 @@ class ContactForm extends React.Component {
 
           .error {
             color: #ef5757;
+          }
+
+          .sm-submit {
+            display: none;
+          }
+
+          @media only screen and (max-width: 768px) {
+            .input-field {
+              width: 100%;
+            }
+
+            input {
+              width: 78%;
+            }
+          }
+
+          @media only screen and (max-width: 554px) {
+            .input-field {
+              width: 315px;
+            }
+
+            input {
+              width: 220px;
+            }
+
+            .submit {
+              display: none;
+            }
+
+            .sm-submit {
+              display: block;
+              margin-right: 5px;
+            }
           }
         `}</style>
       </form>

@@ -11,4 +11,7 @@ interface ITextBaseProps {
   margin?: string;
   color?: string;
   id?: string;
+  style?: string;
+  mStyle?: string;
+  sStyle?: string;
 }

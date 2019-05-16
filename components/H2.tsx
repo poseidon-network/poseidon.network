@@ -7,6 +7,9 @@ const H2 = ({
   size,
   color = styles.primaryColor,
   id = '',
+  style = '',
+  mStyle = '',
+  sStyle = '',
 }: ITextBaseProps & { size?: string }) => ((
   <h2 id={id}>
     { children }
@@ -18,8 +21,23 @@ const H2 = ({
         color: ${ color };
         ${ margin ? `margin: ${margin};` : '' }
         ${ center ? 'text-align: center;' : '' }
+        ${style};
       }
-    `}</style>
+      @media only screen and (max-width: 768px) {
+        h2 {
+          text-align: center;
+          ${mStyle};
+        }
+      }
+
+      @media only screen and (max-width: 554px) {
+        h2 {
+          text-align: center;
+          ${sStyle};
+        }
+      }
+    `}
+    </style>
   </h2>
 ));
 

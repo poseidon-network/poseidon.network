@@ -22,14 +22,9 @@ const Header = () => {
         </Col>
         <Col />
       </Content>
-      <div className="social-media-list">
+      <Content direction="row" style="margin-top: 125px;">
         <SocialMediaList />
-      </div>
-      <style jsx>{`
-        .social-media-list {
-          margin-top: 125px;
-        }
-      `}</style>
+      </Content>
     </Section>
   );
 };

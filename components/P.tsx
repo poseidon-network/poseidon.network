@@ -5,9 +5,11 @@ const P = ({
   center,
   margin,
   style = '',
+  sStyle = '',
+  mStyle = '',
   color = styles.lightColor,
   id = '',
-}: ITextBaseProps & { style?: string }) => ((
+}: ITextBaseProps) => ((
   <p id={id}>
     { children }
     <style jsx>{`
@@ -22,6 +24,20 @@ const P = ({
         ${ margin ? `margin: ${margin};` : '' }
         ${ center ? 'text-align: center;' : '' }
         ${style}
+      }
+
+      @media only screen and (max-width: 768px) {
+        p {
+          text-align: center;
+          ${mStyle}
+        }
+      }
+
+      @media only screen and (max-width: 554px) {
+        p {
+          text-align: center;
+          ${sStyle}
+        }
       }
     `}</style>
   </p>

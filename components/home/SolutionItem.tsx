@@ -8,26 +8,28 @@ interface IProps {
 }
 
 const SolutionItem = ({ imageUri, title, description }: IProps) => ((
-  <div>
+  <div className="item">
     <div className="img-container">
       <img src={imageUri} alt="icon" />
     </div>
-    <H3 center>{ title }</H3>
-    <P style="width: 263px">{ description }</P>
+    <H3 color="#d7f2ee" center>{ title }</H3>
+    <P style="max-width: 263px">{ description }</P>
 
     <style jsx>{`
-      div {
-        flex: 1;
-        width: 263px;
+      .item {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
       }
 
       .img-container {
         display: flex;
         align-items: center;
         justify-content: center;
-        margin: auto;
+        margin: 0 auto 30px;
         width: 210px;
         height: 210px;
+        object-fit: contain;
       }
 
       h3 {
@@ -35,6 +37,12 @@ const SolutionItem = ({ imageUri, title, description }: IProps) => ((
         font-size: 20px;
         text-align: center;
         margin-bottom: 8px;
+      }
+
+      @media only screen and (max-width: 768px) {
+      }
+
+      @media only screen and (max-width: 554px) {
       }
     `}</style>
   </div>
