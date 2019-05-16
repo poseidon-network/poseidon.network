@@ -28,6 +28,14 @@ const Layout = ({ children, bgColor, color, padding, backgroundImage }: IProps) 
           background-image: none;
         }
       }
+
+      @media only screen and (max-width: 768px) {
+        .container {
+          padding-left: 30px;
+          padding-right: 30px;
+          padding-top: 60px;
+        }
+      }
     `}</style>
   </div>
 ));

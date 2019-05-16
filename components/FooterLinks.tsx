@@ -11,7 +11,7 @@ const FooterLinks = ({ title, links }: IProps) => {
       <H4 margin="0 0 20px">{ title }</H4>
       <div className="links">
         { links.map(({ uri, title }) => (
-          <a href={uri}>{ title }</a>
+          <a key={title} href={uri}>{ title }</a>
         )) }
       </div>
       <style jsx>{`
@@ -28,6 +28,23 @@ const FooterLinks = ({ title, links }: IProps) => {
           line-height: 1.5;
           letter-spacing: 0.3px;
           color: #d7f2ee;
+        }
+
+        .links {
+          display: flex;
+          flex-direction: column;
+        }
+
+        @media only screen and (max-width: 768px) {
+          .footer-links {
+            margin: 30px 0;
+          }
+        }
+
+        @media only screen and (max-width: 554px) {
+          .footer-links {
+            margin: 30px 0;
+          }
         }
       `}</style>
     </div>

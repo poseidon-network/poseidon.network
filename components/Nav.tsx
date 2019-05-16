@@ -40,7 +40,9 @@ const Nav = ({ t, bgColor = '#222633' }:  IProps) => {
   return (
     <Section bgColor={bgColor} color="#fff" padding="20px">
       <div className="container">
-        <a href="/"><img className="logo" alt="logo" src="/static/img-logo.png" /></a>
+        <a href="/">
+          <img className="logo" alt="logo" src="/static/poseidonnetwork.svg" />
+        </a>
 
         <nav className="navigation" role="navigation">
           <ul>
@@ -193,6 +195,10 @@ const Nav = ({ t, bgColor = '#222633' }:  IProps) => {
 
         .dropdown a {
           color: #1d202b;
+        }
+
+        nav {
+          display: none;
         }
 
         @media only screen and (min-width: 600px) {

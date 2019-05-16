@@ -12,7 +12,7 @@ const SolutionItem = ({ imageUri, title, description }: IProps) => ((
     <div className="img-container">
       <img src={imageUri} alt="icon" />
     </div>
-    <H3 center>{ title }</H3>
+    <H3 color="#d7f2ee" center>{ title }</H3>
     <P style="width: 263px">{ description }</P>
 
     <style jsx>{`

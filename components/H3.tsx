@@ -6,6 +6,8 @@ const H3 = ({
   margin,
   color = styles.primaryColor,
   id = '',
+  mStyle = '',
+  sStyle = '',
 }: ITextBaseProps) => ((
   <h3 id={id}>
     { children }
@@ -19,6 +21,19 @@ const H3 = ({
         color: ${ color };
         ${ margin ? `margin: ${margin};` : 'margin: 0;' }
         ${ center ? 'text-align: center;' : '' }
+      }
+
+      @media only screen and (max-width: 768px) {
+        h3 {
+          ${mStyle}
+        }
+      }
+
+      @media only screen and (max-width: 554px) {
+        h3 {
+          text-align: center;
+          ${sStyle}
+        }
       }
     `}</style>
   </h3>

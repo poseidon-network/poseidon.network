@@ -4,9 +4,11 @@ interface IProps {
   direction?: string;
   padding?: string;
   style?: string;
+  mStyle?: string;
+  sStyle?: string;
 }
 
-const Content = ({ children, backgroundImage, direction = 'column', padding = '0', style = '' }: IProps) => ((
+const Content = ({ children, backgroundImage, direction = 'column', padding = '0', style = '', mStyle = '', sStyle = '' }: IProps) => ((
   <div className="container">
     { children }
     <style jsx>{`
@@ -22,6 +24,21 @@ const Content = ({ children, backgroundImage, direction = 'column', padding = '0
         background-size: cover;
         background-repeat: no-repeat;
         ${style}
+      }
+
+      @media only screen and (max-width: 768px) {
+        .container {
+          flex-direction: column;
+          ${mStyle}
+        }
+      }
+
+      @media only screen and (max-width: 554px) {
+        .container {
+          flex-direction: column;
+          align-items: center;
+          ${sStyle}
+        }
       }
     `}</style>
   </div>

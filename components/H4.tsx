@@ -6,6 +6,9 @@ const H4 = ({
   margin,
   color = styles.primaryColor,
   id = '',
+  style = '',
+  mStyle = '',
+  sStyle = '',
 }: ITextBaseProps) => ((
   <h4 id={id}>
     { children }
@@ -22,6 +25,19 @@ const H4 = ({
         color: ${ color };
         ${ margin ? `margin: ${margin};` : 'margin: 0;' }
         ${ center ? 'text-align: center;' : '' }
+        ${style};
+      }
+
+      @media only screen and (max-width: 768px) {
+        h4 {
+          ${mStyle};
+        }
+      }
+
+      @media only screen and (max-width: 554px) {
+        h4 {
+          ${sStyle};
+        }
       }
     `}</style>
   </h4>

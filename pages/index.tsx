@@ -7,9 +7,10 @@ import Solutions from '../components/home/Solutions';
 import Partners from '../components/home/Partners';
 import Team from '../components/home/Team';
 import Contact from '../components/Contact';
-import Developers from '../components/home/Developers';
 import HelpCompany from '../components/home/HelpCompany';
 import SettingUp from '../components/home/SettingUp';
+import MediaList from '../components/home/MediaList';
+import { styles } from '../constants';
 
 class Homepage extends React.Component {
   static async getInitialProps() {
@@ -20,15 +21,15 @@ class Homepage extends React.Component {
 
   render() {
     return (
-      <Page title="Poseidon Network">
+      <Page navColor={styles.dark} title="Poseidon Network">
         <Header />
         <Intro />
         <Solutions />
-        <Developers />
         <HelpCompany />
         <SettingUp />
         <Team />
         <Partners />
+        <MediaList />
         <Contact />
       </Page>
     );

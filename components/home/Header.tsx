@@ -4,79 +4,110 @@ import Section from '../Section';
 import Content from '../Content';
 import H2 from '../H2';
 import H3 from '../H3';
-import { footer } from '../../data';
 import SocialMedia from './SocialMedia';
+import Col from '../Col';
+import Button from '../Button';
+import P from '../P';
+
+import { footer } from '../../data';
 import { styles } from '../../constants';
 
 const Header = () => {
   return (
     <Section
-      bgColor={styles.darkLight}
+      bgColor={styles.dark}
       color={styles.primaryColor}
-      padding="0 0 114px"
+      padding="110px 0 120px"
     >
-      <Content>
-        <div className="main">
-          <H2 margin="32px 0 30px">A Blockchain Transport<br/>Layer Solution</H2>
-          <p className="description">Next-Generation Content Layer (CDN + DSN), incentivized by TRX. Utilized unused bandwidth and storage from NAS, desktop, and mobile devices around the world. It’s distributed, efficient, and integrates perfectly with existing internet and blockchain infrastructure. </p>
-          <H3>Join Our Community</H3>
+      <Content direction="row">
+        <Col
+          style="display: none;"
+          mStyle="display: flex; margin-bottom: 120px;"
+          sStyle="display: flex; margin-bottom: 60px;"
+        >
+          <img className="right-img" src="/static/key-vision.svg" />
+        </Col>
+        <Col style="margin-right: 27px;">
+          <H2 margin="8px 0 30px">A Blockchain Transport<br/>Layer Solution</H2>
+          <P margin="0">Next-Generation Content Layer (CDN + DSN), incentivized by TRX. Utilized unused bandwidth and storage from NAS, desktop, and mobile devices around the world. It’s distributed, efficient, and integrates perfectly with existing internet and blockchain infrastructure. </P>
+          <div className="btn-wrapper">
+            <Button title="Whitepaper" uri="http://ipfs.poseidon.network/ipfs/QmUzzcKXhturgVu8BgFhf7bmnf2ittC7d9T9bXwuX5NEXB" />
+          </div>
           <div className="social-medias">
+            <H3 margin="0 30px 0 0" sStyle="margin: 0;">Join Our Community</H3>
+            <div className="social-medias__imglist">
             { footer.socialMediaList.map(({ imgUri, link, alt }) => (
               <SocialMedia key={imgUri} imgUri={imgUri} link={link} alt={alt} />
             ))}
+            </div>
           </div>
-        </div>
-        <style jsx>{`
-          .main {
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            padding-top: 88px;
-          }
+        </Col>
+        <Col mStyle="display: none;" sStyle="display: none;">
+          <img className="right-img" src="/static/key-vision.svg" />
+        </Col>
+      </Content>
+      <style jsx>{`
+        .title {
+          max-width: 460px;
+          min-width: 300px;
+          height: 78px;
+          font-family: Montserrat;
+          font-size: 32px;
+          font-weight: bold;
+          color: #d7f2ee;
+        }
 
-          .title {
-            width: 460px;
-            height: 78px;
-            font-family: Montserrat;
-            font-size: 32px;
-            font-weight: bold;
-            color: #d7f2ee;
-          }
+        .btn-wrapper {
+          margin-top: 30px;
+        }
 
-          .description {
-            width: 460px;
-            height: 140px;
-            font-family: Lato;
-            font-size: 16px;
-            line-height: 1.75;
-            color: #d7f2ee;
-            margin-top: 0;
-            margin-bottom: 60px;
+        .social-medias {
+          display: flex;
+          margin-top: 61px;
+          align-items: center;
+        }
+
+        .right-img {
+          width: 100%;
+          min-width: 300px;
+          object-fit: contain;
+        }
+
+        @media only screen and (max-width: 768px) {
+          .btn-wrapper {
+            margin-top: 75px;
           }
 
           .social-medias {
-            display: flex;
-            margin-top: 32px;
+            margin-top: 60px;
+            flex-direction: column;
           }
 
-          @media only screen and (max-width: 1120px) {
-            .main {
-              height: 100%;
-              padding-top: 30px;
-            }
-
-            .title {
-              margin-bottom: 30px;
-            }
-
-            .title, .description {
-              width: 80%;
-              height: initial;
-              text-align: center;
-            }
+          .social-medias__imglist {
+            margin-top: 22px;
           }
-        `}</style>
-      </Content>
+        }
+
+        @media only screen and (max-width: 554px) {
+          .btn-wrapper {
+            margin-top: 60px;
+          }
+
+          .right-img {
+            width: 315px;
+            height: 282px;
+          }
+
+          .social-medias {
+            margin-top: 120px;
+            flex-direction: column;
+          }
+
+          .social-medias__imglist {
+            margin-top: 22px;
+          }
+        }
+      `}</style>
     </Section>
   );
 };

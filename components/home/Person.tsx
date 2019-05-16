@@ -10,10 +10,10 @@ interface IPerson {
   titleColor?: string;
 }
 
-const Person = ({ name, title, backgroundColor = styles.primaryColor, nameColor = styles.primaryColor, titleColor = styles.lightColor }: IPerson) => ((
+const Person = ({ name, title, avatar, nameColor = styles.primaryColor, titleColor = styles.lightColor }: IPerson) => ((
   <div className="container">
     <div className="avatar">
-      {/* <img alt={name} src={avatar}/> */}
+      <img alt={name} src={avatar}/>
     </div>
     <div className="content">
       <H3 color={nameColor} margin="0 0 10px">{ name }</H3>
@@ -26,21 +26,16 @@ const Person = ({ name, title, backgroundColor = styles.primaryColor, nameColor 
         display: flex;
         flex-direction: column;
         align-items: center;
-      }
-
-      .avatar {
-        width: 160px;
-        height: 160px;
-        border-radius: 60px;
-        background-color: ${backgroundColor};
-        margin-bottom: 30px;
+        width: 100%;
       }
 
       img {
-        width: 157px;
-        height: 143px;
+        width: 100%;
+        border-radius: 60px;
         background-blend-mode: multiply;
         background-image: linear-gradient(to bottom, #d7f2ee, #d7f2ee);
+        margin-bottom: 30px;
+        background-color: #1d202b;
       }
 
       h5 {

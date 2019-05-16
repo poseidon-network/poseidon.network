@@ -6,16 +6,34 @@ import Col from '../Col';
 import { styles } from '../../constants';
 
 const SettingUp = () => ((
-  <Section bgColor={styles.dark} color="#fff" padding="120px 0">
-    <Content direction="row">
-      <Col />
+  <Section bgColor={styles.darkLight} color="#fff" padding="120px 0">
+    <Content direction="row" style="align-items: center;">
+      <Col>
+        <img className="setup" src="/static/setup-tmp.png" />
+      </Col>
       <Col>
         <H2 margin="0 0 15px">Setting Up Easily</H2>
-        <P margin="0 0 30px 0">Setting Up Easily</P>
+        <P margin="0 0 30px 0">To join Poseidon Network is easy. Get reward immediately in less than 5 minutes.</P>
       </Col>
       <style jsx>{`
         .col {
           flex: 1;
+        }
+
+        .setup {
+        }
+
+        @media only screen and (max-width: 768px) {
+          .setup {
+            margin-bottom: 60px;
+          }
+        }
+
+        @media only screen and (max-width: 554px) {
+          .setup {
+            margin-bottom: 60px;
+            width: 100%;
+          }
         }
       `}</style>
     </Content>

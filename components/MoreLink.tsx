@@ -1,7 +1,7 @@
 const MoreLink = ({ uri }: { uri: string }) => {
   return (
     <div>
-      <a href={uri}>Read More</a>
+      <a href={uri}>Read More  →</a>
       <style jsx>{`
         a {
           font-size: 18px;
