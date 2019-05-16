@@ -7,11 +7,15 @@ class ContactForm extends React.Component {
     isSucceed: false,
   };
 
-  handleChangeInput = ({ target: { name, value  } }: { target: { name: string; value: string  } }) => {
+  handleChangeInput = ({
+    target: { name, value },
+  }: {
+    target: { name: string; value: string };
+  }) => {
     this.setState({
       [name]: value,
     });
-  }
+  };
 
   handleSubmit = async (event: React.SyntheticEvent) => {
     event.preventDefault();
@@ -22,10 +26,13 @@ class ContactForm extends React.Component {
       isSucceed: false,
     });
     try {
-      await fetch('https://script.google.com/macros/s/AKfycbwVfb9acsqEuPnYZlgRBOUng74nnNd6a4NGmJPCRXtp5HOBTMeJ/exec', {
-        body: formData,
-        method: 'POST',
-      });
+      await fetch(
+        'https://script.google.com/macros/s/AKfycbwVfb9acsqEuPnYZlgRBOUng74nnNd6a4NGmJPCRXtp5HOBTMeJ/exec',
+        {
+          body: formData,
+          method: 'POST',
+        },
+      );
       this.setState({
         email: '',
         isSucceed: true,
@@ -36,17 +43,19 @@ class ContactForm extends React.Component {
         isFailed: true,
       });
     }
-  }
+  };
 
   render() {
     return (
       <form onSubmit={this.handleSubmit}>
-        { this.state.isSucceed &&
+        {this.state.isSucceed && (
           <p className="msg success">Sent successfully!</p>
-        }
-        { this.state.isFailed &&
-          <p className="msg error">Something went wrong, please try again later.</p>
-        }
+        )}
+        {this.state.isFailed && (
+          <p className="msg error">
+            Something went wrong, please try again later.
+          </p>
+        )}
 
         <div className="input-field">
           <input
@@ -57,7 +66,7 @@ class ContactForm extends React.Component {
             value={this.state.email}
             onChange={this.handleChangeInput}
           />
-          <input className="submit" type="submit" value="Send" />
+          <input className="submit" type="submit" value="Subscribe" />
           <input className="submit sm-submit" type="submit" value="→" />
         </div>
         <style jsx>{`
@@ -77,7 +86,6 @@ class ContactForm extends React.Component {
             align-items: center;
           }
 
-
           input {
             width: 405px;
             height: 60px;
@@ -91,7 +99,8 @@ class ContactForm extends React.Component {
             font-family: Montserrat;
           }
 
-          input:focus, textarea:focus {
+          input:focus,
+          textarea:focus {
             outline: none;
           }
 

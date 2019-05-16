@@ -10,14 +10,22 @@ interface IPerson {
   titleColor?: string;
 }
 
-const Person = ({ name, title, avatar, nameColor = styles.primaryColor, titleColor = styles.lightColor }: IPerson) => ((
+const Person = ({
+  name,
+  title,
+  avatar,
+  nameColor = styles.primaryColor,
+  titleColor = styles.lightColor,
+}: IPerson) => (
   <div className="container">
     <div className="avatar">
-      <img alt={name} src={avatar}/>
+      <img alt={name} src={avatar} />
     </div>
     <div className="content">
-      <H3 color={nameColor} margin="0 0 10px">{ name }</H3>
-      <h5>{ title }</h5>
+      <H3 color={nameColor} margin="0 0 10px">
+        {name}
+      </H3>
+      <h5>{title}</h5>
     </div>
 
     <style jsx>{`
@@ -30,7 +38,8 @@ const Person = ({ name, title, avatar, nameColor = styles.primaryColor, titleCol
       }
 
       img {
-        width: 100%;
+        width: 160px;
+        height: 160px;
         border-radius: 60px;
         background-blend-mode: multiply;
         background-image: linear-gradient(to bottom, #d7f2ee, #d7f2ee);
@@ -49,8 +58,18 @@ const Person = ({ name, title, avatar, nameColor = styles.primaryColor, titleCol
         color: ${titleColor};
         margin: 0;
       }
+
+      @media only screen and (max-width: 768px) {
+      }
+
+      @media only screen and (max-width: 554px) {
+        img {
+          width: 141px;
+          height: 141px;
+        }
+      }
     `}</style>
   </div>
-));
+);
 
 export default Person;

@@ -29,24 +29,49 @@ class Layout extends React.Component<IProps, { user: IUser }> {
     return (
       <div>
         <Head>
-          <title>{ this.props.title }</title>
-          <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-          <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
-          <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600" rel="stylesheet" />
-          <link rel="icon" type="image/png" sizes="32x32" href="/static/favicon-32x32.png" />
-          <link rel="icon" type="image/png" sizes="16x16" href="/static/favicon-16x16.png" />
+          <title>{this.props.title}</title>
+          <meta
+            name="viewport"
+            content="initial-scale=1.0, width=device-width"
+          />
+          <link
+            rel="stylesheet"
+            type="text/css"
+            href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+          />
+          <link
+            href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600"
+            rel="stylesheet"
+          />
+          <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/static/favicon-32x32.png"
+          />
+          <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="/static/favicon-16x16.png"
+          />
         </Head>
         <UserContext.Provider value={this.state.user}>
-          <Nav user={this.state.user} logout={logout} bgColor={this.props.navColor} />
-          { this.props.children }
+          <Nav
+            user={this.state.user}
+            logout={logout}
+            bgColor={this.props.navColor}
+          />
+          {this.props.children}
           <Footer />
         </UserContext.Provider>
         <style global jsx>{`
-          html, body {
+          html,
+          body {
             font-family: 'Montserrat', sans-serif;
             -webkit-font-smoothing: antialiased;
             text-rendering: optimizeLegibility;
-            background-color: ${ styles.darkLight };
+            background-color: ${styles.darkLight};
             min-height: 100vh;
             min-width: 100vw;
           }
@@ -58,8 +83,12 @@ class Layout extends React.Component<IProps, { user: IUser }> {
             font-stretch: normal;
             line-height: normal;
             letter-spacing: normal;
-            color: #90cfbe;
+            color: ${styles.lightColor};
             text-decoration: none;
+          }
+
+          a:hover {
+            color: ${styles.primaryColor};
           }
 
           * {

@@ -1,4 +1,9 @@
-const Button = ({ uri, title, width, margin }: {
+const Button = ({
+  uri,
+  title,
+  width,
+  margin,
+}: {
   uri: string;
   title: string;
   width?: string;
@@ -6,10 +11,10 @@ const Button = ({ uri, title, width, margin }: {
 }) => {
   return (
     <a href={uri}>
-      { title }
+      {title}
       <style jsx>{`
         a {
-          width: ${ width ? width : '100%' };
+          width: ${width ? width : '100%'};
           text-align: center;
           border-radius: 28px;
           border: solid 1px #90cfbe;
@@ -22,11 +27,11 @@ const Button = ({ uri, title, width, margin }: {
           letter-spacing: 0.3px;
           text-align: center;
           color: #90cfbe;
-          ${ margin ? `margin: ${margin};` : '' }
+          ${margin ? `margin: ${margin};` : ''}
         }
 
         a:hover {
-          opacity: 0.8;
+          opacity: 0.7;
         }
       `}</style>
     </a>
