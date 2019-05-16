@@ -8,7 +8,7 @@ interface IProps {
   sStyle?: string;
 }
 
-const Col = ({ children, flex = false, style = '', mStyle, sStyle }: IProps) => (
+const Col = ({ children, flex = false, style = '', mStyle = '', sStyle = '' }: IProps) => (
   <div className="col">
     { children }
     <style jsx>{`

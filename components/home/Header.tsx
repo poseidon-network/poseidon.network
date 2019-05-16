@@ -27,7 +27,10 @@ const Header = () => {
         >
           <img className="right-img" src="/static/key-vision.svg" />
         </Col>
-        <Col style="margin-right: 27px;">
+        <Col
+          style="margin-right: 27px;"
+          mStyle="margin: 0;"
+        >
           <H2 margin="8px 0 30px">A Blockchain Transport<br/>Layer Solution</H2>
           <P margin="0">Next-Generation Content Layer (CDN + DSN), incentivized by TRX. Utilized unused bandwidth and storage from NAS, desktop, and mobile devices around the world. It’s distributed, efficient, and integrates perfectly with existing internet and blockchain infrastructure. </P>
           <div className="btn-wrapper">

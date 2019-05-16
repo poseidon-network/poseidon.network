@@ -34,6 +34,7 @@ const Layout = ({ children, bgColor, color, padding, backgroundImage }: IProps) 
           padding-left: 30px;
           padding-right: 30px;
           padding-top: 60px;
+          padding-bottom: 60px;
         }
       }
     `}</style>
