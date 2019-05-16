@@ -67,6 +67,10 @@ const Header = () => {
           align-items: center;
         }
 
+        social-medias__imglist {
+          margin-top: 1px;
+        }
+
         .right-img {
           width: 100%;
           min-width: 300px;
