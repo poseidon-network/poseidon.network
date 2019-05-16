@@ -4,6 +4,10 @@ const withTypescript = require('@zeit/next-typescript');
 module.exports = withTypescript({
   exportPathMap: () => ({
     '/': { page: '/' },
+    '/technology': { page: '/technology' },
+    '/company': { page: '/company' },
+    '/token': { page: '/token' },
+    '/community': { page: '/community' },
     '/demo': { page: '/demo' },
     '/preview': { page: '/preview', query: { q: '' } },
     '/tron-dapp': { page: '/tron-dapp' },
@@ -15,5 +19,10 @@ module.exports = withTypescript({
       CONTRACT_ADDRESS: process.env.CONTRACT_ADDRESS,
     }));
     return config;
+  },
+  publicRuntimeConfig: {
+    localeSubpaths: typeof process.env.LOCALE_SUBPATHS === 'string'
+      ? process.env.LOCALE_SUBPATHS
+      : 'none',
   },
 });

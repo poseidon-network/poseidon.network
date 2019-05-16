@@ -1,17 +1,23 @@
+import { styles } from '../constants';
+
 const H2 = ({
   children,
   center,
-  color = '#fff',
+  margin,
+  size,
+  color = styles.primaryColor,
   id = '',
-}: { children: React.ReactNode, center?: boolean, color?: string, id?: string; }) => ((
+}: ITextBaseProps & { size?: string }) => ((
   <h2 id={id}>
     { children }
-
     <style jsx>{`
       h2 {
-        font-size: 24px;
+        font-size: ${ size ? size : '40px;' };
+        font-weight: 600;
+        line-height: 1.3;
         color: ${ color };
-        ${ center && 'text-align: center;' }
+        ${ margin ? `margin: ${margin};` : '' }
+        ${ center ? 'text-align: center;' : '' }
       }
     `}</style>
   </h2>

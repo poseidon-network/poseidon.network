@@ -7,12 +7,12 @@ import { withApollo } from 'react-apollo';
 import { ReactFacebookLoginInfo } from 'react-facebook-login';
 import short from 'short-uuid';
 
-import { saveLoginData } from '../utils/auth';
-import { APP_URL, CONTRACT_ADDRESS } from '../constants';
-import CustomApolloClient from '../utils/CustomApolloClient';
+import { saveLoginData } from '../../utils/auth';
+import { APP_URL, CONTRACT_ADDRESS } from '../../constants';
+import CustomApolloClient from '../../utils/CustomApolloClient';
 import PreviewModal from './PreviewModal';
 import Video from './Video';
-import Modal from './Modal';
+import Modal from '../Modal';
 
 const REDIRECT_TIMEOUT_MS = 3000;
 const translator = short();

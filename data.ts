@@ -38,34 +38,24 @@ export const intro = [
 
 export const features = [
   {
-    imageUri: '/static/img-1.png',
-    title: 'Build Sharing  Economy',
-    description: 'Utilized unused bandwidth and storage from any NAS, desktop, or mobile devices around the world. It’s distributed, efficient, and integrates perfectly with existing internet and blockchain infrastructure',
-  },
-  {
-    imageUri: '/static/img-2.png',
-    title: 'Faster',
-    description: 'Benefit from Fog Computing technology.',
-  },
-  {
     imageUri: '/static/img-3.png',
-    title: 'Cheaper',
-    description: 'With Fog Computing technology. We provide a cheaper content acceleration Layer incentivized by QQQ Token.  “$0.01 USD/GB, almost ten times cheaper than AWS cloudfront”.',
+    title: 'Scalable',
+    description: 'We already host decentralized global nodes providing Bandwidth, Storage & Computing, combined with several top-notch blockchain technology partners.',
   },
   {
     imageUri: '/static/img-4.png',
-    title: 'Production Ready',
-    description: 'Real customers delivering and storing content.',
+    title: 'Cheaper',
+    description: '1/5 times cheaper than cloud providers, yet faster. Enterprise friendly solutions and services are provided.',
   },
   {
     imageUri: '/static/img-5.png',
-    title: 'Layer 2 Solution',
-    description: 'NOT putting data on blockchain to ensure performance, scalability, and feasibility. ',
+    title: 'Flexible Speed',
+    description: 'Poseidon is faster. The edge at fog are closer to the users , so that latency is lower than the edges at cloud. 10x faster in Waiting Time & 2x Download Speed than AWS, GCP.',
   },
   {
     imageUri: '/static/img-6.png',
-    title: 'Multipurpose',
-    description: 'Data storage, bandwidth, and computation.',
+    title: 'Efficiency',
+    description: 'We build Internet resources sharing platform based on  blockchain technology. Sharing economy is incentive by native token QQQ, a mining friendly platform and a powerful ecosystem without border.',
   },
 ];
 
@@ -79,11 +69,6 @@ export const partners = [
 ];
 
 export const roadmap = [
-  {
-    time: 'WHERE WE START',
-    description: 'Bootstrapping Qinfra from 2 co-founders Qing & Mike, target to disrupt cloud infra with innovative Edge Computing Technology',
-    done: true,
-  },
   {
     time: 'Q2 - Q3 2018',
     title: 'Core Development',
@@ -111,23 +96,13 @@ export const roadmap = [
     title: 'Monthly Revenue - 9M USD',
     description: 'Decentralized Qontroller Distributed Edges',
   },
-  {
-    time: 'WHERE WE ARE GOING',
-    description: 'Open-sourced, Decentralized, Distributed, Autonomous Content Acceleration Layer incentivized by QQQ Token',
-    lastone: true,
-  },
 ];
 
 export const team = [
   { name: 'Light Lin', title: 'CEO', avatar: '/static/img-light@2x.jpg' },
   { name: 'Mike Lin', title: 'COO', avatar: '/static/img-mike@2x.jpg' },
   { name: 'Qing Wang', title: 'CTO', avatar: '/static/img-qing@2x.jpg' },
-  { name: 'Chi Hsuan', title: 'Prototype', avatar: '/static/img-chi-hsuan@2x.jpg' },
-  { name: 'GT Lin', title: 'Production', avatar: '/static/img-gt-lin@2x.jpg' },
-  { name: 'Jocelyn', title: 'Marketing', avatar: '/static/img-jocelyn@2x.jpg' },
-  { name: 'Cindy', title: 'Community', avatar: '/static/img-cindy@2x.jpg' },
-  { name: 'Bee Li', title: 'Product Design', avatar: '/static/img-bee@2x.jpg' },
-  { name: 'Elsa', title: 'Office Mangager', avatar: '/static/img-elsa@2x.jpg' },
+  { name: 'Rest of team members →', title: '', avatar: '' },
 ];
 
 export const techCoreTeam = [
@@ -142,14 +117,6 @@ export const advisors = [
   { name: 'Jason Hsu', title: 'Blockchain Advisors', avatar: '/static/img-jason@2x.jpg' },
   { name: 'Celeste Kwon', title: 'Blockchain Advisors', avatar: '/static/img-celeste@2x.jpg' },
   { name: 'Emma Chi', title: 'Blockchain Advisors', avatar: '/static/img-emma@2x.jpg' },
-  { name: 'Daniel Yeh', title: 'Blockchain Advisors', avatar: '/static/img-daniel@2x.jpg' },
-  { name: 'Jaclyn Tsai', title: 'Tech Advisors', avatar: '/static/img-jaclyn-tsai@2x.jpg' },
-  { name: 'Kenny Hsia', title: 'Blockchain Advisors', avatar: '/static/img-kenny@2x.jpg' },
-  { name: 'Lman Chu', title: 'Jason Hsu', avatar: '/static/img-lman@2x.jpg' },
-  { name: 'Jserv Huang', title: 'Tech Advisors', avatar: '/static/img-jserv@2x.jpg' },
-  { name: 'Tom Soong', title: 'Tech Advisors', avatar: '/static/img-tom@2x.jpg' },
-  { name: 'Sega Cheng', title: 'Tech Advisors', avatar: '/static/img-sega@2x.jpg' },
-  { name: 'Mark Sung', title: 'Tech Advisors', avatar: '/static/img-mark-sung@2x.jpg' },
 ];
 
 export const contact = {
@@ -164,5 +131,5 @@ export const footer = {
     { imgUri: '/static/ic-twitter.png', link: ' https://twitter.com/QQQtoken', alt: 'Twitter' },
   ],
   email: 'service@poseidon.network',
-  copyright: 'POSEIDON NETWORK © 2018-2019 All rights reserved.',
+  copyright: 'Copyright © Poseidon Network 2019.',
 };

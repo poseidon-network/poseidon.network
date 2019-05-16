@@ -1,20 +1,27 @@
 interface IProps {
   children: React.ReactNode;
+  backgroundImage?: string;
   direction?: string;
+  padding?: string;
+  style?: string;
 }
 
-const Content = ({ children, direction = 'column' }: IProps) => ((
+const Content = ({ children, backgroundImage, direction = 'column', padding = '0', style = '' }: IProps) => ((
   <div className="container">
     { children }
     <style jsx>{`
       .container {
-        align-items: center;
+        max-width: 1440px;
+        width: 100%;
         display: flex;
         flex-wrap: wrap;
-        max-width: 88%;
         flex-direction: ${ direction };
         margin: 0 auto;
-        padding: 0;
+        padding: ${padding};
+        ${backgroundImage ? `background-image: url(${backgroundImage});` : ''}
+        background-size: cover;
+        background-repeat: no-repeat;
+        ${style}
       }
     `}</style>
   </div>
