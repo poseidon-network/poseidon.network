@@ -67,8 +67,11 @@ const Header = () => {
           align-items: center;
         }
 
-        social-medias__imglist {
-          margin-top: 1px;
+        .social-medias__imglist {
+          margin-top: 2px;
+          width: 150px;
+          display: flex;
+          justify-content: space-between;
         }
 
         .right-img {
