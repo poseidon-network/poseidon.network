@@ -21,7 +21,7 @@ interface IState {
   hash?: string;
 }
 export default class Demo extends React.Component<{}, IState> {
-  state:IState = {
+  state: IState = {
     fileList: [],
     hash: undefined,
     isLoading: true,
@@ -35,9 +35,10 @@ export default class Demo extends React.Component<{}, IState> {
   getFileList = async () => {
     try {
       const response = await axios.post(`${process.env.GRAPHQL_URI}`, {
-        operationName:null,
-        variables:{},
-        query: '{files(filter: { take: 9  }) {  id    name    size    hash  }}',
+        operationName: null,
+        variables: {},
+        query:
+          '{files(filter: {take: 9, orderBy: "file.createdAt"}) {  id    name    size    hash  }}',
       });
       this.setState({
         fileList: response.data.data.files,
@@ -48,19 +49,22 @@ export default class Demo extends React.Component<{}, IState> {
     this.setState({
       isLoading: false,
     });
-  }
+  };
 
   onDrop = async (files: File[]) => {
     if (this.state.isLoading) {
       return;
     }
     const formData = new FormData();
-    formData.append('operations', '{"operationName":null,"variables":{"file":null},"query":"mutation ($file: Upload!) {  file: uploadPublicFile(file: $file) {    uri    __typename  }}"}');
+    formData.append(
+      'operations',
+      '{"operationName":null,"variables":{"file":null},"query":"mutation ($file: Upload!) {  file: uploadPublicFile(file: $file) {    uri    __typename  }}"}',
+    );
     formData.append('map', '{ "0": ["variables.file"] }');
     formData.append('0', files[0]);
     await this.uploadToIpfs(formData);
     await this.getFileList();
-  }
+  };
 
   uploadToIpfs = async (formData: FormData) => {
     this.setState({
@@ -76,8 +80,10 @@ export default class Demo extends React.Component<{}, IState> {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
-        onUploadProgress: (progressEvent) => {
-          const percentCompleted = Math.floor((progressEvent.loaded * 100) / progressEvent.total);
+        onUploadProgress: progressEvent => {
+          const percentCompleted = Math.floor(
+            (progressEvent.loaded * 100) / progressEvent.total,
+          );
           this.setState({
             percentCompleted: percentCompleted >= 95 ? 95 : percentCompleted,
           });
@@ -94,7 +100,7 @@ export default class Demo extends React.Component<{}, IState> {
         hasError: true,
       });
     }
-  }
+  };
 
   render() {
     return (
