@@ -26,7 +26,10 @@ const SolutionItem = ({ imageUri, title, description }: IProps) => ((
         display: flex;
         align-items: center;
         justify-content: center;
-        margin: 0 auto 80px;
+        margin: 0 auto 30px;
+        width: 210px;
+        height: 210px;
+        object-fit: contain;
       }
 
       h3 {
@@ -36,10 +39,10 @@ const SolutionItem = ({ imageUri, title, description }: IProps) => ((
         margin-bottom: 8px;
       }
 
+      @media only screen and (max-width: 768px) {
+      }
+
       @media only screen and (max-width: 554px) {
-        .img-container {
-          margin-top: 130px;
-        }
       }
     `}</style>
   </div>
