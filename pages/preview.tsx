@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Page, { UserContext } from '../layout/Page';
-import Preview from '../components/Preview';
+import Preview from '../components/demo/Preview';
 import { ApolloProvider } from 'react-apollo';
 import { GRAPHQL_URI } from '../constants';
 import CustomApolloClient from '../utils/CustomApolloClient';

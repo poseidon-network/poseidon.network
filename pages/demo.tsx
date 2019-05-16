@@ -1,5 +1,5 @@
 import Page from '../layout/Page';
-import Demo from '../components/Demo';
+import Demo from '../components/demo/Demo';
 import Intro from '../components/dapp/Intro';
 
 const Index = () => ((

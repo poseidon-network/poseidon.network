@@ -1,8 +1,8 @@
 import React from 'react';
 import axios from 'axios';
 
-import Section from './Section';
-import Content from './Content';
+import Section from '../Section';
+import Content from '../Content';
 import UploadFileForm from './UploadFileForm';
 import FileTable from './FileTable';
 

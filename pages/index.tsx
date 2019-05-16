@@ -1,24 +1,38 @@
+import React from 'react';
 import Page from '../layout/Page';
 import Header from '../components/Header';
-import Indicators from '../components/Indicators';
-import Intro from '../components/Intro';
-import Features from '../components/Features';
-import Partners from '../components/Partners';
-import Roadmap from '../components/Roadmap';
-import Team from '../components/Team';
+import Intro from '../components/home/Intro';
+
+import Solutions from '../components/home/Solutions';
+import Partners from '../components/home/Partners';
+import Team from '../components/home/Team';
 import Contact from '../components/Contact';
+import Developers from '../components/home/Developers';
+import HelpCompany from '../components/home/HelpCompany';
+import SettingUp from '../components/home/SettingUp';
 
-const Index = () => ((
-  <Page title="Poseidon Network">
-    <Header />
-    <Indicators />
-    <Intro />
-    <Features />
-    <Partners />
-    <Roadmap />
-    <Team />
-    <Contact />
-  </Page>
-));
+class Homepage extends React.Component {
+  static async getInitialProps() {
+    return {
+      namespacesRequired: ['common', 'footer'],
+    };
+  }
 
-export default Index;
+  render() {
+    return (
+      <Page title="Poseidon Network">
+        <Header />
+        <Intro />
+        <Solutions />
+        <Developers />
+        <HelpCompany />
+        <SettingUp />
+        <Team />
+        <Partners />
+        <Contact />
+      </Page>
+    );
+  }
+}
+
+export default Homepage;
