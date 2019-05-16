@@ -9,7 +9,7 @@ const SettingUp = () => ((
   <Section bgColor={styles.darkLight} color="#fff" padding="120px 0">
     <Content direction="row" style="align-items: center;">
       <Col>
-        <img className="setup" src="/static/setup-tmp.png" />
+        <img className="left-img" src="/static/setup-tmp.png" />
       </Col>
       <Col>
         <H2 margin="0 0 15px">Setting Up Easily</H2>
@@ -20,17 +20,19 @@ const SettingUp = () => ((
           flex: 1;
         }
 
-        .setup {
+        .left-img {
+          margin-right: 30px;
         }
 
         @media only screen and (max-width: 768px) {
-          .setup {
+          .left-img {
             margin-bottom: 60px;
+            margin-right: 0;
           }
         }
 
         @media only screen and (max-width: 554px) {
-          .setup {
+          .left-img {
             margin-bottom: 60px;
             width: 100%;
           }

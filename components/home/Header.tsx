@@ -34,7 +34,7 @@ const Header = () => {
             <Button title="Whitepaper" uri="http://ipfs.poseidon.network/ipfs/QmUzzcKXhturgVu8BgFhf7bmnf2ittC7d9T9bXwuX5NEXB" />
           </div>
           <div className="social-medias">
-            <H3 margin="0 30px 0 0" sStyle="margin: 0;">Join Our Community</H3>
+            <H3 margin="0 30px 0 0" style="width: min-content;" sStyle="margin: 0;">Join Our Community</H3>
             <div className="social-medias__imglist">
             { footer.socialMediaList.map(({ imgUri, link, alt }) => (
               <SocialMedia key={imgUri} imgUri={imgUri} link={link} alt={alt} />
@@ -65,10 +65,6 @@ const Header = () => {
           display: flex;
           margin-top: 61px;
           align-items: center;
-        }
-
-        .social-medias__imglist {
-          width: 300px;
         }
 
         .right-img {

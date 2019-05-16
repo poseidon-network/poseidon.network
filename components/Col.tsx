@@ -13,8 +13,8 @@ const Col = ({ children, flex = false, style = '', mStyle, sStyle }: IProps) => 
     { children }
     <style jsx>{`
       .col {
-        ${ flex ? 'display: flex; flex-direction: column;' : '' }
         flex: 1;
+        ${ flex ? 'display: flex; flex-direction: column;' : '' }
         ${style}
       }
 
