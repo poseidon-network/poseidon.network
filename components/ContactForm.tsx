@@ -141,7 +141,13 @@ class ContactForm extends React.Component {
           }
 
           @media only screen and (max-width: 768px) {
+            .input-field {
+              width: 100%;
+            }
 
+            input {
+              width: 78%;
+            }
           }
 
           @media only screen and (max-width: 554px) {

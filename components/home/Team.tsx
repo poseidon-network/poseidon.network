@@ -39,7 +39,7 @@ const Team = () => ((
 
         @media only screen and (max-width: 554px) {
           .members {
-            grid-template-columns: 50% 50%;
+            grid-template-columns: 141px 141px;
             grid-gap: 10px 34px;
           }
         }
