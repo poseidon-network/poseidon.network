@@ -9,8 +9,8 @@ const MediaList = () => ((
     <H2 center margin="0 0 58px">Media List</H2>
     <Content
       direction="row"
-      style="justify-content: center;"
-      mStyle="display: grid; grid-template-columns: 33.3% 33.3% 33.3%; justify-items: center;"
+      style="display: grid; grid-template-columns: auto auto auto auto auto; grid-gap: 40px 23.5px; justify-items: center;"
+      mStyle="grid-template-columns: auto auto auto; grid-gap: 40px 8.5px;"
       sStyle="grid-template-columns: 100%;"
     >
       {
@@ -22,7 +22,6 @@ const MediaList = () => ((
         .logo {
           height: 50px;
           margin: 0 23.5px;
-          margin-bottom: 40px;
         }
       `}</style>
     </Content>
