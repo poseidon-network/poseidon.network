@@ -107,6 +107,10 @@ export const techCoreTeam = [
   { name: 'Ju Quyang', title: 'Embedded Engineer', avatar: '/static/img-ju@2x.jpg' },
 ];
 
+export const advisors = [
+  { name: '', title: '' },
+];
+
 export const contact = {
   title: 'Follow Our Journey',
   description: 'Bootstrapping Qinfra from 2 co-founders, Qing & Mike, target to disrupt cloud infra …',
