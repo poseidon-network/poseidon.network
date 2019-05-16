@@ -76,7 +76,6 @@ const Header = () => {
 
         .right-img {
           width: 100%;
-          min-width: 300px;
           object-fit: contain;
         }
 
@@ -101,7 +100,6 @@ const Header = () => {
           }
 
           .right-img {
-            width: 315px;
             height: 282px;
           }
 

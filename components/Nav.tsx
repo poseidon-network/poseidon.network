@@ -201,9 +201,9 @@ const Nav = ({ t, bgColor = '#222633' }:  IProps) => {
           display: none;
         }
 
-        @media only screen and (min-width: 600px) {
+        @media only screen and (max-width: 500px) {
           .logo {
-            width: 269px;
+            width: 220px;
           }
         }
 
