@@ -10,17 +10,18 @@ const H2 = ({
   style = '',
   mStyle = '',
   sStyle = '',
-}: ITextBaseProps & { size?: string }) => ((
+}: ITextBaseProps & { size?: string }) => (
   <h2 id={id}>
-    { children }
-    <style jsx>{`
+    {children}
+    <style jsx>
+      {`
       h2 {
-        font-size: ${ size ? size : '40px;' };
+        font-size: ${size ? size : '32px;'};
         font-weight: 600;
         line-height: 1.3;
-        color: ${ color };
-        ${ margin ? `margin: ${margin};` : '' }
-        ${ center ? 'text-align: center;' : '' }
+        color: ${color};
+        ${margin ? `margin: ${margin};` : ''}
+        ${center ? 'text-align: center;' : ''}
         ${style};
       }
       @media only screen and (max-width: 768px) {
@@ -39,6 +40,6 @@ const H2 = ({
     `}
     </style>
   </h2>
-));
+);
 
 export default H2;

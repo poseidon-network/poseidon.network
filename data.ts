@@ -154,19 +154,24 @@ export const contact = {
 export const footer = {
   socialMediaList: [
     {
-      imgUri: '/static/ic-facebook.png',
+      imgUri: '/static/facebook.svg',
       link: 'https://www.facebook.com/QQQtoken/',
       alt: 'Facebook',
     },
     {
-      imgUri: '/static/ic-medium.png',
+      imgUri: '/static/medium.svg',
       link: 'https://medium.com/poseidonnetwork',
       alt: 'Medium',
     },
     {
-      imgUri: '/static/ic-twitter.png',
+      imgUri: '/static/twitter.svg',
       link: ' https://twitter.com/QQQtoken',
       alt: 'Twitter',
+    },
+    {
+      imgUri: '/static/telegram.svg',
+      link: 'https://t.me/QQQtoken',
+      alt: 'telegram',
     },
   ],
   email: 'service@poseidon.network',

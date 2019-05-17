@@ -3,31 +3,37 @@ import Content from '../Content';
 import H2 from '../H2';
 import { styles } from '../../constants';
 
-const HelpCompany = () => ((
-  <Section bgColor={styles.dark} color="#fff" padding="0 0 100px">
+const HelpCompany = () => (
+  <Section bgColor={styles.dark} color="#fff" padding="0 0 120px">
     <Content>
-      <H2 center style="margin-bottom: 100px;" sStyle="margin-bottom: 30px;">Help Company to Do Good Things</H2>
-      <img className="companies" src="/static/companies@2x.png"/>
+      <H2 center style="margin-bottom: 100px;" sStyle="margin-bottom: 30px;">
+        Help Company to Do Good Things
+      </H2>
+      <img className="companies" src="/static/companies@2x.png" />
       <style jsx>{`
         .companies {
-          height: 167px;
-          max-width: 100%;
+          height: 316px;
+          width: 900px;
+          margin: auto;
+          object-fit: contain;
         }
 
         @media only screen and (max-width: 768px) {
           .companies {
-            height: 100px;
+            width: 707px;
+            height: 248.2px;
           }
         }
 
         @media only screen and (max-width: 554px) {
           .companies {
+            width: 314px;
             height: 49px;
           }
         }
       `}</style>
     </Content>
   </Section>
-));
+);
 
 export default HelpCompany;
