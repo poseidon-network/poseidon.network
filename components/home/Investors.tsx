@@ -6,11 +6,11 @@ import Content from '../Content';
 import { styles } from '../../constants';
 import { partners } from '../../data';
 
-const Partners = () => (
+const Investors = () => (
   <Section padding="110px 0 120px" bgColor={styles.dark} color="#fff">
     <Content>
       <H2 id="partners" margin="0 0 60px" size="32px" center>
-        Our Strong Partners
+        Our Investors
       </H2>
       <div className="partners">
         {partners.map(({ name, title, avatar }) => (
@@ -50,4 +50,4 @@ const Partners = () => (
   </Section>
 );
 
-export default Partners;
+export default Investors;

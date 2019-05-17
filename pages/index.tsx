@@ -4,7 +4,7 @@ import Header from '../components/home/Header';
 import Intro from '../components/home/Intro';
 
 import Solutions from '../components/home/Solutions';
-import Partners from '../components/home/Partners';
+import Investors from '../components/home/Investors';
 import Team from '../components/home/Team';
 import Contact from '../components/Contact';
 import HelpCompany from '../components/home/HelpCompany';
@@ -28,7 +28,7 @@ class Homepage extends React.Component {
         <HelpCompany />
         <SettingUp />
         <Team />
-        <Partners />
+        <Investors />
         <MediaList />
         <Contact />
       </Page>

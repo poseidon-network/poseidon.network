@@ -14,7 +14,7 @@ const Person = ({
   name,
   title,
   avatar,
-  nameColor = styles.primaryColor,
+  nameColor = styles.lightColor,
   titleColor = styles.lightColor,
 }: IPerson) => (
   <div className="container">

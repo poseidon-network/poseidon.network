@@ -184,11 +184,13 @@ export const mediaList = [
   { imgUri: '/static/blocktempo@2x.png' },
   { imgUri: '/static/dooridoori@2x.png' },
   { imgUri: '/static/businessnext@2x.png' },
+  { imgUri: '/static/jtbc@2x.png' },
   { imgUri: '/static/zombit@2x.png' },
   { imgUri: '/static/digitimes@2x.png' },
   { imgUri: '/static/edaily@2x.png' },
   { imgUri: '/static/viva-100@2x.png' },
   { imgUri: '/static/pbm@2x.png' },
+  { imgUri: '/static/coingape@2x.png' },
 ];
 
 export const communities = [
