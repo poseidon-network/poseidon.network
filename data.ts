@@ -179,18 +179,50 @@ export const footer = {
 };
 
 export const mediaList = [
-  { imgUri: '/static/jinse.svg' },
-  { imgUri: '/static/newbrite@2x.png' },
-  { imgUri: '/static/blocktempo@2x.png' },
-  { imgUri: '/static/dooridoori@2x.png' },
-  { imgUri: '/static/businessnext@2x.png' },
-  { imgUri: '/static/jtbc@2x.png' },
-  { imgUri: '/static/zombit@2x.png' },
-  { imgUri: '/static/digitimes@2x.png' },
-  { imgUri: '/static/edaily@2x.png' },
-  { imgUri: '/static/viva-100@2x.png' },
-  { imgUri: '/static/pbm@2x.png' },
-  { imgUri: '/static/coingape@2x.png' },
+  {
+    imgUri: '/static/jinse.svg',
+    uri:
+      'https://www.jinse.com/news/blockchain/359603.html?fbclid=IwAR3AiK8_PmZK1TIYScugq58E8qg0YxfY6EDrX2qeMcjPscpFtKWV_2iIxVE',
+  },
+  {
+    imgUri: '/static/newbrite@2x.png',
+    uri: 'https://meet.bnext.com.tw/articles/view/44803',
+  },
+  {
+    imgUri: '/static/blocktempo@2x.png',
+    uri:
+      'https://www.blocktempo.com/poseidon-network-will-launch-two-type-of-token/',
+  },
+  { imgUri: '/static/dooridoori@2x.png', uri: 'https://youtu.be/PjRAwbT1bRk' },
+  {
+    imgUri: '/static/businessnext@2x.png',
+    uri: 'https://meet.bnext.com.tw/articles/view/44803',
+  },
+  {
+    imgUri: '/static/jtbc@2x.png',
+    uri: 'http://news.jtbc.joins.com/article/article.aspx?news_id=NB11815075',
+  },
+  { imgUri: '/static/zombit@2x.png', uri: 'https://youtu.be/gqpkqoJwsY8' },
+  {
+    imgUri: '/static/digitimes@2x.png',
+    uri:
+      'https://www.digitimes.com.tw/iot/article.asp?cat=158&cat1=30&cat2=132&id=0000559214_ZBY33RWR0726IK5BVFY4T',
+  },
+  {
+    imgUri: '/static/edaily@2x.png',
+    uri:
+      'http://www.edaily.co.kr/news/read?newsId=03863846622486624&mediaCodeNo=E',
+  },
+  {
+    imgUri: '/static/viva-100@2x.png',
+    uri: 'http://www.viva100.com/main/view.php?key=20190507010001926',
+  },
+  { imgUri: '/static/pbm@2x.png', uri: 'https://youtu.be/iEe9H9eRNMU' },
+  {
+    imgUri: '/static/coingape@2x.png',
+    uri:
+      'https://coingape.com/abcc-exchange-launches-poseidon-network-ieo-decentralized-space-sharing/',
+  },
 ];
 
 export const communities = [

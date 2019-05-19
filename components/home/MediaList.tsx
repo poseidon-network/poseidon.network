@@ -15,8 +15,10 @@ const MediaList = () => (
       mStyle="grid-template-columns: auto auto auto; grid-gap: 70px 5px;"
       sStyle="grid-template-columns: 100%;"
     >
-      {mediaList.map(({ imgUri }, index) => (
-        <img key={index.toString()} className="logo" src={imgUri} />
+      {mediaList.map(({ imgUri, uri }, index) => (
+        <a key={index.toString()} target="_open" href={uri}>
+          <img className="logo" src={imgUri} />
+        </a>
       ))}
       <style jsx>{`
         .logo {
