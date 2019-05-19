@@ -4,24 +4,24 @@ const H3 = ({
   children,
   center,
   margin,
-  color = styles.primaryColor,
+  color = styles.lightColor,
   id = '',
   style = '',
   mStyle = '',
   sStyle = '',
-}: ITextBaseProps) => ((
+}: ITextBaseProps) => (
   <h3 id={id}>
-    { children }
+    {children}
 
     <style jsx>{`
       h3 {
-        font-size: 24px;
+        font-size: 20px;
         font-weight: 600;
         line-height: 1.25;
         letter-spacing: 0.3px;
-        color: ${ color };
-        ${ margin ? `margin: ${margin};` : 'margin: 0;' }
-        ${ center ? 'text-align: center;' : '' }
+        color: ${color};
+        ${margin ? `margin: ${margin};` : 'margin: 0;'}
+        ${center ? 'text-align: center;' : ''}
         ${style}
       }
 
@@ -40,6 +40,6 @@ const H3 = ({
       }
     `}</style>
   </h3>
-));
+);
 
 export default H3;

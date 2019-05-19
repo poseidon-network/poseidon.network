@@ -3,7 +3,6 @@ import Content from '../Content';
 import H2 from '../H2';
 import H3 from '../H3';
 import P from '../P';
-import Col from '../Col';
 
 import { styles } from '../../constants';
 
@@ -12,24 +11,63 @@ const Vaule = () => {
     <Section
       bgColor={styles.dark}
       color={styles.primaryColor}
-      padding="58px 0 114px"
+      padding="137px 0"
     >
-      <H2 margin="0 0 226px">Our Vaule</H2>
-      <Content direction="row">
-        <Col style="margin: 0 5px;">
-          <H3>Spirit</H3>
-          <P>Cellulite is fat that is caught between bands of connective tissue directly beneath the skin that creates a lumpy, bumpy orange peel appearance mostly on the hips, thighs and backsides of most women. </P>
-        </Col>
-        <Col style="margin: 0 5px;">
-          <H3>Sharing</H3>
-          <P>Cellulite is fat that is caught between bands of connective tissue directly beneath the skin that creates a lumpy, bumpy orange peel appearance mostly on the hips, thighs and backsides of most women. </P>
-        </Col>
-        <Col>
-          <H3>Innovation</H3>
-          <P>Cellulite is fat that is caught between bands of connective tissue directly beneath the skin that creates a lumpy, bumpy orange peel appearance mostly on the hips, thighs and backsides of most women. </P>
-        </Col>
+      <H2 center margin="0 0 60px">
+        Our Vaule
+      </H2>
+      <Content
+        style="display: grid; grid-template-columns: auto auto auto; grid-gap: 0 31px;"
+        mStyle="grid-template-columns: auto; grid-gap: 60px;"
+      >
+        <div className="value">
+          <img className="vaule-img" src="/static/img-spirit.svg" />
+          <H3 color={styles.lightColor} center>
+            Spirit
+          </H3>
+          <P mStyle="max-width: 349px; text-align: left;">
+            We value our customers — which is why we respect privacy, and don’t
+            exploit customer data or end user data. And our team is available to
+            help along the way via our support center.
+          </P>
+        </div>
+        <div className="value">
+          <img className="vaule-img" src="/static/img-sharing.svg" />
+          <H3 color={styles.lightColor} center>
+            Sharing
+          </H3>
+          <P mStyle="max-width: 349px; text-align: left;">
+            Our platform helps businesses across industries scale faster and
+            more securely, and we’re proud to offer free services for
+            open-source and nonprofit projects.
+          </P>
+        </div>
+        <div className="value">
+          <img className="vaule-img" src="/static/img-innaovation.svg" />
+          <H3 color={styles.lightColor} center>
+            Innovation
+          </H3>
+          <P mStyle="max-width: 349px; text-align: left;">
+            From the start, we’ve moved data and applications closer to the end
+            user — at the edge of the network — to improve apps and websites.
+            Today, we’re continuing to set the industry standard and innovate at
+            the edge.
+          </P>
+        </div>
       </Content>
       <style jsx>{`
+        .value {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .vaule-img {
+          margin-bottom: 58px;
+        }
+
+        @media only screen and (max-width: 768px) {
+        }
       `}</style>
     </Section>
   );

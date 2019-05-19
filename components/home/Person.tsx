@@ -16,6 +16,7 @@ const Person = ({
   avatar,
   nameColor = styles.lightColor,
   titleColor = styles.lightColor,
+  backgroundColor = styles.dark,
 }: IPerson) => (
   <div className="container">
     <div className="avatar">
@@ -44,7 +45,7 @@ const Person = ({
         background-blend-mode: multiply;
         background-image: linear-gradient(to bottom, #d7f2ee, #d7f2ee);
         margin-bottom: 30px;
-        background-color: #1d202b;
+        background-color: ${backgroundColor};
       }
 
       h5 {

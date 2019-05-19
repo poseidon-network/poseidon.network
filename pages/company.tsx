@@ -9,8 +9,8 @@ import Roadmap from '../components/company/Roadmap';
 
 import { styles } from '../constants';
 
-const Company = () => ((
-  <Page title="Poseidon Network | Company" navColor={styles.dark}>
+const Company = () => (
+  <Page title="Poseidon Network | Company" navColor={styles.darkLight}>
     <Intro />
     <Vaule />
     <Team />
@@ -19,6 +19,6 @@ const Company = () => ((
     <Roadmap />
     <Contact />
   </Page>
-));
+);
 
 export default Company;

@@ -3,37 +3,77 @@ import RoadmapItem from './RoadmapItem';
 import H2 from '../H2';
 import P from '../P';
 import Content from '../Content';
-import { roadmap } from '../../data';
+import { roadmap2018, roadmap2019, roadmap2020 } from '../../data';
 import { styles } from '../../constants';
 import Col from '../Col';
+import H3 from '../H3';
 
-const Roadmap = () => ((
+const Roadmap = () => (
   <Section padding="120px" bgColor={styles.darkLight} color="#1c1c1d">
-    <H2 id="roadmap" margin="0 0 5px">Roadmap</H2>
+    <H2 id="roadmap" center margin="0 0 5px">
+      Roadmap
+    </H2>
     <Content direction="row">
-      <Col>
-        <P margin="0 0 58px">Focus is on face, body and breast cosmetic surgery. On the other hand, cosmetic surgery restores normal structures of the body and to improve appearance and self-esteem. Leipziger is a Board certified plastic surgeon with special expertise in cosmetic and reconstructive surgery of the face, breast and body. Addiction to cosmetic surgery Some people appear to become addicted to cosmetic surgery, possibly because of body dysmorphic disorder. </P>
-      </Col>
-      <Col />
+      <P margin="0 0 60px">
+        There’s so much more to Poseidon than technology. At the heart of our
+        work, we aim to improve human lives — and from the beginning, we’ve
+        grown with a deliberate focus on transparency, integrity, and inclusion.
+      </P>
     </Content>
     <Content>
-      {
-        roadmap.map((props, index) => (
-          <RoadmapItem key={index} right={index % 2 === 1} {...props} />
-        ))
-      }
+      <H3 margin="0 0 13px" center>
+        2018
+      </H3>
+      {roadmap2018.map((props, index) => (
+        <RoadmapItem key={index} right={index % 2 === 0} {...props} />
+      ))}
+
+      <H3 margin="15px 0 10px" center>
+        2019
+      </H3>
+      {roadmap2019.map((props, index) => (
+        <RoadmapItem key={index} right={index % 2 === 1} {...props} />
+      ))}
+
+      <H3 margin="15px 0 10px" center>
+        2020
+      </H3>
+      {roadmap2020.map((props, index) => (
+        <RoadmapItem key={index} right={index % 2 === 0} {...props} />
+      ))}
     </Content>
 
-    <Content direction="row">
-      <Col />
+    <Content style="margin-top: 60px;" direction="row">
+      <Col flex style="align-items: center;">
+        <img className="img-company" src="/static/img-company@2x.png" />
+      </Col>
       <Col>
-        <H2>World’s largest nodes network</H2>
-        <P>Focus is on face, body and breast cosmetic surgery. On the other hand, cosmetic surgery restores normal structures of the body and to improve appearance and self-esteem. Leipziger is a Board certified plastic surgeon with special expertise in cosmetic and reconstructive surgery of the face, breast and body. Addiction to cosmetic surgery Some people appear to become addicted to cosmetic surgery, possibly because of body dysmorphic disorder. </P>
+        <H2 mStyle="text-align: left;" margin="0 0 57px;">
+          World’s largest nodes network
+        </H2>
+        <P mStyle="text-align: left;">
+          For cities that meet the following four or more conditions, the
+          POSEIDON NETWORK will seek long-term cooperative partnership with
+          companies, government agencies, universities, etc. as stable large
+          nodes; the POSEIDON NETWORK will give priority to install experiment
+          nodes in cities that meet the following two or more conditions.
+        </P>
       </Col>
     </Content>
     <style jsx>{`
+      .img-company {
+        width: 398px;
+        height: 444px;
+        object-fit: contain;
+      }
+
+      @media only screen and (max-width: 554px) {
+        .img-company {
+          width: 100%;
+        }
+      }
     `}</style>
   </Section>
-));
+);
 
 export default Roadmap;

@@ -84,33 +84,50 @@ export const partners = [
   },
 ];
 
-export const roadmap = [
+export const roadmap2018 = [
+  {
+    time: '',
+    description: '',
+    done: true,
+    init: true,
+  },
   {
     time: 'Q2 - Q3 2018',
-    title: 'Core Development',
+    description: 'Core Development',
     done: true,
   },
   {
-    time: 'Q4 2018',
-    title: 'EQUITY Round',
-    description: 'Centralized dispatcher Distributed Edges',
+    time: '2018 Q4',
+    description: 'Equity Round',
     done: true,
   },
+];
+
+export const roadmap2019 = [
   {
-    time: 'Q1 2019',
-    title: 'Public Sale on ACE',
-    description: 'Decentralized Qontroller Distributed Edges',
+    time: '2019 Q1',
+    description: 'Equity Seed funding',
     active: true,
   },
   {
-    time: 'Q2 2019',
+    time: '2019 Q2-Q3',
     title: 'Public Sale on ACE',
     description: 'Decentralized Qontroller Distributed Edges',
   },
   {
-    time: 'Q3-Q4 2019',
-    title: 'Monthly Revenue - 9M USD',
+    time: '2019 Q4',
     description: 'Decentralized Qontroller Distributed Edges',
+  },
+];
+
+export const roadmap2020 = [
+  {
+    time: 'Q1',
+    description: '',
+  },
+  {
+    time: 'Q2',
+    description: '',
   },
 ];
 
@@ -118,32 +135,129 @@ export const team = [
   { name: 'Light Lin', title: 'CEO', avatar: '/static/avatar-light@2x.png' },
   { name: 'Mike Lin', title: 'COO', avatar: '/static/avatar-mike@2x.png' },
   { name: 'Qing Wang', title: 'CTO', avatar: '/static/avatar-qing@2x.png' },
+  {
+    name: 'Reno Duh',
+    title: 'Chief Analyst',
+    avatar: '/static/avatar-reno@2x.png',
+  },
+  {
+    name: 'Bee Li',
+    title: 'Chief Design Officer ',
+    avatar: '/static/avatar-bee@2x.png',
+  },
+  {
+    name: 'Bill Sun',
+    title: 'Product Manager ',
+    avatar: '/static/avatar-bill@2x.png',
+  },
+  {
+    name: 'Chi-Hsuan Huang',
+    title: 'Blockchain Engineer',
+    avatar: '/static/avatar-chihsuan@2x.png',
+  },
+  {
+    name: 'Jocelyn Chu',
+    title: 'Marketing Manager',
+    avatar: '/static/avatar-jocelyn@2x.png',
+  },
+  {
+    name: 'Vita Tsui',
+    title: 'Office Manager',
+    avatar: '/static/avatar-vita@2x.png',
+  },
+  {
+    name: 'Join Us',
+    title: 'Contact us for a best position ',
+    avatar: '/static/avatar-ps@2x.png',
+  },
 ];
 
 export const techCoreTeam = [
   {
     name: 'Raymond',
-    title: 'Senior Architect',
-    avatar: '/static/img-raymond@2x.jpg',
+    title:
+      "Raymond has worked for a Belgium Company in Taiwan before joining Qinfra. As a R&D team lead, he plays a major role in joint projects among Taiwan, U.S. and Belgium with solid technical knowledge and good communication. Raymond holds a Master's Degree in Communication Engineering at Nation Tsing-Hua University.",
+    avatar: '/static/avatar-raymond@2x.png',
   },
   {
     name: 'ST Wang',
-    title: 'Senior Embedded',
-    avatar: '/static/img-st@2x.jpg',
+    title:
+      'Dr. Wang has over 20 years of professional experience in Machine Learning and Embedded Systems. He was previously responsible for designing various solutions and creating proprietary functions. Dr. Wang holds a Ph.D degree in Computer Scient and Information Engineering.',
+    avatar: '/static/avatar-st@2x.png',
   },
   {
-    name: 'Peng Wu Sung',
-    title: 'Senior DevOps',
-    avatar: '/static/img-wu@2x.jpg',
+    name: 'Wu Sung',
+    title:
+      'Wusung has over 16 years of professional experience in IT consultant service. He designs various enterprise solutions based on GCP and AWS. Wusung holds a Bachelor of Computer Science and Information Engineering.',
+    avatar: '/static/avatar-wu@2x.png',
   },
   {
     name: 'Ju Quyang',
-    title: 'Embedded Engineer',
-    avatar: '/static/img-ju@2x.jpg',
+    title:
+      'PhD Candidate in Institute of Medical Science, Tzu Chi University, Hualien. Familiar with Embedded Linux Development. Familiar with GUI Auto Test Architecture and Implementation.',
+    avatar: '/static/avatar-ju@2x.png',
   },
 ];
 
-export const advisors = [{ name: '', title: '' }];
+export const advisors = [
+  {
+    name: 'Andy Tian',
+    title: 'CEO of Asia Innovation Group Founder of Gifto',
+    avatar: '/static/avatar-andy@2x.png',
+  },
+  {
+    name: 'Jason Hsu',
+    title: 'Crypto Congressman, Taiwan Government.',
+    avatar: '/static/avatar-jason@2x.png',
+  },
+  {
+    name: 'Celeste Kwon',
+    title: 'VP, ACE Exchange\nVP, InfiniteX',
+    avatar: '/static/avatar-celeste@2x.png',
+  },
+  {
+    name: 'Yan Chean',
+    title: 'CEO & Co-founder of LONGHASH',
+    avatar: '/static/avatar-yan@2x.png',
+  },
+  {
+    name: 'Kenny Hsiao',
+    title: 'Founder of Badwater Capital',
+    avatar: '/static/avatar-kenny@2x.png',
+  },
+  {
+    name: 'Daniel Yeh',
+    title: 'CEO of AIG Taiwan\nGM of Uplive',
+    avatar: '/static/avatar-daniel@2x.png',
+  },
+  {
+    name: 'David Pan',
+    title: 'GM of ACE Exchange\nCEO of ABA',
+    avatar: '/static/avatar-david@2x.png',
+  },
+  {
+    name: 'Fenix Hsu',
+    title: 'NEM.TW CTO TRON competition first prize',
+    avatar: '/static/avatar-fenix@2x.png',
+  },
+  {
+    name: 'Posiedon Ho',
+    title: 'Founder of Outliers',
+    avatar: '/static/avatar-poseidon@2x.png',
+  },
+  {
+    name: 'Jun Qian',
+    title:
+      'Principal Director,\nMicrosoft AI+ Research\nFounder, Amazon Machine Learning',
+    avatar: '/static/avatar-jun@2x.png',
+  },
+  {
+    name: 'Chen Zhuling',
+    title:
+      'MIT graduate\nConsulting veteran at Roland Berger. Advised multiple MNCs and governments.',
+    avatar: '/static/avatar-zhuling@2x.png',
+  },
+];
 
 export const contact = {
   title: 'Follow Our Journey',

@@ -15,7 +15,7 @@ interface IProps {
   t: i18next.TFunction;
 }
 
-const Nav = ({ t, bgColor = '#222633' }:  IProps) => {
+const Nav = ({ t, bgColor = '#222633' }: IProps) => {
   const [isLangVisiable, setLangVisiable] = useState<boolean>(false);
   const [isMoreVisiable, setMoreVisiable] = useState<boolean>(false);
 
@@ -38,7 +38,7 @@ const Nav = ({ t, bgColor = '#222633' }:  IProps) => {
   };
 
   return (
-    <Section bgColor={bgColor} color="#fff" padding="20px">
+    <Section bgColor={bgColor} color="#fff" padding="20px !important;">
       <div className="container">
         <a href="/">
           <img className="logo" alt="logo" src="/static/poseidonnetwork.svg" />
@@ -46,7 +46,10 @@ const Nav = ({ t, bgColor = '#222633' }:  IProps) => {
 
         <nav className="navigation" role="navigation">
           <ul>
-            <li className="item"><a href="/technology">{t('Technology')}</a></li>
+            <li className="item">
+              <a href="/company">{t('Company')}</a>
+            </li>
+            {/* <li className="item"><a href="/technology">{t('Technology')}</a></li>
             <li className="item"><a>{t('Solutions')}</a></li>
             <li className="item"><a>{t('Developer')}</a></li>
             <li className="item"><a>{t('Pricing')}</a></li>
@@ -58,8 +61,8 @@ const Nav = ({ t, bgColor = '#222633' }:  IProps) => {
                   <li>{t('Company')}</li>
                   <li>{t('Help Center')}</li>
                 </ul>
-            </li>
-            <li className="item">
+            </li> */}
+            {/* <li className="item">
               <a onClick={() => setLangVisiable(!isLangVisiable)}>Language</a>
                 <ul className={`dropdown ${isLangVisiable ? 'show' : ''}`}>
                   <li><a onClick={changeLanguage('en')}>English</a></li>
@@ -67,33 +70,36 @@ const Nav = ({ t, bgColor = '#222633' }:  IProps) => {
                   <li>한국어</li>
                   <li>Việt Nam</li>
                 </ul>
-            </li>
+            </li> */}
           </ul>
         </nav>
       </div>
 
-        {/* mobile <nav role="navigation">
-          <div id="profile">
-            { user.avatar && <img className="avatar" src={user.avatar} /> }
-            <span className="username">{ user.name }</span>
-          </div>
-          <div id="menuToggle">
-            <input type="checkbox" />
-            <span></span>
-            <span></span>
-            <ul id="menu">
-              <a href="/demo"><li>Demo</li></a>
-              <a href="/tron-dapp"><li>Download</li></a>
-              <a href="/#feature"><li>Feature</li></a>
-              <a href="/#partners"><li>Partners</li></a>
-              <a href="/#roadmap"><li>Roadmap</li></a>
-              <a href="/#team"><li>Team</li></a>
-              <a href="/#contact"><li>Contact</li></a>
-              <a href="https://poseidon.zendesk.com/hc/zh-tw"><li>FAQ</li></a>
-              { user.token && <a onClick={(e) => { e.preventDefault(); logout && logout(); }} href="/#logout"><li>Logout</li></a> }
-            </ul>
-          </div>
-        </nav> */}
+      <nav className="m-nav" role="navigation">
+        {/* <div id="profile">
+          { user.avatar && <img className="avatar" src={user.avatar} /> }
+          <span className="username">{ user.name }</span>
+        </div> */}
+        <div id="menuToggle">
+          <input type="checkbox" />
+          <span />
+          <span />
+          <ul id="menu">
+            <a href="/company">
+              <li className="item">{t('Company')}</li>
+            </a>
+            {/* <a href="/demo"><li>Demo</li></a>
+            <a href="/tron-dapp"><li>Download</li></a>
+            <a href="/#feature"><li>Feature</li></a>
+            <a href="/#partners"><li>Partners</li></a>
+            <a href="/#roadmap"><li>Roadmap</li></a>
+            <a href="/#team"><li>Team</li></a>
+            <a href="/#contact"><li>Contact</li></a>
+            <a href="https://poseidon.zendesk.com/hc/zh-tw"><li>FAQ</li></a> */}
+            {/* { user.token && <a onClick={(e) => { e.preventDefault(); logout && logout(); }} href="/#logout"><li>Logout</li></a> } */}
+          </ul>
+        </div>
+      </nav>
 
       <style jsx>{`
         .container {
@@ -162,7 +168,6 @@ const Nav = ({ t, bgColor = '#222633' }:  IProps) => {
           user-select: none;
         }
 
-
         .dropdown {
           display: flex;
           border-radius: 2px;
@@ -197,10 +202,6 @@ const Nav = ({ t, bgColor = '#222633' }:  IProps) => {
           color: #1d202b;
         }
 
-        nav {
-          display: none;
-        }
-
         @media only screen and (max-width: 500px) {
           .logo {
             width: 220px;
@@ -233,9 +234,8 @@ const Nav = ({ t, bgColor = '#222633' }:  IProps) => {
           border-radius: 1px;
           z-index: 1;
           transform-origin: 4px 0px;
-          transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-                      background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-                      opacity 0.55s ease;
+          transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
+            background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
         }
 
         #menuToggle span:first-child {
@@ -256,12 +256,11 @@ const Nav = ({ t, bgColor = '#222633' }:  IProps) => {
           background: #90cfbe;
         }
 
-
         /*
         * Ohyeah and the last one should go the other direction
         */
         #menuToggle input:checked ~ span:nth-last-child(2) {
-          transform: rotate(-45deg) translate(-7px,7px);
+          transform: rotate(-45deg) translate(-7px, 7px);
         }
 
         /*
@@ -283,7 +282,7 @@ const Nav = ({ t, bgColor = '#222633' }:  IProps) => {
           transform-origin: 0% 0%;
           transform: translate(120%, 0);
 
-          transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+          transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
         }
 
         #menu li {
@@ -298,13 +297,26 @@ const Nav = ({ t, bgColor = '#222633' }:  IProps) => {
           transform: none;
         }
 
-        @media only screen and (max-width: 600px) {
+        .m-nav {
+          display: none;
+        }
+
+        @media only screen and (max-width: 768px) {
           .container {
             width: 100%;
           }
 
           #menuToggle {
-            right: 15px;
+            right: 30px;
+            top: 30px;
+          }
+
+          .m-nav {
+            display: block;
+          }
+
+          .navigation {
+            display: none;
           }
         }
       `}</style>
