@@ -27,8 +27,7 @@ const HelpCompany = () => (
 
         @media only screen and (max-width: 554px) {
           .companies {
-            width: 314px;
-            height: 49px;
+            width: 100%;
           }
         }
       `}</style>

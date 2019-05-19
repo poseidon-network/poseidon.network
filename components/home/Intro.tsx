@@ -11,7 +11,7 @@ const Intro = () => (
   <Section bgColor={styles.darkLight} color="#fff" padding="149px 0 100px">
     <Content
       direction="row"
-      style="display: grid; grid-template-columns: auto auto auto auto auto auto; justify-content: space-between; margin-bottom: 120px;"
+      style="display: grid; grid-template-columns: repeat(auto-fit, 165px); justify-content: space-between; margin-bottom: 120px;"
       mStyle="grid-template-columns: 30% 30% 30%; justify-items: center; grid-gap: 0 60px;"
       sStyle="grid-template-columns: 100%; grid-gap: 0 30px"
     >

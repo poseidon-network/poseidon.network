@@ -35,6 +35,7 @@ const Investors = () => (
 
         @media only screen and (max-width: 768px) {
           .partners {
+            grid-template-columns: auto auto;
             grid-gap: 60px 0;
           }
         }

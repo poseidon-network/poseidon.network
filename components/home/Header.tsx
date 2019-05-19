@@ -62,7 +62,12 @@ const Header = () => {
             </div>
           </div>
         </Col>
-        <Col mStyle="display: none;" sStyle="display: none;">
+        <Col
+          flex
+          style="align-items: center;"
+          mStyle="display: none;"
+          sStyle="display: none;"
+        >
           <img className="right-img" src="/static/key-vision@2x.png" />
         </Col>
       </Content>
