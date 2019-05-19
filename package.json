@@ -6,7 +6,7 @@
     "pre-deploy": "sh pre-deploy.sh",
     "deploy": "npm run export && npm run pre-deploy && gh-pages -t -d out",
     "export": "NODE_ENV=production npm run build && next export",
-    "lint": "tslint --fix --force --format verbose \"./components/**/*.tsx\"",
+    "lint": "tslint --force --format verbose \"./components/**/*.tsx\"",
     "start": "NODE_ENV=production ts-node index.ts",
     "tsc": "tsc"
   },
