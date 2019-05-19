@@ -31,6 +31,12 @@ const Intro = () => {
         </Col>
       </Content>
       <style jsx>{`
+        img {
+          width: 556px;
+          height: 499px;
+          object-fit: contain;
+        }
+
         @media only screen and (max-width: 768px) {
           img {
             width: 100%;
