@@ -25,28 +25,45 @@ const Header = () => {
           mStyle="display: flex; margin-bottom: 120px;"
           sStyle="display: flex; margin-bottom: 60px;"
         >
-          <img className="right-img" src="/static/key-vision.svg" />
+          <img className="right-img" src="/static/key-vision@2x.png" />
         </Col>
-        <Col
-          style="margin-right: 27px;"
-          mStyle="margin: 0;"
-        >
-          <H2 margin="8px 0 30px">A Blockchain Transport<br/>Layer Solution</H2>
-          <P margin="0">Next-Generation Content Layer (CDN + DSN), incentivized by TRX. Utilized unused bandwidth and storage from NAS, desktop, and mobile devices around the world. It’s distributed, efficient, and integrates perfectly with existing internet and blockchain infrastructure. </P>
+        <Col style="margin-right: 27px;" mStyle="margin: 0;">
+          <H2 margin="8px 0 30px">
+            A Blockchain Transport
+            <br />
+            Layer Solution
+          </H2>
+          <P margin="0">
+            Next-Generation Content Layer (CDN + DSN), incentivized by TRX.
+            Utilized unused bandwidth and storage from NAS, desktop, and mobile
+            devices around the world. It’s distributed, efficient, and
+            integrates perfectly with existing internet and blockchain
+            infrastructure.{' '}
+          </P>
           <div className="btn-wrapper">
-            <Button title="Whitepaper" uri="http://ipfs.poseidon.network/ipfs/QmUzzcKXhturgVu8BgFhf7bmnf2ittC7d9T9bXwuX5NEXB" />
+            <Button
+              title="Whitepaper"
+              uri="http://ipfs.poseidon.network/ipfs/QmUzzcKXhturgVu8BgFhf7bmnf2ittC7d9T9bXwuX5NEXB"
+            />
           </div>
           <div className="social-medias">
-            <H3 margin="0 30px 0 0" sStyle="margin: 0;">Join Our Community</H3>
+            <H3 margin="0 30px 0 0" sStyle="margin: 0;">
+              Join Our Community
+            </H3>
             <div className="social-medias__imglist">
-            { footer.socialMediaList.map(({ imgUri, link, alt }) => (
-              <SocialMedia key={imgUri} imgUri={imgUri} link={link} alt={alt} />
-            ))}
+              {footer.socialMediaList.map(({ imgUri, link, alt }) => (
+                <SocialMedia
+                  key={imgUri}
+                  imgUri={imgUri}
+                  link={link}
+                  alt={alt}
+                />
+              ))}
             </div>
           </div>
         </Col>
         <Col mStyle="display: none;" sStyle="display: none;">
-          <img className="right-img" src="/static/key-vision.svg" />
+          <img className="right-img" src="/static/key-vision@2x.png" />
         </Col>
       </Content>
       <style jsx>{`

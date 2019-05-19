@@ -15,7 +15,7 @@ const Intro = () => {
     >
       <Content direction="row">
         <Col mStyle="margin-bottom: 100px;">
-          <img src="/static/key-vision.svg" />
+          <img src="/static/key-vision@2x.png" />
         </Col>
         <Col mStyle="margin-bottom: 100px;">
           <H2 margin="90px 0 10px">Help us build a better Internet</H2>
