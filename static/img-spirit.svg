@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120">
+    <g fill="none" fill-rule="evenodd">
+        <path stroke="#90CFBE" stroke-dasharray="1" d="M55.037 53.21L59.53 34l4.431 19.21L64 82.593 59.481 86 55 82.494l.037-29.284zM73 53.324L81 47l-1.6 3.876v20.12L73 76V53.324zm-26 0V76l-6.4-5.004v-20.12L39 47l8 6.324z"/>
+        <path stroke="#D7F2EE" d="M20.5 20.5h79v79h-79z"/>
+        <path stroke="#90CFBE" d="M60 8.707L8.707 60 60 111.293 111.293 60 60 8.707z"/>
+        <g fill="#D7F2EE">
+            <g transform="translate(56)">
+                <path d="M3.5 7h1v20h-1z"/>
+                <circle cx="4" cy="4" r="4"/>
+            </g>
+            <g transform="matrix(1 0 0 -1 56 120)">
+                <path d="M3.5 7h1v20h-1z"/>
+                <circle cx="4" cy="4" r="4"/>
+            </g>
+        </g>
+        <g fill="#D7F2EE">
+            <g transform="rotate(90 32 88)">
+                <path d="M3.5 7h1v20h-1z"/>
+                <circle cx="4" cy="4" r="4"/>
+            </g>
+            <g transform="matrix(0 1 1 0 0 56)">
+                <path d="M3.5 7h1v20h-1z"/>
+                <circle cx="4" cy="4" r="4"/>
+            </g>
+        </g>
+    </g>
+</svg>
