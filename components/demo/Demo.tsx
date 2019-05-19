@@ -80,7 +80,7 @@ export default class Demo extends React.Component<{}, IState> {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
-        onUploadProgress: progressEvent => {
+        onUploadProgress: (progressEvent: any) => {
           const percentCompleted = Math.floor(
             (progressEvent.loaded * 100) / progressEvent.total,
           );

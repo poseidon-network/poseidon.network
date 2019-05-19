@@ -17,7 +17,7 @@ interface IProps {
 
 const Nav = ({ t, bgColor = '#222633' }: IProps) => {
   const [isLangVisiable, setLangVisiable] = useState<boolean>(false);
-  const [isMoreVisiable, setMoreVisiable] = useState<boolean>(false);
+  const [, setMoreVisiable] = useState<boolean>(false);
 
   useEffect(() => {
     const hideAll = () => {
@@ -62,15 +62,19 @@ const Nav = ({ t, bgColor = '#222633' }: IProps) => {
                   <li>{t('Help Center')}</li>
                 </ul>
             </li> */}
-            {/* <li className="item">
+            <li style={{ display: 'none' }} className="item">
               <a onClick={() => setLangVisiable(!isLangVisiable)}>Language</a>
-                <ul className={`dropdown ${isLangVisiable ? 'show' : ''}`}>
-                  <li><a onClick={changeLanguage('en')}>English</a></li>
-                  <li><a onClick={changeLanguage('zh-tw')}>繁體中文</a></li>
-                  <li>한국어</li>
-                  <li>Việt Nam</li>
-                </ul>
-            </li> */}
+              <ul className={`dropdown ${isLangVisiable ? 'show' : ''}`}>
+                <li>
+                  <a onClick={changeLanguage('en')}>English</a>
+                </li>
+                <li>
+                  <a onClick={changeLanguage('zh-tw')}>繁體中文</a>
+                </li>
+                <li>한국어</li>
+                <li>Việt Nam</li>
+              </ul>
+            </li>
           </ul>
         </nav>
       </div>

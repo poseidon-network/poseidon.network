@@ -11,7 +11,7 @@ let myReq: any;
 
 const Team = () => {
   const [currentRestAvatar, setCurrentResetAvtar] = useState<string>(
-    '/static/avatar-reno@2x.png',
+    team[defaultCurrentAvatarIndex].avatar,
   );
   const [currentAvatarIndex, setCurrentAvatarIndex] = useState<number>(
     defaultCurrentAvatarIndex,

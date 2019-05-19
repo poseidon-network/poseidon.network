@@ -2,7 +2,7 @@ import Section from '../Section';
 import H2 from '../H2';
 import Content from '../Content';
 import { styles } from '../../constants';
-import { team, techCoreTeam } from '../../data';
+import { techCoreTeam } from '../../data';
 import Person from '../home/Person';
 
 const TechCoreTeam = () => (
