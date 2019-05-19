@@ -1,7 +1,9 @@
-import Section from './Section';
 import { useState, useEffect } from 'react';
-import { i18n, withNamespaces } from '../i18n';
 import i18next from 'i18next';
+
+import Section from './Section';
+import { i18n, withNamespaces } from '../i18n';
+import { styles } from '../constants';
 
 interface IProps {
   user?: {
@@ -119,6 +121,11 @@ const Nav = ({ t, bgColor = '#222633' }: IProps) => {
 
         a {
           cursor: pointer;
+          color: ${styles.primaryColor};
+        }
+
+        a:hover {
+          color: ${styles.lightColor};
         }
 
         .logo {

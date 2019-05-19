@@ -22,7 +22,7 @@ const RoadmapItem = ({
   right = false,
 }: IProps) => (
   <div className="container">
-    <div className="content circle">
+    <div className="content">
       <H3 color={active ? styles.dark : styles.lightColor} margin="0 0 7px">
         {time}
       </H3>
@@ -42,60 +42,7 @@ const RoadmapItem = ({
           : active
           ? '#90cfbe'
           : 'transparent'};
-        min-height: ${init ? '100px' : '131px'};
-      }
-
-      .container::before {
-        position: absolute;
-        ${!right ? 'right: -54px;' : ''}
-        ${right ? 'left: -20px;' : ''}
-        top: -8px;
-        content: '';
-        display: inline-block;
-        width: 35px;
-        height: 35px;
-        border-radius: 50%;
-        background-color: ${active ? styles.primaryColor : 'transparent'};
-        opacity: 0.3;
-        margin-right: 22px;
-      }
-
-      .circle::before {
-        position: absolute;
-        ${!right ? 'right: -45px;' : ''}
-        ${right ? 'left: -22px;' : ''}
-        top: 0px;
-        content: '';
-        display: inline-block;
-        width: 16px;
-        height: 16px;
-        border-radius: 50%;
-        background-color: ${done
-          ? '#216c8a'
-          : active
-          ? '#90cfbe'
-          : 'transparent'};
-        border: 1px solid
-          ${!done && !active ? styles.primaryColor : 'transparent'};
-        margin-right: 22px;
-      }
-
-      .circle::after {
-        position: absolute;
-        ${right ? 'left: -14px;' : ''}
-        ${!right ? 'right: -15px;' : ''}
-        top: 18px;
-        content: '';
-        width: 0px;
-        display: inline-block;
-        border: 1px solid #fff;
-        border-color: ${done
-          ? '#216c8a'
-          : active
-          ? '#90cfbe'
-          : styles.primaryColor};
-        border-style: ${done ? 'solid' : 'dashed'};
-        height: 85%;
+        height: ${init ? '100px' : '131px'};
       }
 
       .content {
@@ -114,24 +61,67 @@ const RoadmapItem = ({
         width: 100%;
       }
 
+      .container::before {
+        position: absolute;
+        ${right ? 'left: -20px;' : 'right: calc(-2.4% - 18px);'}
+        top: -8px;
+        content: '';
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        background-color: ${active ? styles.primaryColor : 'transparent'};
+        opacity: 0.3;
+      }
+
+      .content::before {
+        position: absolute;
+        ${right ? 'left: calc(-2% - 8px);' : 'right: calc(-2.4% - 8px);'}
+        top: 0px;
+        content: '';
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        background-color: ${done
+          ? '#216c8a'
+          : active
+          ? '#90cfbe'
+          : 'transparent'};
+        border: 1px solid
+          ${!done && !active ? styles.primaryColor : 'transparent'};
+      }
+
+      .content::after {
+        position: absolute;
+        ${right ? 'left: -2%;' : 'right: -2.4%;'}
+        top: 18px;
+        content: '';
+        width: 0px;
+        border: 1px solid #fff;
+        border-color: ${done
+          ? '#216c8a'
+          : active
+          ? '#90cfbe'
+          : styles.primaryColor};
+        border-style: ${done ? 'solid' : 'dashed'};
+        height: 85%;
+      }
+
       @media only screen and (max-width: 768px) {
         .container {
           width: 48.5%;
+          height: initial;
         }
 
-        .circle::before {
-          ${!right ? 'right: -42px;' : ''}
-          ${right ? 'left: -20px;' : ''}
+        .content::before {
+          ${right ? 'left: calc(-3.2% - 8px);' : 'right: calc(-3.4% - 8px);'}
         }
 
-        .circle::after {
-          ${!right ? 'right: -12px;' : ''}
-          ${right ? 'left: -12px;' : ''}
+        .content::after {
+          ${right ? 'left: -3.2%;' : 'right: -3.4%;'}
         }
 
         .container::before {
-          ${!right ? 'right: -51px;' : ''}
-          ${right ? 'left: -20px;' : ''}
+          ${right ? 'left: calc(-3.2% - 8px);' : 'right: calc(-3.4% - 18px);'}
         }
       }
 
@@ -140,19 +130,16 @@ const RoadmapItem = ({
           width: 47%;
         }
 
-        .circle::before {
-          ${!right ? 'right: -45px;' : ''}
-          ${right ? 'left: -15px;' : ''}
+        .content::before {
+          ${right ? 'left: calc(-4% - 8px);' : 'right: calc(-10% - 8px);'}
         }
 
-        .circle::after {
-          ${!right ? 'right: -15px;' : ''}
-          ${right ? 'left: -7px;' : ''}
+        .content::after {
+          ${right ? 'left: -4%;' : 'right: -10%;'}
         }
 
         .container::before {
-          ${!right ? 'right: -53px;' : ''}
-          ${right ? 'left: -20px;' : ''}
+          ${right ? 'left: calc(-4% - 18px);' : 'right: calc(-10% - 18px);'}
         }
       }
     `}</style>
