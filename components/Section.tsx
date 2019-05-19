@@ -4,23 +4,32 @@ interface IProps {
   color: string;
   padding?: string;
   backgroundImage?: string;
+  style?: string;
 }
 
-const Layout = ({ children, bgColor, color, padding, backgroundImage }: IProps) => ((
+const Layout = ({
+  children,
+  bgColor,
+  color,
+  padding,
+  backgroundImage,
+  style,
+}: IProps) => (
   <div className="container">
-    { children }
+    {children}
     <style jsx>{`
       .container {
-        background-color: ${ bgColor };
-        color: ${ color };
+        background-color: ${bgColor};
+        color: ${color};
         width: 100%;
         overflow: hidden;
-        padding: ${ padding || '32px'};
+        padding: ${padding || '32px'};
         padding-left: 150px;
         padding-right: 150px;
         ${backgroundImage ? `background-image: url(${backgroundImage});` : ''}
         background-size: cover;
         background-repeat: no-repeat;
+        ${style}
       }
 
       @media only screen and (max-width: 1120px) {
@@ -39,6 +48,6 @@ const Layout = ({ children, bgColor, color, padding, backgroundImage }: IProps) 
       }
     `}</style>
   </div>
-));
+);
 
 export default Layout;

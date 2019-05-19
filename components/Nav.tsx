@@ -38,7 +38,11 @@ const Nav = ({ t, bgColor = '#222633' }: IProps) => {
   };
 
   return (
-    <Section bgColor={bgColor} color="#fff" padding="20px !important;">
+    <Section
+      bgColor={bgColor}
+      color="#fff"
+      style="padding-top: 20px !important;"
+    >
       <div className="container">
         <a href="/">
           <img className="logo" alt="logo" src="/static/poseidonnetwork.svg" />

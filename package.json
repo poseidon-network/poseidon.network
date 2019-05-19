@@ -75,7 +75,6 @@
   "lint-staged": {
     "*.{ts,tsx,js}": [
       "prettier --write",
-      "yarn run tsc",
       "yarn run lint",
       "git add"
     ]
