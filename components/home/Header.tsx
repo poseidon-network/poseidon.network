@@ -25,7 +25,7 @@ const Header = () => {
           mStyle="display: flex; margin-bottom: 120px;"
           sStyle="display: flex; margin-bottom: 60px;"
         >
-          <img className="right-img" src="/static/key-vision@2x.png" />
+          <img className="top-img" src="/static/key-vision@2x.png" />
         </Col>
         <Col style="margin-right: 27px;" mStyle="margin: 0;">
           <H2 margin="8px 0 30px">
@@ -95,13 +95,19 @@ const Header = () => {
         }
 
         .right-img {
-          width: 100%;
+          width: 556px;
+          height: 499px;
           object-fit: contain;
         }
 
         @media only screen and (max-width: 768px) {
           .btn-wrapper {
             margin-top: 75px;
+          }
+
+          .top-img {
+            width: 100%;
+            object-fit: contain;
           }
 
           .social-medias {
@@ -119,7 +125,7 @@ const Header = () => {
             margin-top: 60px;
           }
 
-          .right-img {
+          .top-img {
             height: 282px;
           }
 
