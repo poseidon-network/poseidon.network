@@ -18,7 +18,7 @@ const Button = ({
           text-align: center;
           border-radius: 28px;
           border: solid 1px #90cfbe;
-          padding: 17px 0 15px;
+          padding: 17px 20px 15px;
           text-decoration: none;
           display: flex;
           justify-content: center;

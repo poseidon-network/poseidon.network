@@ -15,16 +15,44 @@ const Header = () => {
       padding="120px 0 120px"
     >
       <Content direction="row">
+        <Col
+          style="align-items: center; display: none;"
+          mStyle="display: flex;"
+        >
+          <img src="/static/img-community@2x.png" />
+        </Col>
         <Col>
           <H2 margin="0 0 15px">Join To Tthe Community</H2>
-          <P margin="0 0 60px">Cooperate with the most elite software develop team and the biggest NAS manufacturer in the world.</P>
+          <P margin="0 0 60px">
+            Cooperate with the most elite software develop team and the biggest
+            NAS manufacturer in the world.
+          </P>
           <Button margin="0" title="Become an ambassador" uri="" />
         </Col>
-        <Col />
+        <Col flex style="align-items: center;" mStyle="display: none;">
+          <img src="/static/img-community@2x.png" />
+        </Col>
       </Content>
-      <Content direction="row" style="margin-top: 125px;">
+      <Content
+        direction="row"
+        style="display: grid; grid-template-columns: auto auto auto auto;"
+        mStyle="grid-template-columns: auto auto; grid-gap: 60px 32px; margin-top: 60px;"
+      >
         <SocialMediaList />
       </Content>
+      <style jsx>{`
+        img {
+          width: 431px;
+          height: 398px;
+          object-fit: contain;
+        }
+
+        @media only screen and (max-width: 768px) {
+          img {
+            width: 100%;
+          }
+        }
+      `}</style>
     </Section>
   );
 };
