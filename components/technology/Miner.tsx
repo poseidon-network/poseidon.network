@@ -3,7 +3,6 @@ import Content from '../Content';
 import P from '../P';
 import Col from '../Col';
 import H2 from '../H2';
-import Button from '../Button';
 
 import { styles } from '../../constants';
 
