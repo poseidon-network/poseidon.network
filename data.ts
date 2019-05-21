@@ -362,5 +362,8 @@ export const resources = [
 ];
 
 export const footerCompany = [
+  { title: 'About Us', uri: '/company' },
+  { title: 'Team', uri: '/company#team' },
+  { title: 'FAQ', uri: 'https://poseidon.zendesk.com/hc/zh-tw' },
   { title: 'Contract Us', uri: 'mailto:service@poseidon.network' },
 ];

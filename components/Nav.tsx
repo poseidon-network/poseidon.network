@@ -53,10 +53,12 @@ const Nav = ({ t, bgColor = '#222633' }: IProps) => {
         <nav className="navigation" role="navigation">
           <ul>
             <li className="item">
+              <a href="/technology">{t('Technology')}</a>
+            </li>
+            <li className="item">
               <a href="/company">{t('Company')}</a>
             </li>
-            {/* <li className="item"><a href="/technology">{t('Technology')}</a></li>
-            <li className="item"><a>{t('Solutions')}</a></li>
+            {/* <li className="item"><a>{t('Solutions')}</a></li>
             <li className="item"><a>{t('Developer')}</a></li>
             <li className="item"><a>{t('Pricing')}</a></li>
             <li className="item">
@@ -95,6 +97,9 @@ const Nav = ({ t, bgColor = '#222633' }: IProps) => {
           <span />
           <span />
           <ul id="menu">
+            <a href="/technology">
+              <li className="item">{t('Technology')}</li>
+            </a>
             <a href="/company">
               <li className="item">{t('Company')}</li>
             </a>

@@ -13,30 +13,69 @@ const Dapp2 = () => {
       color={styles.primaryColor}
       padding="120px"
     >
-      <H2 margin="0 0 60px" center>Poseidon Network Dapps</H2>
-      <Content direction="row" style="justify-content: space-between;">
+      <H2 center margin="0 0 60px">
+        Poseidon Network Dapps
+      </H2>
+      <Content
+        direction="row"
+        style="display: grid; grid-template-columns: auto auto auto; grid-gap: 30px 31px; justify-content: space-between;"
+        mStyle="grid-template-columns: auto;"
+      >
         <div className="block">
-          <H3 color={styles.lightColor} margin="0 0 16px" center>QCDN</H3>
-          <P center>Cellulite is fat that is caught between bands of connective tissue directly beneath the skin that creates a lumpy, bumpy orange peel appearance mostly on the hips, thighs and backsides of most women.</P>
+          <img src="/static/img-harddisk-green.svg" />
+          <H3 color={styles.lightColor} margin="0 0 16px" center>
+            QCDN
+          </H3>
+          <P mStyle="text-align: left;">
+            Cellulite is fat that is caught between bands of connective tissue
+            directly beneath the skin that creates a lumpy, bumpy orange peel
+            appearance mostly on the hips, thighs and backsides of most women.
+          </P>
         </div>
         <div className="block">
-          <H3 color={styles.lightColor} margin="0 0 16px" center>DSN</H3>
-          <P center>Cellulite is fat that is caught between bands of connective tissue directly beneath the skin that creates a lumpy, bumpy orange peel appearance mostly on the hips, thighs and backsides of most women.</P>
+          <img src="/static/img-harddisk-yellow.svg" />
+          <H3 color={styles.lightColor} margin="0 0 16px" center>
+            DSN
+          </H3>
+          <P mStyle="text-align: left;">
+            Cellulite is fat that is caught between bands of connective tissue
+            directly beneath the skin that creates a lumpy, bumpy orange peel
+            appearance mostly on the hips, thighs and backsides of most women.
+          </P>
         </div>
         <div className="block">
-          <H3 color={styles.lightColor} margin="0 0 16px" center>Blockchain</H3>
-          <P center>Cellulite is fat that is caught between bands of connective tissue directly beneath the skin that creates a lumpy, bumpy orange peel appearance mostly on the hips, thighs and backsides of most women.</P>
+          <img src="/static/img-harddisk-blue.svg" />
+          <H3 color={styles.lightColor} margin="0 0 16px" center>
+            Blockchain
+          </H3>
+          <P mStyle="text-align: left;">
+            Cellulite is fat that is caught between bands of connective tissue
+            directly beneath the skin that creates a lumpy, bumpy orange peel
+            appearance mostly on the hips, thighs and backsides of most women.
+          </P>
         </div>
       </Content>
       <style jsx>{`
         .block {
-          width: 30%;
+          display: flex;
+          flex-direction: column;
           min-width: 300px;
-          height: 480px;
+          min-height: 525px;
+          max-width: 360px;
           background-color: #1d202b;
           padding: 60px 30px 30px;
         }
-    `}</style>
+
+        img {
+          margin-bottom: 35px;
+        }
+
+        @media only screen and (max-width: 768px) {
+          .block {
+            max-width: 100%;
+          }
+        }
+      `}</style>
     </Section>
   );
 };

@@ -4,14 +4,14 @@ const H4 = ({
   children,
   center,
   margin,
-  color = styles.primaryColor,
+  color = styles.lightColor,
   id = '',
   style = '',
   mStyle = '',
   sStyle = '',
-}: ITextBaseProps) => ((
+}: ITextBaseProps) => (
   <h4 id={id}>
-    { children }
+    {children}
 
     <style jsx>{`
       h4 {
@@ -22,9 +22,9 @@ const H4 = ({
         font-stretch: normal;
         line-height: 2;
         letter-spacing: 0.2px;
-        color: ${ color };
-        ${ margin ? `margin: ${margin};` : 'margin: 0;' }
-        ${ center ? 'text-align: center;' : '' }
+        color: ${color};
+        ${margin ? `margin: ${margin};` : 'margin: 0;'}
+        ${center ? 'text-align: center;' : ''}
         ${style};
       }
 
@@ -41,6 +41,6 @@ const H4 = ({
       }
     `}</style>
   </h4>
-));
+);
 
 export default H4;

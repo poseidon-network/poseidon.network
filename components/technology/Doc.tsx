@@ -14,29 +14,31 @@ const Header = () => {
     >
       <Content>
         <H2>Documentation</H2>
-        <P margin="0 0 49px">There is a lot of exciting stuff going on in the stars above us that make astronomy so much fun. The truth is the universe is a constantly changing, moving, some would say “living” thing because you just never know what you are going to see on any given night of stargazing.</P>
-
+        <P mStyle="text-align: left;" margin="0 0 90px">
+          We’re proud to offer free services for open-source and nonprofit
+          projects. Try our solution with our open-source spirit!
+        </P>
         <Content direction="row" style="justify-content: space-between;">
           <div className="doc-block">
             <div className="doc-content whitepaper">
               <strong>Whitepaper</strong>
               <p>Whitepaper</p>
             </div>
-            <MoreLink uri="" />
+            <MoreLink uri="http://ipfs.poseidon.network/ipfs/QmUzzcKXhturgVu8BgFhf7bmnf2ittC7d9T9bXwuX5NEXB" />
           </div>
           <div className="doc-block">
             <div className="doc-content sdk">
               <strong>SDK</strong>
               <p>SDK</p>
             </div>
-            <MoreLink uri="" />
+            {/* <MoreLink uri="" /> */}
           </div>
           <div className="doc-block">
             <div className="doc-content github">
               <strong>Github</strong>
               <p>SDK</p>
             </div>
-            <MoreLink uri="" />
+            {/* <MoreLink uri="" /> */}
           </div>
         </Content>
       </Content>
@@ -57,20 +59,31 @@ const Header = () => {
           width: 360px;
           height: 358px;
           position: absolute;
-          transform: translate(-33px, -28px);
+          transform: translate(-33px, -38px);
           padding: 23px 32px;
         }
 
         .whitepaper {
-          background-image: conic-gradient(#d7f2ee,#90cfbe,#d7f2ee);
+          background-image: conic-gradient(
+            #a1d7c8 0%,
+            #8fcebd 25%,
+            #d6f1ed 25%,
+            #bce4db,
+            #a9dace
+          );
         }
 
         .sdk {
-          background-image: conic-gradient(#ffe180 75%, #ffffff 75%, #ffe180 75%);
+          background-image: conic-gradient(#fff, #ffe180 90%, #ffe180 85%);
         }
 
         .github {
-          background-image: conic-gradient(#216c8a 25%, #d7f2ee 25%, #216c8a 25%);
+          background-image: conic-gradient(
+            #659eaf,
+            #216c8a 50%,
+            #d7f2ee 50%,
+            #92bfc7 90%
+          );
         }
 
         strong {
@@ -91,6 +104,23 @@ const Header = () => {
           line-height: 1.5;
           letter-spacing: 0.3px;
           color: #1d202b;
+        }
+
+        @media only screen and (max-width: 768px) {
+          .doc-block {
+            width: 100%;
+            margin-bottom: 60px;
+          }
+
+          .doc-content {
+            width: 92%;
+          }
+        }
+
+        @media only screen and (max-width: 554px) {
+          .doc-content {
+            width: 83%;
+          }
         }
       `}</style>
     </Section>
