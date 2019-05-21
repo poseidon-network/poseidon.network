@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="92" height="108" viewBox="0 0 92 108">
+    <defs>
+        <path id="b" d="M75.998 74.917a2.763 2.763 0 0 1-1.31 2.234L40.781 97.807a5.337 5.337 0 0 1-5.564 0L1.313 77.15a2.75 2.75 0 0 1-1.31-2.234L0 68.012h76v6.905z"/>
+        <filter id="a" width="134.2%" height="185%" x="-17.1%" y="-36%" filterUnits="objectBoundingBox">
+            <feMorphology in="SourceAlpha" radius="1" result="shadowSpreadOuter1"/>
+            <feOffset dy="2" in="shadowSpreadOuter1" result="shadowOffsetOuter1"/>
+            <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="5"/>
+            <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0.129411765 0 0 0 0 0.423529412 0 0 0 0 0.541176471 0 0 0 0.1 0"/>
+        </filter>
+        <path id="d" d="M75.998 65.25a2.763 2.763 0 0 1-1.31 2.235L40.781 88.14a5.337 5.337 0 0 1-5.564 0L1.313 67.485a2.75 2.75 0 0 1-1.31-2.235L0 58.346h76v6.904z"/>
+        <filter id="c" width="134.2%" height="185%" x="-17.1%" y="-36%" filterUnits="objectBoundingBox">
+            <feMorphology in="SourceAlpha" radius="1" result="shadowSpreadOuter1"/>
+            <feOffset dy="2" in="shadowSpreadOuter1" result="shadowOffsetOuter1"/>
+            <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="5"/>
+            <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0.129411765 0 0 0 0 0.423529412 0 0 0 0 0.541176471 0 0 0 0.1 0"/>
+        </filter>
+        <path id="f" d="M75.998 54.203a2.763 2.763 0 0 1-1.31 2.235L40.781 77.093a5.337 5.337 0 0 1-5.564 0L1.313 56.438a2.75 2.75 0 0 1-1.31-2.235L0 47.3h76v6.904z"/>
+        <filter id="e" width="134.2%" height="185%" x="-17.1%" y="-36%" filterUnits="objectBoundingBox">
+            <feMorphology in="SourceAlpha" radius="1" result="shadowSpreadOuter1"/>
+            <feOffset dy="2" in="shadowSpreadOuter1" result="shadowOffsetOuter1"/>
+            <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="5"/>
+            <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0.129411765 0 0 0 0 0.423529412 0 0 0 0 0.541176471 0 0 0 0.1 0"/>
+        </filter>
+        <linearGradient id="g" x1="50%" x2="50%" y1="-25.316%" y2="100%">
+            <stop offset="0%" stop-color="#90CFBE"/>
+            <stop offset="100%" stop-color="#206871"/>
+        </linearGradient>
+        <path id="i" d="M75.998 42.906a2.763 2.763 0 0 1-1.31 2.235L40.781 65.797a5.337 5.337 0 0 1-5.564 0L1.313 45.14a2.75 2.75 0 0 1-1.31-2.235L0 36.002h76v6.904z"/>
+        <filter id="h" width="134.2%" height="185%" x="-17.1%" y="-36%" filterUnits="objectBoundingBox">
+            <feMorphology in="SourceAlpha" radius="1" result="shadowSpreadOuter1"/>
+            <feOffset dy="2" in="shadowSpreadOuter1" result="shadowOffsetOuter1"/>
+            <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="5"/>
+            <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0.129411765 0 0 0 0 0.423529412 0 0 0 0 0.541176471 0 0 0 0.1 0"/>
+        </filter>
+        <path id="k" d="M75.998 31.86a2.763 2.763 0 0 1-1.31 2.234L40.781 54.749a5.337 5.337 0 0 1-5.564 0L1.313 34.094a2.75 2.75 0 0 1-1.31-2.235L0 24.955h76v6.904z"/>
+        <filter id="j" width="134.2%" height="185%" x="-17.1%" y="-36%" filterUnits="objectBoundingBox">
+            <feMorphology in="SourceAlpha" radius="1" result="shadowSpreadOuter1"/>
+            <feOffset dy="2" in="shadowSpreadOuter1" result="shadowOffsetOuter1"/>
+            <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="5"/>
+            <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0.129411765 0 0 0 0 0.423529412 0 0 0 0 0.541176471 0 0 0 0.1 0"/>
+        </filter>
+        <path id="l" d="M40.782 1.016L74.687 21.27a2.685 2.685 0 0 1 0 4.616L40.782 46.137a5.428 5.428 0 0 1-5.564 0L1.313 25.885a2.685 2.685 0 0 1 0-4.616L35.218 1.016a5.428 5.428 0 0 1 5.564 0z"/>
+        <filter id="m" width="102.6%" height="104.3%" x="-1.3%" y="-2.1%" filterUnits="objectBoundingBox">
+            <feGaussianBlur in="SourceAlpha" result="shadowBlurInner1" stdDeviation=".5"/>
+            <feOffset dy="1" in="shadowBlurInner1" result="shadowOffsetInner1"/>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" k2="-1" k3="1" operator="arithmetic" result="shadowInnerInner1"/>
+            <feColorMatrix in="shadowInnerInner1" values="0 0 0 0 0.729647871 0 0 0 0 0.557290106 0 0 0 0 0 0 0 0 1 0"/>
+        </filter>
+    </defs>
+    <g fill="none" fill-rule="evenodd" transform="translate(8)">
+        <path fill="#FFF" fill-rule="nonzero" stroke="#FFF" d="M40.525 54.472a4.926 4.926 0 0 0-5.05 0L1.569 74.733a2.186 2.186 0 0 0 0 3.76l33.906 20.26a4.926 4.926 0 0 0 5.05 0l33.906-20.26a2.186 2.186 0 0 0 0-3.76l-33.906-20.26z"/>
+        <path fill="#90CFBE" fill-rule="nonzero" stroke="#FFF" d="M40.525 1.196a4.928 4.928 0 0 0-5.05 0L1.569 21.45a2.185 2.185 0 0 0 0 3.757l33.906 20.252a4.928 4.928 0 0 0 5.05 0l33.906-20.252a2.185 2.185 0 0 0 0-3.757L40.525 1.196z"/>
+        <g fill-rule="nonzero">
+            <use fill="#000" filter="url(#a)" xlink:href="#b"/>
+            <use fill="#FFE180" xlink:href="#b"/>
+        </g>
+        <path fill="#FFF" fill-rule="nonzero" d="M40.782 46.205l33.905 20.253a2.685 2.685 0 0 1 0 4.615L40.782 91.326a5.428 5.428 0 0 1-5.564 0L1.313 71.073a2.685 2.685 0 0 1 0-4.615l33.905-20.253a5.428 5.428 0 0 1 5.564 0z"/>
+        <path fill="#FFC300" fill-rule="nonzero" d="M40.782 45.205l33.905 20.253a2.685 2.685 0 0 1 0 4.615L40.782 90.326a5.428 5.428 0 0 1-5.564 0L1.313 70.073a2.685 2.685 0 0 1 0-4.615l33.905-20.253a5.428 5.428 0 0 1 5.564 0z"/>
+        <path fill="#FFC300" fill-rule="nonzero" d="M40.782 45.205l33.905 20.253a2.685 2.685 0 0 1 0 4.615L40.782 90.326a5.428 5.428 0 0 1-5.564 0L1.313 70.073a2.685 2.685 0 0 1 0-4.615l33.905-20.253a5.428 5.428 0 0 1 5.564 0z"/>
+        <g fill-rule="nonzero">
+            <use fill="#000" filter="url(#c)" xlink:href="#d"/>
+            <use fill="#FFE180" xlink:href="#d"/>
+        </g>
+        <path fill="#FFF" fill-rule="nonzero" d="M40.782 35.158L74.687 55.41a2.685 2.685 0 0 1 0 4.616L40.782 80.279a5.428 5.428 0 0 1-5.564 0L1.313 60.026a2.685 2.685 0 0 1 0-4.616l33.905-20.252a5.428 5.428 0 0 1 5.564 0z"/>
+        <path fill="#FFC300" fill-rule="nonzero" d="M40.782 34.158L74.687 54.41a2.685 2.685 0 0 1 0 4.616L40.782 79.279a5.428 5.428 0 0 1-5.564 0L1.313 59.026a2.685 2.685 0 0 1 0-4.616l33.905-20.252a5.428 5.428 0 0 1 5.564 0z"/>
+        <ellipse cx="64.255" cy="20.272" fill="#CCEAE5" rx="3.455" ry="2.071"/>
+        <ellipse cx="13.127" cy="20.272" fill="#CCEAE5" rx="3.455" ry="2.071"/>
+        <g fill-rule="nonzero">
+            <use fill="#000" filter="url(#e)" xlink:href="#f"/>
+            <use fill="#FFE180" xlink:href="#f"/>
+        </g>
+        <path fill="#FFF" fill-rule="nonzero" d="M40.782 24.196l33.905 20.252a2.685 2.685 0 0 1 0 4.616L40.782 69.316a5.428 5.428 0 0 1-5.564 0L1.313 49.064a2.685 2.685 0 0 1 0-4.616l33.905-20.252a5.428 5.428 0 0 1 5.564 0z"/>
+        <path fill="#FFC300" fill-rule="nonzero" d="M40.782 23.11l33.905 20.253a2.685 2.685 0 0 1 0 4.616L40.782 68.23a5.428 5.428 0 0 1-5.564 0L1.313 47.98a2.685 2.685 0 0 1 0-4.616l33.905-20.252a5.428 5.428 0 0 1 5.564 0z"/>
+        <path fill="url(#g)" fill-rule="nonzero" d="M39.59 32.523l19.374 11.359c.732.413.969 1.306.53 1.995-.13.205-.313.376-.53.499L39.59 57.734c-.979.553-2.201.553-3.18 0L17.036 46.376c-.732-.414-.969-1.307-.53-1.996.13-.204.313-.376.53-.498L36.41 32.523a3.255 3.255 0 0 1 3.18 0z"/>
+        <g fill-rule="nonzero">
+            <use fill="#000" filter="url(#h)" xlink:href="#i"/>
+            <use fill="#FFE180" xlink:href="#i"/>
+        </g>
+        <path fill="#FFF" fill-rule="nonzero" d="M40.782 12.9l33.905 20.252a2.685 2.685 0 0 1 0 4.615L40.782 58.02a5.428 5.428 0 0 1-5.564 0L1.313 37.767a2.685 2.685 0 0 1 0-4.615l33.905-20.253a5.428 5.428 0 0 1 5.564 0z"/>
+        <path fill="#FFC300" fill-rule="nonzero" d="M40.782 11.814l33.905 20.253a2.685 2.685 0 0 1 0 4.615L40.782 56.935a5.428 5.428 0 0 1-5.564 0L1.313 36.682a2.685 2.685 0 0 1 0-4.615l33.905-20.253a5.428 5.428 0 0 1 5.564 0z"/>
+        <path fill="url(#g)" fill-rule="nonzero" d="M39.59 21.227l19.374 11.358c.732.413.969 1.306.53 1.995-.13.205-.313.376-.53.5L39.59 46.436c-.979.553-2.201.553-3.18 0L17.036 35.08c-.732-.413-.969-1.307-.53-1.995.13-.205.313-.376.53-.5L36.41 21.228a3.255 3.255 0 0 1 3.18 0z"/>
+        <g fill-rule="nonzero">
+            <use fill="#000" filter="url(#j)" xlink:href="#k"/>
+            <use fill="#FFE180" xlink:href="#k"/>
+        </g>
+        <path fill="#FFF5D6" fill-rule="nonzero" d="M8.29 34.91l-4.144-2.493V30.63l4.145 2.596zM8.29 57.004l-4.144-2.493v-1.787L8.29 55.32zM30.4 59.49L9.673 47.33v-1.787L30.4 57.805zM26.255 79.099L5.528 66.939v-1.787l20.727 12.262z"/>
+        <path fill="#FFF" fill-rule="nonzero" d="M40.782 1.852l33.905 20.253a2.685 2.685 0 0 1 0 4.615L40.782 46.973a5.428 5.428 0 0 1-5.564 0L1.313 26.72a2.685 2.685 0 0 1 0-4.615L35.218 1.852a5.428 5.428 0 0 1 5.564 0z"/>
+        <g fill-rule="nonzero">
+            <use fill="#F6BF05" xlink:href="#l"/>
+            <use fill="#000" filter="url(#m)" xlink:href="#l"/>
+            <path stroke="#FFE180" stroke-linejoin="square" d="M40.525 1.446a4.928 4.928 0 0 0-5.05 0L1.569 21.698a2.185 2.185 0 0 0 0 3.757l33.906 20.253a4.928 4.928 0 0 0 5.05 0l33.906-20.253a2.185 2.185 0 0 0 0-3.757L40.525 1.446z"/>
+        </g>
+        <path fill="#FFF" fill-rule="nonzero" d="M60.8 20.963v2.874a1 1 0 0 1-.5.867L40.31 36.23a3.367 3.367 0 0 1-3.238 0l-19.99-11.527a1 1 0 0 1-.5-.867v-2.874H60.8z"/>
+        <path fill="#FFE180" fill-rule="nonzero" d="M40.31 8.95l19.726 11.358c.745.413.987 1.306.54 1.995a1.52 1.52 0 0 1-.54.499L40.31 34.16a3.367 3.367 0 0 1-3.237 0L17.346 22.802c-.745-.413-.987-1.307-.54-1.996a1.52 1.52 0 0 1 .54-.498L37.072 8.949a3.367 3.367 0 0 1 3.237 0z"/>
+        <ellipse cx="54.582" cy="21.074" fill="#FFF" rx="2.073" ry="1.243"/>
+        <path fill="#FFF" fill-rule="nonzero" d="M11.055 36.567l-1.382-.836v-1.788l1.382.801zM13.818 38.224l-1.381-.836V35.6l1.381.801zM5.527 44.852l-1.381-.835v-1.788l1.381.8zM8.29 46.51l-1.38-.836v-1.788l1.38.8zM11.055 58.938l-1.382-.836v-1.788l1.382.8zM13.818 60.595l-1.381-.836V57.97l1.381.801zM4.145 66.256l-1.381-.835v-1.788l1.381.8zM4.145 76.06l-1.381-.835v-1.788l1.381.801zM6.907 77.719l-1.38-.838.003-1.788 1.38.803zM9.673 79.376l-1.38-.838.002-1.788 1.38.803zM12.436 81.172l-1.38-.838.003-1.788 1.38.804z"/>
+    </g>
+</svg>
