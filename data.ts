@@ -324,8 +324,7 @@ export const mediaList = [
   },
   {
     imgUri: '/static/edaily@2x.png',
-    uri:
-      'http://www.edaily.co.kr/news/read?newsId=03863846622486624&mediaCodeNo=E',
+    uri: 'https://n.news.naver.com/article/018/0004371928',
   },
   {
     imgUri: '/static/viva-100@2x.png',
