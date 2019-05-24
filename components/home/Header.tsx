@@ -34,11 +34,12 @@ const Header = () => {
             Layer Solution
           </H2>
           <P margin="0">
-            Next-Generation Content Layer (CDN + DSN), incentivized by TRX.
-            Utilized unused bandwidth and storage from NAS, desktop, and mobile
-            devices around the world. It’s distributed, efficient, and
-            integrates perfectly with existing internet and blockchain
-            infrastructure.{' '}
+            Next-Generation Content Acceleration Layer (CDN + DSN), incentivized
+            by Token Economy, it’s cheaper yet faster. Utilized unused bandwidth
+            and storage from any NAS, desktop, or mobile devices around the
+            world. It’s distributed, efficient, and integrates perfectly with
+            existing internet and blockchain infrastructure Served as a
+            bandwidth optimization mechanism.
           </P>
           <div className="btn-wrapper">
             <Button

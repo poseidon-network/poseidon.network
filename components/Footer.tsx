@@ -1,4 +1,3 @@
-import i18next from 'i18next';
 import Section from './Section';
 import H4 from './H4';
 import P from './P';
@@ -7,7 +6,7 @@ import FooterLinks from './FooterLinks';
 import { withNamespaces } from '../i18n';
 import { footer, communities, resources, footerCompany } from '../data';
 
-const Footer = ({ t }: { t: i18next.TFunction }) => (
+const Footer = () => (
   <Section padding="77px 0 100px" bgColor="#1d202b" color="#fff">
     <Content direction="row" sStyle="align-items: flex-start;">
       <div className="company-info">
