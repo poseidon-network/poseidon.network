@@ -4,7 +4,7 @@ import H2 from '../H2';
 import { styles } from '../../constants';
 import P from '../P';
 import Col from '../Col';
-import Button from '../Button';
+// import Button from '../Button';
 
 const Miner = () => {
   return (

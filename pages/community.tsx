@@ -3,7 +3,7 @@ import Contact from '../components/Contact';
 import Header from '../components/community/Header';
 import Miner from '../components/community/Miner';
 import Embassador from '../components/community/Embassador';
-import Blog from '../components/community/Blog';
+// import Blog from '../components/community/Blog';
 import { styles } from '../constants';
 
 const Community = () => (
