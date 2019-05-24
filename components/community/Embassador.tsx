@@ -19,7 +19,7 @@ const Embassador = () => {
       </H2>
       <Content direction="row" mStyle="flex-direction: row;">
         <Col style="margin-right: 69px;" mStyle="margin-right: 0;">
-          <H3 center mStyle="text-align: left;" margin="0 0 15px">
+          <H3 mStyle="text-align: left;" margin="0 0 15px">
             Great works are performed not by strength but by perseverance.
           </H3>
           <P mStyle="text-align: left;" margin="0">
@@ -47,7 +47,11 @@ const Embassador = () => {
           Any Interested
         </H2>
         <Col flex style="align-items: center;">
-          <Button title="Apply to become an ambassador" uri="" width="45%" />
+          <Button
+            title="Apply to become an ambassador"
+            uri="https://www.surveycake.com/s/w48yR"
+            width="45%"
+          />
         </Col>
       </Content>
       <style jsx>{`

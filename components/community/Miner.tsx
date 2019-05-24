@@ -26,9 +26,9 @@ const Miner = () => {
             for those idel resources, we sold them to companies in need. Share
             your idle resources like Airbnb or Uber.
           </P>
-          <Button title="Mobile App" uri="" margin="0 0 16px" />
-          <Button title="Desktop App" uri="" margin="0 0 16px" />
-          <Button title="NAS" uri="" />
+          {/* <Button title="Mobile App Coming soon" uri="" margin="0 0 16px" />
+          <Button title="Desktop App Coming soon" uri="" margin="0 0 16px" />
+          <Button title="NAS Coming soon" uri="" /> */}
         </Col>
       </Content>
       <style jsx>{`

@@ -58,7 +58,7 @@ const Blog = () => {
         <Col flex style="align-items: center;">
           <Button
             width="40%;"
-            title="Explore more articals"
+            title="Explore more articles"
             uri=""
             margin="77px 0 0"
           />
