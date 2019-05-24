@@ -3,7 +3,7 @@ import Content from '../Content';
 import P from '../P';
 import Col from '../Col';
 import H2 from '../H2';
-
+// import Button from '../Button';
 import { styles } from '../../constants';
 
 const Miner = () => {
@@ -15,7 +15,7 @@ const Miner = () => {
     >
       <Content direction="row">
         <Col flex style="algin-items: center;">
-          <img src="/static/img-miner.svg" />
+          <img src="/static/tech-miner.svg" />
         </Col>
         <Col flex style="justify-content: center;">
           <H2>Become Miner</H2>

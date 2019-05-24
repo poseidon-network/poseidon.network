@@ -58,6 +58,9 @@ const Nav = ({ t, bgColor = '#222633' }: IProps) => {
             <li className="item">
               <a href="/company">{t('Company')}</a>
             </li>
+            <li>
+              <a href="/community">{t('Community')}</a>
+            </li>
             {/* <li className="item"><a>{t('Solutions')}</a></li>
             <li className="item"><a>{t('Developer')}</a></li>
             <li className="item"><a>{t('Pricing')}</a></li>
@@ -102,6 +105,9 @@ const Nav = ({ t, bgColor = '#222633' }: IProps) => {
             </a>
             <a href="/company">
               <li className="item">{t('Company')}</li>
+            </a>
+            <a href="/community">
+              <li className="item">{t('Community')}</li>
             </a>
             {/* <a href="/demo"><li>Demo</li></a>
             <a href="/tron-dapp"><li>Download</li></a>
