@@ -51,6 +51,7 @@ const Embassador = () => {
             title="Apply to become an ambassador"
             uri="https://www.surveycake.com/s/w48yR"
             width="45%"
+            mStyle="width: 90%;"
           />
         </Col>
       </Content>

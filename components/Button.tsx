@@ -3,11 +3,13 @@ const Button = ({
   title,
   width,
   margin,
+  mStyle = '',
 }: {
   uri: string;
   title: string;
   width?: string;
   margin?: string;
+  mStyle?: string;
 }) => {
   return (
     <a href={uri}>
@@ -32,6 +34,12 @@ const Button = ({
 
         a:hover {
           opacity: 0.7;
+        }
+
+        @media only screen and (max-width: 768px) {
+          a {
+            ${mStyle};
+          }
         }
       `}</style>
     </a>
