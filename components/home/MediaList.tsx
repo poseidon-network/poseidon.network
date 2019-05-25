@@ -11,7 +11,7 @@ const MediaList = () => (
     </H2>
     <Content
       direction="row"
-      style="display: grid; grid-template-columns: auto auto auto auto; grid-gap: 60px 101px; justify-items: center;"
+      style="display: grid; grid-template-columns: auto auto auto auto; grid-gap: 60px 101px; justify-items: center; justify-content: center;"
       mStyle="grid-template-columns: auto auto auto; grid-gap: 70px 5px;"
       sStyle="grid-template-columns: 100%;"
     >
