@@ -26,8 +26,6 @@ const SocialMeidia = ({
     </Head>
     <style jsx>{`
       h2 {
-        width: 262px;
-        height: 104px;
         font-family: 'IBM Plex Mono';
         font-size: 80px;
         font-weight: 500;
@@ -46,6 +44,21 @@ const SocialMeidia = ({
 
       img {
         margin-right: 23.5px;
+      }
+
+      @media only screen and (max-width: 768px) {
+        h2 {
+        }
+      }
+
+      @media only screen and (max-width: 554px) {
+        h2 {
+          font-size: 32px;
+        }
+
+        img {
+          display: none;
+        }
       }
     `}</style>
   </div>

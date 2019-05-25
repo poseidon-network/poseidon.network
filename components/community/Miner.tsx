@@ -19,7 +19,7 @@ const Miner = () => {
         </Col>
         <Col>
           <H2 margin="0 0 15px">Become Miner</H2>
-          <P margin="0 0 60px">
+          <P margin="0 0 60px" mStyle="text-align: left;">
             We provide a platform to everyone for sharing idel bandwidth. Once
             you go out, you can provide the Wifi bandwidth, storage and other
             resources to us, and we will give you the rewards you deserve. As

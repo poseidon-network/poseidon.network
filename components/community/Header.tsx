@@ -14,7 +14,7 @@ const Header = () => {
       color={styles.primaryColor}
       padding="120px 0 120px"
     >
-      <Content direction="row">
+      <Content direction="row" sStyle="margin-bottom: 99px;">
         <Col
           style="align-items: center; display: none;"
           mStyle="display: flex;"
@@ -23,7 +23,11 @@ const Header = () => {
         </Col>
         <Col>
           <H2 margin="0 0 15px"> Dip in our community</H2>
-          <P margin="0 0 60px">
+          <P
+            margin="0 0 60px"
+            mStyle="text-align: left;"
+            sStyle="text-align: left;"
+          >
             Cooperate with the most elite software develop team and the biggest
             NAS manufacturer in the world.
           </P>
@@ -41,6 +45,7 @@ const Header = () => {
         direction="row"
         style="display: grid; grid-template-columns: auto auto auto auto;"
         mStyle="grid-template-columns: auto auto; grid-gap: 60px 32px; margin-top: 60px;"
+        sStyle="grid-template-columns: auto auto; grid-gap: 30px 31px; margin-top: 60px;"
       >
         <SocialMediaList />
       </Content>

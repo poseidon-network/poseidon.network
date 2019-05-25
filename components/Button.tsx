@@ -4,12 +4,14 @@ const Button = ({
   width,
   margin,
   mStyle = '',
+  sStyle = '',
 }: {
   uri: string;
   title: string;
   width?: string;
   margin?: string;
   mStyle?: string;
+  sStyle?: string;
 }) => {
   return (
     <a href={uri}>
@@ -39,6 +41,12 @@ const Button = ({
         @media only screen and (max-width: 768px) {
           a {
             ${mStyle};
+          }
+        }
+
+        @media only screen and (max-width: 554px) {
+          a {
+            ${sStyle};
           }
         }
       `}</style>
