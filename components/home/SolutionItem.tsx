@@ -7,13 +7,15 @@ interface IProps {
   description: string;
 }
 
-const SolutionItem = ({ imageUri, title, description }: IProps) => ((
+const SolutionItem = ({ imageUri, title, description }: IProps) => (
   <div className="item">
     <div className="img-container">
       <img src={imageUri} alt="icon" />
     </div>
-    <H3 color="#d7f2ee" center>{ title }</H3>
-    <P style="max-width: 263px">{ description }</P>
+    <H3 color="#d7f2ee" center>
+      {title}
+    </H3>
+    <P style="max-width: 263px">{description}</P>
 
     <style jsx>{`
       .item {
@@ -39,13 +41,13 @@ const SolutionItem = ({ imageUri, title, description }: IProps) => ((
         margin-bottom: 8px;
       }
 
-      @media only screen and (max-width: 768px) {
+      @media only screen and (max-width: 1024px) {
       }
 
       @media only screen and (max-width: 554px) {
       }
     `}</style>
   </div>
-));
+);
 
 export default SolutionItem;

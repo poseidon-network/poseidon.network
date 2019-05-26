@@ -25,7 +25,7 @@ const H3 = ({
         ${style}
       }
 
-      @media only screen and (max-width: 768px) {
+      @media only screen and (max-width: 1024px) {
         h3 {
           text-align: center;
           ${mStyle}

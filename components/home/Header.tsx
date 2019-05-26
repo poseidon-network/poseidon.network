@@ -106,7 +106,7 @@ const Header = () => {
           object-fit: contain;
         }
 
-        @media only screen and (max-width: 768px) {
+        @media only screen and (max-width: 1024px) {
           .btn-wrapper {
             margin-top: 75px;
           }
@@ -114,6 +114,7 @@ const Header = () => {
           .top-img {
             width: 100%;
             object-fit: contain;
+            max-height: 499px;
           }
 
           .social-medias {

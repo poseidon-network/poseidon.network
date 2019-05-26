@@ -9,8 +9,13 @@ import { styles } from '../../constants';
 const SettingUp = () => (
   <Section bgColor={styles.darkLight} color="#fff" padding="120px 0">
     <Content direction="row" style="align-items: center;">
-      <Col>
-        <img className="left-img" src="/static/setup-tmp.png" />
+      <Col
+        flex
+        style="flex-direction: row; padding-right: 93px;"
+        mStyle="padding-right: 0; margin-bottom: 60px;"
+      >
+        <img className="screen1" src="/static/screen-1@2x.png" />
+        <img className="screen2" src="/static/screen-2@2x.png" />
       </Col>
       <Col>
         <H2 margin="0 0 15px">Setting Up Easily</H2>
@@ -28,21 +33,20 @@ const SettingUp = () => (
           flex: 1;
         }
 
-        .left-img {
-          margin-right: 30px;
+        img {
+          height: 500px;
         }
 
-        @media only screen and (max-width: 768px) {
-          .left-img {
-            margin-bottom: 60px;
-            margin-right: 0;
-          }
+        .screen2 {
+          margin-left: -45px;
+        }
+
+        @media only screen and (max-width: 1024px) {
         }
 
         @media only screen and (max-width: 554px) {
-          .left-img {
-            margin-bottom: 60px;
-            width: 100%;
+          img {
+            height: 345px;
           }
         }
       `}</style>

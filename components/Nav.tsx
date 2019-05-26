@@ -327,7 +327,7 @@ const Nav = ({ t, bgColor = '#222633' }: IProps) => {
           display: none;
         }
 
-        @media only screen and (max-width: 768px) {
+        @media only screen and (max-width: 1024px) {
           .container {
             width: 100%;
           }

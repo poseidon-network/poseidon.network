@@ -9,9 +9,9 @@ const P = ({
   mStyle = '',
   color = styles.lightColor,
   id = '',
-}: ITextBaseProps) => ((
+}: ITextBaseProps) => (
   <p id={id}>
-    { children }
+    {children}
     <style jsx>{`
       p {
         font-size: 16px;
@@ -20,13 +20,13 @@ const P = ({
         font-stretch: normal;
         line-height: 1.88;
         letter-spacing: 0.3px;
-        color: ${ color };
-        ${ margin ? `margin: ${margin};` : '' }
-        ${ center ? 'text-align: center;' : '' }
+        color: ${color};
+        ${margin ? `margin: ${margin};` : ''}
+        ${center ? 'text-align: center;' : ''}
         ${style}
       }
 
-      @media only screen and (max-width: 768px) {
+      @media only screen and (max-width: 1024px) {
         p {
           text-align: center;
           ${mStyle}
@@ -41,6 +41,6 @@ const P = ({
       }
     `}</style>
   </p>
-));
+);
 
 export default P;

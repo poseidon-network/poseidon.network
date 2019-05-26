@@ -78,7 +78,7 @@ const Team = () => {
             grid-gap: 0 30px;
           }
 
-          @media only screen and (max-width: 768px) {
+          @media only screen and (max-width: 1024px) {
             .members {
               grid-template-columns: 160px 160px;
               grid-gap: 60px 0;

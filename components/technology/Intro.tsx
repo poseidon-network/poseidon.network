@@ -14,7 +14,7 @@ const Intro = () => {
       padding="110px 0"
     >
       <Content direction="row">
-        <Col>
+        <Col flex>
           <img src="/static/img-sharingplatform.svg" />
         </Col>
         <Col>
@@ -40,7 +40,7 @@ const Intro = () => {
           object-fit: contain;
         }
 
-        @media only screen and (max-width: 768px) {
+        @media only screen and (max-width: 1024px) {
           img {
             width: 100%;
             margin-bottom: 160px;

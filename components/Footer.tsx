@@ -10,7 +10,7 @@ const Footer = () => (
   <Section padding="77px 0 100px" bgColor="#1d202b" color="#fff">
     <Content direction="row" sStyle="align-items: flex-start;">
       <div className="company-info">
-        <img className="logo" alt="logo" src="/static/Logo.png" />
+        <img className="logo" alt="logo" src="/static/poseidon-network.svg" />
         <H4 style="width: 261px;" mStyle="width: 100%;">
           A scalable value transfer protocol for the digital economy.
         </H4>
@@ -43,9 +43,11 @@ const Footer = () => (
 
       .logo {
         margin-bottom: 16px;
+        width: 60px;
+        height: 60px;
       }
 
-      @media only screen and (max-width: 768px) {
+      @media only screen and (max-width: 1024px) {
         .logo {
           margin-bottom: 31px;
         }

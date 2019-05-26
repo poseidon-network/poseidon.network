@@ -45,7 +45,7 @@ const Miner = () => {
           margin-bottom: 60px;
         }
 
-        @media only screen and (max-width: 768px) {
+        @media only screen and (max-width: 1024px) {
           img {
             width: 100%;
           }

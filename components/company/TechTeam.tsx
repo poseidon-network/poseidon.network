@@ -25,7 +25,7 @@ const TechCoreTeam = () => (
           justify-content: space-around;
         }
 
-        @media only screen and (max-width: 768px) {
+        @media only screen and (max-width: 1024px) {
           .members {
             grid-template-columns: auto auto;
             grid-gap: 60px 0;

@@ -58,7 +58,7 @@ const Intro = () => (
         width: 100%;
       }
 
-      @media only screen and (max-width: 768px) {
+      @media only screen and (max-width: 1024px) {
       }
 
       @media only screen and (max-width: 554px) {

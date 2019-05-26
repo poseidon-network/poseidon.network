@@ -70,7 +70,7 @@ const Dapp2 = () => {
           margin-bottom: 35px;
         }
 
-        @media only screen and (max-width: 768px) {
+        @media only screen and (max-width: 1024px) {
           .block {
             max-width: 100%;
           }

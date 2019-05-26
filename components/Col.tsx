@@ -8,17 +8,23 @@ interface IProps {
   sStyle?: string;
 }
 
-const Col = ({ children, flex = false, style = '', mStyle = '', sStyle = '' }: IProps) => (
+const Col = ({
+  children,
+  flex = false,
+  style = '',
+  mStyle = '',
+  sStyle = '',
+}: IProps) => (
   <div className="col">
-    { children }
+    {children}
     <style jsx>{`
       .col {
         flex: 1;
-        ${ flex ? 'display: flex; flex-direction: column;' : '' }
+        ${flex ? 'display: flex; flex-direction: column;' : ''}
         ${style}
       }
 
-      @media only screen and (max-width: 768px) {
+      @media only screen and (max-width: 1024px) {
         .col {
           ${mStyle}
         }

@@ -106,7 +106,7 @@ const Header = () => {
           color: #1d202b;
         }
 
-        @media only screen and (max-width: 768px) {
+        @media only screen and (max-width: 1024px) {
           .doc-block {
             width: 100%;
             margin-bottom: 60px;

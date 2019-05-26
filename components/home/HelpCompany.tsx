@@ -18,7 +18,7 @@ const HelpCompany = () => (
           object-fit: contain;
         }
 
-        @media only screen and (max-width: 768px) {
+        @media only screen and (max-width: 1024px) {
           .companies {
             width: 707px;
             height: 248.2px;

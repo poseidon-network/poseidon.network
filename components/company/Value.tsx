@@ -66,7 +66,7 @@ const Vaule = () => {
           margin-bottom: 58px;
         }
 
-        @media only screen and (max-width: 768px) {
+        @media only screen and (max-width: 1024px) {
         }
       `}</style>
     </Section>

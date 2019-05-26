@@ -38,7 +38,7 @@ const Layout = ({
         }
       }
 
-      @media only screen and (max-width: 768px) {
+      @media only screen and (max-width: 1024px) {
         .container {
           padding-left: 30px;
           padding-right: 30px;

@@ -8,16 +8,24 @@ interface IProps {
   sStyle?: string;
 }
 
-const Content = ({ children, backgroundImage, direction = 'column', padding = '0', style = '', mStyle = '', sStyle = '' }: IProps) => ((
+const Content = ({
+  children,
+  backgroundImage,
+  direction = 'column',
+  padding = '0',
+  style = '',
+  mStyle = '',
+  sStyle = '',
+}: IProps) => (
   <div className="container">
-    { children }
+    {children}
     <style jsx>{`
       .container {
         max-width: 1440px;
         width: 100%;
         display: flex;
         flex-wrap: wrap;
-        flex-direction: ${ direction };
+        flex-direction: ${direction};
         margin: 0 auto;
         padding: ${padding};
         ${backgroundImage ? `background-image: url(${backgroundImage});` : ''}
@@ -26,7 +34,7 @@ const Content = ({ children, backgroundImage, direction = 'column', padding = '0
         ${style}
       }
 
-      @media only screen and (max-width: 768px) {
+      @media only screen and (max-width: 1024px) {
         .container {
           flex-direction: column;
           ${mStyle}
@@ -42,6 +50,6 @@ const Content = ({ children, backgroundImage, direction = 'column', padding = '0
       }
     `}</style>
   </div>
-));
+);
 
 export default Content;

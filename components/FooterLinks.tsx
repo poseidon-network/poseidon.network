@@ -40,7 +40,7 @@ const FooterLinks = ({ title, links }: IProps) => {
           flex-direction: column;
         }
 
-        @media only screen and (max-width: 768px) {
+        @media only screen and (max-width: 1024px) {
           .footer-links {
             margin: 30px 0;
           }

@@ -106,7 +106,7 @@ const RoadmapItem = ({
         height: 85%;
       }
 
-      @media only screen and (max-width: 768px) {
+      @media only screen and (max-width: 1024px) {
         .container {
           width: 48.5%;
           height: initial;

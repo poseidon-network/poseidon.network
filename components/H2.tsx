@@ -24,7 +24,7 @@ const H2 = ({
         ${center ? 'text-align: center;' : ''}
         ${style};
       }
-      @media only screen and (max-width: 768px) {
+      @media only screen and (max-width: 1024px) {
         h2 {
           text-align: center;
           ${mStyle};
