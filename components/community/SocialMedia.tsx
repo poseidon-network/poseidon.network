@@ -5,19 +5,22 @@ const SocialMeidia = ({
   name,
   img,
   followerNum,
+  uri,
 }: {
   name: string;
   img: string;
   followerNum: string;
+  uri: string;
 }) => (
   <div>
     <h2>{followerNum}</h2>
-    <div className="footer">
+
+    <a className="footer" href={uri}>
       <img src={img} alt={name} />
       <H3 color="#d7f2ee" margin="0">
         {name}
       </H3>
-    </div>
+    </a>
     <Head>
       <link
         href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono:500"
@@ -43,7 +46,7 @@ const SocialMeidia = ({
       }
 
       img {
-        margin-right: 23.5px;
+        margin-right: 16px;
       }
 
       @media only screen and (max-width: 1024px) {

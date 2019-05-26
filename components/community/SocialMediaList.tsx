@@ -1,19 +1,16 @@
 import SocialMedia from './SocialMedia';
+import { socialMediaList } from '../../data';
 
 const SocialMediaList = () => (
   <>
-    <SocialMedia
-      img="/static/facebook.svg"
-      followerNum="19.4"
-      name="Facebook"
-    />
-    <SocialMedia img="/static/medium.svg" followerNum="8.2" name="Medium" />
-    <SocialMedia img="/static/twitter.svg" followerNum="17.5" name="Twitter" />
-    <SocialMedia
-      img="/static/telegram.svg"
-      followerNum="10.3"
-      name="Telegram"
-    />
+    {socialMediaList.map(({ title, link, imgUri, followerNum }) => (
+      <SocialMedia
+        img={imgUri}
+        followerNum={followerNum}
+        name={title}
+        uri={link}
+      />
+    ))}
   </>
 );
 

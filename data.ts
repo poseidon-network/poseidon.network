@@ -1,30 +1,3 @@
-export const header = {
-  description: 'World’s First\nDecentralized Content\nAcceleration Network\n',
-};
-
-export const indicators = [
-  {
-    value: 500,
-    unit: '+',
-    description: 'Active nodes',
-  },
-  {
-    value: 20,
-    unit: 'Cites',
-    description: 'Around the world',
-  },
-  {
-    value: 2700,
-    unit: 'TB',
-    description: 'Bandwith delivered',
-  },
-  {
-    value: 400,
-    unit: 'TB',
-    description: 'Storage',
-  },
-];
-
 export const introLogoList = [
   { uri: '/static/aelf@2x.png' },
   { uri: '/static/logo-longhash@2x.png' },
@@ -259,34 +232,65 @@ export const advisors = [
   },
 ];
 
-export const contact = {
-  title: 'Follow Our Journey',
-  description:
-    'Bootstrapping Qinfra from 2 co-founders, Qing & Mike, target to disrupt cloud infra …',
-};
+export const socialMediaList = [
+  {
+    title: 'Facebook',
+    imgUri: '/static/facebook.svg',
+    link: 'https://www.facebook.com/QQQtoken/',
+    alt: 'Facebook',
+    followerNum: '8K',
+  },
+  {
+    title: 'Medium',
+    imgUri: '/static/medium.svg',
+    link: 'https://medium.com/poseidonnetwork',
+    alt: 'Medium',
+    followerNum: '100',
+  },
+  {
+    title: 'Twitter',
+    imgUri: '/static/twitter.svg',
+    link: ' https://twitter.com/QQQtoken',
+    alt: 'Twitter',
+    followerNum: '10K',
+  },
+  {
+    title: 'Telegram',
+    imgUri: '/static/telegram.svg',
+    link: 'https://t.me/QQQtoken',
+    alt: 'telegram',
+    followerNum: '400',
+  },
+];
 
 export const footer = {
-  socialMediaList: [
+  socialMediaList,
+  communities: [
+    { title: 'Twitter', uri: 'https://twitter.com/QQQtoken' },
+    { title: 'Facebook', uri: 'https://www.facebook.com/psd.token/' },
+    { title: 'Telegram', uri: 'https://t.me/QQQtoken' },
+    { title: 'Medium', uri: 'https://medium.com/poseidonnetwork' },
     {
-      imgUri: '/static/facebook.svg',
-      link: 'https://www.facebook.com/QQQtoken/',
-      alt: 'Facebook',
+      title: 'Linkedin',
+      uri: 'https://tw.linkedin.com/company/poseidon-network',
     },
     {
-      imgUri: '/static/medium.svg',
-      link: 'https://medium.com/poseidonnetwork',
-      alt: 'Medium',
+      title: 'Youtube',
+      uri: 'https://www.youtube.com/channel/UCSWS4rhlJLonKe41JOXePJA',
     },
+  ],
+  resources: [
     {
-      imgUri: '/static/twitter.svg',
-      link: ' https://twitter.com/QQQtoken',
-      alt: 'Twitter',
+      title: 'Whitepaper',
+      uri:
+        'http://ipfs.poseidon.network/ipfs/QmUzzcKXhturgVu8BgFhf7bmnf2ittC7d9T9bXwuX5NEXB',
     },
-    {
-      imgUri: '/static/telegram.svg',
-      link: 'https://t.me/QQQtoken',
-      alt: 'telegram',
-    },
+  ],
+  company: [
+    { title: 'About Us', uri: '/company' },
+    { title: 'Team', uri: '/company#team' },
+    { title: 'FAQ', uri: 'https://poseidon.zendesk.com/hc/zh-tw' },
+    { title: 'Contract Us', uri: 'mailto:service@poseidon.network' },
   ],
   email: 'service@poseidon.network',
   copyright: 'Copyright © Poseidon Network 2019.',
@@ -336,34 +340,4 @@ export const mediaList = [
     uri:
       'https://coingape.com/abcc-exchange-launches-poseidon-network-ieo-decentralized-space-sharing/',
   },
-];
-
-export const communities = [
-  { title: 'Twitter', uri: 'https://twitter.com/QQQtoken' },
-  { title: 'Facebook', uri: 'https://www.facebook.com/psd.token/' },
-  { title: 'Telegram', uri: 'https://t.me/QQQtoken' },
-  { title: 'Medium', uri: 'https://medium.com/poseidonnetwork' },
-  {
-    title: 'Linkedin',
-    uri: 'https://tw.linkedin.com/company/poseidon-network',
-  },
-  {
-    title: 'Youtube',
-    uri: 'https://www.youtube.com/channel/UCSWS4rhlJLonKe41JOXePJA',
-  },
-];
-
-export const resources = [
-  {
-    title: 'Whitepaper',
-    uri:
-      'http://ipfs.poseidon.network/ipfs/QmUzzcKXhturgVu8BgFhf7bmnf2ittC7d9T9bXwuX5NEXB',
-  },
-];
-
-export const footerCompany = [
-  { title: 'About Us', uri: '/company' },
-  { title: 'Team', uri: '/company#team' },
-  { title: 'FAQ', uri: 'https://poseidon.zendesk.com/hc/zh-tw' },
-  { title: 'Contract Us', uri: 'mailto:service@poseidon.network' },
 ];

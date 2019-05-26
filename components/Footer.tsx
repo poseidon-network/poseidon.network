@@ -4,7 +4,7 @@ import P from './P';
 import Content from './Content';
 import FooterLinks from './FooterLinks';
 import { withNamespaces } from '../i18n';
-import { footer, communities, resources, footerCompany } from '../data';
+import { footer } from '../data';
 
 const Footer = () => (
   <Section padding="77px 0 100px" bgColor="#1d202b" color="#fff">
@@ -25,9 +25,9 @@ const Footer = () => (
 
       <div className="links">
         {/* <FooterLinks title="Getting Started" links={[]} /> */}
-        <FooterLinks title="Company" links={footerCompany} />
-        <FooterLinks title="Resources" links={resources} />
-        <FooterLinks title="Community" links={communities} />
+        <FooterLinks title="Company" links={footer.company} />
+        <FooterLinks title="Resources" links={footer.resources} />
+        <FooterLinks title="Community" links={footer.communities} />
       </div>
     </Content>
 
