@@ -20,7 +20,7 @@ const Team = () => {
 
   useEffect(() => {
     if (isAnimate) {
-      myReq = setInterval(animate, 700);
+      myReq = setInterval(animate, 500);
     }
     return () => {
       if (myReq) {
