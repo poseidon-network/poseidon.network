@@ -20,8 +20,18 @@ const Intro = () => (
       ))}
     </Content>
     <Content direction="row">
-      <Col flex mStyle="margin-bottom: 60px;" sStyle="margin-bottom: 90px;">
-        <img className="left-img" src="/static/intro-left.png" />
+      <Col
+        flex
+        style="justify-content: center; align-items: center;"
+        mStyle="margin-bottom: 60px;"
+        sStyle="margin-bottom: 90px;"
+      >
+        <video
+          poster="/static/img-map@3x.png"
+          controls
+          className="video"
+          src="https://s3-ap-northeast-1.amazonaws.com/static.poseidon.network/poseidon.mp4"
+        />
       </Col>
       <Col style="padding: 0 32px;">
         <H2
@@ -56,6 +66,11 @@ const Intro = () => (
       .left-img {
         margin-right: 32px;
         width: 100%;
+      }
+
+      video {
+        width: 95%;
+        min-width: 300px;
       }
 
       @media only screen and (max-width: 1024px) {
