@@ -27,9 +27,10 @@ const Dapp2 = () => {
             QCDN
           </H3>
           <P mStyle="text-align: left;">
-            Cellulite is fat that is caught between bands of connective tissue
-            directly beneath the skin that creates a lumpy, bumpy orange peel
-            appearance mostly on the hips, thighs and backsides of most women.
+            The next-generation decentralized Content Delivery Network (dCDN)
+            built by the POSEIDON NETWORK is called QCDN. It includes a traffic
+            dispatcher called Qontroller, and QEdge, decentralized nodes from
+            all over the world that join our network.
           </P>
         </div>
         <div className="block">
@@ -38,9 +39,9 @@ const Dapp2 = () => {
             DSN
           </H3>
           <P mStyle="text-align: left;">
-            Cellulite is fat that is caught between bands of connective tissue
-            directly beneath the skin that creates a lumpy, bumpy orange peel
-            appearance mostly on the hips, thighs and backsides of most women.
+            Decentralized Storage Network is mostly created by blockchain
+            network like IPFS, Filecoin, etc. We combined with these technology
+            and company to greater our network.
           </P>
         </div>
         <div className="block">
@@ -49,9 +50,10 @@ const Dapp2 = () => {
             Blockchain
           </H3>
           <P mStyle="text-align: left;">
-            Cellulite is fat that is caught between bands of connective tissue
-            directly beneath the skin that creates a lumpy, bumpy orange peel
-            appearance mostly on the hips, thighs and backsides of most women.
+            We create our token on Ethereum, and use Aelf network to create
+            mutiple VM by runing nodes parallel. In addition, we cooperate with
+            Nem, Harmony, and Cybavo to get the toppest technical advices and
+            collaboration.
           </P>
         </div>
       </Content>
