@@ -3,9 +3,10 @@ import Content from '../Content';
 import H2 from '../H2';
 import P from '../P';
 import Col from '../Col';
+import Button from '../Button';
 import { styles } from '../../constants';
 
-const SettingUp = () => ((
+const SettingUp = () => (
   <Section bgColor={styles.darkLight} color="#fff" padding="120px 0">
     <Content direction="row" style="align-items: center;">
       <Col>
@@ -13,7 +14,14 @@ const SettingUp = () => ((
       </Col>
       <Col>
         <H2 margin="0 0 15px">Setting Up Easily</H2>
-        <P margin="0 0 30px 0">To join Poseidon Network is easy. Get reward immediately in less than 5 minutes.</P>
+        <P margin="0 0 30px 0">
+          To join Poseidon Network is easy. Get reward immediately in less than
+          5 minutes.
+        </P>
+        <Button
+          title="Get the Demo App"
+          uri="https://www.surveycake.com/s/W8GAD"
+        />
       </Col>
       <style jsx>{`
         .col {
@@ -40,6 +48,6 @@ const SettingUp = () => ((
       `}</style>
     </Content>
   </Section>
-));
+);
 
 export default SettingUp;
