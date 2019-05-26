@@ -2,7 +2,7 @@ import Section from '../Section';
 import Content from '../Content';
 import H2 from '../H2';
 import P from '../P';
-// import MoreLink from '../MoreLink';
+import MoreLink from '../MoreLink';
 import Col from '../Col';
 import { styles } from '../../constants';
 import { introLogoList } from '../../data';
@@ -44,7 +44,7 @@ const Intro = () => (
           brands, e-commerce, content industries, well-known gamer community
           forums, live streaming and so on.
         </P>
-        {/* <MoreLink uri="" /> */}
+        <MoreLink uri="/technology" />
       </Col>
     </Content>
 

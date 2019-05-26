@@ -48,7 +48,7 @@ const Header = () => {
             />
           </div>
           <div className="social-medias">
-            <H3 margin="0 30px 0 0" sStyle="margin: 0;">
+            <H3 margin="0 40px 0 0" sStyle="margin: 0;">
               Join Our Community
             </H3>
             <div className="social-medias__imglist">

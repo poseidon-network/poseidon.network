@@ -1,4 +1,5 @@
 import H4 from './H4';
+import { styles } from '../constants';
 
 interface IProps {
   title: string;
@@ -8,11 +9,15 @@ interface IProps {
 const FooterLinks = ({ title, links }: IProps) => {
   return (
     <div className="footer-links">
-      <H4 margin="0 0 20px">{ title }</H4>
+      <H4 color={styles.primaryColor} margin="0 0 20px">
+        {title}
+      </H4>
       <div className="links">
-        { links.map(({ uri, title }) => (
-          <a key={title} href={uri}>{ title }</a>
-        )) }
+        {links.map(({ uri, title }) => (
+          <a key={title} href={uri}>
+            {title}
+          </a>
+        ))}
       </div>
       <style jsx>{`
         .footer-links {
