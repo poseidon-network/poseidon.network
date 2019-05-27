@@ -80,12 +80,13 @@ export const roadmap2019 = [
   {
     time: '2019 Q1',
     description: 'Equity Seed funding',
-    active: true,
+    done: true,
   },
   {
     time: '2019 Q2-Q3',
     title: 'Public Sale on ACE',
     description: 'Decentralized Qontroller Distributed Edges',
+    active: true,
   },
   {
     time: '2019 Q4',

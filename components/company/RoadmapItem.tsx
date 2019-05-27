@@ -63,7 +63,7 @@ const RoadmapItem = ({
 
       .container::before {
         position: absolute;
-        ${right ? 'left: -20px;' : 'right: calc(-2.4% - 18px);'}
+        ${right ? 'left: calc(-2% - 17px);' : 'right: calc(-2.4% - 18px);'}
         top: -8px;
         content: '';
         width: 36px;
@@ -121,7 +121,7 @@ const RoadmapItem = ({
         }
 
         .container::before {
-          ${right ? 'left: calc(-3.2% - 8px);' : 'right: calc(-3.4% - 18px);'}
+          ${right ? 'left: calc(-3.2% - 17px);' : 'right: calc(-3.4% - 18px);'}
         }
       }
 
@@ -139,7 +139,7 @@ const RoadmapItem = ({
         }
 
         .container::before {
-          ${right ? 'left: calc(-4% - 18px);' : 'right: calc(-10% - 18px);'}
+          ${right ? 'left: calc(-4% - 17px);' : 'right: calc(-10% - 18px);'}
         }
       }
     `}</style>
