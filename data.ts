@@ -238,7 +238,7 @@ export const socialMediaList = [
     imgUri: '/static/facebook.svg',
     link: 'https://www.facebook.com/QQQtoken/',
     alt: 'Facebook',
-    followerNum: '8K',
+    followerNum: '7.4K',
   },
   {
     title: 'Medium',
@@ -252,14 +252,14 @@ export const socialMediaList = [
     imgUri: '/static/twitter.svg',
     link: ' https://twitter.com/QQQtoken',
     alt: 'Twitter',
-    followerNum: '10K',
+    followerNum: '10.2K',
   },
   {
     title: 'Telegram',
     imgUri: '/static/telegram.svg',
     link: 'https://t.me/QQQtoken',
     alt: 'telegram',
-    followerNum: '400',
+    followerNum: '21.1K',
   },
 ];
 
@@ -280,6 +280,10 @@ export const footer = {
     },
   ],
   resources: [
+    {
+      title: 'Github',
+      uri: 'https://github.com/poseidon-network',
+    },
     {
       title: 'Whitepaper',
       uri:

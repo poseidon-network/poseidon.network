@@ -1,30 +1,46 @@
 import Section from '../Section';
 import Content from '../Content';
 import H2 from '../H2';
+import H3 from '../H3';
 import P from '../P';
-import Col from '../Col';
 import { styles } from '../../constants';
 
 const UseCase = () => {
   return (
-    <Section
-      bgColor={styles.dark}
-      color={styles.primaryColor}
-      padding="120px"
-    >
-      <Content direction="row">
-        <Col>
-          <H2 margin="0 0 20px">Use Case</H2>
-          <P margin="0 31px 0 0">A - Requesting Content from Worker Node
-Alice is requesting content form worker Node C, before WN-C is starting to deliver, it sends a signal to its neighboring SN-A, and after the Content is delivered, Alice sends a confirmed signal to SN-A, and we shall call it “Verified”.</P>
-        </Col>
-        <Col>
-          <P style="padding: 52px 0;">B - Requesting Content from Super Node
-Bob is requesting content from Super Node B. Since SN-Bcan not verify itself, SN-B sends signal to neighboring SN-A, and after content is delivered, Bob Sends a confirmed signal to SN-A, and we shall call it “Verified”.</P>
-        </Col>
+    <Section bgColor={styles.dark} color={styles.primaryColor} padding="120px">
+      <Content>
+        <H2 center margin="0 0 49px" mStyle="margin: 0 0 60px;">
+          Use Case
+        </H2>
+        <img src="/static/img-use-case.svg" />
+        <H3 center margin="0 0 30px;">
+          B2B
+        </H3>
+        <P center margin="0 0 30px;">
+          Fields of media, entertainment and education, such as video live
+          broadcasters, audio and video content industry, audio and video
+          education websites, social media, forums, and update file download
+          support. POSEIDON NETWORK collects the bandwidth, storage space mainly
+          from NAS and Linux systems, and pays the small-to-medium sized
+          enterprises (SMEs) who are willing to provide idle network resources,
+          and provides network resources to the above-mentioned industries and
+          gets profits.
+        </P>
+        <H3 center margin="0 0 30px;">
+          C2B2B
+        </H3>
+        <P center>
+          In addition to SMEs, we also allow the general public to join the
+          POSEIDON NETWORK mining model to share idle resources through NAS,
+          computers or mobile phones to gain profits.
+        </P>
       </Content>
       <style jsx>{`
-    `}</style>
+        img {
+          margin-bottom: 65px;
+          width: 100%;
+        }
+      `}</style>
     </Section>
   );
 };

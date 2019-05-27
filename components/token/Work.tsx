@@ -13,15 +13,39 @@ const Work = () => {
       padding="120px"
     >
       <Content direction="row">
-        <Col />
-        <Col>
+        <Col
+          flex
+          style="justify-content: center; align-items: center; display: none;"
+          mStyle="display: block; margin-bottom: 60px;"
+        >
+          <img src="/static/img-coins@2x.png" />
+        </Col>
+        <Col
+          style="margin-right: 30px;"
+          mStyle="margin-right: 0; margin-bottom: 60px;"
+        >
           <H2 margin="0 0 20px">How doest it work</H2>
-          <P margin="0">A - Requesting Content from Worker Node
-Alice is requesting content form worker Node C, before WN-C is starting to deliver, it sends a signal to its neighboring SN-A, and after the Content is delivered, Alice sends a confirmed signal to SN-A, and we shall call it “Verified”.</P>
+          <P margin="0">
+            QQQ is the functional token of POSEIDON NETWORK platform, the most
+            important part of POSEIDON NETWORK mainnet, furthermore, the only
+            token in this ecosystem. Pay QQQ token to drive the services of
+            POSEIDON NETWORK, or get QQQ from supplying your unused network
+            resources.
+          </P>
+        </Col>
+        <Col
+          flex
+          style="justify-content: center; align-items: center;"
+          mStyle="display: none;"
+        >
+          <img src="/static/img-coins@2x.png" />
         </Col>
       </Content>
       <style jsx>{`
-    `}</style>
+        img {
+          width: 100%;
+        }
+      `}</style>
     </Section>
   );
 };

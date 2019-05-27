@@ -11,7 +11,11 @@ const Footer = () => (
     <Content direction="row" sStyle="align-items: flex-start;">
       <div className="company-info">
         <img className="logo" alt="logo" src="/static/poseidon-network.svg" />
-        <H4 style="width: 261px;" mStyle="width: 100%;">
+        <H4
+          style="width: 280px;"
+          mStyle="width: 100%; text-align: center;"
+          sStyle="text-align: left;"
+        >
           A scalable value transfer protocol for the digital economy.
         </H4>
         <P
@@ -50,6 +54,10 @@ const Footer = () => (
       @media only screen and (max-width: 1024px) {
         .logo {
           margin-bottom: 31px;
+        }
+
+        .company-info {
+          width: 100%;
         }
       }
 
