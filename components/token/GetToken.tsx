@@ -16,8 +16,9 @@ const GetToken = () => {
     >
       <Content direction="row">
         <Col
+          flex
           style="margin-right: 30px;"
-          mStyle="margin-right: 0; margin-bottom: 60px;"
+          mStyle="margin-right: 0; margin-bottom: 60px; align-items: center;"
         >
           <img src="/static/img-community-bounty@2x.png" />
         </Col>

@@ -13,7 +13,11 @@ const Intro = () => {
       padding="80px 0 70px"
     >
       <Content direction="row">
-        <Col flex style="margin: 0 108px 0 0;" mStyle="margin: 0 0 92px;">
+        <Col
+          flex
+          style="margin: 0 108px 0 0;"
+          mStyle="margin: 0 0 92px; align-items: center;"
+        >
           <img src="/static/img-token-vision.svg" />
         </Col>
         <Col flex style="justify-content: center;">
