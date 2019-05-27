@@ -4,6 +4,7 @@ import H2 from '../H2';
 import H3 from '../H3';
 import P from '../P';
 import Col from '../Col';
+import Button from '../Button';
 import { styles } from '../../constants';
 
 const GetToken = () => {
@@ -14,20 +15,38 @@ const GetToken = () => {
       padding="120px"
     >
       <Content direction="row">
+        <Col
+          style="margin-right: 30px;"
+          mStyle="margin-right: 0; margin-bottom: 60px;"
+        >
+          <img src="/static/img-community-bounty@2x.png" />
+        </Col>
         <Col>
           <H2 margin="0 0 60px">How to Get Poseidon Network QQQ</H2>
-          <H3 margin="0 0 32px">IEO</H3>
-          <P margin="0 0 60px">A - Requesting Content from Worker Node
-Alice is requesting content form worker Node C, before WN-C is starting to deliver, it sends a signal to its neighboring SN-A, and after the Content is delivered, Alice sends a confirmed signal to SN-A, and we shall call it “Verified”.</P>
+          <H3 margin="0 0 15px">Exchanges</H3>
+          <P margin="0 0 20px">
+            We provides a variety of exchanges to list QQQ and let people to but
+            it from fiat coin or cryptocurrencies.
+          </P>
 
-          <H3 margin="0 0 32px">Community Bounty</H3>
-          <P margin="0">A - Requesting Content from Worker Node
-Alice is requesting content form worker Node C, before WN-C is starting to deliver, it sends a signal to its neighboring SN-A, and after the Content is delivered, Alice sends a confirmed signal to SN-A, and we shall call it “Verified”.</P>
+          <H3 margin="0 0 15px">Community Bounty</H3>
+          <P margin="0 0 60px">
+            We provide a diversity of bonty for our community, such as
+            scholarship program, research development, testing volunteer,
+            college ambassadar, etc. This is our vision for the future, our
+            belief in the rise of you - on the community.
+          </P>
+
+          <Button title="Community" uri="/community" />
         </Col>
-        <Col />
       </Content>
       <style jsx>{`
-    `}</style>
+        img {
+          max-width: 541px;
+          width: 100%;
+          margin-right: 35px;
+        }
+      `}</style>
     </Section>
   );
 };
