@@ -49,7 +49,7 @@ class ContactForm extends React.Component {
     return (
       <form onSubmit={this.handleSubmit}>
         {this.state.isSucceed && (
-          <p className="msg success">Sent successfully!</p>
+          <p className="msg success">Subscribed successfully!</p>
         )}
         {this.state.isFailed && (
           <p className="msg error">
