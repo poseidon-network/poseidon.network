@@ -9,7 +9,7 @@ const Team = () => (
   <Section bgColor={styles.darkLight} color="#222633">
     <Content padding="0 0 120px">
       <H2 center id="team" margin="120px 0 100px" size="32px">
-        Meat The Team
+        Meet The Team
       </H2>
       <div className="members">
         {team.map(({ name, title, avatar }) => (
