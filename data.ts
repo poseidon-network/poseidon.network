@@ -239,28 +239,28 @@ export const socialMediaList = [
     imgUri: '/static/facebook.svg',
     link: 'https://www.facebook.com/QQQtoken/',
     alt: 'Facebook',
-    followerNum: '7.4K',
+    followerNum: '6.4K',
   },
   {
     title: 'Medium',
     imgUri: '/static/medium.svg',
     link: 'https://medium.com/poseidonnetwork',
     alt: 'Medium',
-    followerNum: '100',
+    followerNum: '10.2K',
   },
   {
     title: 'Twitter',
     imgUri: '/static/twitter.svg',
     link: ' https://twitter.com/QQQtoken',
     alt: 'Twitter',
-    followerNum: '10.2K',
+    followerNum: '2.5K',
   },
   {
     title: 'Telegram',
     imgUri: '/static/telegram.svg',
     link: 'https://t.me/QQQtoken',
     alt: 'telegram',
-    followerNum: '21.1K',
+    followerNum: '27.3K',
   },
 ];
 
