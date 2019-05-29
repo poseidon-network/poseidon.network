@@ -1,7 +1,7 @@
 {
-  "Technology": "Technology",
-  "Solutions": "Solutions",
-  "Developer": "Developer",
-  "Pricing": "Prcing",
-  "More": "More"
+  "nav.technology": "Technology",
+  "nav.solutions": "Solutions",
+  "nav.developer": "Developer",
+  "nav.pricing": "Prcing",
+  "nav.more": "More"
 }
