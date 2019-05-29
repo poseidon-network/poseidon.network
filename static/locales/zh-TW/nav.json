@@ -1,7 +1,7 @@
 {
-  "Technology": "科技",
-  "Solutions": "解決方案",
-  "Developer": "開發者",
-  "Pricing": "價格",
-  "More": "更多"
+  "nav.technology": "科技",
+  "nav.solutions": "解決方案",
+  "nav.developer": "開發者",
+  "nav.pricing": "價格",
+  "nav.more": "更多"
 }
