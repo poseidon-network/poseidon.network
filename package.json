@@ -32,6 +32,7 @@
     "next-i18next": "^0.39.0",
     "rc-progress": "^2.2.6",
     "react": "^16.8.6",
+    "react-animate-on-scroll": "^2.1.5",
     "react-apollo": "^2.4.1",
     "react-content-loader": "^3.4.1",
     "react-copy-to-clipboard": "^5.0.1",

@@ -1,5 +1,8 @@
 import React from 'react';
 
+// @ts-ignore
+import ScrollAnimation from 'react-animate-on-scroll';
+
 import Section from '../Section';
 import Content from '../Content';
 import H2 from '../H2';
@@ -28,40 +31,42 @@ const Header = () => {
           <img className="top-img" src="/static/key-vision@2x.png" />
         </Col>
         <Col style="margin-right: 27px;" mStyle="margin: 0;">
-          <H2 margin="8px 0 30px">
-            A Blockchain Transport
-            <br />
-            Layer Solution
-          </H2>
-          <P margin="0">
-            Next-Generation Content Acceleration Layer (CDN + DSN), incentivized
-            by Token Economy, it’s cheaper yet faster. Utilized unused bandwidth
-            and storage from any NAS, desktop, or mobile devices around the
-            world. It’s distributed, efficient, and integrates perfectly with
-            existing internet and blockchain infrastructure Served as a
-            bandwidth optimization mechanism.
-          </P>
-          <div className="btn-wrapper">
-            <Button
-              title="Whitepaper"
-              uri="http://ipfs.poseidon.network/ipfs/QmUzzcKXhturgVu8BgFhf7bmnf2ittC7d9T9bXwuX5NEXB"
-            />
-          </div>
-          <div className="social-medias">
-            <H3 margin="0 40px 0 0" sStyle="margin: 0;">
-              Join Our Community
-            </H3>
-            <div className="social-medias__imglist">
-              {footer.socialMediaList.map(({ imgUri, link, alt }) => (
-                <SocialMedia
-                  key={imgUri}
-                  imgUri={imgUri}
-                  link={link}
-                  alt={alt}
-                />
-              ))}
+          <ScrollAnimation animateOnce animateIn="fadeInUp">
+            <H2 margin="8px 0 30px">
+              A Blockchain Transport
+              <br />
+              Layer Solution
+            </H2>
+            <P margin="0">
+              Next-Generation Content Acceleration Layer (CDN + DSN),
+              incentivized by Token Economy, it’s cheaper yet faster. Utilized
+              unused bandwidth and storage from any NAS, desktop, or mobile
+              devices around the world. It’s distributed, efficient, and
+              integrates perfectly with existing internet and blockchain
+              infrastructure Served as a bandwidth optimization mechanism.
+            </P>
+            <div className="btn-wrapper">
+              <Button
+                title="Whitepaper"
+                uri="http://ipfs.poseidon.network/ipfs/QmUzzcKXhturgVu8BgFhf7bmnf2ittC7d9T9bXwuX5NEXB"
+              />
             </div>
-          </div>
+            <div className="social-medias">
+              <H3 margin="0 40px 0 0" sStyle="margin: 0;">
+                Join Our Community
+              </H3>
+              <div className="social-medias__imglist">
+                {footer.socialMediaList.map(({ imgUri, link, alt }) => (
+                  <SocialMedia
+                    key={imgUri}
+                    imgUri={imgUri}
+                    link={link}
+                    alt={alt}
+                  />
+                ))}
+              </div>
+            </div>
+          </ScrollAnimation>
         </Col>
         <Col
           flex

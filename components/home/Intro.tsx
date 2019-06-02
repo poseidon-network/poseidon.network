@@ -1,3 +1,6 @@
+// @ts-ignore
+import ScrollAnimation from 'react-animate-on-scroll';
+
 import Section from '../Section';
 import Content from '../Content';
 import H2 from '../H2';
@@ -34,27 +37,29 @@ const Intro = () => (
         />
       </Col>
       <Col style="padding: 0 32px;">
-        <H2
-          margin="0 0 15px"
-          mStyle="text-align: left;"
-          sStyle="text-align: left;"
-        >
-          What is Poseidon Network
-        </H2>
-        <P
-          margin="0 0 30px 0"
-          mStyle="text-align: left;"
-          sStyle="text-align: left;"
-        >
-          We provide decentralized CDN service, the decentralized version of
-          GCP, AWS Cloud Service. With IoT such as NAS, we achieve fog
-          computing, it's closer to users than the cloud, several times faster,
-          cheaper, and effective use of idle resources. With our variety of
-          flexible solutions, partners have included the world's leading NAS
-          brands, e-commerce, content industries, well-known gamer community
-          forums, live streaming and so on.
-        </P>
-        <MoreLink uri="/technology" />
+        <ScrollAnimation animateOnce animateIn="fadeInUp">
+          <H2
+            margin="0 0 15px"
+            mStyle="text-align: left;"
+            sStyle="text-align: left;"
+          >
+            What is Poseidon Network
+          </H2>
+          <P
+            margin="0 0 30px 0"
+            mStyle="text-align: left;"
+            sStyle="text-align: left;"
+          >
+            We provide decentralized CDN service, the decentralized version of
+            GCP, AWS Cloud Service. With IoT such as NAS, we achieve fog
+            computing, it's closer to users than the cloud, several times
+            faster, cheaper, and effective use of idle resources. With our
+            variety of flexible solutions, partners have included the world's
+            leading NAS brands, e-commerce, content industries, well-known gamer
+            community forums, live streaming and so on.
+          </P>
+          <MoreLink uri="/technology" />
+        </ScrollAnimation>
       </Col>
     </Content>
 

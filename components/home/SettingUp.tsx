@@ -1,3 +1,6 @@
+// @ts-ignore
+import ScrollAnimation from 'react-animate-on-scroll';
+
 import Section from '../Section';
 import Content from '../Content';
 import H2 from '../H2';
@@ -18,15 +21,17 @@ const SettingUp = () => (
         <img className="screen2" src="/static/screen-2@2x.png" />
       </Col>
       <Col>
-        <H2 margin="0 0 15px">Setting Up Easily</H2>
-        <P margin="0 0 30px 0">
-          To join Poseidon Network is easy. Get reward immediately in less than
-          5 minutes.
-        </P>
-        <Button
-          title="Get the Demo App"
-          uri="https://www.surveycake.com/s/W8GAD"
-        />
+        <ScrollAnimation animateOnce animateIn="fadeInUp">
+          <H2 margin="0 0 15px">Setting Up Easily</H2>
+          <P margin="0 0 30px 0">
+            To join Poseidon Network is easy. Get reward immediately in less
+            than 5 minutes.
+          </P>
+          <Button
+            title="Get the Demo App"
+            uri="https://www.surveycake.com/s/W8GAD"
+          />
+        </ScrollAnimation>
       </Col>
       <style jsx>{`
         .col {

@@ -1,3 +1,6 @@
+// @ts-ignore
+import ScrollAnimation from 'react-animate-on-scroll';
+
 import Section from '../Section';
 import Content from '../Content';
 import H2 from '../H2';
@@ -23,21 +26,23 @@ const Embassador = () => {
           mStyle="margin-right: 0;"
           sStyle="margin-bottom: 60px;"
         >
-          <H3 mStyle="text-align: left;" margin="0 0 15px">
-            Great works are performed not by strength but by perseverance.
-          </H3>
-          <P
-            margin="0"
-            mStyle="text-align: left;"
-            sStyle="margin-bottom: 10px; text-align: left;"
-          >
-            We provide a great amount of technical resources and opportunity to
-            join in Poseidon Network. eg, Scholarship appllication, College
-            Groups, Campus ambassador. We value our community qualitive and
-            qauntitive both. As far as you are willing or interesting in
-            Poseidon Network, and willing to share it to your groups or friends,
-            we provide community bounty for these case.
-          </P>
+          <ScrollAnimation animateOnce animateIn="fadeInUp">
+            <H3 mStyle="text-align: left;" margin="0 0 15px">
+              Great works are performed not by strength but by perseverance.
+            </H3>
+            <P
+              margin="0"
+              mStyle="text-align: left;"
+              sStyle="margin-bottom: 10px; text-align: left;"
+            >
+              We provide a great amount of technical resources and opportunity
+              to join in Poseidon Network. eg, Scholarship appllication, College
+              Groups, Campus ambassador. We value our community qualitive and
+              qauntitive both. As far as you are willing or interesting in
+              Poseidon Network, and willing to share it to your groups or
+              friends, we provide community bounty for these case.
+            </P>
+          </ScrollAnimation>
         </Col>
         <Col style="width: 100%;">
           <ul>

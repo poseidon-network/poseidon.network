@@ -6,6 +6,7 @@ interface IProps {
   style?: string;
   mStyle?: string;
   sStyle?: string;
+  fadeInUp?: boolean;
 }
 
 const Col = ({

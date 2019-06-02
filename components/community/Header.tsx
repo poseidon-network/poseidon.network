@@ -1,3 +1,6 @@
+// @ts-ignore
+import ScrollAnimation from 'react-animate-on-scroll';
+
 import Section from '../Section';
 import Content from '../Content';
 import H2 from '../H2';
@@ -22,20 +25,22 @@ const Header = () => {
           <img src="/static/img-community@2x.png" />
         </Col>
         <Col>
-          <H2 margin="0 0 15px"> Dip in our community</H2>
-          <P
-            margin="0 0 60px"
-            mStyle="text-align: left;"
-            sStyle="text-align: left;"
-          >
-            Cooperate with the most elite software develop team and the biggest
-            NAS manufacturer in the world.
-          </P>
-          <Button
-            margin="0"
-            title="Become an ambassador"
-            uri="https://www.surveycake.com/s/w48yR"
-          />
+          <ScrollAnimation animateOnce animateIn="fadeInUp">
+            <H2 margin="0 0 15px"> Dip in our community</H2>
+            <P
+              margin="0 0 60px"
+              mStyle="text-align: left;"
+              sStyle="text-align: left;"
+            >
+              Cooperate with the most elite software develop team and the
+              biggest NAS manufacturer in the world.
+            </P>
+            <Button
+              margin="0"
+              title="Become an ambassador"
+              uri="https://www.surveycake.com/s/w48yR"
+            />
+          </ScrollAnimation>
         </Col>
         <Col flex style="align-items: center;" mStyle="display: none;">
           <img src="/static/img-community@2x.png" />

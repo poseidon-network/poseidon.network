@@ -1,3 +1,6 @@
+// @ts-ignore
+import ScrollAnimation from 'react-animate-on-scroll';
+
 import Section from '../Section';
 import Content from '../Content';
 import H2 from '../H2';
@@ -21,16 +24,18 @@ const Intro = () => {
           <img src="/static/img-token-vision.svg" />
         </Col>
         <Col flex style="justify-content: center;">
-          <H2 margin="0 0 30px;" mStyle="margin: 0 0 15px;">
-            Transport Layer driven via Token
-          </H2>
-          <P mStyle="text-align: left;" sStyle="text-algin: left;">
-            Token Economics are fundamentally new ways of incentivizing human
-            behavior, The main task in mechanism design is to specify a
-            mechanism that incentivizes rational agents to behave in certain
-            ways, based upon their private information, that lead to socially
-            desired outcomes.
-          </P>
+          <ScrollAnimation animateOnce animateIn="fadeInUp">
+            <H2 margin="0 0 30px;" mStyle="margin: 0 0 15px;">
+              Transport Layer driven via Token
+            </H2>
+            <P mStyle="text-align: left;" sStyle="text-algin: left;">
+              Token Economics are fundamentally new ways of incentivizing human
+              behavior, The main task in mechanism design is to specify a
+              mechanism that incentivizes rational agents to behave in certain
+              ways, based upon their private information, that lead to socially
+              desired outcomes.
+            </P>
+          </ScrollAnimation>
         </Col>
       </Content>
       <style jsx>{`
