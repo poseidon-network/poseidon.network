@@ -39,6 +39,7 @@
     "react-dropzone": "^7.0.1",
     "react-facebook-login": "^4.1.1",
     "react-icons": "^3.2.2",
+    "react-inlinesvg": "^0.8.4",
     "react-social-sharing": "^2.0.1",
     "short-uuid": "^3.1.0"
   },
