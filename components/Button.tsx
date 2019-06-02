@@ -1,3 +1,5 @@
+import React from 'react';
+
 const Button = ({
   uri,
   title,
@@ -7,7 +9,7 @@ const Button = ({
   sStyle = '',
 }: {
   uri: string;
-  title: string;
+  title: string | React.ReactNode;
   width?: string;
   margin?: string;
   mStyle?: string;

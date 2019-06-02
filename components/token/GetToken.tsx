@@ -26,10 +26,19 @@ const GetToken = () => {
           <H2 margin="0 0 60px">How to Get Poseidon Network QQQ</H2>
           <H3 margin="0 0 15px">Exchanges</H3>
           <P margin="0 0 20px">
-            We provides a variety of exchanges to list QQQ and let people to but
+            We provides a variety of exchanges to list QQQ and let people to buy
             it from fiat coin or cryptocurrencies.
           </P>
-
+          <Button
+            margin="0 0 60px;"
+            title={
+              <img
+                style={{ width: 115, height: 20 }}
+                src="/static/logo-bitforex@2x.png"
+              />
+            }
+            uri="https://www.bitforex.com/cn/trade/spotTrading?commodityCode=QQQ&currencyCode=USDT"
+          />
           <H3 margin="0 0 15px">Community Bounty</H3>
           <P margin="0 0 60px">
             We provide a diversity of bonty for our community, such as
