@@ -13,12 +13,12 @@ const Layout = ({
   color,
   padding,
   backgroundImage,
-  style,
+  style = '',
 }: IProps) => (
-  <div className="container">
+  <div className="section">
     {children}
     <style jsx>{`
-      .container {
+      .section {
         background-color: ${bgColor};
         color: ${color};
         width: 100%;
@@ -33,13 +33,13 @@ const Layout = ({
       }
 
       @media only screen and (max-width: 1120px) {
-        .container {
+        .section {
           background-image: none;
         }
       }
 
       @media only screen and (max-width: 1024px) {
-        .container {
+        .section {
           padding-left: 30px;
           padding-right: 30px;
           padding-top: 60px;
