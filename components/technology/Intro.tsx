@@ -1,3 +1,6 @@
+// @ts-ignore
+import ScrollAnimation from 'react-animate-on-scroll';
+
 import Section from '../Section';
 import Content from '../Content';
 import H2 from '../H2';
@@ -18,18 +21,21 @@ const Intro = () => {
           <img src="/static/img-sharingplatform.svg" />
         </Col>
         <Col>
-          <H2 margin="0 0 10px">
-            The Lights towards the next Internet Sources Sharing Platform
-          </H2>
-          <P>
-            Next-Generation Content Acceleration Layer (CDN + DSN), incentivized
-            by Token Economy, it’s cheaper yet faster. Utilized unused bandwidth
-            and storage from any NAS, desktop, or mobile devices around the
-            world. It’s distributed, efficient, and integrates perfectly with
-            existing internet and blockchain infrastructure Served as a
-            bandwidth optimization mechanism for every type of web content
-            (static file / video on demand / live streaming)
-          </P>
+          <ScrollAnimation animateOnce animateIn="fadeInUp">
+            <H2 margin="0 0 10px">
+              The Lights towards the next Internet Sources Sharing Platform
+            </H2>
+            <P>
+              Next-Generation Content Acceleration Layer (CDN + DSN),
+              incentivized by Token Economy, it’s cheaper yet faster. Utilized
+              unused bandwidth and storage from any NAS, desktop, or mobile
+              devices around the world. It’s distributed, efficient, and
+              integrates perfectly with existing internet and blockchain
+              infrastructure Served as a bandwidth optimization mechanism for
+              every type of web content (static file / video on demand / live
+              streaming)
+            </P>
+          </ScrollAnimation>
         </Col>
       </Content>
       <style jsx>{`

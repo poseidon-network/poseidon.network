@@ -55,6 +55,11 @@ class Layout extends React.Component<IProps, { user: IUser }> {
             sizes="16x16"
             href="/static/favicon-16x16.png"
           />
+          <link
+            rel="stylesheet"
+            type="text/css"
+            href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.1/animate.min.css"
+          />
         </Head>
         <UserContext.Provider value={this.state.user}>
           <Nav
@@ -101,6 +106,18 @@ class Layout extends React.Component<IProps, { user: IUser }> {
             width: 100%;
             position: relative;
             overflow: hidden;
+          }
+
+          @keyframes fadeInUp {
+            from {
+              opacity: 0;
+              transform: translate3d(0, 10%, 0);
+            }
+
+            to {
+              opacity: 1;
+              transform: translate3d(0, 0, 0);
+            }
           }
         `}</style>
       </div>
