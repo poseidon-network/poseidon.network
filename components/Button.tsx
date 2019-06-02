@@ -1,4 +1,5 @@
 import React from 'react';
+import { styles } from '../constants';
 
 const Button = ({
   uri,
@@ -37,7 +38,8 @@ const Button = ({
         }
 
         a:hover {
-          opacity: 0.7;
+          background-color: ${styles.primaryColor};
+          color: ${styles.darkLight};
         }
 
         @media only screen and (max-width: 1024px) {

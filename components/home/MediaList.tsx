@@ -24,6 +24,11 @@ const MediaList = () => (
         .logo {
           height: 50px;
           margin: 0 23.5px;
+          transition: transform 0.3s linear;
+        }
+
+        .logo:hover {
+          transform: scale(0.95, 0.95);
         }
       `}</style>
     </Content>
