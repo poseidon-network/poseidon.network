@@ -184,6 +184,8 @@ const Nav = ({ t, bgColor = '#222633' }: IProps) => {
 
         .navigation li {
           margin-left: 24px;
+          display: flex;
+          align-items: center;
         }
 
         .navigation a {
