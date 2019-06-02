@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import CountUp from 'react-countup';
 import H3 from '../H3';
 
 const SocialMeidia = ({
@@ -9,11 +10,18 @@ const SocialMeidia = ({
 }: {
   name: string;
   img: string;
-  followerNum: string;
+  followerNum: number;
   uri: string;
 }) => (
   <div>
-    <h2>{followerNum}</h2>
+    <CountUp
+      formattingFn={value => `${(value / 1000).toFixed(1)}K`}
+      start={0}
+      end={followerNum}
+      delay={0}
+    >
+      {({ countUpRef }) => <h2 ref={countUpRef} />}
+    </CountUp>
 
     <a className="footer" href={uri}>
       <img src={img} alt={name} />
