@@ -55,8 +55,7 @@ const Roadmap = () => (
           For cities that meet the following four or more conditions, the
           POSEIDON NETWORK will seek long-term cooperative partnership with
           companies, government agencies, universities, etc. as stable large
-          nodes; the POSEIDON NETWORK will give priority to install experiment
-          nodes in cities that meet the following two or more conditions.
+          nodes.
         </P>
       </Col>
     </Content>
