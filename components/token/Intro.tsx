@@ -17,7 +17,7 @@ const Intro = () => {
       color={styles.primaryColor}
       padding="80px 0 70px"
     >
-      <Parallax percentage={0.5} speed={-10}>
+      <Parallax speed={-10}>
         <Content direction="row">
           <Col
             flex
