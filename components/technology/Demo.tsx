@@ -16,9 +16,8 @@ const Demo = () => {
           devices around the world. It’s distributed, efficient, and integrates
           perfectly with existing internet and blockchain infrastructure.
         </P>
-        <Button margin="0 auto;" width="40%;" title="Coming Soon" uri="#" />
+        <Button margin="0 auto;" width="40%;" title="See Demo" uri="/demo" />
       </Content>
-      <style jsx>{``}</style>
     </Section>
   );
 };

@@ -28,7 +28,7 @@ const Footer = () => (
       </div>
 
       <div className="links">
-        {/* <FooterLinks title="Getting Started" links={[]} /> */}
+        <FooterLinks title="Getting Started" links={footer.gettingStarted} />
         <FooterLinks title="Company" links={footer.company} />
         <FooterLinks title="Resources" links={footer.resources} />
         <FooterLinks title="Community" links={footer.communities} />
