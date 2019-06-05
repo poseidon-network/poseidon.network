@@ -34,11 +34,7 @@ const Header = () => {
           </Col>
           <Col style="margin-right: 27px;" mStyle="margin: 0;">
             <ScrollAnimation animateOnce animateIn="fadeInUp">
-              <H2 margin="8px 0 30px">
-                A Blockchain Transport
-                <br />
-                Layer Solution
-              </H2>
+              <H2 margin="8px 0 30px">A Scalable Blockchain Edge Solution</H2>
               <P margin="0">
                 Next-Generation Content Acceleration Layer (CDN + DSN),
                 incentivized by Token Economy, it’s cheaper yet faster. Utilized
