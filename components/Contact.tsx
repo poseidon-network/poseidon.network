@@ -15,7 +15,6 @@ const Contact = ({ t }: ITrans) => (
       {t('footer.stayinfo')}
     </H3>
     <ContactForm />
-    <style jsx>{``}</style>
   </Section>
 );
 

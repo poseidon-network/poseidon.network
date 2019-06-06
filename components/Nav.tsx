@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 
 import Section from './Section';
-import { i18n, withNamespaces, Link } from '../i18n';
+import { i18n, withNamespaces } from '../i18n';
 import { styles } from '../constants';
 
 interface IProps extends ITrans {
