@@ -8,7 +8,6 @@ const NextI18NextInstance = new NextI18Next({
   react: {
     wait: true,
   },
-  localeSubpaths: 'foreign',
 });
 
 // For next export static
