@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 
 import Section from './Section';
-import { i18n, withNamespaces } from '../i18n';
+import { i18n, withNamespaces, Link } from '../i18n';
 import { styles } from '../constants';
 
 interface IProps extends ITrans {
@@ -37,6 +37,7 @@ const Nav = ({ t, bgColor = '#222633' }: IProps) => {
     return () => {
       i18n.changeLanguage(lang, err => {
         if (err) return console.log('something went wrong loading', err);
+        localStorage.setItem('i18nextLng', lang);
       });
     };
   };

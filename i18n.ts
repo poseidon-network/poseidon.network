@@ -10,9 +10,19 @@ const NextI18NextInstance = new NextI18Next({
   },
 });
 
-// For next export static
-NextI18NextInstance.i18n.languages = ['en'];
-NextI18NextInstance.i18n.language = 'en';
+// if (typeof window === 'undefined') {
+//   // For next export static
+//   NextI18NextInstance.i18n.languages = ['en', 'zh-TW'];
+//   NextI18NextInstance.i18n.language = 'en';
+// } else {
+//   const lang = NextI18NextInstance.i18n.services.languageDetector.detect(['localStorage']);
+//   NextI18NextInstance.i18n.changeLanguage(lang);
+//   try {
+//     localStorage.setItem('i18nextLng', lang);
+//   } catch (error) {
+//     console.log(error);
+//   }
+// }
 
 export default NextI18NextInstance;
 
