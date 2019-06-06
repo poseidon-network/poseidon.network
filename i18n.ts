@@ -4,6 +4,10 @@ const NextI18NextInstance = new NextI18Next({
   defaultLanguage: 'en',
   otherLanguages: ['zh-TW'],
   fallbackLng: 'en',
+  keySeparator: false,
+  react: {
+    wait: true,
+  },
 });
 
 // For next export static

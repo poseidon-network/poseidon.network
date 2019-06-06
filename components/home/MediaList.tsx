@@ -3,11 +3,12 @@ import Content from '../Content';
 import H2 from '../H2';
 import { styles } from '../../constants';
 import { mediaList } from '../../data';
+import { withNamespaces } from '../../i18n';
 
-const MediaList = () => (
+const MediaList = ({ t }: ITrans) => (
   <Section bgColor={styles.darkLight} color="#fff" padding="120px 0 158px">
     <H2 center margin="0 0 58px">
-      Media List
+      {t('home.media')}
     </H2>
     <Content
       direction="row"
@@ -35,4 +36,4 @@ const MediaList = () => (
   </Section>
 );
 
-export default MediaList;
+export default withNamespaces('home')(MediaList);

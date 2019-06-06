@@ -10,8 +10,9 @@ import P from '../P';
 import Col from '../Col';
 import Button from '../Button';
 import { styles } from '../../constants';
+import { withNamespaces } from '../../i18n';
 
-const SettingUp = () => (
+const SettingUp = ({ t }: ITrans) => (
   <Section bgColor={styles.darkLight} color="#fff" padding="120px 0">
     <Parallax percentage={0.5} speed={-7}>
       <Content direction="row" style="align-items: center;">
@@ -25,13 +26,10 @@ const SettingUp = () => (
         </Col>
         <Col>
           <ScrollAnimation animateOnce animateIn="fadeInUp">
-            <H2 margin="0 0 15px">Setting Up Easily</H2>
-            <P margin="0 0 30px 0">
-              To join Poseidon Network is easy. Get reward immediately in less
-              than 5 minutes.
-            </P>
+            <H2 margin="0 0 15px">{t('home.mobile')}</H2>
+            <P margin="0 0 30px 0">{t('home.mobile.description')}</P>
             <Button
-              title="Get the Demo App"
+              title={t('home.mobile.download')}
               uri="https://www.surveycake.com/s/W8GAD"
             />
           </ScrollAnimation>
@@ -63,4 +61,4 @@ const SettingUp = () => (
   </Section>
 );
 
-export default SettingUp;
+export default withNamespaces('home')(SettingUp);

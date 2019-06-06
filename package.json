@@ -29,7 +29,7 @@
     "i18next": "^15.1.0",
     "ipfs-api": "^26.1.2",
     "next": "^7.0.2",
-    "next-i18next": "^0.39.0",
+    "next-i18next": "^0.40.1",
     "rc-progress": "^2.2.6",
     "react": "^16.8.6",
     "react-animate-on-scroll": "^2.1.5",

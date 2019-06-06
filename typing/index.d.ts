@@ -15,3 +15,8 @@ interface ITextBaseProps {
   mStyle?: string;
   sStyle?: string;
 }
+
+interface ITrans {
+  t: i18next.TFunction;
+  tReady: boolean;
+}

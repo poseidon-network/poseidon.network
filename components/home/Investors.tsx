@@ -5,19 +5,20 @@ import Content from '../Content';
 
 import { styles } from '../../constants';
 import { partners } from '../../data';
+import { withNamespaces } from '../../i18n';
 
-const Investors = () => (
+const Investors = ({ t }: ITrans) => (
   <Section padding="110px 0 120px" bgColor={styles.dark} color="#fff">
     <Content>
       <H2 id="partners" margin="0 0 60px" size="32px" center>
-        Our Investors
+        {t('home.investors')}
       </H2>
       <div className="partners">
         {partners.map(({ name, title, avatar }) => (
           <Person
             key={name}
-            name={name}
-            title={title}
+            name={t(name)}
+            title={t(title)}
             avatar={avatar}
             backgroundColor="#000"
           />
@@ -51,4 +52,4 @@ const Investors = () => (
   </Section>
 );
 
-export default Investors;
+export default withNamespaces('home')(Investors);

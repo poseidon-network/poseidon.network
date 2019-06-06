@@ -13,10 +13,11 @@ import Col from '../Col';
 import Button from '../Button';
 import P from '../P';
 
+import { withNamespaces } from '../../i18n';
 import { footer } from '../../data';
 import { styles } from '../../constants';
 
-const Header = () => {
+const Header = ({ t }: ITrans) => {
   return (
     <Section
       bgColor={styles.dark}
@@ -34,24 +35,17 @@ const Header = () => {
           </Col>
           <Col style="margin-right: 27px;" mStyle="margin: 0;">
             <ScrollAnimation animateOnce animateIn="fadeInUp">
-              <H2 margin="8px 0 30px">A Scalable Blockchain Edge Solution</H2>
-              <P margin="0">
-                Next-Generation Content Acceleration Layer (CDN + DSN),
-                incentivized by Token Economy, it’s cheaper yet faster. Utilized
-                unused bandwidth and storage from any NAS, desktop, or mobile
-                devices around the world. It’s distributed, efficient, and
-                integrates perfectly with existing internet and blockchain
-                infrastructure Served as a bandwidth optimization mechanism.
-              </P>
+              <H2 margin="8px 0 30px">{t('home.title')}</H2>
+              <P margin="0">{t('home.description')}</P>
               <div className="btn-wrapper">
                 <Button
-                  title="Whitepaper"
+                  title={t('home.whitepaper')}
                   uri="http://ipfs.poseidon.network/ipfs/QmUzzcKXhturgVu8BgFhf7bmnf2ittC7d9T9bXwuX5NEXB"
                 />
               </div>
               <div className="social-medias">
                 <H3 margin="0 40px 0 0" sStyle="margin: 0;">
-                  Join Our Community
+                  {t('home.join')}
                 </H3>
                 <div className="social-medias__imglist">
                   {footer.socialMediaList.map(({ imgUri, link, alt }) => (
@@ -154,4 +148,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default withNamespaces('home')(Header);

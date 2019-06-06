@@ -1,11 +1,10 @@
 import { useState, useEffect } from 'react';
-import i18next from 'i18next';
 
 import Section from './Section';
 import { i18n, withNamespaces } from '../i18n';
 import { styles } from '../constants';
 
-interface IProps {
+interface IProps extends ITrans {
   user?: {
     id?: string;
     token?: string;
@@ -14,7 +13,6 @@ interface IProps {
   };
   bgColor?: string;
   logout?: () => void;
-  t: i18next.TFunction;
 }
 
 const Nav = ({ t, bgColor = '#222633' }: IProps) => {
@@ -22,20 +20,24 @@ const Nav = ({ t, bgColor = '#222633' }: IProps) => {
   const [, setMoreVisiable] = useState<boolean>(false);
 
   useEffect(() => {
-    const hideAll = () => {
-      setLangVisiable(false);
-      setMoreVisiable(false);
+    const hideAll = ({ target }: React.SyntheticEvent) => {
+      if ((target as HTMLElement).tagName !== 'A') {
+        setLangVisiable(false);
+        setMoreVisiable(false);
+      }
     };
 
-    document.body.addEventListener('click', hideAll);
+    document.body.addEventListener<any>('click', hideAll);
     return () => {
-      document.body.removeEventListener('click', hideAll);
+      document.body.removeEventListener<any>('click', hideAll);
     };
   }, []);
 
   const changeLanguage = (lang: string) => {
     return () => {
-      i18n.changeLanguage(lang);
+      i18n.changeLanguage(lang, err => {
+        if (err) return console.log('something went wrong loading', err);
+      });
     };
   };
 
@@ -53,16 +55,16 @@ const Nav = ({ t, bgColor = '#222633' }: IProps) => {
         <nav className="navigation" role="navigation">
           <ul>
             <li className="item">
-              <a href="/technology">{t('Technology')}</a>
+              <a href="/technology">{t('nav.technology')}</a>
             </li>
             <li className="item">
-              <a href="/company">{t('Company')}</a>
+              <a href="/company">{t('nav.company')}</a>
             </li>
-            <li>
-              <a href="/community">{t('Community')}</a>
+            <li className="item">
+              <a href="/community">{t('nav.community')}</a>
             </li>
-            <li>
-              <a href="/token">{t('Token')}</a>
+            <li className="item">
+              <a href="/token">{t('nav.token')}</a>
             </li>
             {/* <li className="item"><a>{t('Solutions')}</a></li>
             <li className="item"><a>{t('Developer')}</a></li>
@@ -76,7 +78,7 @@ const Nav = ({ t, bgColor = '#222633' }: IProps) => {
                   <li>{t('Help Center')}</li>
                 </ul>
             </li> */}
-            <li style={{ display: 'none' }} className="item">
+            <li className="item">
               <a onClick={() => setLangVisiable(!isLangVisiable)}>Language</a>
               <ul className={`dropdown ${isLangVisiable ? 'show' : ''}`}>
                 <li>
@@ -85,8 +87,6 @@ const Nav = ({ t, bgColor = '#222633' }: IProps) => {
                 <li>
                   <a onClick={changeLanguage('zh-tw')}>繁體中文</a>
                 </li>
-                <li>한국어</li>
-                <li>Việt Nam</li>
               </ul>
             </li>
           </ul>
@@ -94,36 +94,23 @@ const Nav = ({ t, bgColor = '#222633' }: IProps) => {
       </div>
 
       <nav className="m-nav" role="navigation">
-        {/* <div id="profile">
-          { user.avatar && <img className="avatar" src={user.avatar} /> }
-          <span className="username">{ user.name }</span>
-        </div> */}
         <div id="menuToggle">
           <input type="checkbox" />
           <span />
           <span />
           <ul id="menu">
             <a href="/technology">
-              <li className="item">{t('Technology')}</li>
+              <li className="item">{t('nav.technology')}</li>
             </a>
             <a href="/company">
-              <li className="item">{t('Company')}</li>
+              <li className="item">{t('nav.company')}</li>
             </a>
             <a href="/community">
-              <li className="item">{t('Community')}</li>
+              <li className="item">{t('nav.community')}</li>
             </a>
             <a href="/token">
-              <li className="item">{t('Token')}</li>
+              <li className="item">{t('nav.token')}</li>
             </a>
-            {/* <a href="/demo"><li>Demo</li></a>
-            <a href="/tron-dapp"><li>Download</li></a>
-            <a href="/#feature"><li>Feature</li></a>
-            <a href="/#partners"><li>Partners</li></a>
-            <a href="/#roadmap"><li>Roadmap</li></a>
-            <a href="/#team"><li>Team</li></a>
-            <a href="/#contact"><li>Contact</li></a>
-            <a href="https://poseidon.zendesk.com/hc/zh-tw"><li>FAQ</li></a> */}
-            {/* { user.token && <a onClick={(e) => { e.preventDefault(); logout && logout(); }} href="/#logout"><li>Logout</li></a> } */}
           </ul>
         </div>
       </nav>
@@ -214,6 +201,8 @@ const Nav = ({ t, bgColor = '#222633' }: IProps) => {
           position: absolute;
           transition: visibility 0.1s;
           visibility: hidden;
+          position: absolute;
+          top: 55px;
         }
 
         .show {

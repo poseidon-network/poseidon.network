@@ -6,7 +6,7 @@ import FooterLinks from './FooterLinks';
 import { withNamespaces } from '../i18n';
 import { footer } from '../data';
 
-const Footer = () => (
+const Footer = ({ t }: ITrans) => (
   <Section padding="77px 0 100px" bgColor="#1d202b" color="#fff">
     <Content direction="row" sStyle="align-items: flex-start;">
       <div className="company-info">
@@ -16,7 +16,7 @@ const Footer = () => (
           mStyle="width: 100%; text-align: center;"
           sStyle="text-align: left;"
         >
-          A scalable value transfer protocol for the digital economy.
+          {t('footer.poseidon.description')}
         </H4>
         <P
           style="font-size: 13px;"
@@ -28,10 +28,19 @@ const Footer = () => (
       </div>
 
       <div className="links">
-        <FooterLinks title="Getting Started" links={footer.gettingStarted} />
-        <FooterLinks title="Company" links={footer.company} />
-        <FooterLinks title="Resources" links={footer.resources} />
-        <FooterLinks title="Community" links={footer.communities} />
+        <FooterLinks
+          title={t('footer.gettingstart.title')}
+          links={footer.gettingStarted}
+        />
+        <FooterLinks title={t('footer.company.title')} links={footer.company} />
+        <FooterLinks
+          title={t('footer.resource.title')}
+          links={footer.resources}
+        />
+        <FooterLinks
+          title={t('footer.community.title')}
+          links={footer.communities}
+        />
       </div>
     </Content>
 

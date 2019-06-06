@@ -1,21 +1,22 @@
 import H4 from './H4';
 import { styles } from '../constants';
+import { withNamespaces } from '../i18n';
 
-interface IProps {
+interface IProps extends ITrans {
   title: string;
   links: any[];
 }
 
-const FooterLinks = ({ title, links }: IProps) => {
+const FooterLinks = ({ title, links, t }: IProps) => {
   return (
     <div className="footer-links">
       <H4 color={styles.primaryColor} margin="0 0 20px">
-        {title}
+        {t(title)}
       </H4>
       <div className="links">
         {links.map(({ uri, title }) => (
           <a key={title} href={uri}>
-            {title}
+            {t(title)}
           </a>
         ))}
       </div>
@@ -56,4 +57,4 @@ const FooterLinks = ({ title, links }: IProps) => {
   );
 };
 
-export default FooterLinks;
+export default withNamespaces('footer')(FooterLinks);

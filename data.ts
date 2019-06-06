@@ -10,49 +10,45 @@ export const introLogoList = [
 export const solutions = [
   {
     imageUri: '/static/img-solution-scalable.svg',
-    title: 'Scalable',
-    description:
-      'We already host decentralized global nodes providing Bandwidth, Storage & Computing, combined with several top-notch blockchain technology partners.',
+    title: 'home.scalabe',
+    description: 'home.scalabe.description',
   },
   {
     imageUri: '/static/img-cheaper.svg',
-    title: 'Cheaper',
-    description:
-      '1/5 times cheaper than cloud providers, yet faster. Enterprise friendly solutions and services are provided.',
+    title: 'home.cheaper',
+    description: 'home.cheaper.description',
   },
   {
     imageUri: '/static/img-speed.svg',
-    title: 'Flexible Speed',
-    description:
-      'Poseidon is faster. The edge at fog are closer to the users , so that latency is lower than the edges at cloud. 10x faster in Waiting Time & 2x Download Speed than AWS, GCP.',
+    title: 'home.fast',
+    description: 'home.fast.description',
   },
   {
     imageUri: '/static/img-efficiency.svg',
-    title: 'Efficiency',
-    description:
-      'We build Internet resources sharing platform based on  blockchain technology. Sharing economy is incentive by native token QQQ, a mining friendly platform and a powerful ecosystem without border.',
+    title: 'home.ecosystem',
+    description: 'home.ecosystem.description',
   },
 ];
 
 export const partners = [
   {
     name: 'Longhash Singapore',
-    title: '',
+    title: 'home.investors.longhash',
     avatar: '/static/avatar-longhsh@2x.png',
   },
   {
     name: 'Jamie Lin',
-    title: 'General Manager of Taiwan Mobile Co., Ltd',
+    title: 'home.investors.JamieLin',
     avatar: '/static/avatar-lin@2x.png',
   },
   {
     name: 'Jaclyn Tsai',
-    title: 'Founder & Chief Lawyer of Lee Tsai&Partners',
+    title: 'home.investors.JaclynTsai',
     avatar: '/static/avatar-jaclyn@2x.png',
   },
   {
     name: 'Sega Cheng',
-    title: 'CEO of iKala、LIVEhouse.in and GCP Expert',
+    title: 'home.investors.SegaCheng',
     avatar: '/static/avatar-sega@2x.png',
   },
 ];
@@ -283,20 +279,26 @@ export const footer = {
   ],
   resources: [
     {
-      title: 'Github',
+      title: 'footer.resource.github',
       uri: 'https://github.com/poseidon-network',
     },
     {
-      title: 'Whitepaper',
+      title: 'footer.resource.whitepaper',
       uri:
         'http://ipfs.poseidon.network/ipfs/QmUzzcKXhturgVu8BgFhf7bmnf2ittC7d9T9bXwuX5NEXB',
     },
   ],
   company: [
-    { title: 'About Us', uri: '/company' },
-    { title: 'Team', uri: '/company#team' },
-    { title: 'FAQ', uri: 'https://poseidon.zendesk.com/hc/zh-tw' },
-    { title: 'Contract Us', uri: 'mailto:service@poseidon.network' },
+    { title: 'footer.company.aboutus', uri: '/company' },
+    { title: 'footer.company.team', uri: '/company#team' },
+    {
+      title: 'footer.company.faq',
+      uri: 'https://poseidon.zendesk.com/hc/zh-tw',
+    },
+    {
+      title: 'footer.company.contactus',
+      uri: 'mailto:service@poseidon.network',
+    },
   ],
   email: 'service@poseidon.network',
   copyright: 'Copyright © Poseidon Network 2019.',

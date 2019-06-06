@@ -1,7 +1,13 @@
-const MoreLink = ({ uri }: { uri: string }) => {
+const MoreLink = ({
+  title = 'Read More',
+  uri,
+}: {
+  title?: string;
+  uri: string;
+}) => {
   return (
     <div>
-      <a href={uri}>Read More  →</a>
+      <a href={uri}>{title} →</a>
       <style jsx>{`
         a {
           font-size: 18px;

@@ -9,8 +9,9 @@ import MoreLink from '../MoreLink';
 import Col from '../Col';
 import { styles } from '../../constants';
 import { introLogoList } from '../../data';
+import { withNamespaces } from '../../i18n';
 
-const Intro = () => (
+const Intro = ({ t }: ITrans) => (
   <Section bgColor={styles.darkLight} color="#fff" padding="149px 0 100px">
     <Content
       direction="row"
@@ -43,22 +44,16 @@ const Intro = () => (
             mStyle="text-align: left;"
             sStyle="text-align: left;"
           >
-            What is Poseidon Network
+            {t('home.whatposeidon')}
           </H2>
           <P
             margin="0 0 30px 0"
             mStyle="text-align: left;"
             sStyle="text-align: left;"
           >
-            We provide decentralized CDN service, the decentralized version of
-            GCP, AWS Cloud Service. With IoT such as NAS, we achieve fog
-            computing, it's closer to users than the cloud, several times
-            faster, cheaper, and effective use of idle resources. With our
-            variety of flexible solutions, partners have included the world's
-            leading NAS brands, e-commerce, content industries, well-known gamer
-            community forums, live streaming and so on.
+            {t('home.explain')}
           </P>
-          <MoreLink uri="/technology" />
+          <MoreLink title={t('home.explain.readmore')} uri="/technology" />
         </ScrollAnimation>
       </Col>
     </Content>
@@ -90,4 +85,4 @@ const Intro = () => (
   </Section>
 );
 
-export default Intro;
+export default withNamespaces('home')(Intro);

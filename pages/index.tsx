@@ -15,7 +15,7 @@ import { styles } from '../constants';
 class Homepage extends React.Component {
   static async getInitialProps() {
     return {
-      namespacesRequired: ['common', 'footer'],
+      namespacesRequired: ['common', 'nav', 'footer', 'home'],
     };
   }
 

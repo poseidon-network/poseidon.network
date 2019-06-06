@@ -5,11 +5,12 @@ import Person from './Person';
 import Content from '../Content';
 import { styles } from '../../constants';
 import { team } from '../../data';
+import { withNamespaces } from '../../i18n';
 
 const defaultCurrentAvatarIndex = 3;
 let myReq: any;
 
-const Team = () => {
+const Team = ({ t }: ITrans) => {
   const [currentRestAvatar, setCurrentResetAvtar] = useState<string>(
     team[defaultCurrentAvatarIndex].avatar,
   );
@@ -51,7 +52,7 @@ const Team = () => {
     <Section bgColor={styles.dark} color="#222633">
       <Content>
         <H2 center id="team" margin="120px 0 100px" size="32px">
-          A Strong Team Determined On Things Happen
+          {t('home.team')}
         </H2>
         <div className="members">
           {team.slice(0, 3).map(({ name, title, avatar }) => (
@@ -97,4 +98,4 @@ const Team = () => {
   );
 };
 
-export default Team;
+export default withNamespaces('home')(Team);

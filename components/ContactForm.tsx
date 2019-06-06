@@ -1,6 +1,7 @@
 import React from 'react';
+import { withNamespaces } from '../i18n';
 
-class ContactForm extends React.Component {
+class ContactForm extends React.Component<ITrans> {
   state = {
     email: '',
     isFailed: false,
@@ -46,6 +47,7 @@ class ContactForm extends React.Component {
   };
 
   render() {
+    const { t } = this.props;
     return (
       <form onSubmit={this.handleSubmit}>
         {this.state.isSucceed && (
@@ -62,11 +64,15 @@ class ContactForm extends React.Component {
             id="email"
             type="email"
             name="email"
-            placeholder="Your Email Address"
+            placeholder={t('footer.stayinfo.email')}
             value={this.state.email}
             onChange={this.handleChangeInput}
           />
-          <input className="submit" type="submit" value="Subscribe" />
+          <input
+            className="submit"
+            type="submit"
+            value={t('footer.stayinfo.subscribe')}
+          />
           <input className="submit sm-submit" type="submit" value="→" />
         </div>
         <style jsx>{`
@@ -183,4 +189,4 @@ class ContactForm extends React.Component {
   }
 }
 
-export default ContactForm;
+export default withNamespaces('footer')(ContactForm);
