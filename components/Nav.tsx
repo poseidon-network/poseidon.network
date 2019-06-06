@@ -79,7 +79,9 @@ const Nav = ({ t, bgColor = '#222633' }: IProps) => {
                 </ul>
             </li> */}
             <li className="item">
-              <a onClick={() => setLangVisiable(!isLangVisiable)}>Language</a>
+              <a onClick={() => setLangVisiable(!isLangVisiable)}>
+                {t('nav.lang')}
+              </a>
               <ul className={`dropdown ${isLangVisiable ? 'show' : ''}`}>
                 <li>
                   <a onClick={changeLanguage('en')}>English</a>
