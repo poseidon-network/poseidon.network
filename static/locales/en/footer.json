@@ -1,4 +1,26 @@
 {
   "footer.privacy_policy": "Privacy Policy ",
-  "footer.cookie_preferences": "Cookie Preferences"
+  "footer.cookie_preferences": "Cookie Preferences",
+  "footer.stayinfo": "Stay Informed",
+  "footer.stayinfo.email": "Your Email Address",
+  "footer.stayinfo.subscribe": "Subscribe",
+  "footer.poseidon.description": "A Scalable Blockchain Edge Solution",
+  "footer.gettingstart.title": "Getting Started",
+  "footer.gettingstart.demo": "Demo",
+  "footer.gettingstart.download": "Download",
+  "footer.gettingstart.sdk": "SDK",
+  "footer.gettingstart.tutorial": "Tutorial",
+  "footer.company.title": "Company",
+  "footer.company.aboutus": "About Us",
+  "footer.company.team": "Team",
+  "footer.company.token": "Tokens",
+  "footer.company.jobs": "Jobs",
+  "footer.company.faq": "FAQ",
+  "footer.company.contactus": "Contact Us",
+  "footer.resource.title": "Resources",
+  "footer.resource.github": "GitHub",
+  "footer.resource.techpaper": "Tech Paper",
+  "footer.resource.docs": "Docs",
+  "footer.resource.whitepaper": "Whitepaper",
+  "footer.community.title": "Community"
 }
