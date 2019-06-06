@@ -1,4 +1,26 @@
 {
   "footer.privacy_policy": "隱私權政策",
-  "footer.cookie_preferences": "Cookie 偏好"
+  "footer.cookie_preferences": "Cookie 偏好",
+  "footer.stayinfo": "接收最新消息",
+  "footer.stayinfo.email": "電子信箱",
+  "footer.stayinfo.subscribe": "訂閱",
+  "footer.poseidon.description": "基於區塊鏈的分散式邊緣運算解決方案",
+  "footer.gettingstart.title": "立即開始",
+  "footer.gettingstart.demo": "產品演示",
+  "footer.gettingstart.download": "下載",
+  "footer.gettingstart.sdk": "SDK",
+  "footer.gettingstart.tutorial": "產品教學",
+  "footer.company.title": "公司",
+  "footer.company.aboutus": "關於我們",
+  "footer.company.team": "團隊",
+  "footer.company.token": "代幣",
+  "footer.company.jobs": "工作機會",
+  "footer.company.faq": "常見問題",
+  "footer.company.contactus": "聯絡我們",
+  "footer.resource.title": "資訊",
+  "footer.resource.github": "GitHub",
+  "footer.resource.techpaper": "技術文檔",
+  "footer.resource.docs": "文件",
+  "footer.resource.whitepaper": "白皮書",
+  "footer.community.title": "社群"
 }
