@@ -87,7 +87,7 @@ const Nav = ({ t, bgColor = '#222633' }: IProps) => {
                   <a onClick={changeLanguage('en')}>English</a>
                 </li>
                 <li>
-                  <a onClick={changeLanguage('zh-tw')}>繁體中文</a>
+                  <a onClick={changeLanguage('zh-TW')}>繁體中文</a>
                 </li>
               </ul>
             </li>
