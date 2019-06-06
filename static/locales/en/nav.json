@@ -3,5 +3,9 @@
   "nav.solutions": "Solutions",
   "nav.developer": "Developer",
   "nav.pricing": "Prcing",
-  "nav.more": "More"
+  "nav.more": "More",
+  "nav.community": "Community",
+  "nav.token": "Token",
+  "nav.company": "About us",
+  "nav.help": "Heip Center"
 }
