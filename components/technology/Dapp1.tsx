@@ -5,8 +5,9 @@ import Col from '../Col';
 import H2 from '../H2';
 
 import { styles } from '../../constants';
+import { withNamespaces } from '../../i18n';
 
-const Dapp1 = () => {
+const Dapp1 = ({ t }: ITrans) => {
   return (
     <Section
       bgColor={styles.dark}
@@ -16,29 +17,29 @@ const Dapp1 = () => {
       <Content direction="row" mStyle="align-items: center;">
         <Col>
           <H2 style="line-height: 1.63; width: 154px;" mStyle="width:100%;">
-            Poseidon Network Dapps
+            {t('tech.smartcontract')}
           </H2>
         </Col>
         <Col style="flex: 2;">
           <div className="feature">
             <img src="/static/icon-node.svg" />
-            <P>Node Selection Algorithm</P>
+            <P>{t('tech.smartcontract1')}</P>
           </div>
           <div className="feature">
             <img src="/static/icon-prediction.svg" />
-            <P>Caching Prediction Algorithm</P>
+            <P>{t('tech.smartcontract2')}</P>
           </div>
           <div className="feature">
             <img src="/static/icon-pricing.svg" />
-            <P>Flexible QCDN pricing and smart contract</P>
+            <P>{t('tech.smartcontract3')}</P>
           </div>
           <div className="feature">
             <img src="/static/icon-contrract.svg" />
-            <P>QEdge Voting and Reward smart contract </P>
+            <P>{t('tech.smartcontract4')}</P>
           </div>
           <div className="feature">
             <img src="/static/icon-lockup.svg" />
-            <P>Payout and Lockup Cycle smart contract </P>
+            <P>{t('tech.smartcontract5')}</P>
           </div>
         </Col>
       </Content>
@@ -56,4 +57,4 @@ const Dapp1 = () => {
   );
 };
 
-export default Dapp1;
+export default withNamespaces('technology')(Dapp1);

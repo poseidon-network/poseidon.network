@@ -4,8 +4,9 @@ import H2 from '../H2';
 import P from '../P';
 import MoreLink from '../MoreLink';
 import { styles } from '../../constants';
+import { withNamespaces } from '../../i18n';
 
-const Header = () => {
+const Doc = ({ t }: ITrans) => {
   return (
     <Section
       bgColor={styles.darkLight}
@@ -13,30 +14,32 @@ const Header = () => {
       padding="0 0 120px"
     >
       <Content>
-        <H2>Documentation</H2>
+        <H2>{t('tech.documentation')}</H2>
         <P mStyle="text-align: left;" margin="0 0 90px">
-          We’re proud to offer free services for open-source and nonprofit
-          projects. Try our solution with our open-source spirit!
+          {t('tech.documentation.description')}
         </P>
         <Content direction="row" style="justify-content: space-between;">
           <div className="doc-block">
             <div className="doc-content whitepaper">
-              <strong>Whitepaper</strong>
-              <p>Whitepaper</p>
+              <strong>{t('tech.whitepaper')}</strong>
+              <p>{t('tech.whitepaper')}</p>
             </div>
-            <MoreLink uri="http://ipfs.poseidon.network/ipfs/QmUzzcKXhturgVu8BgFhf7bmnf2ittC7d9T9bXwuX5NEXB" />
+            <MoreLink
+              title={t('tech.readmore')}
+              uri="http://ipfs.poseidon.network/ipfs/QmUzzcKXhturgVu8BgFhf7bmnf2ittC7d9T9bXwuX5NEXB"
+            />
           </div>
           <div className="doc-block">
             <div className="doc-content sdk">
-              <strong>SDK</strong>
-              <p>SDK</p>
+              <strong>{t('tech.sdk')}</strong>
+              <p>{t('tech.sdk')}</p>
             </div>
             {/* <MoreLink uri="" /> */}
           </div>
           <div className="doc-block">
             <div className="doc-content github">
-              <strong>Github</strong>
-              <p>SDK</p>
+              <strong>{t('tech.github')}</strong>
+              <p>{t('tech.sdk')}</p>
             </div>
             {/* <MoreLink uri="" /> */}
           </div>
@@ -127,4 +130,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default withNamespaces('technology')(Doc);

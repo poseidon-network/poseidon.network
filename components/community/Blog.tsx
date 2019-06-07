@@ -6,8 +6,9 @@ import P from '../P';
 import H3 from '../H3';
 import Button from '../Button';
 import Col from '../Col';
+import { withNamespaces } from '../../i18n';
 
-const Blog = () => {
+const Blog = ({ t }: ITrans) => {
   return (
     <Section
       bgColor={styles.darkLight}
@@ -15,7 +16,7 @@ const Blog = () => {
       padding="120px 0 120px"
     >
       <Content>
-        <H2 margin="0 0 60px">Blogs</H2>
+        <H2 margin="0 0 60px">{t('community.blog')}</H2>
         <Content
           direction="row"
           style="display: grid; grid-template-columns: auto auto auto; grid-gap: 10px 30px;"
@@ -81,4 +82,4 @@ const Blog = () => {
   );
 };
 
-export default Blog;
+export default withNamespaces('community')(Blog);

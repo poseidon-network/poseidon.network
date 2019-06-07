@@ -9,8 +9,9 @@ import { styles } from '../../constants';
 import P from '../P';
 import Col from '../Col';
 import Button from '../Button';
+import { withNamespaces } from '../../i18n';
 
-const Embassador = () => {
+const Embassador = ({ t }: ITrans) => {
   return (
     <Section
       bgColor={styles.dark}
@@ -18,7 +19,7 @@ const Embassador = () => {
       padding="120px 0 120px"
     >
       <H2 center margin="0 0 60px">
-        Become an Embassador
+        {t('community.ambassador')}
       </H2>
       <Content direction="row" mStyle="flex-direction: row;">
         <Col
@@ -28,19 +29,14 @@ const Embassador = () => {
         >
           <ScrollAnimation animateOnce animateIn="fadeInUp">
             <H3 mStyle="text-align: left;" margin="0 0 15px">
-              Great works are performed not by strength but by perseverance.
+              {t('community.ambassador.title')}
             </H3>
             <P
               margin="0"
               mStyle="text-align: left;"
               sStyle="margin-bottom: 10px; text-align: left;"
             >
-              We provide a great amount of technical resources and opportunity
-              to join in Poseidon Network. eg, Scholarship appllication, College
-              Groups, Campus ambassador. We value our community qualitive and
-              qauntitive both. As far as you are willing or interesting in
-              Poseidon Network, and willing to share it to your groups or
-              friends, we provide community bounty for these case.
+              {t('community.ambassador.description')}
             </P>
           </ScrollAnimation>
         </Col>
@@ -48,26 +44,26 @@ const Embassador = () => {
           <ul>
             <li>
               <img className="check" src="/static/check.svg" />
-              <H3>Education related</H3>
+              <H3>{t('community.ambassador.related1')}</H3>
             </li>
             <li>
               <img className="check" src="/static/check.svg" />
-              <H3>Social Media related</H3>
+              <H3>{t('community.ambassador.related2')}</H3>
             </li>
             <li>
               <img className="check" src="/static/check.svg" />
-              <H3>Media related</H3>
+              <H3>{t('community.ambassador.related3')}</H3>
             </li>
           </ul>
         </Col>
       </Content>
       <Content style="margin-top: 60px;">
         <H2 center margin="0 0 30px">
-          Any Interested
+          {t('community.ambassador.interested')}
         </H2>
         <Col flex style="align-items: center;">
           <Button
-            title="Apply to become an ambassador"
+            title={t('community.ambassador.apply')}
             uri="https://www.surveycake.com/s/w48yR"
             width="45%"
             mStyle="width: 90%;"
@@ -96,4 +92,4 @@ const Embassador = () => {
   );
 };
 
-export default Embassador;
+export default withNamespaces('community')(Embassador);

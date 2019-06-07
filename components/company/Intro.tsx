@@ -6,10 +6,10 @@ import Content from '../Content';
 import H2 from '../H2';
 import P from '../P';
 import Col from '../Col';
-
+import { withNamespaces } from '../../i18n';
 import { styles } from '../../constants';
 
-const Intro = () => {
+const Intro = ({ t }: ITrans) => {
   return (
     <Section
       bgColor={styles.darkLight}
@@ -22,16 +22,8 @@ const Intro = () => {
         </Col>
         <Col mStyle="margin-bottom: 100px;">
           <ScrollAnimation animateOnce animateIn="fadeInUp">
-            <H2 margin="90px 0 10px">Help us build a better Internet</H2>
-            <P>
-              We provide decentralized CDN service, the decentralized version of
-              GCP, AWS Cloud Service. With IoT such as NAS, we achieve fog
-              computing, it's closer to users than the cloud, several times
-              faster, cheaper, and effective use of idle resources. With our
-              variety of flexible solutions, partners have included the world's
-              leading NAS brands, e-commerce, content industries, well-known
-              gamer community forums, live streaming and so on.
-            </P>
+            <H2 margin="90px 0 10px">{t('company.title')}</H2>
+            <P>{t('company.description')}</P>
           </ScrollAnimation>
         </Col>
       </Content>
@@ -52,4 +44,4 @@ const Intro = () => {
   );
 };
 
-export default Intro;
+export default withNamespaces('company')(Intro);

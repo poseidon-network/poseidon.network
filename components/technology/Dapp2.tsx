@@ -5,8 +5,9 @@ import H3 from '../H3';
 import P from '../P';
 
 import { styles } from '../../constants';
+import { withNamespaces } from '../../i18n';
 
-const Dapp2 = () => {
+const Dapp2 = ({ t }: ITrans) => {
   return (
     <Section
       bgColor={styles.darkLight}
@@ -14,7 +15,7 @@ const Dapp2 = () => {
       padding="120px"
     >
       <H2 center margin="0 0 60px">
-        Poseidon Network Dapps
+        {t('tech.dapps.title')}
       </H2>
       <Content
         direction="row"
@@ -24,36 +25,24 @@ const Dapp2 = () => {
         <div className="block">
           <img src="/static/img-harddisk-green.svg" />
           <H3 color={styles.lightColor} margin="0 0 16px" center>
-            QCDN
+            {t('tech.dapps.qcdn')}
           </H3>
-          <P mStyle="text-align: left;">
-            The next-generation decentralized Content Delivery Network (dCDN)
-            built by the POSEIDON NETWORK is called QCDN. It includes a traffic
-            dispatcher called Qontroller, and QEdge, decentralized nodes from
-            all over the world that join our network.
-          </P>
+          <P mStyle="text-align: left;">{t('tech.dapps.qcdn.description')}</P>
         </div>
         <div className="block">
           <img src="/static/img-harddisk-yellow.svg" />
           <H3 color={styles.lightColor} margin="0 0 16px" center>
-            DSN
+            {t('tech.dapps.dsn')}
           </H3>
-          <P mStyle="text-align: left;">
-            Decentralized Storage Network is mostly created by blockchain
-            network like IPFS, Filecoin, etc. We combined with these technology
-            and company to greater our network.
-          </P>
+          <P mStyle="text-align: left;">{t('tech.dapps.dsn.description')}</P>
         </div>
         <div className="block">
           <img src="/static/img-harddisk-blue.svg" />
           <H3 color={styles.lightColor} margin="0 0 16px" center>
-            Blockchain
+            {t('tech.dapps.blockchain')}
           </H3>
           <P mStyle="text-align: left;">
-            We create our token on Ethereum, and use Aelf network to create
-            mutiple VM by runing nodes parallel. In addition, we cooperate with
-            Nem, Harmony, and Cybavo to get the toppest technical advices and
-            collaboration.
+            {t('tech.dapps.blockchain.description')}
           </P>
         </div>
       </Content>
@@ -82,4 +71,4 @@ const Dapp2 = () => {
   );
 };
 
-export default Dapp2;
+export default withNamespaces('technology')(Dapp2);

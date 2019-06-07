@@ -7,9 +7,10 @@ import H2 from '../H2';
 import P from '../P';
 import Col from '../Col';
 
+import { withNamespaces } from '../../i18n';
 import { styles } from '../../constants';
 
-const Intro = () => {
+const Intro = ({ t }: ITrans) => {
   return (
     <Section
       bgColor={styles.darkLight}
@@ -22,19 +23,8 @@ const Intro = () => {
         </Col>
         <Col>
           <ScrollAnimation animateOnce animateIn="fadeInUp">
-            <H2 margin="0 0 10px">
-              The Lights towards the next Internet Sources Sharing Platform
-            </H2>
-            <P>
-              Next-Generation Content Acceleration Layer (CDN + DSN),
-              incentivized by Token Economy, it’s cheaper yet faster. Utilized
-              unused bandwidth and storage from any NAS, desktop, or mobile
-              devices around the world. It’s distributed, efficient, and
-              integrates perfectly with existing internet and blockchain
-              infrastructure Served as a bandwidth optimization mechanism for
-              every type of web content (static file / video on demand / live
-              streaming)
-            </P>
+            <H2 margin="0 0 10px">{t('tech.title')}</H2>
+            <P>{t('tech.description')}</P>
           </ScrollAnimation>
         </Col>
       </Content>
@@ -63,4 +53,4 @@ const Intro = () => {
   );
 };
 
-export default Intro;
+export default withNamespaces('technology')(Intro);

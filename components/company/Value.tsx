@@ -3,10 +3,10 @@ import Content from '../Content';
 import H2 from '../H2';
 import H3 from '../H3';
 import P from '../P';
-
+import { withNamespaces } from '../../i18n';
 import { styles } from '../../constants';
 
-const Vaule = () => {
+const Vaule = ({ t }: ITrans) => {
   return (
     <Section
       bgColor={styles.dark}
@@ -14,7 +14,7 @@ const Vaule = () => {
       padding="137px 0"
     >
       <H2 center margin="0 0 60px">
-        Our Vaule
+        {t('company.ourvalue')}
       </H2>
       <Content
         style="display: grid; grid-template-columns: auto auto auto; grid-gap: 0 31px;"
@@ -23,35 +23,28 @@ const Vaule = () => {
         <div className="value">
           <img className="vaule-img" src="/static/img-spirit.svg" />
           <H3 color={styles.lightColor} center>
-            Spirit
+            {t('company.ourvalue.spirit')}
           </H3>
           <P mStyle="max-width: 349px; text-align: left;">
-            We value our customers — which is why we respect privacy, and don’t
-            exploit customer data or end user data. And our team is available to
-            help along the way via our support center.
+            {t('company.ourvalue.spirit.description')}
           </P>
         </div>
         <div className="value">
           <img className="vaule-img" src="/static/img-sharing.svg" />
           <H3 color={styles.lightColor} center>
-            Sharing
+            {t('company.ourvalue.sharing')}
           </H3>
           <P mStyle="max-width: 349px; text-align: left;">
-            Our platform helps businesses across industries scale faster and
-            more securely, and we’re proud to offer free services for
-            open-source and nonprofit projects.
+            {t('company.ourvalue.sharing.description')}
           </P>
         </div>
         <div className="value">
           <img className="vaule-img" src="/static/img-innaovation.svg" />
           <H3 color={styles.lightColor} center>
-            Innovation
+            {t('company.ourvalue.innovation')}
           </H3>
           <P mStyle="max-width: 349px; text-align: left;">
-            From the start, we’ve moved data and applications closer to the end
-            user — at the edge of the network — to improve apps and websites.
-            Today, we’re continuing to set the industry standard and innovate at
-            the edge.
+            {t('company.ourvalue.innovation.description')}
           </P>
         </div>
       </Content>
@@ -73,4 +66,4 @@ const Vaule = () => {
   );
 };
 
-export default Vaule;
+export default withNamespaces('company')(Vaule);

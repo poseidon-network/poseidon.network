@@ -7,8 +7,9 @@ import H2 from '../H2';
 import P from '../P';
 import Col from '../Col';
 import { styles } from '../../constants';
+import { withNamespaces } from '../../i18n';
 
-const Work = () => {
+const Work = ({ t }: ITrans) => {
   return (
     <Section
       bgColor={styles.darkLight}
@@ -28,14 +29,8 @@ const Work = () => {
           mStyle="margin-right: 0; margin-bottom: 60px;"
         >
           <ScrollAnimation animateOnce animateIn="fadeInUp">
-            <H2 margin="0 0 20px">How doest it work</H2>
-            <P margin="0">
-              QQQ is the functional token of POSEIDON NETWORK platform, the most
-              important part of POSEIDON NETWORK mainnet, furthermore, the only
-              token in this ecosystem. Pay QQQ token to drive the services of
-              POSEIDON NETWORK, or get QQQ from supplying your unused network
-              resources.
-            </P>
+            <H2 margin="0 0 20px">{t('token.howwork')}</H2>
+            <P margin="0">{t('token.howwork.description')}</P>
           </ScrollAnimation>
         </Col>
         <Col
@@ -55,4 +50,4 @@ const Work = () => {
   );
 };
 
-export default Work;
+export default withNamespaces('token')(Work);

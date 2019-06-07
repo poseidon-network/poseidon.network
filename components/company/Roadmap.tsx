@@ -7,39 +7,51 @@ import { roadmap2018, roadmap2019, roadmap2020 } from '../../data';
 import { styles } from '../../constants';
 import Col from '../Col';
 import H3 from '../H3';
+import { withNamespaces } from '../../i18n';
 
-const Roadmap = () => (
+const Roadmap = ({ t }: ITrans) => (
   <Section padding="120px" bgColor={styles.darkLight} color="#1c1c1d">
     <H2 id="roadmap" center margin="0 0 5px">
-      Roadmap
+      {t('company.roadmap')}
     </H2>
     <Content direction="row">
-      <P margin="0 0 60px">
-        There’s so much more to Poseidon than technology. At the heart of our
-        work, we aim to improve human lives — and from the beginning, we’ve
-        grown with a deliberate focus on transparency, integrity, and inclusion.
-      </P>
+      <P margin="0 0 60px">{t('company.roadmap.description')}</P>
     </Content>
     <Content>
       <H3 margin="0 0 13px" center>
         2018
       </H3>
-      {roadmap2018.map((props, index) => (
-        <RoadmapItem key={index} right={index % 2 === 0} {...props} />
+      {roadmap2018.map(({ description, ...props }, index) => (
+        <RoadmapItem
+          key={index}
+          right={index % 2 === 0}
+          description={t(description)}
+          {...props}
+        />
       ))}
 
       <H3 margin="15px 0 10px" center>
         2019
       </H3>
-      {roadmap2019.map((props, index) => (
-        <RoadmapItem key={index} right={index % 2 === 1} {...props} />
+      {roadmap2019.map(({ description, ...props }, index) => (
+        <RoadmapItem
+          key={index}
+          right={index % 2 === 1}
+          description={t(description)}
+          {...props}
+        />
       ))}
 
       <H3 margin="15px 0 10px" center>
         2020
       </H3>
-      {roadmap2020.map((props, index) => (
-        <RoadmapItem key={index} right={index % 2 === 0} {...props} />
+      {roadmap2020.map(({ description, ...props }, index) => (
+        <RoadmapItem
+          key={index}
+          right={index % 2 === 0}
+          description={t(description)}
+          {...props}
+        />
       ))}
     </Content>
 
@@ -49,13 +61,10 @@ const Roadmap = () => (
       </Col>
       <Col>
         <H2 mStyle="text-align: left;" margin="0 0 57px;">
-          World’s largest nodes network
+          {t('company.nodesnetwork')}
         </H2>
         <P mStyle="text-align: left;">
-          For cities that meet the following four or more conditions, the
-          POSEIDON NETWORK will seek long-term cooperative partnership with
-          companies, government agencies, universities, etc. as stable large
-          nodes.
+          {t('company.nodesnetwork.description')}
         </P>
       </Col>
     </Content>
@@ -75,4 +84,4 @@ const Roadmap = () => (
   </Section>
 );
 
-export default Roadmap;
+export default withNamespaces('company')(Roadmap);

@@ -9,8 +9,9 @@ import H2 from '../H2';
 import P from '../P';
 import Col from '../Col';
 import { styles } from '../../constants';
+import { withNamespaces } from '../../i18n';
 
-const Intro = () => {
+const Intro = ({ t }: ITrans) => {
   return (
     <Section
       bgColor={styles.darkLight}
@@ -29,14 +30,10 @@ const Intro = () => {
           <Col flex style="justify-content: center;">
             <ScrollAnimation animateOnce animateIn="fadeInUp">
               <H2 margin="0 0 30px;" mStyle="margin: 0 0 15px;">
-                Transport Layer driven via Token
+                {t('token.title')}
               </H2>
               <P mStyle="text-align: left;" sStyle="text-algin: left;">
-                Token Economics are fundamentally new ways of incentivizing
-                human behavior, The main task in mechanism design is to specify
-                a mechanism that incentivizes rational agents to behave in
-                certain ways, based upon their private information, that lead to
-                socially desired outcomes.
+                {t('token.description')}
               </P>
             </ScrollAnimation>
           </Col>
@@ -58,4 +55,4 @@ const Intro = () => {
   );
 };
 
-export default Intro;
+export default withNamespaces('token')(Intro);

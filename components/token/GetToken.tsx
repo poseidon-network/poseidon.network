@@ -6,8 +6,9 @@ import P from '../P';
 import Col from '../Col';
 import Button from '../Button';
 import { styles } from '../../constants';
+import { withNamespaces } from '../../i18n';
 
-const GetToken = () => {
+const GetToken = ({ t }: ITrans) => {
   return (
     <Section
       bgColor={styles.darkLight}
@@ -23,12 +24,9 @@ const GetToken = () => {
           <img src="/static/img-community-bounty@2x.png" />
         </Col>
         <Col>
-          <H2 margin="0 0 60px">How to Get Poseidon Network QQQ</H2>
-          <H3 margin="0 0 15px">Exchanges</H3>
-          <P margin="0 0 20px">
-            We provides a variety of exchanges to list QQQ and let people to buy
-            it from fiat coin or cryptocurrencies.
-          </P>
+          <H2 margin="0 0 60px">{t('token.getqqq')}</H2>
+          <H3 margin="0 0 15px">{t('token.getqqq.exchanges')}</H3>
+          <P margin="0 0 20px">{t('token.getqqq.exchanges.description')}</P>
           <Button
             margin="0 0 60px;"
             title={
@@ -39,15 +37,10 @@ const GetToken = () => {
             }
             uri="https://www.bitforex.com/cn/trade/spotTrading?commodityCode=QQQ&currencyCode=USDT"
           />
-          <H3 margin="0 0 15px">Community Bounty</H3>
-          <P margin="0 0 60px">
-            We provide a diversity of bonty for our community, such as
-            scholarship program, research development, testing volunteer,
-            college ambassadar, etc. This is our vision for the future, our
-            belief in the rise of you - on the community.
-          </P>
+          <H3 margin="0 0 15px">{t('token.getqqq.community')}</H3>
+          <P margin="0 0 60px">{t('token.getqqq.community.description')}</P>
 
-          <Button title="Community" uri="/community" />
+          <Button title={t('token.getqqq.community.link')} uri="/community" />
         </Col>
       </Content>
       <style jsx>{`
@@ -61,4 +54,4 @@ const GetToken = () => {
   );
 };
 
-export default GetToken;
+export default withNamespaces('token')(GetToken);

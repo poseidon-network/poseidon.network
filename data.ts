@@ -62,12 +62,12 @@ export const roadmap2018 = [
   },
   {
     time: 'Q2 - Q3 2018',
-    description: 'Core Development',
+    description: 'company.roadmap.2018q1q3.description',
     done: true,
   },
   {
     time: '2018 Q4',
-    description: 'Equity Round',
+    description: 'company.roadmap.2018q4.description',
     done: true,
   },
 ];
@@ -75,29 +75,29 @@ export const roadmap2018 = [
 export const roadmap2019 = [
   {
     time: '2019 Q1',
-    description: 'Equity Seed funding',
+    description: 'company.roadmap.2019q1.description',
     done: true,
   },
   {
     time: '2019 Q2-Q3',
     title: 'Public Sale on ACE',
-    description: 'Decentralized Qontroller Distributed Edges',
+    description: 'company.roadmap.2019q2q3.description',
     active: true,
   },
   {
     time: '2019 Q4',
-    description: 'Decentralized Qontroller Distributed Edges',
+    description: 'company.roadmap.2019q4.description',
   },
 ];
 
 export const roadmap2020 = [
   {
-    time: 'Q1',
-    description: '',
+    time: '2020 Q1',
+    description: 'company.roadmap.2020q1.description',
   },
   {
-    time: 'Q2',
-    description: '',
+    time: '2020 Q2 - Q4',
+    description: 'company.roadmap.2020q2q4.description',
   },
 ];
 
@@ -145,26 +145,22 @@ export const team = [
 export const techCoreTeam = [
   {
     name: 'Raymond',
-    title:
-      "Raymond has worked for a Belgium Company in Taiwan before joining Qinfra. As a R&D team lead, he plays a major role in joint projects among Taiwan, U.S. and Belgium with solid technical knowledge and good communication. Raymond holds a Master's Degree in Communication Engineering at Nation Tsing-Hua University.",
+    title: 'Raymond',
     avatar: '/static/avatar-raymond@2x.png',
   },
   {
     name: 'ST Wang',
-    title:
-      'Dr. Wang has over 20 years of professional experience in Machine Learning and Embedded Systems. He was previously responsible for designing various solutions and creating proprietary functions. Dr. Wang holds a Ph.D degree in Computer Scient and Information Engineering.',
+    title: 'ST Wang',
     avatar: '/static/avatar-st@2x.png',
   },
   {
     name: 'Wu Sung',
-    title:
-      'Wusung has over 16 years of professional experience in IT consultant service. He designs various enterprise solutions based on GCP and AWS. Wusung holds a Bachelor of Computer Science and Information Engineering.',
+    title: 'Wu Sung',
     avatar: '/static/avatar-wu@2x.png',
   },
   {
-    name: 'Ju Quyang',
-    title:
-      'PhD Candidate in Institute of Medical Science, Tzu Chi University, Hualien. Familiar with Embedded Linux Development. Familiar with GUI Auto Test Architecture and Implementation.',
+    name: 'Ju Ouyang',
+    title: 'Ju Ouyang',
     avatar: '/static/avatar-ju@2x.png',
   },
 ];
@@ -172,59 +168,57 @@ export const techCoreTeam = [
 export const advisors = [
   {
     name: 'Andy Tian',
-    title: 'CEO of Asia Innovation Group Founder of Gifto',
+    title: 'company.advisors.andy',
     avatar: '/static/avatar-andy@2x.png',
   },
   {
     name: 'Jason Hsu',
-    title: 'Crypto Congressman, Taiwan Government.',
+    title: 'company.advisors.JasonHsu',
     avatar: '/static/avatar-jason@2x.png',
   },
   {
     name: 'Celeste Kwon',
-    title: 'VP, ACE Exchange\nVP, InfiniteX',
+    title: 'company.advisors.CelesteKwon',
     avatar: '/static/avatar-celeste@2x.png',
   },
   {
     name: 'Yan Chean',
-    title: 'CEO & Co-founder of LONGHASH',
+    title: 'company.advisors.YanChean',
     avatar: '/static/avatar-yan@2x.png',
   },
   {
     name: 'Kenny Hsiao',
-    title: 'Founder of Badwater Capital',
+    title: 'company.advisors.KennyHsiao',
     avatar: '/static/avatar-kenny@2x.png',
   },
   {
     name: 'Daniel Yeh',
-    title: 'CEO of AIG Taiwan\nGM of Uplive',
+    title: 'company.advisors.DanielYeh',
     avatar: '/static/avatar-daniel@2x.png',
   },
   {
     name: 'David Pan',
-    title: 'GM of ACE Exchange\nCEO of ABA',
+    title: 'company.advisors.DavidPan',
     avatar: '/static/avatar-david@2x.png',
   },
   {
     name: 'Fenix Hsu',
-    title: 'NEM.TW CTO TRON competition first prize',
+    title: 'company.advisors.FenixHsu',
     avatar: '/static/avatar-fenix@2x.png',
   },
   {
     name: 'Posiedon Ho',
-    title: 'Founder of Outliers',
+    title: 'company.advisors.PosiedonHo',
     avatar: '/static/avatar-poseidon@2x.png',
   },
   {
     name: 'Jun Qian',
-    title:
-      'Principal Director,\nMicrosoft AI+ Research\nFounder, Amazon Machine Learning',
+    title: 'company.advisors.JunQian',
     avatar: '/static/avatar-jun@2x.png',
   },
   {
     name: 'Chen Zhuling',
-    title:
-      'MIT graduate\nConsulting veteran at Roland Berger. Advised multiple MNCs and governments.',
+    title: 'company.advisors.ChenZhuling',
     avatar: '/static/avatar-zhuling@2x.png',
   },
 ];

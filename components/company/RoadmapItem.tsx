@@ -1,6 +1,7 @@
 import P from '../P';
 import H3 from '../H3';
 import { styles } from '../../constants';
+import { withNamespaces } from '../../i18n';
 
 interface IProps {
   time: string;
@@ -42,7 +43,7 @@ const RoadmapItem = ({
           : active
           ? '#90cfbe'
           : 'transparent'};
-        height: ${init ? '100px' : '131px'};
+        height: ${init ? '100px' : '200px'};
       }
 
       .content {
@@ -146,4 +147,4 @@ const RoadmapItem = ({
   </div>
 );
 
-export default RoadmapItem;
+export default withNamespaces('company')(RoadmapItem);

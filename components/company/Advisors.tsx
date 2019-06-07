@@ -2,11 +2,11 @@ import Section from '../Section';
 import H2 from '../H2';
 import Person from '../home/Person';
 import Content from '../Content';
-
+import { withNamespaces } from '../../i18n';
 import { styles } from '../../constants';
 import { advisors } from '../../data';
 
-const Advisors = () => (
+const Advisors = ({ t }: ITrans) => (
   <Section padding="110px 0 120px;" bgColor={styles.primaryColor} color="#fff">
     <Content>
       <H2
@@ -16,14 +16,14 @@ const Advisors = () => (
         size="32px"
         center
       >
-        Advisors
+        {t('company.advisors')}
       </H2>
       <div className="advisors">
         {advisors.map(({ name, title, avatar }) => (
           <Person
             key={name}
             name={name}
-            title={title}
+            title={t(title)}
             avatar={avatar}
             backgroundColor={styles.primaryColor}
             nameColor={styles.dark}
@@ -58,4 +58,4 @@ const Advisors = () => (
   </Section>
 );
 
-export default Advisors;
+export default withNamespaces('company')(Advisors);

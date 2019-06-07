@@ -4,12 +4,13 @@ import Content from '../Content';
 import { styles } from '../../constants';
 import { team } from '../../data';
 import Person from '../home/Person';
+import { withNamespaces } from '../../i18n';
 
-const Team = () => (
+const Team = ({ t }: ITrans) => (
   <Section bgColor={styles.darkLight} color="#222633">
     <Content padding="0 0 120px">
       <H2 center id="team" margin="120px 0 100px" size="32px">
-        Meet The Team
+        {t('company.team')}
       </H2>
       <div className="members">
         {team.map(({ name, title, avatar }) => (
@@ -42,4 +43,4 @@ const Team = () => (
   </Section>
 );
 
-export default Team;
+export default withNamespaces('company')(Team);

@@ -9,8 +9,9 @@ import P from '../P';
 import Col from '../Col';
 import Button from '../Button';
 import SocialMediaList from './SocialMediaList';
+import { withNamespaces } from '../../i18n';
 
-const Header = () => {
+const Header = ({ t }: ITrans) => {
   return (
     <Section
       bgColor={styles.dark}
@@ -26,18 +27,17 @@ const Header = () => {
         </Col>
         <Col>
           <ScrollAnimation animateOnce animateIn="fadeInUp">
-            <H2 margin="0 0 15px"> Dip in our community</H2>
+            <H2 margin="0 0 15px">{t('community.title')}</H2>
             <P
               margin="0 0 60px"
               mStyle="text-align: left;"
               sStyle="text-align: left;"
             >
-              Cooperate with the most elite software develop team and the
-              biggest NAS manufacturer in the world.
+              {t('community.description')}
             </P>
             <Button
               margin="0"
-              title="Become an ambassador"
+              title={t('community.ambassador')}
               uri="https://www.surveycake.com/s/w48yR"
             />
           </ScrollAnimation>
@@ -71,4 +71,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default withNamespaces('community')(Header);

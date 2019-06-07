@@ -5,8 +5,9 @@ import H3 from '../H3';
 import P from '../P';
 import Col from '../Col';
 import { styles } from '../../constants';
+import { withNamespaces } from '../../i18n';
 
-const POD = () => {
+const POD = ({ t }: ITrans) => {
   return (
     <Section
       bgColor={styles.darkLight}
@@ -14,32 +15,22 @@ const POD = () => {
       padding="120px"
     >
       <H2 center margin="0 0 60px">
-        Proof of Delivery
+        {t('tech.pod')}
       </H2>
       <Content direction="row">
         <Col style="margin-right: 31px;" mStyle="margin-right: 0;">
           <img src="/static/img-proof-a@2x.png" />
           <H3 center margin="0 0 15px;">
-            A - Requesting Content from Worker Node
+            {t('tech.pod.a')}
           </H3>
-          <P mStyle="text-align: left;">
-            Alice is requesting content form worker Node C, before WN-C is
-            starting to deliver, it sends a signal to its neighboring SN-A, and
-            after the Content is delivered, Alice sends a confirmed signal to
-            SN-A, and we shall call it “Verified”.
-          </P>
+          <P mStyle="text-align: left;">{t('tech.pod.a.description')}</P>
         </Col>
         <Col>
           <img src="/static/img-proof-b@2x.png" />
           <H3 center margin="0 0 15px;">
-            B - Requesting Content from Super Node
+            {t('tech.pod.b')}
           </H3>
-          <P mStyle="text-align: left;">
-            Bob is requesting content from Super Node B. Since SN-Bcan not
-            verify itself, SN-B sends signal to neighboring SN-A, and after
-            content is delivered, Bob Sends a confirmed signal to SN-A, and we
-            shall call it “Verified”.
-          </P>
+          <P mStyle="text-align: left;">{t('tech.pod.b.description')}</P>
         </Col>
       </Content>
       <style jsx>{`
@@ -53,4 +44,4 @@ const POD = () => {
   );
 };
 
-export default POD;
+export default withNamespaces('technology')(POD);

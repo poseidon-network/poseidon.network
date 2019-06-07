@@ -4,16 +4,17 @@ import Content from '../Content';
 import { styles } from '../../constants';
 import { techCoreTeam } from '../../data';
 import Person from '../home/Person';
+import { withNamespaces } from '../../i18n';
 
-const TechCoreTeam = () => (
+const TechCoreTeam = ({ t }: ITrans) => (
   <Section bgColor={styles.darkLight} color="#222633">
     <Content padding="0 0 120px">
       <H2 center id="team" margin="0 0 100px" size="32px">
-        Tech Core Team
+        {t('company.techteam')}
       </H2>
       <div className="members">
         {techCoreTeam.map(({ name, title, avatar }) => (
-          <Person key={name} name={name} title={title} avatar={avatar} />
+          <Person key={name} name={name} title={t(title)} avatar={avatar} />
         ))}
       </div>
       <style jsx>{`
@@ -42,4 +43,4 @@ const TechCoreTeam = () => (
   </Section>
 );
 
-export default TechCoreTeam;
+export default withNamespaces('company')(TechCoreTeam);

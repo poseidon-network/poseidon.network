@@ -1,3 +1,4 @@
+import React from 'react';
 import Page from '../layout/Page';
 import Contact from '../components/Contact';
 import Intro from '../components/technology/Intro';
@@ -9,18 +10,28 @@ import Demo from '../components/technology/Demo';
 import Miner from '../components/technology/Miner';
 import Doc from '../components/technology/Doc';
 
-const Technology = () => ((
-  <Page title="Poseidon Network | Technology">
-    <Intro />
-    <Scenario />
-    <Dapp1 />
-    <Dapp2 />
-    <POD />
-    <Demo />
-    <Miner />
-    <Doc />
-    <Contact />
-  </Page>
-));
+class Technology extends React.Component {
+  static async getInitialProps() {
+    return {
+      namespacesRequired: ['common', 'nav', 'footer', 'technology'],
+    };
+  }
+
+  render() {
+    return (
+      <Page title="Poseidon Network | Technology">
+        <Intro />
+        <Scenario />
+        <Dapp1 />
+        <Dapp2 />
+        <POD />
+        <Demo />
+        <Miner />
+        <Doc />
+        <Contact />
+      </Page>
+    );
+  }
+}
 
 export default Technology;

@@ -7,9 +7,10 @@ import H2 from '../H2';
 import { styles } from '../../constants';
 import P from '../P';
 import Col from '../Col';
+import { withNamespaces } from '../../i18n';
 // import Button from '../Button';
 
-const Miner = () => {
+const Miner = ({ t }: ITrans) => {
   return (
     <Section
       bgColor={styles.darkLight}
@@ -22,13 +23,9 @@ const Miner = () => {
         </Col>
         <Col>
           <ScrollAnimation animateOnce animateIn="fadeInUp">
-            <H2 margin="0 0 15px">Become Miner</H2>
+            <H2 margin="0 0 15px">{t('community.miner')}</H2>
             <P margin="0 0 60px" mStyle="text-align: left;">
-              We provide a platform to everyone for sharing idel bandwidth. Once
-              you go out, you can provide the Wifi bandwidth, storage and other
-              resources to us, and we will give you the rewards you deserve. As
-              for those idel resources, we sold them to companies in need. Share
-              your idle resources like Airbnb or Uber.
+              {t('community.miner.description')}
             </P>
             {/* <Button title="Mobile App Coming soon" uri="" margin="0 0 16px" />
             <Button title="Desktop App Coming soon" uri="" margin="0 0 16px" />
@@ -46,4 +43,4 @@ const Miner = () => {
   );
 };
 
-export default Miner;
+export default withNamespaces('community')(Miner);

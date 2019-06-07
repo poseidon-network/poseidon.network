@@ -7,9 +7,11 @@ import P from '../P';
 import Col from '../Col';
 import H2 from '../H2';
 // import Button from '../Button';
+
+import { withNamespaces } from '../../i18n';
 import { styles } from '../../constants';
 
-const Miner = () => {
+const Miner = ({ t }: ITrans) => {
   return (
     <Section
       bgColor={styles.darkLight}
@@ -22,8 +24,8 @@ const Miner = () => {
             <img src="/static/tech-miner.svg" />
           </Col>
           <Col flex style="justify-content: center;">
-            <H2>Become Miner</H2>
-            <P mStyle="text-align: left;">{''}</P>
+            <H2>{t('tech.miner')}</H2>
+            <P mStyle="text-align: left;">{t('tech.miner.description')}</P>
           </Col>
         </Content>
         {/* <Content direction="row" padding="190px 0 0 0">
@@ -60,4 +62,4 @@ const Miner = () => {
   );
 };
 
-export default Miner;
+export default withNamespaces('technology')(Miner);

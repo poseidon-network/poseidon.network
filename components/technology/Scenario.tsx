@@ -8,8 +8,9 @@ import P from '../P';
 import Col from '../Col';
 
 import { styles } from '../../constants';
+import { withNamespaces } from '../../i18n';
 
-const Scenario = () => {
+const Scenario = ({ t }: ITrans) => {
   return (
     <Section
       bgColor={styles.dark}
@@ -19,25 +20,9 @@ const Scenario = () => {
       <Content direction="row">
         <Col style="margin-right: 30px" mStyle="margin-right: 0;">
           <ScrollAnimation animateOnce animateIn="fadeInUp">
-            <H2 margin="0 0 15px">
-              Poseidon Network Dapps
-              <br />
-              Scenario
-            </H2>
+            <H2 margin="0 0 15px">{t('tech.dapps.scenario')}</H2>
             <P mStyle="margin-bottom: 60px;">
-              The upper chart shows the application scenarios of Apps and dApps,
-              including live broadcast, video sharing, photo sharing, file
-              sharing, update file distribution, and future block chain
-              identity, Trust Execution Environment (TEE), etc., and unlimited
-              possibilities.
-              <br />
-              The middle chart displays smart contracts and algorithms. The
-              various algorithms maintain the efficiency of the POSEIDON NETWORK
-              and form the supervision layer of it.
-              <br />
-              The lower chart demonstrates the entire underlying architecture,
-              which includes QCDN, DSN, and Block chain. QCDN also contains
-              QEdge as the node and the Qontroller of the distributor.
+              {t('tech.dapps.scenario.description')}
             </P>
           </ScrollAnimation>
         </Col>
@@ -56,4 +41,4 @@ const Scenario = () => {
   );
 };
 
-export default Scenario;
+export default withNamespaces('technology')(Scenario);
