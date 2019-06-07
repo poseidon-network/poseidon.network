@@ -15,15 +15,15 @@ interface IProps extends ITrans {
   logout?: () => void;
 }
 
-const langStrMap = {
-  en: 'English',
-  'zh-TW': '繁體中文',
+const langIconClassMap = {
+  en: 'flag-icon-us',
+  'zh-TW': 'flag-icon-tw',
 };
 
 const Nav = ({ t, bgColor = '#222633' }: IProps) => {
   const [isLangVisiable, setLangVisiable] = useState<boolean>(false);
   const [, setMoreVisiable] = useState<boolean>(false);
-  const [langStr, setLangStr] = useState('');
+  const [langIconClass, setLangIconClass] = useState('');
 
   useEffect(() => {
     const hideAll = ({ target }: React.SyntheticEvent) => {
@@ -32,7 +32,7 @@ const Nav = ({ t, bgColor = '#222633' }: IProps) => {
         setMoreVisiable(false);
       }
     };
-    setLangStr((langStrMap as any)[i18n.language]);
+    setLangIconClass((langIconClassMap as any)[i18n.language]);
     document.body.addEventListener<any>('click', hideAll);
     return () => {
       document.body.removeEventListener<any>('click', hideAll);
@@ -44,7 +44,7 @@ const Nav = ({ t, bgColor = '#222633' }: IProps) => {
       i18n.changeLanguage(lang, err => {
         if (err) return console.log('something went wrong loading', err);
         localStorage.setItem('i18nextLng', lang);
-        setLangStr((langStrMap as any)[lang]);
+        setLangIconClass((langIconClassMap as any)[lang]);
       });
     };
   };
@@ -88,7 +88,10 @@ const Nav = ({ t, bgColor = '#222633' }: IProps) => {
             </li> */}
             <li className="item">
               <a onClick={() => setLangVisiable(!isLangVisiable)}>
-                {langStr}
+                <span
+                  style={{ marginRight: 8 }}
+                  className={`flag-icon ${langIconClass}`}
+                />
                 <img className="down-arrow" src="/static/down-arrow@2x.png" />
               </a>
               <ul className={`dropdown ${isLangVisiable ? 'show' : ''}`}>
