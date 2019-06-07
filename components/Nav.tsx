@@ -32,12 +32,14 @@ const Nav = ({ t, bgColor = '#222633' }: IProps) => {
         setMoreVisiable(false);
       }
     };
+    // fixme: remove later
+    console.log(i18n.language);
     setLangIconClass((langIconClassMap as any)[i18n.language]);
     document.body.addEventListener<any>('click', hideAll);
     return () => {
       document.body.removeEventListener<any>('click', hideAll);
     };
-  }, []);
+  }, [i18n.language]);
 
   const changeLanguage = (lang: string) => {
     return () => {

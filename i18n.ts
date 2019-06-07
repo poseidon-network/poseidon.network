@@ -11,6 +11,9 @@ const NextI18NextInstance = new NextI18Next({
   },
 });
 
+// For next export static
+NextI18NextInstance.i18n.languages = ['en', 'zh-TW'];
+
 export default NextI18NextInstance;
 
 export const {
