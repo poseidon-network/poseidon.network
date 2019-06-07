@@ -1,9 +1,10 @@
+import React from 'react';
 import H3 from '../H3';
 import { styles } from '../../constants';
 
 interface IPerson {
   name: string;
-  title: string;
+  title: string | React.ReactNode;
   avatar: string;
   backgroundColor?: string;
   nameColor?: string;
@@ -58,6 +59,7 @@ const Person = ({
         text-align: center;
         color: ${titleColor};
         margin: 0;
+        white-space: pre-line;
       }
 
       @media only screen and (max-width: 1024px) {

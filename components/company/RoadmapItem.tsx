@@ -60,6 +60,7 @@ const RoadmapItem = ({
           : styles.primaryColor};
         padding: 30px;
         width: 100%;
+        white-space: pre-line;
       }
 
       .container::before {

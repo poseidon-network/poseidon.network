@@ -21,6 +21,7 @@ const P = ({
         line-height: 1.88;
         letter-spacing: 0.3px;
         color: ${color};
+        white-space: pre-line;
         ${margin ? `margin: ${margin};` : ''}
         ${center ? 'text-align: center;' : ''}
         ${style}
