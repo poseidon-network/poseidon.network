@@ -129,6 +129,7 @@ const Nav = ({ t, bgColor = '#222633' }: IProps) => {
         a {
           cursor: pointer;
           color: ${styles.primaryColor};
+          transition: color 0.3s;
         }
 
         a:hover {

@@ -90,6 +90,7 @@ class Layout extends React.Component<IProps, { user: IUser }> {
             letter-spacing: normal;
             color: ${styles.lightColor};
             text-decoration: none;
+            transition: color 0.3s;
           }
 
           a:hover {

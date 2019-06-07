@@ -23,6 +23,10 @@ const SocialMedia = ({
     `}</style>
 
     <style global jsx>{`
+      .social-media-link {
+        transition: fill 0.3s;
+      }
+
       .social-media-link:hover .background {
         fill: ${styles.primaryColor};
       }

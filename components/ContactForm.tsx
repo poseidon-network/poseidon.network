@@ -130,6 +130,7 @@ class ContactForm extends React.Component<ITrans> {
             text-align: center;
             color: #222633;
             padding: 14px 30px;
+            transition: opacity 0.3s;
           }
 
           .submit:hover {

@@ -34,6 +34,7 @@ const Button = ({
           letter-spacing: 0.3px;
           text-align: center;
           color: #90cfbe;
+          transition: background-color 0.3s;
           ${margin ? `margin: ${margin};` : ''}
         }
 

@@ -7,10 +7,10 @@ import Team from '../components/company/Team';
 import TechTeam from '../components/company/TechTeam';
 import Advisors from '../components/company/Advisors';
 import Roadmap from '../components/company/Roadmap';
-
+import { withNamespaces } from '../i18n';
 import { styles } from '../constants';
 
-class Company extends React.Component {
+class Company extends React.Component<any> {
   static async getInitialProps() {
     return {
       namespacesRequired: ['common', 'nav', 'footer', 'community'],
@@ -19,7 +19,10 @@ class Company extends React.Component {
 
   render() {
     return (
-      <Page title="Poseidon Network | Company" navColor={styles.darkLight}>
+      <Page
+        title={`Poseidon Network | ${this.props.t('company.html.title')}`}
+        navColor={styles.darkLight}
+      >
         <Intro />
         <Vaule />
         <Team />
@@ -32,4 +35,4 @@ class Company extends React.Component {
   }
 }
 
-export default Company;
+export default withNamespaces('company')(Company);

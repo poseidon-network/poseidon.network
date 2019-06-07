@@ -5,10 +5,10 @@ import Intro from '../components/token/Intro';
 import UseCase from '../components/token/UseCase';
 import Work from '../components/token/Work';
 import GetToken from '../components/token/GetToken';
-
+import { withNamespaces } from '../i18n';
 import { styles } from '../constants';
 
-class Token extends React.Component {
+class Token extends React.Component<any> {
   static async getInitialProps() {
     return {
       namespacesRequired: ['common', 'nav', 'footer', 'token'],
@@ -17,7 +17,10 @@ class Token extends React.Component {
 
   render() {
     return (
-      <Page title="Poseidon Network | Token" navColor={styles.darkLight}>
+      <Page
+        title={`Poseidon Network | ${this.props.t('token.html.title')}`}
+        navColor={styles.darkLight}
+      >
         <Intro />
         <UseCase />
         <Work />
@@ -28,4 +31,4 @@ class Token extends React.Component {
   }
 }
 
-export default Token;
+export default withNamespaces('token')(Token);

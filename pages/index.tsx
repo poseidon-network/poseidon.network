@@ -11,8 +11,9 @@ import HelpCompany from '../components/home/HelpCompany';
 import SettingUp from '../components/home/SettingUp';
 import MediaList from '../components/home/MediaList';
 import { styles } from '../constants';
+import { withNamespaces } from '../i18n';
 
-class Homepage extends React.Component {
+class Homepage extends React.Component<any> {
   static async getInitialProps() {
     return {
       namespacesRequired: ['common', 'nav', 'footer', 'home'],
@@ -21,7 +22,10 @@ class Homepage extends React.Component {
 
   render() {
     return (
-      <Page navColor={styles.dark} title="Poseidon Network">
+      <Page
+        navColor={styles.dark}
+        title={`Poseidon Network | ${this.props.t('home.html.title')}`}
+      >
         <Header />
         <Intro />
         <Solutions />
@@ -36,4 +40,4 @@ class Homepage extends React.Component {
   }
 }
 
-export default Homepage;
+export default withNamespaces('home')(Homepage);

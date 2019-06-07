@@ -6,8 +6,9 @@ import Miner from '../components/community/Miner';
 import Embassador from '../components/community/Embassador';
 // import Blog from '../components/community/Blog';
 import { styles } from '../constants';
+import { withNamespaces } from '../i18n';
 
-class Community extends React.Component {
+class Community extends React.Component<any> {
   static async getInitialProps() {
     return {
       namespacesRequired: ['common', 'nav', 'footer', 'community'],
@@ -16,7 +17,10 @@ class Community extends React.Component {
 
   render() {
     return (
-      <Page title="Poseidon Network | Community" navColor={styles.dark}>
+      <Page
+        title={`Poseidon Network | ${this.props.t('community.html.title')}`}
+        navColor={styles.dark}
+      >
         <Header />
         <Miner />
         <Embassador />
@@ -27,4 +31,4 @@ class Community extends React.Component {
   }
 }
 
-export default Community;
+export default withNamespaces('community')(Community);

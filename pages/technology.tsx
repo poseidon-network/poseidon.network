@@ -9,8 +9,9 @@ import POD from '../components/technology/POD';
 import Demo from '../components/technology/Demo';
 import Miner from '../components/technology/Miner';
 import Doc from '../components/technology/Doc';
+import { withNamespaces } from '../i18n';
 
-class Technology extends React.Component {
+class Technology extends React.Component<any> {
   static async getInitialProps() {
     return {
       namespacesRequired: ['common', 'nav', 'footer', 'technology'],
@@ -19,7 +20,9 @@ class Technology extends React.Component {
 
   render() {
     return (
-      <Page title="Poseidon Network | Technology">
+      <Page
+        title={`Poseidon Network | ${this.props.t('technology.html.title')}`}
+      >
         <Intro />
         <Scenario />
         <Dapp1 />
@@ -34,4 +37,4 @@ class Technology extends React.Component {
   }
 }
 
-export default Technology;
+export default withNamespaces('technology')(Technology);
