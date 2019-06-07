@@ -58,7 +58,12 @@ class Layout extends React.Component<IProps, { user: IUser }> {
           <link
             rel="stylesheet"
             type="text/css"
-            href="/static/animate.min.css"
+            href="/static/css/animate.min.css"
+          />
+          <link
+            rel="stylesheet"
+            type="text/css"
+            href="/static/css/flag-icon-css/css/flag-icon.min.css"
           />
         </Head>
         <UserContext.Provider value={this.state.user}>

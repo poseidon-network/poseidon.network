@@ -15,9 +15,15 @@ interface IProps extends ITrans {
   logout?: () => void;
 }
 
+const langStrMap = {
+  en: 'English',
+  'zh-TW': '繁體中文',
+};
+
 const Nav = ({ t, bgColor = '#222633' }: IProps) => {
   const [isLangVisiable, setLangVisiable] = useState<boolean>(false);
   const [, setMoreVisiable] = useState<boolean>(false);
+  const [langStr, setLangStr] = useState('');
 
   useEffect(() => {
     const hideAll = ({ target }: React.SyntheticEvent) => {
@@ -26,7 +32,7 @@ const Nav = ({ t, bgColor = '#222633' }: IProps) => {
         setMoreVisiable(false);
       }
     };
-
+    setLangStr((langStrMap as any)[i18n.language]);
     document.body.addEventListener<any>('click', hideAll);
     return () => {
       document.body.removeEventListener<any>('click', hideAll);
@@ -38,6 +44,7 @@ const Nav = ({ t, bgColor = '#222633' }: IProps) => {
       i18n.changeLanguage(lang, err => {
         if (err) return console.log('something went wrong loading', err);
         localStorage.setItem('i18nextLng', lang);
+        setLangStr((langStrMap as any)[lang]);
       });
     };
   };
@@ -81,14 +88,21 @@ const Nav = ({ t, bgColor = '#222633' }: IProps) => {
             </li> */}
             <li className="item">
               <a onClick={() => setLangVisiable(!isLangVisiable)}>
-                {t('nav.lang')}
+                {langStr}
+                <img className="down-arrow" src="/static/down-arrow@2x.png" />
               </a>
               <ul className={`dropdown ${isLangVisiable ? 'show' : ''}`}>
                 <li>
-                  <a onClick={changeLanguage('en')}>English</a>
+                  <a onClick={changeLanguage('en')}>
+                    <span className="flag-icon flag-icon-us" />
+                    English
+                  </a>
                 </li>
                 <li>
-                  <a onClick={changeLanguage('zh-TW')}>繁體中文</a>
+                  <a onClick={changeLanguage('zh-TW')}>
+                    <span className="flag-icon flag-icon-tw" />
+                    繁體中文
+                  </a>
                 </li>
               </ul>
             </li>
@@ -166,6 +180,17 @@ const Nav = ({ t, bgColor = '#222633' }: IProps) => {
           justify-content: flex-end;
         }
 
+        .down-arrow {
+          width: 28px;
+          height: 28px;
+        }
+
+        .item a {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
         .navigation > ul {
           display: flex;
           flex-direction: row;
@@ -193,6 +218,10 @@ const Nav = ({ t, bgColor = '#222633' }: IProps) => {
           user-select: none;
         }
 
+        .flag-icon {
+          margin-right: 13px;
+        }
+
         .dropdown {
           display: flex;
           border-radius: 2px;
@@ -200,7 +229,7 @@ const Nav = ({ t, bgColor = '#222633' }: IProps) => {
           background-color: #d7f2ee;
           flex-direction: column;
           margin: 8px 10px 0;
-          padding: 15px 37px;
+          padding: 16.4px 15px 0;
           transform: translateX(-50px);
           position: absolute;
           transition: visibility 0.1s;
