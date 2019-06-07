@@ -9,7 +9,7 @@ import POD from '../components/technology/POD';
 import Demo from '../components/technology/Demo';
 import Miner from '../components/technology/Miner';
 import Doc from '../components/technology/Doc';
-import { withNamespaces } from '../i18n';
+import { withTranslation } from '../i18n';
 
 class Technology extends React.Component<any> {
   static async getInitialProps() {
@@ -37,4 +37,4 @@ class Technology extends React.Component<any> {
   }
 }
 
-export default withNamespaces('technology')(Technology);
+export default withTranslation('technology')(Technology);

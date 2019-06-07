@@ -4,7 +4,7 @@ import H2 from '../H2';
 import P from '../P';
 import Button from '../Button';
 import { styles } from '../../constants';
-import { withNamespaces } from '../../i18n';
+import { withTranslation } from '../../i18n';
 
 const Demo = ({ t }: ITrans) => {
   return (
@@ -20,4 +20,4 @@ const Demo = ({ t }: ITrans) => {
   );
 };
 
-export default withNamespaces('technology')(Demo);
+export default withTranslation('technology')(Demo);

@@ -3,7 +3,7 @@ import Content from '../Content';
 import H2 from '../H2';
 import { styles } from '../../constants';
 import { mediaList } from '../../data';
-import { withNamespaces } from '../../i18n';
+import { withTranslation } from '../../i18n';
 
 const MediaList = ({ t }: ITrans) => (
   <Section bgColor={styles.darkLight} color="#fff" padding="120px 0 158px">
@@ -36,4 +36,4 @@ const MediaList = ({ t }: ITrans) => (
   </Section>
 );
 
-export default withNamespaces('home')(MediaList);
+export default withTranslation('home')(MediaList);

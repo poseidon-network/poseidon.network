@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import CountUp from 'react-countup';
 import H3 from '../H3';
-import { withNamespaces } from '../../i18n';
+import { withTranslation } from '../../i18n';
 
 const SocialMeidia = ({
   name,
@@ -76,4 +76,4 @@ const SocialMeidia = ({
   </div>
 );
 
-export default withNamespaces('community')(SocialMeidia);
+export default withTranslation('community')(SocialMeidia);

@@ -7,7 +7,7 @@ import { roadmap2018, roadmap2019, roadmap2020 } from '../../data';
 import { styles } from '../../constants';
 import Col from '../Col';
 import H3 from '../H3';
-import { withNamespaces } from '../../i18n';
+import { withTranslation } from '../../i18n';
 
 const Roadmap = ({ t }: ITrans) => (
   <Section padding="120px" bgColor={styles.darkLight} color="#1c1c1d">
@@ -84,4 +84,4 @@ const Roadmap = ({ t }: ITrans) => (
   </Section>
 );
 
-export default withNamespaces('company')(Roadmap);
+export default withTranslation('company')(Roadmap);

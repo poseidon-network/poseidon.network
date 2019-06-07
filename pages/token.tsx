@@ -5,7 +5,7 @@ import Intro from '../components/token/Intro';
 import UseCase from '../components/token/UseCase';
 import Work from '../components/token/Work';
 import GetToken from '../components/token/GetToken';
-import { withNamespaces } from '../i18n';
+import { withTranslation } from '../i18n';
 import { styles } from '../constants';
 
 class Token extends React.Component<any> {
@@ -31,4 +31,4 @@ class Token extends React.Component<any> {
   }
 }
 
-export default withNamespaces('token')(Token);
+export default withTranslation('token')(Token);

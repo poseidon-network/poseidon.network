@@ -7,7 +7,7 @@ import H2 from '../H2';
 import { styles } from '../../constants';
 import P from '../P';
 import Col from '../Col';
-import { withNamespaces } from '../../i18n';
+import { withTranslation } from '../../i18n';
 // import Button from '../Button';
 
 const Miner = ({ t }: ITrans) => {
@@ -43,4 +43,4 @@ const Miner = ({ t }: ITrans) => {
   );
 };
 
-export default withNamespaces('community')(Miner);
+export default withTranslation('community')(Miner);

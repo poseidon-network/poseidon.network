@@ -2,7 +2,7 @@ import Section from './Section';
 import ContactForm from './ContactForm';
 import { styles } from '../constants';
 import H3 from './H3';
-import { withNamespaces } from '../i18n';
+import { withTranslation } from '../i18n';
 
 const Contact = ({ t }: ITrans) => (
   <Section padding="100px 0 50px" bgColor="#1d202b" color={styles.primaryColor}>
@@ -18,4 +18,4 @@ const Contact = ({ t }: ITrans) => (
   </Section>
 );
 
-export default withNamespaces('footer')(Contact);
+export default withTranslation('footer')(Contact);

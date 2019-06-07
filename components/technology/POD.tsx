@@ -5,7 +5,7 @@ import H3 from '../H3';
 import P from '../P';
 import Col from '../Col';
 import { styles } from '../../constants';
-import { withNamespaces } from '../../i18n';
+import { withTranslation } from '../../i18n';
 
 const POD = ({ t }: ITrans) => {
   return (
@@ -44,4 +44,4 @@ const POD = ({ t }: ITrans) => {
   );
 };
 
-export default withNamespaces('technology')(POD);
+export default withTranslation('technology')(POD);

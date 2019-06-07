@@ -1,6 +1,6 @@
 import SocialMedia from './SocialMedia';
 import { socialMediaList } from '../../data';
-import { withNamespaces } from '../../i18n';
+import { withTranslation } from '../../i18n';
 
 const SocialMediaList = () => (
   <>
@@ -16,4 +16,4 @@ const SocialMediaList = () => (
   </>
 );
 
-export default withNamespaces('community')(SocialMediaList);
+export default withTranslation('community')(SocialMediaList);

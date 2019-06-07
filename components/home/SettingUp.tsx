@@ -10,7 +10,7 @@ import P from '../P';
 import Col from '../Col';
 import Button from '../Button';
 import { styles } from '../../constants';
-import { withNamespaces } from '../../i18n';
+import { withTranslation } from '../../i18n';
 
 const SettingUp = ({ t }: ITrans) => (
   <Section bgColor={styles.darkLight} color="#fff" padding="120px 0">
@@ -61,4 +61,4 @@ const SettingUp = ({ t }: ITrans) => (
   </Section>
 );
 
-export default withNamespaces('home')(SettingUp);
+export default withTranslation('home')(SettingUp);

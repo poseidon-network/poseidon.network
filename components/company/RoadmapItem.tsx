@@ -1,7 +1,7 @@
 import P from '../P';
 import H3 from '../H3';
 import { styles } from '../../constants';
-import { withNamespaces } from '../../i18n';
+import { withTranslation } from '../../i18n';
 
 interface IProps {
   time: string;
@@ -147,4 +147,4 @@ const RoadmapItem = ({
   </div>
 );
 
-export default withNamespaces('company')(RoadmapItem);
+export default withTranslation('company')(RoadmapItem);

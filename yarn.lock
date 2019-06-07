@@ -3075,11 +3075,6 @@ find-up@^3.0.0:
   dependencies:
     locate-path "^3.0.0"
 
-flag-icon-css@^3.3.0:
-  version "3.3.0"
-  resolved "https://registry.yarnpkg.com/flag-icon-css/-/flag-icon-css-3.3.0.tgz#7772461e4480d3d86da5962f02120a2825688433"
-  integrity sha512-u5lCGVExrJJRykNGd//ZrBU5Bkt0LTZJFSuG+Az/pwcHgzDeFwomwFbsgVtI1aJd6ysyHsx+5UGrA+nhSGd4yw==
-
 flatmap@0.0.3:
   version "0.0.3"
   resolved "https://registry.yarnpkg.com/flatmap/-/flatmap-0.0.3.tgz#1f18a4d938152d495965f9c958d923ab2dd669b4"
@@ -3440,13 +3435,6 @@ hoist-non-react-statics@2.5.5:
   version "2.5.5"
   resolved "https://registry.yarnpkg.com/hoist-non-react-statics/-/hoist-non-react-statics-2.5.5.tgz#c5903cf409c0dfd908f388e619d86b9c1174cb47"
   integrity sha512-rqcy4pJo55FTTLWt+bU8ukscqHeE/e9KWvsOW2b/a3afxQZhwkQdT1rPPCJ0rYXdj4vNcasY8zHTH+jF/qStxw==
-
-hoist-non-react-statics@3.2.1:
-  version "3.2.1"
-  resolved "https://registry.yarnpkg.com/hoist-non-react-statics/-/hoist-non-react-statics-3.2.1.tgz#c09c0555c84b38a7ede6912b61efddafd6e75e1e"
-  integrity sha512-TFsu3TV3YLY+zFTZDrN8L2DTFanObwmBLpWvJs1qfUuEQ5bTAdFcwfx2T/bsCXfM9QHSLvjfP+nihEl0yvozxw==
-  dependencies:
-    react-is "^16.3.2"
 
 hoist-non-react-statics@^3.0.0, hoist-non-react-statics@^3.2.0:
   version "3.3.0"
@@ -4929,10 +4917,10 @@ neo-async@^2.5.0:
   resolved "https://registry.yarnpkg.com/neo-async/-/neo-async-2.6.0.tgz#b9d15e4d71c6762908654b5183ed38b753340835"
   integrity sha512-MFh0d/Wa7vkKO3Y3LlacqAEeHK0mckVqzDieUKTT+KGxi+zIpeVsFxymkIiRpbpDziHc290Xr9A1O4Om7otoRA==
 
-next-i18next@^0.40.1:
-  version "0.40.1"
-  resolved "https://registry.yarnpkg.com/next-i18next/-/next-i18next-0.40.1.tgz#7fa2598e65df358b1d9d425a5ffeb46c5c4fe027"
-  integrity sha512-xhkL/eOZLBhd3Ij+BsNHKMJxgQFTH2rQlJgbdnVq2Eph9Fr1P5Vki2XP3a5G23eT5EmCeWRMFSvk4bHppU9nFw==
+next-i18next@^0.41.0:
+  version "0.41.0"
+  resolved "https://registry.yarnpkg.com/next-i18next/-/next-i18next-0.41.0.tgz#f93787787cecc5fe7b61b2dd8efd40657418ac35"
+  integrity sha512-BymsOkVgfG338D30C1SdWVdOrk+ZAbDINfEfc+jz8W1pQiTMz5PeKsygWMjr+TbMxczrowMEmhwDbmuuKWw4Sw==
   dependencies:
     detect-node "^2.0.4"
     hoist-non-react-statics "^3.2.0"
@@ -4943,7 +4931,7 @@ next-i18next@^0.40.1:
     i18next-xhr-backend "^2.0.0"
     path-match "^1.2.4"
     prop-types "^15.6.2"
-    react-i18next "9.0.10"
+    react-i18next "^10.9.0"
     url "^0.11.0"
 
 next@^7.0.2:
@@ -5923,13 +5911,12 @@ react-facebook-login@^4.1.1:
   resolved "https://registry.yarnpkg.com/react-facebook-login/-/react-facebook-login-4.1.1.tgz#005121236a6ac0dee02099976fb1a3265f9d633e"
   integrity sha512-COnHEHlYGTKipz4963safFAK9PaNTcCiXfPXMS/yxo8El+/AJL5ye8kMJf23lKSSGGPgqFQuInskIHVqGqTvSw==
 
-react-i18next@9.0.10:
-  version "9.0.10"
-  resolved "https://registry.yarnpkg.com/react-i18next/-/react-i18next-9.0.10.tgz#ba596b98e8dd06dbb805cf720147459ad55a3ada"
-  integrity sha512-xpeCWNut7ylQLs3Qqyo7dT13kgZbML1CdftbdnswLCv0RbRT16bRP16ma59iLe1KHIbn92VJo0Q8LSKYoXVNvg==
+react-i18next@^10.9.0:
+  version "10.11.0"
+  resolved "https://registry.yarnpkg.com/react-i18next/-/react-i18next-10.11.0.tgz#a6854e556d3aff9f5f161b4aa871d43cfff6bd9b"
+  integrity sha512-jmxLZK8mf+KxG3RUIiu/COperTq1c7+iHNsna7LODOYEYaoj6EXFuchOytnB80GoUOb0JC1csT37Zp+U5nPQqQ==
   dependencies:
     "@babel/runtime" "^7.3.1"
-    hoist-non-react-statics "3.2.1"
     html-parse-stringify2 "2.0.1"
 
 react-icons@^3.2.2:
@@ -5944,11 +5931,6 @@ react-inlinesvg@^0.8.4:
   dependencies:
     httpplease "^0.16.4"
     once "^1.4.0"
-
-react-is@^16.3.2:
-  version "16.8.6"
-  resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.8.6.tgz#5bbc1e2d29141c9fbdfed456343fe2bc430a6a16"
-  integrity sha512-aUk3bHfZ2bRSVFFbbeVS4i+lNPZr3/WM5jT2J5omUVV1zzcs1nAaf3l51ctA5FFvCRbhrH0bdAsRRQddFJZPtA==
 
 react-is@^16.6.0:
   version "16.6.3"

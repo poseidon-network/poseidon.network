@@ -9,7 +9,7 @@ import { styles } from '../../constants';
 import P from '../P';
 import Col from '../Col';
 import Button from '../Button';
-import { withNamespaces } from '../../i18n';
+import { withTranslation } from '../../i18n';
 
 const Embassador = ({ t }: ITrans) => {
   return (
@@ -92,4 +92,4 @@ const Embassador = ({ t }: ITrans) => {
   );
 };
 
-export default withNamespaces('community')(Embassador);
+export default withTranslation('community')(Embassador);

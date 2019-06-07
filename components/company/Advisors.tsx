@@ -2,7 +2,7 @@ import Section from '../Section';
 import H2 from '../H2';
 import Person from '../home/Person';
 import Content from '../Content';
-import { withNamespaces } from '../../i18n';
+import { withTranslation } from '../../i18n';
 import { styles } from '../../constants';
 import { advisors } from '../../data';
 
@@ -58,4 +58,4 @@ const Advisors = ({ t }: ITrans) => (
   </Section>
 );
 
-export default withNamespaces('company')(Advisors);
+export default withTranslation('company')(Advisors);

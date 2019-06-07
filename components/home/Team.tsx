@@ -5,7 +5,7 @@ import Person from './Person';
 import Content from '../Content';
 import { styles } from '../../constants';
 import { team } from '../../data';
-import { withNamespaces } from '../../i18n';
+import { withTranslation } from '../../i18n';
 
 const defaultCurrentAvatarIndex = 3;
 let myReq: any;
@@ -98,4 +98,4 @@ const Team = ({ t }: ITrans) => {
   );
 };
 
-export default withNamespaces('home')(Team);
+export default withTranslation('home')(Team);

@@ -3,7 +3,7 @@ import H4 from './H4';
 import P from './P';
 import Content from './Content';
 import FooterLinks from './FooterLinks';
-import { withNamespaces } from '../i18n';
+import { withTranslation } from '../i18n';
 import { footer } from '../data';
 
 const Footer = ({ t }: ITrans) => (
@@ -79,4 +79,4 @@ const Footer = ({ t }: ITrans) => (
   </Section>
 );
 
-export default withNamespaces('footer')(Footer);
+export default withTranslation('footer')(Footer);

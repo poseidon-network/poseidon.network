@@ -6,7 +6,7 @@ import Content from '../Content';
 import H2 from '../H2';
 import P from '../P';
 import Col from '../Col';
-import { withNamespaces } from '../../i18n';
+import { withTranslation } from '../../i18n';
 import { styles } from '../../constants';
 
 const Intro = ({ t }: ITrans) => {
@@ -44,4 +44,4 @@ const Intro = ({ t }: ITrans) => {
   );
 };
 
-export default withNamespaces('company')(Intro);
+export default withTranslation('company')(Intro);

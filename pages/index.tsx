@@ -11,7 +11,7 @@ import HelpCompany from '../components/home/HelpCompany';
 import SettingUp from '../components/home/SettingUp';
 import MediaList from '../components/home/MediaList';
 import { styles } from '../constants';
-import { withNamespaces } from '../i18n';
+import { withTranslation } from '../i18n';
 
 class Homepage extends React.Component<any> {
   static async getInitialProps() {
@@ -40,4 +40,4 @@ class Homepage extends React.Component<any> {
   }
 }
 
-export default withNamespaces('home')(Homepage);
+export default withTranslation('home')(Homepage);

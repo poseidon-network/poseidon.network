@@ -8,7 +8,7 @@ import Col from '../Col';
 import H2 from '../H2';
 // import Button from '../Button';
 
-import { withNamespaces } from '../../i18n';
+import { withTranslation } from '../../i18n';
 import { styles } from '../../constants';
 
 const Miner = ({ t }: ITrans) => {
@@ -62,4 +62,4 @@ const Miner = ({ t }: ITrans) => {
   );
 };
 
-export default withNamespaces('technology')(Miner);
+export default withTranslation('technology')(Miner);

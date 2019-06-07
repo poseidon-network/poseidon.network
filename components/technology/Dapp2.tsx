@@ -5,7 +5,7 @@ import H3 from '../H3';
 import P from '../P';
 
 import { styles } from '../../constants';
-import { withNamespaces } from '../../i18n';
+import { withTranslation } from '../../i18n';
 
 const Dapp2 = ({ t }: ITrans) => {
   return (
@@ -71,4 +71,4 @@ const Dapp2 = ({ t }: ITrans) => {
   );
 };
 
-export default withNamespaces('technology')(Dapp2);
+export default withTranslation('technology')(Dapp2);

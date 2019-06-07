@@ -5,7 +5,7 @@ import Content from '../Content';
 
 import { styles } from '../../constants';
 import { partners } from '../../data';
-import { withNamespaces } from '../../i18n';
+import { withTranslation } from '../../i18n';
 
 const Investors = ({ t }: ITrans) => (
   <Section padding="110px 0 120px" bgColor={styles.dark} color="#fff">
@@ -52,4 +52,4 @@ const Investors = ({ t }: ITrans) => (
   </Section>
 );
 
-export default withNamespaces('home')(Investors);
+export default withTranslation('home')(Investors);

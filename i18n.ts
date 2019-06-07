@@ -7,6 +7,7 @@ const NextI18NextInstance = new NextI18Next({
   keySeparator: false,
   react: {
     wait: true,
+    useSuspense: false,
   },
 });
 
@@ -14,7 +15,7 @@ export default NextI18NextInstance;
 
 export const {
   appWithTranslation,
-  withNamespaces,
+  withTranslation,
   Link,
   i18n,
 } = NextI18NextInstance;

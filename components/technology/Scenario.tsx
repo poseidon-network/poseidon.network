@@ -8,7 +8,7 @@ import P from '../P';
 import Col from '../Col';
 
 import { styles } from '../../constants';
-import { withNamespaces } from '../../i18n';
+import { withTranslation } from '../../i18n';
 
 const Scenario = ({ t }: ITrans) => {
   return (
@@ -41,4 +41,4 @@ const Scenario = ({ t }: ITrans) => {
   );
 };
 
-export default withNamespaces('technology')(Scenario);
+export default withTranslation('technology')(Scenario);

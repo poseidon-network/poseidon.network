@@ -6,7 +6,7 @@ import Miner from '../components/community/Miner';
 import Embassador from '../components/community/Embassador';
 // import Blog from '../components/community/Blog';
 import { styles } from '../constants';
-import { withNamespaces } from '../i18n';
+import { withTranslation } from '../i18n';
 
 class Community extends React.Component<any> {
   static async getInitialProps() {
@@ -31,4 +31,4 @@ class Community extends React.Component<any> {
   }
 }
 
-export default withNamespaces('community')(Community);
+export default withTranslation('community')(Community);

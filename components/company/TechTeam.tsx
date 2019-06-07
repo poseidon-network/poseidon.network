@@ -4,7 +4,7 @@ import Content from '../Content';
 import { styles } from '../../constants';
 import { techCoreTeam } from '../../data';
 import Person from '../home/Person';
-import { withNamespaces } from '../../i18n';
+import { withTranslation } from '../../i18n';
 
 const TechCoreTeam = ({ t }: ITrans) => (
   <Section bgColor={styles.darkLight} color="#222633">
@@ -43,4 +43,4 @@ const TechCoreTeam = ({ t }: ITrans) => (
   </Section>
 );
 
-export default withNamespaces('company')(TechCoreTeam);
+export default withTranslation('company')(TechCoreTeam);

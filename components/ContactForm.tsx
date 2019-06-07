@@ -1,5 +1,5 @@
 import React from 'react';
-import { withNamespaces } from '../i18n';
+import { withTranslation } from '../i18n';
 
 class ContactForm extends React.Component<ITrans> {
   state = {
@@ -190,4 +190,4 @@ class ContactForm extends React.Component<ITrans> {
   }
 }
 
-export default withNamespaces('footer')(ContactForm);
+export default withTranslation('footer')(ContactForm);

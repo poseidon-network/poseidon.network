@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 
 import Section from './Section';
-import { i18n, withNamespaces } from '../i18n';
+import { i18n, withTranslation } from '../i18n';
 import { styles } from '../constants';
 
 interface IProps extends ITrans {
@@ -383,4 +383,4 @@ const Nav = ({ t, bgColor = '#222633' }: IProps) => {
   );
 };
 
-export default withNamespaces('nav')(Nav);
+export default withTranslation('nav')(Nav);

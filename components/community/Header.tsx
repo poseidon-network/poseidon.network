@@ -9,7 +9,7 @@ import P from '../P';
 import Col from '../Col';
 import Button from '../Button';
 import SocialMediaList from './SocialMediaList';
-import { withNamespaces } from '../../i18n';
+import { withTranslation } from '../../i18n';
 
 const Header = ({ t }: ITrans) => {
   return (
@@ -71,4 +71,4 @@ const Header = ({ t }: ITrans) => {
   );
 };
 
-export default withNamespaces('community')(Header);
+export default withTranslation('community')(Header);

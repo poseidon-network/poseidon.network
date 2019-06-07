@@ -4,7 +4,7 @@ import { styles } from '../../constants';
 import SolutionItem from './SolutionItem';
 import H2 from '../H2';
 import { solutions } from '../../data';
-import { withNamespaces } from '../../i18n';
+import { withTranslation } from '../../i18n';
 
 const Solutions = ({ t }: ITrans) => (
   <Section padding="120px 0" bgColor={styles.dark} color={styles.primaryColor}>
@@ -33,4 +33,4 @@ const Solutions = ({ t }: ITrans) => (
   </Section>
 );
 
-export default withNamespaces('home')(Solutions);
+export default withTranslation('home')(Solutions);

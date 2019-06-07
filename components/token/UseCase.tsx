@@ -4,7 +4,7 @@ import H2 from '../H2';
 import H3 from '../H3';
 import P from '../P';
 import { styles } from '../../constants';
-import { withNamespaces } from '../../i18n';
+import { withTranslation } from '../../i18n';
 
 const UseCase = ({ t }: ITrans) => {
   return (
@@ -35,4 +35,4 @@ const UseCase = ({ t }: ITrans) => {
   );
 };
 
-export default withNamespaces('token')(UseCase);
+export default withTranslation('token')(UseCase);

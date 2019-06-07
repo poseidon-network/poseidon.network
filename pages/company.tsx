@@ -7,13 +7,13 @@ import Team from '../components/company/Team';
 import TechTeam from '../components/company/TechTeam';
 import Advisors from '../components/company/Advisors';
 import Roadmap from '../components/company/Roadmap';
-import { withNamespaces } from '../i18n';
+import { withTranslation } from '../i18n';
 import { styles } from '../constants';
 
 class Company extends React.Component<any> {
   static async getInitialProps() {
     return {
-      namespacesRequired: ['common', 'nav', 'footer', 'community'],
+      namespacesRequired: ['common', 'nav', 'footer', 'company'],
     };
   }
 
@@ -35,4 +35,4 @@ class Company extends React.Component<any> {
   }
 }
 
-export default withNamespaces('company')(Company);
+export default withTranslation('company')(Company);

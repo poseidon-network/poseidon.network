@@ -1,6 +1,6 @@
 import H4 from './H4';
 import { styles } from '../constants';
-import { withNamespaces } from '../i18n';
+import { withTranslation } from '../i18n';
 
 interface IProps extends ITrans {
   title: string;
@@ -57,4 +57,4 @@ const FooterLinks = ({ title, links, t }: IProps) => {
   );
 };
 
-export default withNamespaces('footer')(FooterLinks);
+export default withTranslation('footer')(FooterLinks);

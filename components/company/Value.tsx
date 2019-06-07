@@ -3,7 +3,7 @@ import Content from '../Content';
 import H2 from '../H2';
 import H3 from '../H3';
 import P from '../P';
-import { withNamespaces } from '../../i18n';
+import { withTranslation } from '../../i18n';
 import { styles } from '../../constants';
 
 const Vaule = ({ t }: ITrans) => {
@@ -66,4 +66,4 @@ const Vaule = ({ t }: ITrans) => {
   );
 };
 
-export default withNamespaces('company')(Vaule);
+export default withTranslation('company')(Vaule);

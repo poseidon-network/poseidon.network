@@ -6,7 +6,7 @@ import P from '../P';
 import Col from '../Col';
 import Button from '../Button';
 import { styles } from '../../constants';
-import { withNamespaces } from '../../i18n';
+import { withTranslation } from '../../i18n';
 
 const GetToken = ({ t }: ITrans) => {
   return (
@@ -54,4 +54,4 @@ const GetToken = ({ t }: ITrans) => {
   );
 };
 
-export default withNamespaces('token')(GetToken);
+export default withTranslation('token')(GetToken);

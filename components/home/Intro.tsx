@@ -9,7 +9,7 @@ import MoreLink from '../MoreLink';
 import Col from '../Col';
 import { styles } from '../../constants';
 import { introLogoList } from '../../data';
-import { withNamespaces } from '../../i18n';
+import { withTranslation } from '../../i18n';
 
 const Intro = ({ t }: ITrans) => (
   <Section bgColor={styles.darkLight} color="#fff" padding="149px 0 100px">
@@ -85,4 +85,4 @@ const Intro = ({ t }: ITrans) => (
   </Section>
 );
 
-export default withNamespaces('home')(Intro);
+export default withTranslation('home')(Intro);

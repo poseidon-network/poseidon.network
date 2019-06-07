@@ -4,7 +4,7 @@ import H2 from '../H2';
 import P from '../P';
 import MoreLink from '../MoreLink';
 import { styles } from '../../constants';
-import { withNamespaces } from '../../i18n';
+import { withTranslation } from '../../i18n';
 
 const Doc = ({ t }: ITrans) => {
   return (
@@ -130,4 +130,4 @@ const Doc = ({ t }: ITrans) => {
   );
 };
 
-export default withNamespaces('technology')(Doc);
+export default withTranslation('technology')(Doc);

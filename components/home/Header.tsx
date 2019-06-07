@@ -13,7 +13,7 @@ import Col from '../Col';
 import Button from '../Button';
 import P from '../P';
 
-import { withNamespaces } from '../../i18n';
+import { withTranslation } from '../../i18n';
 import { footer } from '../../data';
 import { styles } from '../../constants';
 
@@ -148,4 +148,4 @@ const Header = ({ t }: ITrans) => {
   );
 };
 
-export default withNamespaces('home')(Header);
+export default withTranslation('home')(Header);

@@ -6,7 +6,7 @@ import P from '../P';
 import H3 from '../H3';
 import Button from '../Button';
 import Col from '../Col';
-import { withNamespaces } from '../../i18n';
+import { withTranslation } from '../../i18n';
 
 const Blog = ({ t }: ITrans) => {
   return (
@@ -82,4 +82,4 @@ const Blog = ({ t }: ITrans) => {
   );
 };
 
-export default withNamespaces('community')(Blog);
+export default withTranslation('community')(Blog);
