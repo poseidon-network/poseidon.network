@@ -262,7 +262,7 @@ export const socialMediaList = [
 
 export const footer = {
   socialMediaList,
-  gettingStarted: [{ title: 'Demo', uri: '/demo' }],
+  gettingStarted: [{ title: 'footer.gettingstart.demo', uri: '/demo' }],
   communities: [
     { title: 'Twitter', uri: 'https://twitter.com/QQQtoken' },
     { title: 'Facebook', uri: 'https://www.facebook.com/psd.token/' },
