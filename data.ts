@@ -102,33 +102,44 @@ export const roadmap2020 = [
 ];
 
 export const team = [
-  { name: 'Light Lin', title: 'CEO', avatar: '/static/avatar-light@2x.png' },
+  {
+    name: 'Light Lin',
+    title: 'CEO',
+    avatar: '/static/avatar-light@2x.png',
+    linkedin: 'https://www.linkedin.com/in/lightlin?originalSubdomain=tw',
+  },
   { name: 'Mike Lin', title: 'COO', avatar: '/static/avatar-mike@2x.png' },
   { name: 'Qing Wang', title: 'CTO', avatar: '/static/avatar-qing@2x.png' },
   {
     name: 'Reno Duh',
     title: 'Chief Analyst',
     avatar: '/static/avatar-reno@2x.png',
+    linkedin: 'https://www.linkedin.com/in/renoduh/',
   },
   {
     name: 'Bee Li',
     title: 'Chief Design Officer ',
     avatar: '/static/avatar-bee@2x.png',
+    linkedin: 'https://www.linkedin.com/in/jiajhenli/',
   },
   {
     name: 'Bill Sun',
     title: 'Product Manager ',
     avatar: '/static/avatar-bill@2x.png',
+    linkedin:
+      'https://www.linkedin.com/in/%E5%81%89%E5%80%AB-%E5%AD%AB-59ba20151/',
   },
   {
     name: 'Chi-Hsuan Huang',
     title: 'Blockchain Engineer',
     avatar: '/static/avatar-chihsuan@2x.png',
+    linkedin: 'https://www.linkedin.com/in/chihsuanhuang/',
   },
   {
     name: 'Jocelyn Chu',
     title: 'Marketing Manager',
     avatar: '/static/avatar-jocelyn@2x.png',
+    linkedin: 'https://www.linkedin.com/in/jocelyn-zhu-aa9144176',
   },
   {
     name: 'Vita Tsui',
@@ -139,6 +150,8 @@ export const team = [
     name: 'Join Us',
     title: 'Contact us for a best position ',
     avatar: '/static/avatar-ps@2x.png',
+    avatarLink: 'https://www.cakeresume.com/companies/poseidon-network',
+    linkedin: 'https://tw.linkedin.com/company/poseidon-network',
   },
 ];
 

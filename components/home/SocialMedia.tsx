@@ -12,23 +12,13 @@ const SocialMedia = ({
   alt: string;
 }) => (
   <a href={link}>
-    <SVG src={imgUri} className="social-media-link">
+    <SVG src={imgUri} className="icon-link">
       <img src={imgUri} alt={alt} />
     </SVG>
     <style jsx>{`
       img {
         width: 24px;
         margin: 0;
-      }
-    `}</style>
-
-    <style global jsx>{`
-      .social-media-link {
-        transition: fill 0.3s;
-      }
-
-      .social-media-link:hover .background {
-        fill: ${styles.primaryColor};
       }
     `}</style>
   </a>

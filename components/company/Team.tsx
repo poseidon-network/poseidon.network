@@ -13,8 +13,8 @@ const Team = ({ t }: ITrans) => (
         {t('company.team')}
       </H2>
       <div className="members">
-        {team.map(({ name, title, avatar }) => (
-          <Person key={name} name={name} title={title} avatar={avatar} />
+        {team.map(props => (
+          <Person key={props.name} {...props} />
         ))}
       </div>
       <style jsx>{`

@@ -67,6 +67,14 @@ class Layout extends React.Component<IProps, { user: IUser }> {
             color: ${styles.primaryColor};
           }
 
+          .icon-link .background {
+            transition: fill 0.3s;
+          }
+
+          .icon-link:hover .background {
+            fill: ${styles.primaryColor};
+          }
+
           * {
             -webkit-box-sizing: border-box;
             -moz-box-sizing: border-box;
