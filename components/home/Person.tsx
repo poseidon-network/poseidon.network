@@ -10,6 +10,7 @@ interface IPerson {
   title: string | React.ReactNode;
   avatar: string;
   linkedin?: string;
+  twitter?: string;
   avatarLink?: string;
   backgroundColor?: string;
   nameColor?: string;
@@ -22,6 +23,7 @@ const Person = ({
   avatar,
   avatarLink,
   linkedin,
+  twitter,
   nameColor = styles.lightColor,
   titleColor = styles.lightColor,
   backgroundColor = styles.dark,
@@ -37,13 +39,22 @@ const Person = ({
       )}
     </div>
     <div className="content">
-      {linkedin && (
-        <a className="linkedin" href={linkedin} target="_open">
-          <SVG src="/static/linkedin.svg" className="icon-link">
-            <img src="/static/linkedin.svg" />
-          </SVG>
-        </a>
-      )}
+      <div className="social-links">
+        {linkedin && (
+          <a className="social-link" href={linkedin} target="_open">
+            <SVG src="/static/linkedin.svg" className="icon-link">
+              <img src="/static/linkedin.svg" />
+            </SVG>
+          </a>
+        )}
+        {twitter && (
+          <a className="social-link" href={twitter} target="_open">
+            <SVG src="/static/twitter.svg" className="icon-link">
+              <img src="/static/twitter.svg" />
+            </SVG>
+          </a>
+        )}
+      </div>
       <H3 color={nameColor} margin="0 0 10px">
         {name}
       </H3>
@@ -82,9 +93,16 @@ const Person = ({
         white-space: pre-line;
       }
 
-      .linkedin {
-        margin-bottom: 15px;
-        display: block;
+      .social-links {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+      }
+
+      .social-link {
+        margin: 0 7.5px 15px;
+        display: inline-block;
       }
 
       .clickable-avatar {

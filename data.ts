@@ -121,6 +121,7 @@ export const team = [
     title: 'Chief Design Officer ',
     avatar: '/static/avatar-bee@2x.png',
     linkedin: 'https://www.linkedin.com/in/jiajhenli/',
+    twitter: 'https://twitter.com/jiajhenbee ',
   },
   {
     name: 'Bill Sun',

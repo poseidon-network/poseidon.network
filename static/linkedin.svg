@@ -8,7 +8,7 @@
         </mask>
         <use class="background" fill="#4100FF" xlink:href="#a"/>
         <g class="background" fill="#D7F2EE" mask="url(#b)">
-            <path d="M0 0h28v28H0z"/>
+            <path d="M0 0h24v24H0z"/>
         </g>
     </g>
 </svg>
