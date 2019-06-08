@@ -30,6 +30,8 @@ const Work = ({ t }: ITrans) => {
         >
           <ScrollAnimation animateOnce animateIn="fadeInUp">
             <H2 margin="0 0 20px">{t('token.howwork')}</H2>
+          </ScrollAnimation>
+          <ScrollAnimation animateOnce animateIn="fadeInUp" delay={400}>
             <P margin="0">{t('token.howwork.description')}</P>
           </ScrollAnimation>
         </Col>

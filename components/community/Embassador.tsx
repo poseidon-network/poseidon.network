@@ -27,33 +27,37 @@ const Embassador = ({ t }: ITrans) => {
           mStyle="margin-right: 0;"
           sStyle="margin-bottom: 60px;"
         >
-          <ScrollAnimation animateOnce animateIn="fadeInUp">
-            <H3 mStyle="text-align: left;" margin="0 0 15px">
-              {t('community.ambassador.title')}
-            </H3>
-            <P
-              margin="0"
-              mStyle="text-align: left;"
-              sStyle="margin-bottom: 10px; text-align: left;"
-            >
-              {t('community.ambassador.description')}
-            </P>
-          </ScrollAnimation>
+          <H3 mStyle="text-align: left;" margin="0 0 15px">
+            {t('community.ambassador.title')}
+          </H3>
+          <P
+            margin="0"
+            mStyle="text-align: left;"
+            sStyle="margin-bottom: 10px; text-align: left;"
+          >
+            {t('community.ambassador.description')}
+          </P>
         </Col>
         <Col style="width: 100%;">
           <ul>
-            <li>
-              <img className="check" src="/static/check.svg" />
-              <H3>{t('community.ambassador.related1')}</H3>
-            </li>
-            <li>
-              <img className="check" src="/static/check.svg" />
-              <H3>{t('community.ambassador.related2')}</H3>
-            </li>
-            <li>
-              <img className="check" src="/static/check.svg" />
-              <H3>{t('community.ambassador.related3')}</H3>
-            </li>
+            <ScrollAnimation animateOnce animateIn="fadeInUp">
+              <li>
+                <img className="check" src="/static/check.svg" />
+                <H3>{t('community.ambassador.related1')}</H3>
+              </li>
+            </ScrollAnimation>
+            <ScrollAnimation animateOnce animateIn="fadeInUp" delay={200}>
+              <li>
+                <img className="check" src="/static/check.svg" />
+                <H3>{t('community.ambassador.related2')}</H3>
+              </li>
+            </ScrollAnimation>
+            <ScrollAnimation animateOnce animateIn="fadeInUp" delay={400}>
+              <li>
+                <img className="check" src="/static/check.svg" />
+                <H3>{t('community.ambassador.related3')}</H3>
+              </li>
+            </ScrollAnimation>
           </ul>
         </Col>
       </Content>

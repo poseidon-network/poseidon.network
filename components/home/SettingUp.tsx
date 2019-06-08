@@ -27,12 +27,14 @@ const SettingUp = ({ t }: ITrans) => (
         <Col>
           <ScrollAnimation animateOnce animateIn="fadeInUp">
             <H2 margin="0 0 15px">{t('home.mobile')}</H2>
-            <P margin="0 0 30px 0">{t('home.mobile.description')}</P>
-            <Button
-              title={t('home.mobile.download')}
-              uri="https://www.surveycake.com/s/W8GAD"
-            />
           </ScrollAnimation>
+          <ScrollAnimation animateOnce animateIn="fadeInUp" delay={400}>
+            <P margin="0 0 30px 0">{t('home.mobile.description')}</P>
+          </ScrollAnimation>
+          <Button
+            title={t('home.mobile.download')}
+            uri="https://www.surveycake.com/s/W8GAD"
+          />
         </Col>
         <style jsx>{`
           .col {

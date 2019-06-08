@@ -28,6 +28,8 @@ const Header = ({ t }: ITrans) => {
         <Col>
           <ScrollAnimation animateOnce animateIn="fadeInUp">
             <H2 margin="0 0 15px">{t('community.title')}</H2>
+          </ScrollAnimation>
+          <ScrollAnimation animateOnce animateIn="fadeInUp" delay={400}>
             <P
               margin="0 0 60px"
               mStyle="text-align: left;"
@@ -35,12 +37,12 @@ const Header = ({ t }: ITrans) => {
             >
               {t('community.description')}
             </P>
-            <Button
-              margin="0"
-              title={t('community.ambassador')}
-              uri="https://www.surveycake.com/s/w48yR"
-            />
           </ScrollAnimation>
+          <Button
+            margin="0"
+            title={t('community.ambassador')}
+            uri="https://www.surveycake.com/s/w48yR"
+          />
         </Col>
         <Col flex style="align-items: center;" mStyle="display: none;">
           <img src="/static/img-community@2x.png" />

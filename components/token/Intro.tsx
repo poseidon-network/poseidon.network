@@ -32,6 +32,8 @@ const Intro = ({ t }: ITrans) => {
               <H2 margin="0 0 30px;" mStyle="margin: 0 0 15px;">
                 {t('token.title')}
               </H2>
+            </ScrollAnimation>
+            <ScrollAnimation animateOnce animateIn="fadeInUp" delay={400}>
               <P mStyle="text-align: left;" sStyle="text-algin: left;">
                 {t('token.description')}
               </P>

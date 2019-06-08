@@ -46,6 +46,8 @@ const Intro = ({ t }: ITrans) => (
           >
             {t('home.whatposeidon')}
           </H2>
+        </ScrollAnimation>
+        <ScrollAnimation animateOnce animateIn="fadeInUp" delay={400}>
           <P
             margin="0 0 30px 0"
             mStyle="text-align: left;"
@@ -53,8 +55,8 @@ const Intro = ({ t }: ITrans) => (
           >
             {t('home.explain')}
           </P>
-          <MoreLink title={t('home.explain.readmore')} uri="/technology" />
         </ScrollAnimation>
+        <MoreLink title={t('home.explain.readmore')} uri="/technology" />
       </Col>
     </Content>
 

@@ -24,13 +24,15 @@ const Miner = ({ t }: ITrans) => {
         <Col>
           <ScrollAnimation animateOnce animateIn="fadeInUp">
             <H2 margin="0 0 15px">{t('community.miner')}</H2>
+          </ScrollAnimation>
+          <ScrollAnimation animateOnce animateIn="fadeInUp" delay={400}>
             <P margin="0 0 60px" mStyle="text-align: left;">
               {t('community.miner.description')}
             </P>
-            {/* <Button title="Mobile App Coming soon" uri="" margin="0 0 16px" />
+          </ScrollAnimation>
+          {/* <Button title="Mobile App Coming soon" uri="" margin="0 0 16px" />
             <Button title="Desktop App Coming soon" uri="" margin="0 0 16px" />
             <Button title="NAS Coming soon" uri="" /> */}
-          </ScrollAnimation>
         </Col>
       </Content>
       <style jsx>{`

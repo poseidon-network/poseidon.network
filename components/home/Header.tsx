@@ -36,29 +36,31 @@ const Header = ({ t }: ITrans) => {
           <Col style="margin-right: 27px;" mStyle="margin: 0;">
             <ScrollAnimation animateOnce animateIn="fadeInUp">
               <H2 margin="8px 0 30px">{t('home.title')}</H2>
-              <P margin="0">{t('home.description')}</P>
-              <div className="btn-wrapper">
-                <Button
-                  title={t('home.whitepaper')}
-                  uri="http://ipfs.poseidon.network/ipfs/QmUzzcKXhturgVu8BgFhf7bmnf2ittC7d9T9bXwuX5NEXB"
-                />
-              </div>
-              <div className="social-medias">
-                <H3 margin="0 40px 0 0" sStyle="margin: 0;">
-                  {t('home.join')}
-                </H3>
-                <div className="social-medias__imglist">
-                  {footer.socialMediaList.map(({ imgUri, link, alt }) => (
-                    <SocialMedia
-                      key={imgUri}
-                      imgUri={imgUri}
-                      link={link}
-                      alt={alt}
-                    />
-                  ))}
-                </div>
-              </div>
             </ScrollAnimation>
+            <ScrollAnimation animateOnce animateIn="fadeInUp" delay={400}>
+              <P margin="0">{t('home.description')}</P>
+            </ScrollAnimation>
+            <div className="btn-wrapper">
+              <Button
+                title={t('home.whitepaper')}
+                uri="http://ipfs.poseidon.network/ipfs/QmUzzcKXhturgVu8BgFhf7bmnf2ittC7d9T9bXwuX5NEXB"
+              />
+            </div>
+            <div className="social-medias">
+              <H3 margin="0 40px 0 0" sStyle="margin: 0;">
+                {t('home.join')}
+              </H3>
+              <div className="social-medias__imglist">
+                {footer.socialMediaList.map(({ imgUri, link, alt }) => (
+                  <SocialMedia
+                    key={imgUri}
+                    imgUri={imgUri}
+                    link={link}
+                    alt={alt}
+                  />
+                ))}
+              </div>
+            </div>
           </Col>
           <Col
             flex
