@@ -1,6 +1,5 @@
 // @ts-ignore
 import SVG from 'react-inlinesvg';
-import { styles } from '../../constants';
 
 const SocialMedia = ({
   imgUri,
