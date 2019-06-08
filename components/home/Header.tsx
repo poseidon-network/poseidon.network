@@ -24,7 +24,7 @@ const Header = ({ t }: ITrans) => {
       color={styles.primaryColor}
       padding="110px 0 120px"
     >
-      <Parallax speed={-10}>
+      <Parallax speed={-13}>
         <Content direction="row">
           <Col
             style="display: none;"

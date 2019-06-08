@@ -18,7 +18,7 @@ const Intro = ({ t }: ITrans) => {
       color={styles.primaryColor}
       padding="80px 0 70px"
     >
-      <Parallax speed={-10}>
+      <Parallax speed={-13}>
         <Content direction="row">
           <Col
             flex

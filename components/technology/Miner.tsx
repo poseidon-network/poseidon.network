@@ -18,7 +18,7 @@ const Miner = ({ t }: ITrans) => {
       color={styles.primaryColor}
       padding="120px"
     >
-      <Parallax percentage={0.5} speed={-10}>
+      <Parallax percentage={0.5} speed={-13}>
         <Content direction="row">
           <Col flex style="algin-items: center;">
             <img src="/static/tech-miner.svg" />

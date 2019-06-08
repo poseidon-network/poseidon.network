@@ -14,7 +14,7 @@ import { withTranslation } from '../../i18n';
 
 const SettingUp = ({ t }: ITrans) => (
   <Section bgColor={styles.darkLight} color="#fff" padding="120px 0">
-    <Parallax percentage={0.5} speed={-7}>
+    <Parallax percentage={0.5} speed={-13}>
       <Content direction="row" style="align-items: center;">
         <Col
           flex
