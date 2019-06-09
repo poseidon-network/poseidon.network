@@ -147,6 +147,16 @@ export const team = [
     title: 'Office Manager',
     avatar: '/static/avatar-vita@2x.png',
   },
+  // {
+  //   name: 'Hugo',
+  //   title: 'Community assistant',
+  //   linkedin: 'https://www.linkedin.com/in/yu-kuo-b40847157/',
+  // },
+  {
+    name: 'Kensi Chang',
+    title: 'BD Director',
+    avatar: '/static/avatar-kensi@2x.png',
+  },
   {
     name: 'Join Us',
     title: 'Contact us for a best position ',
