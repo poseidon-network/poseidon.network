@@ -1,3 +1,5 @@
+// @ts-ignore
+import ScrollAnimation from 'react-animate-on-scroll';
 import Section from '../Section';
 import Content from '../Content';
 import H2 from '../H2';
@@ -14,10 +16,14 @@ const Doc = ({ t }: ITrans) => {
       padding="0 0 120px"
     >
       <Content>
-        <H2>{t('tech.documentation')}</H2>
-        <P mStyle="text-align: left;" margin="0 0 90px">
-          {t('tech.documentation.description')}
-        </P>
+        <ScrollAnimation animateOnce animateIn="fadeInUp">
+          <H2>{t('tech.documentation')}</H2>
+        </ScrollAnimation>
+        <ScrollAnimation animateOnce animateIn="fadeInUp" delay={400}>
+          <P mStyle="text-align: left;" margin="0 0 90px">
+            {t('tech.documentation.description')}
+          </P>
+        </ScrollAnimation>
         <Content direction="row" style="justify-content: space-between;">
           <div className="doc-block">
             <div className="doc-content whitepaper">

@@ -21,6 +21,8 @@ const Scenario = ({ t }: ITrans) => {
         <Col style="margin-right: 30px" mStyle="margin-right: 0;">
           <ScrollAnimation animateOnce animateIn="fadeInUp">
             <H2 margin="0 0 15px">{t('tech.dapps.scenario')}</H2>
+          </ScrollAnimation>
+          <ScrollAnimation animateOnce animateIn="fadeInUp" delay={400}>
             <P mStyle="margin-bottom: 60px;">
               {t('tech.dapps.scenario.description')}
             </P>

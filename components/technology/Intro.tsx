@@ -24,6 +24,8 @@ const Intro = ({ t }: ITrans) => {
         <Col>
           <ScrollAnimation animateOnce animateIn="fadeInUp">
             <H2 margin="0 0 10px">{t('tech.title')}</H2>
+          </ScrollAnimation>
+          <ScrollAnimation animateOnce animateIn="fadeInUp" delay={400}>
             <P>{t('tech.description')}</P>
           </ScrollAnimation>
         </Col>

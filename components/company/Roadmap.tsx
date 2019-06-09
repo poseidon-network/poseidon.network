@@ -1,3 +1,5 @@
+// @ts-ignore
+import ScrollAnimation from 'react-animate-on-scroll';
 import Section from '../Section';
 import RoadmapItem from './RoadmapItem';
 import H2 from '../H2';
@@ -11,12 +13,16 @@ import { withTranslation } from '../../i18n';
 
 const Roadmap = ({ t }: ITrans) => (
   <Section padding="120px" bgColor={styles.darkLight} color="#1c1c1d">
-    <H2 id="roadmap" center margin="0 0 5px">
-      {t('company.roadmap')}
-    </H2>
-    <Content direction="row">
-      <P margin="0 0 60px">{t('company.roadmap.description')}</P>
-    </Content>
+    <ScrollAnimation animateOnce animateIn="fadeInUp">
+      <H2 id="roadmap" center margin="0 0 5px">
+        {t('company.roadmap')}
+      </H2>
+    </ScrollAnimation>
+    <ScrollAnimation animateOnce animateIn="fadeInUp" delay={400}>
+      <Content direction="row">
+        <P margin="0 0 60px">{t('company.roadmap.description')}</P>
+      </Content>
+    </ScrollAnimation>
     <Content>
       <H3 margin="0 0 13px" center>
         2018
@@ -60,12 +66,16 @@ const Roadmap = ({ t }: ITrans) => (
         <img className="img-company" src="/static/img-company@2x.png" />
       </Col>
       <Col>
-        <H2 mStyle="text-align: left;" margin="0 0 57px;">
-          {t('company.nodesnetwork')}
-        </H2>
-        <P mStyle="text-align: left;">
-          {t('company.nodesnetwork.description')}
-        </P>
+        <ScrollAnimation animateOnce animateIn="fadeInUp">
+          <H2 mStyle="text-align: left;" margin="0 0 15px;">
+            {t('company.nodesnetwork')}
+          </H2>
+        </ScrollAnimation>
+        <ScrollAnimation animateOnce animateIn="fadeInUp" delay={400}>
+          <P mStyle="text-align: left;">
+            {t('company.nodesnetwork.description')}
+          </P>
+        </ScrollAnimation>
       </Col>
     </Content>
     <style jsx>{`
