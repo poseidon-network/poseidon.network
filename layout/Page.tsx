@@ -2,9 +2,11 @@ import React from 'react';
 import Head from 'next/head';
 
 import Nav from '../components/Nav';
+import Router from 'next/router';
 import Footer from '../components/Footer';
 import { logout, getUser } from '../utils/auth';
 import { styles } from '../constants';
+import { initGA, logPageView } from '../utils/analytics';
 
 interface IProps {
   title: string;
@@ -23,6 +25,12 @@ class Layout extends React.Component<IProps, { user: IUser }> {
     this.setState({
       user: getUser(),
     });
+
+    initGA();
+    logPageView();
+    if (Router.router) {
+      Router.router.events.on('routeChangeComplete', logPageView);
+    }
   }
 
   render() {
