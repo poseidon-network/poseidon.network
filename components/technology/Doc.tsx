@@ -45,7 +45,7 @@ const Doc = ({ t }: ITrans) => {
           <div className="doc-block">
             <div className="doc-content github">
               <strong>{t('tech.github')}</strong>
-              <p>{t('tech.sdk')}</p>
+              <p>{t('tech.github')}</p>
             </div>
             {/* <MoreLink uri="" /> */}
           </div>
