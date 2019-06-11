@@ -32,6 +32,7 @@ const SettingUp = ({ t }: ITrans) => (
             <P margin="0 0 30px 0">{t('home.mobile.description')}</P>
           </ScrollAnimation>
           <Button
+            target="_open"
             title={t('home.mobile.download')}
             uri="https://www.surveycake.com/s/W8GAD"
           />

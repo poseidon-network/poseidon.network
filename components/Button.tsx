@@ -8,16 +8,18 @@ const Button = ({
   margin,
   mStyle = '',
   sStyle = '',
+  ...props
 }: {
   uri: string;
   title: string | React.ReactNode;
+  target?: string;
   width?: string;
   margin?: string;
   mStyle?: string;
   sStyle?: string;
 }) => {
   return (
-    <a href={uri}>
+    <a href={uri} {...props}>
       {title}
       <style jsx>{`
         a {

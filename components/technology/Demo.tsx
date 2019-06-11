@@ -16,7 +16,7 @@ const Demo = ({ t }: ITrans) => {
           <H2 center>{t('tech.demo')}</H2>
         </ScrollAnimation>
         <ScrollAnimation animateOnce animateIn="fadeInUp" delay={400}>
-          <P margin="0 0 30px;" mStyle="text-align: left;">
+          <P center margin="0 0 30px;">
             {t('tech.demo.description')}
           </P>
         </ScrollAnimation>
