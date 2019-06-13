@@ -1,6 +1,4 @@
 // @ts-ignore
-import Parallax from 'react-rellax';
-// @ts-ignore
 import ScrollAnimation from 'react-animate-on-scroll';
 
 import Section from '../Section';
@@ -9,12 +7,13 @@ import H2 from '../H2';
 import P from '../P';
 import Col from '../Col';
 import Button from '../Button';
+import RParallax from '../RParallax';
 import { styles } from '../../constants';
 import { withTranslation } from '../../i18n';
 
 const SettingUp = ({ t }: ITrans) => (
   <Section bgColor={styles.darkLight} color="#fff" padding="120px 0">
-    <Parallax percentage={0.5} speed={-13}>
+    <RParallax percentage={0.5} speed={-13}>
       <Content direction="row" style="align-items: center;">
         <Col
           flex
@@ -60,7 +59,7 @@ const SettingUp = ({ t }: ITrans) => (
           }
         `}</style>
       </Content>
-    </Parallax>
+    </RParallax>
   </Section>
 );
 

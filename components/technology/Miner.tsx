@@ -1,11 +1,9 @@
-// @ts-ignore
-import Parallax from 'react-rellax';
-
 import Section from '../Section';
 import Content from '../Content';
 import P from '../P';
 import Col from '../Col';
 import H2 from '../H2';
+import RParallax from '../RParallax';
 // import Button from '../Button';
 
 import { withTranslation } from '../../i18n';
@@ -18,7 +16,7 @@ const Miner = ({ t }: ITrans) => {
       color={styles.primaryColor}
       padding="120px"
     >
-      <Parallax percentage={0.5} speed={-13}>
+      <RParallax percentage={0.5} speed={-13}>
         <Content direction="row">
           <Col flex style="algin-items: center;">
             <img src="/static/tech-miner.svg" />
@@ -57,7 +55,7 @@ const Miner = ({ t }: ITrans) => {
             }
           }
         `}</style>
-      </Parallax>
+      </RParallax>
     </Section>
   );
 };
