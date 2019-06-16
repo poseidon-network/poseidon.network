@@ -310,7 +310,7 @@ export const footer = {
   gettingStarted: [{ title: 'footer.gettingstart.demo', uri: '/demo' }],
   communities: [
     { title: 'Twitter', uri: 'https://twitter.com/QQQtoken' },
-    { title: 'Facebook', uri: 'https://www.facebook.com/psd.token/' },
+    { title: 'Facebook', uri: 'https://www.facebook.com/QQQtoken/' },
     { title: 'Telegram', uri: 'https://t.me/QQQtoken' },
     { title: 'Medium', uri: 'https://medium.com/poseidonnetwork' },
     {
