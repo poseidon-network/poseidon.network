@@ -11,9 +11,10 @@ import Col from '../Col';
 import Button from '../Button';
 import P from '../P';
 
-import { withTranslation } from '../../i18n';
+import { withTranslation, i18n } from '../../i18n';
 import { footer, whitepaperList } from '../../data';
 import { styles } from '../../constants';
+import { getWhitepaper } from '../../utils';
 
 const Header = ({ t }: ITrans) => {
   return (
@@ -43,7 +44,7 @@ const Header = ({ t }: ITrans) => {
             margin="30px 0 0"
             sStyle="display: none;"
             title={t('home.whitepaper')}
-            uri="http://ipfs.poseidon.network/ipfs/QmUzzcKXhturgVu8BgFhf7bmnf2ittC7d9T9bXwuX5NEXB"
+            uri={getWhitepaper(i18n.language).uri}
           />
 
           <Content

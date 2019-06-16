@@ -8,3 +8,14 @@ export const styles = {
   darkLight: '#232633',
   dark: '#1d202b',
 };
+
+export const langIconClassMap = {
+  en: 'us',
+  'zh-TW': 'tw',
+  'zh-CN': 'cn',
+  ja: 'jp',
+  ko: 'kr',
+  vi: 'vn',
+  th: 'th',
+  ru: 'ru',
+};

@@ -280,24 +280,28 @@ export const socialMediaList = [
 
 export const whitepaperList = [
   {
+    lang: 'en',
     title: 'Whitepaper',
     flag: 'us',
     uri:
       'http://ipfs.poseidon.network/ipfs/QmUzzcKXhturgVu8BgFhf7bmnf2ittC7d9T9bXwuX5NEXB',
   },
   {
+    lang: 'zh-TW',
     title: '白皮書',
     flag: 'tw',
     uri:
       'http://ipfs.poseidon.network/ipfs/QmRCkyGGpwHpYPyLP99qVLC4TPHxxLusZFyZxUte71nxjG',
   },
   {
+    lang: 'ko',
     title: '백서',
     flag: 'kr',
     uri:
       'http://ipfs.poseidon.network/ipfs/QmWsKC9itUBN743mcJMxezaG6uAufkpmNaZqGQ5rGgTonA',
   },
   {
+    lang: 'vi',
     title: 'Giấy trắng',
     flag: 'vn',
     uri:

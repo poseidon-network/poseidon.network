@@ -2,8 +2,10 @@ import { useState, useEffect } from 'react';
 
 import Section from './Section';
 import { i18n, withTranslation } from '../i18n';
-import { styles } from '../constants';
-import { whitepaperList } from '../data';
+import { styles, langIconClassMap } from '../constants';
+
+import Menu from './Menu';
+import MobileMenu from './MobileMenu';
 
 interface IProps extends ITrans {
   user?: {
@@ -16,36 +18,14 @@ interface IProps extends ITrans {
   logout?: () => void;
 }
 
-const langIconClassMap = {
-  en: 'us',
-  'zh-TW': 'tw',
-  'zh-CN': 'cn',
-  ja: 'jp',
-  ko: 'kr',
-  vi: 'vn',
-  th: 'th',
-  ru: 'ru',
-};
-
-const Nav = ({ t, bgColor = '#222633' }: IProps) => {
-  const [isLangVisiable, setLangVisiable] = useState<boolean>(false);
-  const [isMoreVisiable, setMoreVisiable] = useState<boolean>(false);
+const Nav = ({ bgColor = '#222633' }: IProps) => {
   const [langIconClass, setLangIconClass] = useState('');
+  const [isMobileMenuActive, setMobileMenuActive] = useState<boolean>(false);
 
   useEffect(() => {
-    const hideAll = ({ target }: React.SyntheticEvent) => {
-      if ((target as HTMLElement).tagName !== 'A') {
-        setLangVisiable(false);
-        setMoreVisiable(false);
-      }
-    };
     // fixme: remove later
     console.log(i18n.language);
     setLangIconClass((langIconClassMap as any)[i18n.language]);
-    document.body.addEventListener<any>('click', hideAll);
-    return () => {
-      document.body.removeEventListener<any>('click', hideAll);
-    };
   }, [i18n.language]);
 
   const changeLanguage = (lang: string) => {
@@ -68,126 +48,26 @@ const Nav = ({ t, bgColor = '#222633' }: IProps) => {
         <a href="/">
           <img className="logo" alt="logo" src="/static/poseidonnetwork.svg" />
         </a>
-
-        <nav className="navigation" role="navigation">
-          <ul>
-            <li className="item">
-              <a href="/technology">{t('nav.technology')}</a>
-            </li>
-            <li className="item">
-              <a href="/community">{t('nav.community')}</a>
-            </li>
-            <li className="item">
-              <a href="/token">{t('nav.token')}</a>
-            </li>
-            <li className="item">
-              <a href="/company">{t('nav.company')}</a>
-            </li>
-            {/*
-            <li className="item"><a>{t('Solutions')}</a></li>
-            <li className="item"><a>{t('Developer')}</a></li>
-            <li className="item"><a>{t('Pricing')}</a></li> */}
-            <li className="item">
-              <a onClick={() => setMoreVisiable(!isMoreVisiable)}>
-                {t('nav.whitepaper')}
-                <img className="down-arrow" src="/static/down-arrow@2x.png" />
-              </a>
-              <ul className={`dropdown ${isMoreVisiable ? 'show' : ''}`}>
-                {whitepaperList.map(item => (
-                  <li key={item.flag}>
-                    <a href={item.uri}>
-                      <span className={`flag-icon flag-icon-${item.flag}`} />
-                      {item.title}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </li>
-            <li className="item">
-              <a onClick={() => setLangVisiable(!isLangVisiable)}>
-                <span
-                  style={{ marginRight: 8 }}
-                  className={`flag-icon flag-icon-${langIconClass}`}
-                />
-                <img className="down-arrow" src="/static/down-arrow@2x.png" />
-              </a>
-              <ul className={`dropdown ${isLangVisiable ? 'show' : ''}`}>
-                <li>
-                  <a onClick={changeLanguage('en')}>
-                    <span className="flag-icon flag-icon-us" />
-                    English
-                  </a>
-                </li>
-                <li>
-                  <a onClick={changeLanguage('zh-TW')}>
-                    <span className="flag-icon flag-icon-tw" />
-                    繁體中文
-                  </a>
-                </li>
-                <li>
-                  <a onClick={changeLanguage('zh-CN')}>
-                    <span className="flag-icon flag-icon-cn" />
-                    簡體中文
-                  </a>
-                </li>
-                <li>
-                  <a onClick={changeLanguage('ja')}>
-                    <span className="flag-icon flag-icon-jp" />
-                    日本語
-                  </a>
-                </li>
-                <li>
-                  <a onClick={changeLanguage('ko')}>
-                    <span className="flag-icon flag-icon-kr" />
-                    한국어
-                  </a>
-                </li>
-                <li>
-                  <a onClick={changeLanguage('vi')}>
-                    <span className="flag-icon flag-icon-vn" />
-                    Tiếng Việt
-                  </a>
-                </li>
-                <li>
-                  <a onClick={changeLanguage('th')}>
-                    <span className="flag-icon flag-icon-th" />
-                    ภาษาไทย
-                  </a>
-                </li>
-                <li>
-                  <a onClick={changeLanguage('ru')}>
-                    <span className="flag-icon flag-icon-ru" />
-                    ру́сский язы́к
-                  </a>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </nav>
+        <Menu langIconClass={langIconClass} changeLanguage={changeLanguage} />
       </div>
 
-      <nav className="m-nav" role="navigation">
-        <div id="menuToggle">
-          <input type="checkbox" />
-          <span />
-          <span />
-          <ul id="menu">
-            <a href="/technology">
-              <li className="item">{t('nav.technology')}</li>
-            </a>
-            <a href="/company">
-              <li className="item">{t('nav.company')}</li>
-            </a>
-            <a href="/community">
-              <li className="item">{t('nav.community')}</li>
-            </a>
-            <a href="/token">
-              <li className="item">{t('nav.token')}</li>
-            </a>
-          </ul>
-        </div>
-      </nav>
-
+      <div
+        onClick={() => setMobileMenuActive(!isMobileMenuActive)}
+        id="menuToggle"
+        className={`${isMobileMenuActive ? 'is-active' : ''}`}
+      >
+        <input type="checkbox" />
+        <span className="menu-icon" />
+        <span className="menu-icon" />
+      </div>
+      <div
+        onClick={() => setMobileMenuActive(false)}
+        className={`overlay ${isMobileMenuActive ? 'is-active' : ''}`}
+      />
+      <MobileMenu
+        isOpened={isMobileMenuActive}
+        changeLanguage={changeLanguage}
+      />
       <style jsx>{`
         .container {
           width: 100%;
@@ -196,150 +76,52 @@ const Nav = ({ t, bgColor = '#222633' }: IProps) => {
           max-width: 1440px;
         }
 
-        a {
-          cursor: pointer;
-          color: ${styles.primaryColor};
-          transition: color 0.3s;
-        }
-
-        a:hover {
-          color: ${styles.lightColor};
-        }
-
         .logo {
           width: 300px;
         }
 
-        #profile {
-          top: 36px;
-          right: 110px;
-          position: absolute;
-          display: flex;
-          align-items: center;
-        }
-
-        .username {
-          font-size: 14px;
-        }
-
-        .avatar {
-          border-radius: 50%;
-          width: 25px;
-          height: 25px;
-          margin-right: 10px;
-        }
-
-        nav {
-          display: flex;
+        .overlay {
+          display: none;
           width: 100%;
-          flex-direction: row;
-          justify-content: flex-end;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          background-color: ${styles.darkLight};
+          box-shadow: 0 5px 15px 0 #1d202b;
+          opacity: 0.9;
         }
 
-        .down-arrow {
-          width: 28px;
-          height: 28px;
-        }
-
-        .item a {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
-
-        .navigation > ul {
-          display: flex;
-          flex-direction: row;
-          list-style-type: none;
-          margin: 0;
-        }
-
-        .navigation li {
-          margin-left: 24px;
-          display: flex;
-          align-items: center;
-        }
-
-        .navigation a {
-          font-size: 16px;
+        .overlay.is-active {
+          display: block;
         }
 
         #menuToggle {
-          display: block;
+          display: none;
           position: absolute;
-          top: 42px;
-          right: 50px;
-          z-index: 1;
+          z-index: 9;
           -webkit-user-select: none;
           user-select: none;
-        }
-
-        .flag-icon {
-          margin-right: 13px;
-        }
-
-        .dropdown {
-          display: flex;
-          border-radius: 2px;
-          box-shadow: 0 5px 15px 0 #1d202b;
-          background-color: #d7f2ee;
-          flex-direction: column;
-          margin: 8px 10px 0;
-          padding: 16.4px 15px 0;
-          transform: translateX(-50px);
-          position: absolute;
-          transition: visibility 0.1s;
-          visibility: hidden;
-          position: absolute;
-          top: 55px;
-          z-index: 10;
-        }
-
-        .show {
-          visibility: visible;
-        }
-
-        .dropdown li {
-          font-size: 16px;
-          font-weight: normal;
-          font-style: normal;
-          font-stretch: normal;
-          line-height: normal;
-          letter-spacing: normal;
-          color: #1d202b;
-          list-style-type: none;
-          margin: 0 0 13px;
-        }
-
-        .dropdown a {
-          color: #1d202b;
-        }
-
-        @media only screen and (max-width: 500px) {
-          .logo {
-            width: 220px;
-          }
+          height: 20px;
+          width: 20px;
+          right: 30px;
+          top: 30px;
         }
 
         #menuToggle input {
           display: block;
-          width: 40px;
-          height: 32px;
+          width: 20px;
+          height: 20px;
           position: absolute;
-          top: -7px;
-          left: -5px;
           cursor: pointer;
           opacity: 0; /* hide this */
           z-index: 2; /* and place it over the hamburger */
           -webkit-touch-callout: none;
         }
 
-        /*
-        * Just a quick hamburger
-        */
-        #menuToggle span {
+        #menuToggle .menu-icon {
           display: block;
-          width: 33px;
+          width: 24px;
           height: 3px;
           margin-bottom: 5px;
           position: relative;
@@ -351,67 +133,22 @@ const Nav = ({ t, bgColor = '#222633' }: IProps) => {
             background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
         }
 
-        #menuToggle span:first-child {
+        #menuToggle .menu-icon:first-child {
           transform-origin: 0% 0%;
         }
 
-        #menuToggle span:nth-last-child(2) {
+        #menuToggle .menu-icon:nth-last-child(2) {
           transform-origin: 0% 100%;
         }
 
-        /*
-        * Transform all the slices of hamburger
-        * into a crossmark.
-        */
-        #menuToggle input:checked ~ span {
+        #menuToggle.is-active input ~ .menu-icon {
           opacity: 1;
-          transform: rotate(45deg) translate(-2px, -1px);
+          transform: rotate(45deg) translate(-1px, -4px);
           background: #90cfbe;
         }
 
-        /*
-        * Ohyeah and the last one should go the other direction
-        */
-        #menuToggle input:checked ~ span:nth-last-child(2) {
-          transform: rotate(-45deg) translate(-7px, 7px);
-        }
-
-        /*
-        * Make this absolute positioned
-        * at the top right of the screen
-        */
-        #menu {
-          position: absolute;
-          right: 0;
-          top: -50px;
-          width: 300px;
-          padding: 50px;
-
-          background: #222633f7;
-          list-style-type: none;
-          -webkit-font-smoothing: antialiased;
-          /* to stop flickering of text in safari */
-
-          transform-origin: 0% 0%;
-          transform: translate(120%, 0);
-
-          transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
-        }
-
-        #menu li {
-          padding: 10px 0;
-          font-size: 22px;
-        }
-
-        /*
-        * And let's slide it in from the left
-        */
-        #menuToggle input:checked ~ ul {
-          transform: none;
-        }
-
-        .m-nav {
-          display: none;
+        #menuToggle.is-active input ~ .menu-icon:nth-last-child(2) {
+          transform: rotate(-45deg) translate(-10px, 14px);
         }
 
         @media only screen and (max-width: 1024px) {
@@ -420,16 +157,13 @@ const Nav = ({ t, bgColor = '#222633' }: IProps) => {
           }
 
           #menuToggle {
-            right: 30px;
-            top: 30px;
-          }
-
-          .m-nav {
             display: block;
           }
+        }
 
-          .navigation {
-            display: none;
+        @media only screen and (max-width: 500px) {
+          .logo {
+            width: 220px;
           }
         }
       `}</style>
