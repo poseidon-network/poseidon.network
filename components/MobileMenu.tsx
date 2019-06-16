@@ -15,7 +15,7 @@ const MobileMenu = ({ changeLanguage, isOpened, t }: IProps & ITrans) => {
   const [currentLang, setLang] = useState<string>(i18n.language);
 
   useEffect(() => {
-    setCurrentPath(window.location.pathname);
+    setCurrentPath(window.location.pathname.replace(/\//g, ''));
     setWhitepaperURI(getWhitepaper(i18n.language).uri);
     setLang(i18n.language);
   }, [i18n.language]);
@@ -33,22 +33,22 @@ const MobileMenu = ({ changeLanguage, isOpened, t }: IProps & ITrans) => {
         <img className="menu-logo" src="/static/Logo.png" />
         <ul>
           <li className="item">
-            <a href="/technology" className={itemActiveClass('/technology')}>
+            <a href="/technology" className={itemActiveClass('technology')}>
               {t('nav.technology')}
             </a>
           </li>
           <li className="item">
-            <a href="/community" className={itemActiveClass('/community')}>
+            <a href="/community" className={itemActiveClass('community')}>
               {t('nav.community')}
             </a>
           </li>
           <li className="item">
-            <a href="/token" className={itemActiveClass('/token')}>
+            <a href="/token" className={itemActiveClass('token')}>
               {t('nav.token')}
             </a>
           </li>
           <li className="item">
-            <a href="/company" className={itemActiveClass('/company')}>
+            <a href="/company" className={itemActiveClass('company')}>
               {t('nav.company')}
             </a>
           </li>

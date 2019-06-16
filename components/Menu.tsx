@@ -14,7 +14,7 @@ const Menu = ({ changeLanguage, langIconClass, t }: IProps & ITrans) => {
   const [currentLang, setLang] = useState<string>(i18n.language);
 
   useEffect(() => {
-    setCurrentPath(window.location.pathname);
+    setCurrentPath(window.location.pathname.replace(/\//g, ''));
     setLang(i18n.language);
   }, [i18n.language]);
 
@@ -25,22 +25,22 @@ const Menu = ({ changeLanguage, langIconClass, t }: IProps & ITrans) => {
     <nav className="navigation" role="navigation">
       <ul>
         <li className="item">
-          <a href="/technology" className={itemActiveClass('/technology')}>
+          <a href="/technology" className={itemActiveClass('technology')}>
             {t('nav.technology')}
           </a>
         </li>
         <li className="item">
-          <a href="/community" className={itemActiveClass('/community')}>
+          <a href="/community" className={itemActiveClass('community')}>
             {t('nav.community')}
           </a>
         </li>
         <li className="item">
-          <a href="/token" className={itemActiveClass('/token')}>
+          <a href="/token" className={itemActiveClass('token')}>
             {t('nav.token')}
           </a>
         </li>
         <li className="item">
-          <a href="/company" className={itemActiveClass('/company')}>
+          <a href="/company" className={itemActiveClass('company')}>
             {t('nav.company')}
           </a>
         </li>
@@ -158,7 +158,7 @@ const Menu = ({ changeLanguage, langIconClass, t }: IProps & ITrans) => {
 
         a.is-active {
           color: ${styles.lightColor};
-          font-weight: 500;
+          font-weight: bold;
         }
 
         nav {
