@@ -83,7 +83,7 @@ const Nav = ({ t, bgColor = '#222633' }: IProps) => {
             <li className="item"><a>{t('Pricing')}</a></li> */}
             <li className="item">
               <a onClick={() => setMoreVisiable(!isMoreVisiable)}>
-                {t('whitepaper')}
+                {t('nav.whitepaper')}
                 <img className="down-arrow" src="/static/down-arrow@2x.png" />
               </a>
               <ul className={`dropdown ${isMoreVisiable ? 'show' : ''}`}>

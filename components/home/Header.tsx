@@ -50,7 +50,7 @@ const Header = ({ t }: ITrans) => {
             sStyle="display: flex; align-items: normal; margin-top: 50px;"
           >
             {whitepaperList.map(item => (
-              <Col flex style="align-items: center;">
+              <Col key={item.flag} flex style="align-items: center;">
                 <div className={`flag-icon flag-icon-${item.flag}`} />
                 <Button
                   margin="15px 0 20px;"
