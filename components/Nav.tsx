@@ -19,6 +19,8 @@ interface IProps extends ITrans {
 const langIconClassMap = {
   en: 'flag-icon-us',
   'zh-TW': 'flag-icon-tw',
+  'zh-CN': 'flag-icon-cn',
+  ja: 'flag-icon-jp',
 };
 
 const Nav = ({ t, bgColor = '#222633' }: IProps) => {
@@ -116,6 +118,18 @@ const Nav = ({ t, bgColor = '#222633' }: IProps) => {
                   <a onClick={changeLanguage('zh-TW')}>
                     <span className="flag-icon flag-icon-tw" />
                     繁體中文
+                  </a>
+                </li>
+                <li>
+                  <a onClick={changeLanguage('zh-CN')}>
+                    <span className="flag-icon flag-icon-cn" />
+                    簡體中文
+                  </a>
+                </li>
+                <li>
+                  <a onClick={changeLanguage('ja')}>
+                    <span className="flag-icon flag-icon-jp" />
+                    日本語
                   </a>
                 </li>
               </ul>

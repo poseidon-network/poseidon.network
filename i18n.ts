@@ -1,8 +1,9 @@
 import NextI18Next from 'next-i18next';
 
+const otherLanguages = ['zh-TW', 'zh-CN', 'ja'];
 const NextI18NextInstance = new NextI18Next({
+  otherLanguages,
   defaultLanguage: 'en',
-  otherLanguages: ['zh-TW'],
   fallbackLng: 'en',
   keySeparator: false,
   react: {
@@ -12,7 +13,7 @@ const NextI18NextInstance = new NextI18Next({
 });
 
 // For next export static
-NextI18NextInstance.i18n.languages = ['en', 'zh-TW'];
+NextI18NextInstance.i18n.languages = ['en', ...otherLanguages];
 
 export default NextI18NextInstance;
 

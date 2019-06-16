@@ -33,6 +33,12 @@ class Layout extends React.Component<IProps, { user: IUser }> {
     }
   }
 
+  componentWillMount() {
+    if (Router.router) {
+      Router.router.events.off('routeChangeComplete', logPageView);
+    }
+  }
+
   render() {
     return (
       <div>
