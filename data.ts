@@ -301,7 +301,7 @@ export const whitepaperList = [
     title: 'Giấy trắng',
     flag: 'vn',
     uri:
-      'http://ipfs.poseidon.network/ipfs/QmUzzcKXhturgVu8BgFhf7bmnf2ittC7d9T9bXwuX5NEXB',
+      'http://ipfs.poseidon.network/ipfs/QmR1uXcQ8eqhJFY1GBrbh4v9DxnLq1qoa9cY3Lm4tJRGCB',
   },
 ];
 
