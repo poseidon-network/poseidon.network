@@ -15,6 +15,7 @@ const Intro = ({ t }: ITrans) => {
       bgColor={styles.darkLight}
       color={styles.primaryColor}
       padding="80px 0 70px"
+      style="min-height: 100vh;"
     >
       <Content direction="row">
         <Col
