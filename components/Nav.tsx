@@ -17,11 +17,14 @@ interface IProps extends ITrans {
 }
 
 const langIconClassMap = {
-  en: 'flag-icon-us',
-  'zh-TW': 'flag-icon-tw',
-  'zh-CN': 'flag-icon-cn',
-  ja: 'flag-icon-jp',
-  ko: 'flag-icon-kr',
+  en: 'us',
+  'zh-TW': 'tw',
+  'zh-CN': 'cn',
+  ja: 'jp',
+  ko: 'kr',
+  vi: 'vn',
+  th: 'th',
+  ru: 'ru',
 };
 
 const Nav = ({ t, bgColor = '#222633' }: IProps) => {
@@ -104,7 +107,7 @@ const Nav = ({ t, bgColor = '#222633' }: IProps) => {
               <a onClick={() => setLangVisiable(!isLangVisiable)}>
                 <span
                   style={{ marginRight: 8 }}
-                  className={`flag-icon ${langIconClass}`}
+                  className={`flag-icon flag-icon-${langIconClass}`}
                 />
                 <img className="down-arrow" src="/static/down-arrow@2x.png" />
               </a>
@@ -137,6 +140,24 @@ const Nav = ({ t, bgColor = '#222633' }: IProps) => {
                   <a onClick={changeLanguage('ko')}>
                     <span className="flag-icon flag-icon-kr" />
                     한국어
+                  </a>
+                </li>
+                <li>
+                  <a onClick={changeLanguage('vi')}>
+                    <span className="flag-icon flag-icon-vn" />
+                    Tiếng Việt
+                  </a>
+                </li>
+                <li>
+                  <a onClick={changeLanguage('th')}>
+                    <span className="flag-icon flag-icon-th" />
+                    ภาษาไทย
+                  </a>
+                </li>
+                <li>
+                  <a onClick={changeLanguage('ru')}>
+                    <span className="flag-icon flag-icon-ru" />
+                    ру́сский язы́к
                   </a>
                 </li>
               </ul>

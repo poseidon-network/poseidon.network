@@ -1,6 +1,6 @@
 import NextI18Next from 'next-i18next';
 
-const otherLanguages = ['zh-TW', 'zh-CN', 'ja', 'ko'];
+const otherLanguages = ['zh-TW', 'zh-CN', 'ja', 'ko', 'vi', 'th', 'ru'];
 const NextI18NextInstance = new NextI18Next({
   otherLanguages,
   defaultLanguage: 'en',
