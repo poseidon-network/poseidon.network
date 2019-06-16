@@ -43,7 +43,7 @@ const RoadmapItem = ({
           : active
           ? '#90cfbe'
           : 'transparent'};
-        height: ${init ? '100px' : '200px'};
+        min-height: ${init ? '100px' : '200px'};
       }
 
       .content {
