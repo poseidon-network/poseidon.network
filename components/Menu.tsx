@@ -10,25 +10,12 @@ interface IProps {
 }
 
 const Menu = ({ changeLanguage, langIconClass, t }: IProps & ITrans) => {
-  const [isLangVisiable, setLangVisiable] = useState<boolean>(false);
-  const [isMoreVisiable, setMoreVisiable] = useState<boolean>(false);
   const [currentPath, setCurrentPath] = useState<string>('');
   const [currentLang, setLang] = useState<string>(i18n.language);
 
   useEffect(() => {
-    const hideAll = ({ target }: React.SyntheticEvent) => {
-      if ((target as HTMLElement).tagName !== 'A') {
-        setLangVisiable(false);
-        setMoreVisiable(false);
-      }
-    };
-
     setCurrentPath(window.location.pathname);
     setLang(i18n.language);
-    document.body.addEventListener<any>('click', hideAll);
-    return () => {
-      document.body.removeEventListener<any>('click', hideAll);
-    };
   }, [i18n.language]);
 
   const itemActiveClass = (path: string) =>
@@ -58,11 +45,11 @@ const Menu = ({ changeLanguage, langIconClass, t }: IProps & ITrans) => {
           </a>
         </li>
         <li className="item">
-          <a onClick={() => setMoreVisiable(!isMoreVisiable)}>
+          <a className="dropdown-trigger">
             {t('nav.whitepaper')}
             <img className="down-arrow" src="/static/down-arrow@2x.png" />
           </a>
-          <ul className={`dropdown ${isMoreVisiable ? 'show' : ''}`}>
+          <ul className="dropdown">
             {whitepaperList.map(item => (
               <li key={item.flag}>
                 <a href={item.uri}>
@@ -74,14 +61,14 @@ const Menu = ({ changeLanguage, langIconClass, t }: IProps & ITrans) => {
           </ul>
         </li>
         <li className="item">
-          <a onClick={() => setLangVisiable(!isLangVisiable)}>
+          <a className="dropdown-trigger">
             <span
               style={{ marginRight: 8 }}
               className={`flag-icon flag-icon-${langIconClass}`}
             />
             <img className="down-arrow" src="/static/down-arrow@2x.png" />
           </a>
-          <ul className={`dropdown ${isLangVisiable ? 'show' : ''}`}>
+          <ul className="dropdown">
             <li>
               <a
                 onClick={changeLanguage('en')}
@@ -223,7 +210,8 @@ const Menu = ({ changeLanguage, langIconClass, t }: IProps & ITrans) => {
           z-index: 10;
         }
 
-        .dropdown.show {
+        .dropdown-trigger:hover ~ .dropdown,
+        .dropdown:hover {
           visibility: visible;
         }
 
