@@ -73,6 +73,8 @@ const RoadmapItem = ({
         border-radius: 50%;
         background-color: ${active ? styles.primaryColor : 'transparent'};
         opacity: 0.3;
+        animation: pulse-dot 1.25s cubic-bezier(0.455, 0.03, 0.515, 0.955) -0.4s
+          infinite;
       }
 
       .content::before {
@@ -106,6 +108,18 @@ const RoadmapItem = ({
           : styles.primaryColor};
         border-style: ${done ? 'solid' : 'dashed'};
         height: 85%;
+      }
+
+      @keyframes pulse-dot {
+        0% {
+          transform: scale(0.8);
+        }
+        50% {
+          transform: scale(1);
+        }
+        100% {
+          transform: scale(0.8);
+        }
       }
 
       @media only screen and (max-width: 1024px) {
