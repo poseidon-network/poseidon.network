@@ -21,6 +21,7 @@ const Header = ({ t }: ITrans) => {
       bgColor={styles.dark}
       color={styles.primaryColor}
       padding="110px 0 120px"
+      style="min-height: 100vh;"
     >
       <Content direction="row">
         <Col
