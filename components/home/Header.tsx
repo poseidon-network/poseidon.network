@@ -12,7 +12,7 @@ import Button from '../Button';
 import P from '../P';
 
 import { withTranslation } from '../../i18n';
-import { footer } from '../../data';
+import { footer, whitepaperList } from '../../data';
 import { styles } from '../../constants';
 
 const Header = ({ t }: ITrans) => {
@@ -37,12 +37,30 @@ const Header = ({ t }: ITrans) => {
           <ScrollAnimation animateOnce animateIn="fadeInUp" delay={400}>
             <P margin="0">{t('home.description')}</P>
           </ScrollAnimation>
-          <div className="btn-wrapper">
-            <Button
-              title={t('home.whitepaper')}
-              uri="http://ipfs.poseidon.network/ipfs/QmUzzcKXhturgVu8BgFhf7bmnf2ittC7d9T9bXwuX5NEXB"
-            />
-          </div>
+
+          <Button
+            margin="30px 0 0"
+            sStyle="display: none;"
+            title={t('home.whitepaper')}
+            uri="http://ipfs.poseidon.network/ipfs/QmUzzcKXhturgVu8BgFhf7bmnf2ittC7d9T9bXwuX5NEXB"
+          />
+
+          <Content
+            style="display: none;"
+            sStyle="display: flex; align-items: normal; margin-top: 50px;"
+          >
+            {whitepaperList.map(item => (
+              <Col flex style="align-items: center;">
+                <div className={`flag-icon flag-icon-${item.flag}`} />
+                <Button
+                  margin="15px 0 20px;"
+                  title={item.title}
+                  uri={item.uri}
+                />
+              </Col>
+            ))}
+          </Content>
+
           <div className="social-medias">
             <H3 margin="0 40px 0 0" sStyle="margin: 0;">
               {t('home.join')}

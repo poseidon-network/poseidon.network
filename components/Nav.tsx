@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import Section from './Section';
 import { i18n, withTranslation } from '../i18n';
 import { styles } from '../constants';
+import { whitepaperList } from '../data';
 
 interface IProps extends ITrans {
   user?: {
@@ -22,7 +23,7 @@ const langIconClassMap = {
 
 const Nav = ({ t, bgColor = '#222633' }: IProps) => {
   const [isLangVisiable, setLangVisiable] = useState<boolean>(false);
-  const [, setMoreVisiable] = useState<boolean>(false);
+  const [isMoreVisiable, setMoreVisiable] = useState<boolean>(false);
   const [langIconClass, setLangIconClass] = useState('');
 
   useEffect(() => {
@@ -68,26 +69,34 @@ const Nav = ({ t, bgColor = '#222633' }: IProps) => {
               <a href="/technology">{t('nav.technology')}</a>
             </li>
             <li className="item">
-              <a href="/company">{t('nav.company')}</a>
-            </li>
-            <li className="item">
               <a href="/community">{t('nav.community')}</a>
             </li>
             <li className="item">
               <a href="/token">{t('nav.token')}</a>
             </li>
-            {/* <li className="item"><a>{t('Solutions')}</a></li>
-            <li className="item"><a>{t('Developer')}</a></li>
-            <li className="item"><a>{t('Pricing')}</a></li>
             <li className="item">
-              <a onClick={() => setMoreVisiable(!isMoreVisiable)}>{t('More')}</a>
-                <ul className={`dropdown ${isMoreVisiable ? 'show' : ''}`}>
-                  <li><a href="/community">{t('Community')}</a></li>
-                  <li><a href="/token">{t('Token')}</a></li>
-                  <li>{t('Company')}</li>
-                  <li>{t('Help Center')}</li>
-                </ul>
-            </li> */}
+              <a href="/company">{t('nav.company')}</a>
+            </li>
+            {/*
+            <li className="item"><a>{t('Solutions')}</a></li>
+            <li className="item"><a>{t('Developer')}</a></li>
+            <li className="item"><a>{t('Pricing')}</a></li> */}
+            <li className="item">
+              <a onClick={() => setMoreVisiable(!isMoreVisiable)}>
+                {t('whitepaper')}
+                <img className="down-arrow" src="/static/down-arrow@2x.png" />
+              </a>
+              <ul className={`dropdown ${isMoreVisiable ? 'show' : ''}`}>
+                {whitepaperList.map(item => (
+                  <li key={item.flag}>
+                    <a href={item.uri}>
+                      <span className={`flag-icon flag-icon-${item.flag}`} />
+                      {item.title}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </li>
             <li className="item">
               <a onClick={() => setLangVisiable(!isLangVisiable)}>
                 <span

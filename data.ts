@@ -278,6 +278,33 @@ export const socialMediaList = [
   },
 ];
 
+export const whitepaperList = [
+  {
+    title: 'Whitepaper',
+    flag: 'us',
+    uri:
+      'http://ipfs.poseidon.network/ipfs/QmUzzcKXhturgVu8BgFhf7bmnf2ittC7d9T9bXwuX5NEXB',
+  },
+  {
+    title: '白皮書',
+    flag: 'tw',
+    uri:
+      'http://ipfs.poseidon.network/ipfs/QmRCkyGGpwHpYPyLP99qVLC4TPHxxLusZFyZxUte71nxjG',
+  },
+  {
+    title: '백서',
+    flag: 'kr',
+    uri:
+      'http://ipfs.poseidon.network/ipfs/QmWsKC9itUBN743mcJMxezaG6uAufkpmNaZqGQ5rGgTonA',
+  },
+  {
+    title: 'Giấy trắng',
+    flag: 'vn',
+    uri:
+      'http://ipfs.poseidon.network/ipfs/QmUzzcKXhturgVu8BgFhf7bmnf2ittC7d9T9bXwuX5NEXB',
+  },
+];
+
 export const footer = {
   socialMediaList,
   gettingStarted: [{ title: 'footer.gettingstart.demo', uri: '/demo' }],
@@ -300,11 +327,7 @@ export const footer = {
       title: 'footer.resource.github',
       uri: 'https://github.com/poseidon-network',
     },
-    {
-      title: 'footer.resource.whitepaper',
-      uri:
-        'http://ipfs.poseidon.network/ipfs/QmUzzcKXhturgVu8BgFhf7bmnf2ittC7d9T9bXwuX5NEXB',
-    },
+    ...whitepaperList,
   ],
   company: [
     { title: 'footer.company.aboutus', uri: '/company' },
