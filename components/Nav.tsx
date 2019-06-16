@@ -21,6 +21,7 @@ const langIconClassMap = {
   'zh-TW': 'flag-icon-tw',
   'zh-CN': 'flag-icon-cn',
   ja: 'flag-icon-jp',
+  ko: 'flag-icon-kr',
 };
 
 const Nav = ({ t, bgColor = '#222633' }: IProps) => {
@@ -130,6 +131,12 @@ const Nav = ({ t, bgColor = '#222633' }: IProps) => {
                   <a onClick={changeLanguage('ja')}>
                     <span className="flag-icon flag-icon-jp" />
                     日本語
+                  </a>
+                </li>
+                <li>
+                  <a onClick={changeLanguage('ko')}>
+                    <span className="flag-icon flag-icon-kr" />
+                    한국어
                   </a>
                 </li>
               </ul>
@@ -264,6 +271,7 @@ const Nav = ({ t, bgColor = '#222633' }: IProps) => {
           visibility: hidden;
           position: absolute;
           top: 55px;
+          z-index: 10;
         }
 
         .show {
