@@ -21,8 +21,10 @@ const Intro = ({ t }: ITrans) => (
         mStyle="grid-template-columns: 30% 30% 30%; justify-items: center; grid-gap: 0 60px;"
         sStyle="grid-template-columns: 100%; grid-gap: 0 30px"
       >
-        {introLogoList.map(({ uri }, index) => (
-          <img className="logo" key={index.toString()} src={uri} />
+        {introLogoList.map(({ img, uri }, index) => (
+          <a className="partner" href={uri} target="_blank">
+            <img className="logo" key={index.toString()} src={img} />
+          </a>
         ))}
       </Content>
       <Content direction="row">
@@ -75,6 +77,14 @@ const Intro = ({ t }: ITrans) => (
       video {
         width: 95%;
         min-width: 300px;
+      }
+
+      .partner {
+        transition: transform 0.3s linear;
+      }
+
+      .partner:hover {
+        transform: scale(0.95, 0.95);
       }
 
       @media only screen and (max-width: 1024px) {

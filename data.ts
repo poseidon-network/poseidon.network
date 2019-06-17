@@ -1,10 +1,10 @@
 export const introLogoList = [
-  { uri: '/static/aelf@2x.png' },
-  { uri: '/static/logo-longhash@2x.png' },
-  { uri: '/static/logo-tron@2x.png' },
-  { uri: '/static/logo-harmany@2x.png' },
-  { uri: '/static/logo-gifto@2x.png' },
-  { uri: '/static/logo-nem@2x.png' },
+  { img: '/static/aelf@2x.png', uri: 'https://aelf.io/' },
+  { img: '/static/logo-longhash@2x.png', uri: 'https://www.longhash.com/' },
+  { img: '/static/logo-tron@2x.png', uri: 'https://tron.network/' },
+  { img: '/static/logo-harmany@2x.png', uri: 'https://harmony.one/' },
+  { img: '/static/logo-gifto@2x.png', uri: 'https://gifto.io/' },
+  { img: '/static/logo-nem@2x.png', uri: 'https://nem.io/' },
 ];
 
 export const solutions = [
