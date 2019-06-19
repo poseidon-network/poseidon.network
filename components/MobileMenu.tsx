@@ -153,17 +153,6 @@ const MobileMenu = ({ changeLanguage, isOpened, t }: IProps & ITrans) => {
           transform: none;
         }
 
-        #menuToggle input {
-          display: block;
-          width: 20px;
-          height: 20px;
-          position: absolute;
-          cursor: pointer;
-          opacity: 0; /* hide this */
-          z-index: 2; /* and place it over the hamburger */
-          -webkit-touch-callout: none;
-        }
-
         #menu {
           position: absolute;
           right: -30px;

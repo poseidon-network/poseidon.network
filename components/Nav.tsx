@@ -90,6 +90,7 @@ const Nav = ({ bgColor = '#222633' }: IProps) => {
           background-color: ${styles.darkLight};
           box-shadow: 0 5px 15px 0 #1d202b;
           opacity: 0.9;
+          z-index: 2;
         }
 
         .overlay.is-active {
