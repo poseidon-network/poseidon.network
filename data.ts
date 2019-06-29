@@ -291,7 +291,7 @@ export const whitepaperList = [
     title: '白皮書',
     flag: 'tw',
     uri:
-      'http://ipfs.poseidon.network/ipfs/QmRCkyGGpwHpYPyLP99qVLC4TPHxxLusZFyZxUte71nxjG',
+      'http://ipfs.poseidon.network/ipfs/QmagSzt2soVZeAaxQBefrpGpeNL6sqFrH88khfszurTiMU',
   },
   {
     lang: 'ko',
