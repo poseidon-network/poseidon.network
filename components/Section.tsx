@@ -1,7 +1,7 @@
 interface IProps {
   children: React.ReactNode;
-  bgColor: string;
-  color: string;
+  bgColor?: string;
+  color?: string;
   padding?: string;
   backgroundImage?: string;
   style?: string;
