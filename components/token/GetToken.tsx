@@ -35,7 +35,7 @@ const GetToken = ({ t }: ITrans) => {
                 src="/static/logo-bitforex@2x.png"
               />
             }
-            uri="https://www.bitforex.com/cn/trade/spotTrading?commodityCode=QQQ&currencyCode=USDT"
+            uri="https://www.bitforex.com/cn/spot/qqq_usdt"
           />
           <H3 margin="0 0 15px">{t('token.getqqq.community')}</H3>
           <P margin="0 0 60px">{t('token.getqqq.community.description')}</P>
