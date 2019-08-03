@@ -24,17 +24,6 @@ const Miner = ({ t }: ITrans) => {
           <P mStyle="text-align: left;">{t('tech.miner.description')}</P>
         </Col>
       </Content>
-      {/* <Content direction="row" padding="190px 0 0 0">
-      <Col style="margin-right: 40px">
-        <Button title="Mobile App" uri=""/>
-      </Col>
-      <Col style="margin-right: 40px">
-        <Button title="Desktop App" uri=""/>
-      </Col>
-      <Col>
-        <Button title="NAS" uri=""/>
-      </Col>
-    </Content> */}
       <style jsx>{`
         h2 {
           height: 80px;
