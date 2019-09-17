@@ -4,29 +4,29 @@ import Download from '../components/edge/Download';
 import Link from '../components/edge/Link';
 import Gain from '../components/edge/Gain';
 import { withTranslation } from '../i18n';
-import { string } from 'prop-types';
 
 class Edge extends React.Component<any> {
+  state = {
+    sn: '',
+  };
+
   static async getInitialProps() {
     return {
       namespacesRequired: ['common'],
     };
   }
 
-  constructor(props) {
-    super(props);
-    this.sn = '';
-  }
-
   async componentDidMount() {
-    this.sn = new URLSearchParams(window.location.search).get('sn');
+    this.setState({
+      sn: new URLSearchParams(window.location.search).get('sn'),
+    });
   }
 
   render() {
     return (
-      <Page title={`Poseidon Network | QEdge`}>
+      <Page title={'Poseidon Network | QEdge'}>
         <Download />
-        <Link sn={this.sn} />
+        <Link sn={this.state.sn} />
         <Gain />
       </Page>
     );

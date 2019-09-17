@@ -34,10 +34,7 @@ const Link = ({ sn, t }: IProps & ITrans) => {
           <ScrollAnimation animateOnce animateIn="fadeInUp" delay={800}>
             <div className="qrcode">
               <img
-                src={
-                  'https://api.qrserver.com/v1/create-qr-code/?size=400x400&data=QN-TEST:' +
-                  sn
-                }
+                src={`https://api.qrserver.com/v1/create-qr-code/?size=400x400&data=QN-TEST:${sn}`}
               />
             </div>
           </ScrollAnimation>
