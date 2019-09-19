@@ -16,11 +16,12 @@ const Gain = ({ t }: ITrans) => {
     <Section
       bgColor={styles.darkLight}
       color={styles.primaryColor}
-      padding="110px 0"
+      padding="10vh 0"
+      mStyle="padding-top: 30px; padding-bottom: 30px;"
     >
       <Content direction="row">
-        <Col style="margin: 0 80px;" mStyle="margin: 0;">
-          <img src="/static/qedge-img-3@2x.png" />
+        <Col style="margin: 0 80px;">
+          <img className="instruction-img" src="/static/qedge-img-3@2x.png" />
         </Col>
         <Col>
           <H1 margin="0 0 10px">3</H1>
@@ -35,15 +36,20 @@ const Gain = ({ t }: ITrans) => {
       <style jsx>{`
         img {
           width: 100%;
-          max-wdith: 500px;
-          min-width: 300px;
+          max-width: 500px;
           object-fit: contain;
         }
 
         @media only screen and (max-width: 1024px) {
           img {
             width: 100%;
-            margin-bottom: 160px;
+            margin-bottom: 20px;
+          }
+
+          .instruction-img {
+            height: 30vh;
+            display: block;
+            margin: auto;
           }
         }
 

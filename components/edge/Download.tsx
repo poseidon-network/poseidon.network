@@ -16,11 +16,12 @@ const Download = ({ t }: ITrans) => {
     <Section
       bgColor={styles.darkLight}
       color={styles.primaryColor}
-      padding="110px 0"
+      padding="10vh 0"
+      mStyle="padding-top: 30px; padding-bottom: 30px;"
     >
       <Content direction="row">
-        <Col style="margin: 0 80px;" mStyle="margin: 0;">
-          <img src="/static/qedge-img-1@2x.png" />
+        <Col style="margin: 0 80px;">
+          <img className="instruction-img" src="/static/qedge-img-1@2x.png" />
         </Col>
         <Col>
           <H1 margin="0 0 10px">1</H1>
@@ -34,7 +35,7 @@ const Download = ({ t }: ITrans) => {
             <div className="download">
               <a
                 target="_blank"
-                href="https://apps.apple.com/us/app/poseidon-qapp/id1468063328?l=zh&ls=1"
+                href="https://apps.apple.com/app/qqq-app/id1468063328"
               >
                 <img alt="apple store" src="/static/img-ios-badge@2x.png" />
               </a>
@@ -49,15 +50,20 @@ const Download = ({ t }: ITrans) => {
       <style jsx>{`
         img {
           width: 100%;
-          max-wdith: 500px;
-          min-width: 300px;
+          max-width: 500px;
           object-fit: contain;
         }
 
         @media only screen and (max-width: 1024px) {
           img {
             width: 100%;
-            margin-bottom: 160px;
+            margin-bottom: 20px;
+          }
+
+          .instruction-img {
+            height: 30vh;
+            display: block;
+            margin: auto;
           }
         }
 

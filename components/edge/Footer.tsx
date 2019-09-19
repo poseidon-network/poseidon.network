@@ -5,7 +5,7 @@ import { withTranslation } from '../../i18n';
 import { styles } from '../../constants';
 
 const Footer = ({ t }: ITrans) => (
-  <Section padding="77px 0 100px" bgColor="#1d202b" color="#fff">
+  <Section padding="47px 0 70px" bgColor="#1d202b" color="#fff">
     <Content direction="row" style="align-items: center;">
       <div className="company-info">
         <img className="logo" alt="logo" src="/static/poseidonnetwork.svg" />
