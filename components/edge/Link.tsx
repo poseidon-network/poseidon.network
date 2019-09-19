@@ -20,9 +20,14 @@ const Link = ({ sn, t }: IProps & ITrans) => {
     <Section
       bgColor={styles.darkLight}
       color={styles.primaryColor}
-      padding="110px 0"
+      padding="10vh 0"
+      mStyle="padding-top: 30px; padding-bottom: 30px;"
     >
-      <Content direction="row">
+      <Content
+        direction="row"
+        mStyle="flex-direction: column-reverse;"
+        sStyle="flex-direction: column-reverse;"
+      >
         <Col>
           <H1 margin="0 0 10px">2</H1>
           <ScrollAnimation animateOnce animateIn="fadeInUp">
@@ -33,21 +38,23 @@ const Link = ({ sn, t }: IProps & ITrans) => {
           </ScrollAnimation>
           <ScrollAnimation animateOnce animateIn="fadeInUp" delay={800}>
             <div className="qrcode">
-              <img
-                src={`https://api.qrserver.com/v1/create-qr-code/?size=400x400&data=QN-TEST:${sn}`}
-              />
+              <div className="qrcode-wrapper">
+                <img
+                  src={`https://api.qrserver.com/v1/create-qr-code/?size=1000x1000&data=QN-TEST:${sn}`}
+                />
+                <p className="qrcode-text">Scan Me</p>
+              </div>
             </div>
           </ScrollAnimation>
         </Col>
-        <Col style="margin: 0 80px;" mStyle="margin: 0;">
-          <img src="/static/qedge-img-2@2x.png" />
+        <Col style="margin: 0 80px;">
+          <img className="instruction-img" src="/static/qedge-img-2@2x.png" />
         </Col>
       </Content>
       <style jsx>{`
         img {
           width: 100%;
-          max-wdith: 500px;
-          min-width: 300px;
+          max-width: 500px;
           object-fit: contain;
         }
 
@@ -55,19 +62,45 @@ const Link = ({ sn, t }: IProps & ITrans) => {
           width: 100%;
         }
 
-        .qrcode img {
-          height: 250px;
+        .qrcode-wrapper {
           width: 250px;
+          padding: 20px 20px 0;
+          background-color: #90cfbe;
+        }
+
+        .qrcode img {
+          width: 100%;
           min-width: initial;
           background-color: white;
           padding: 12px;
+          margin: auto;
+          display: block;
+        }
+
+        .qrcode-text {
           margin: 0;
+          padding: 8px 0;
+          color: #1d202b;
+          font-size: 24px;
+          font-weight: bold;
+          text-align: center;
         }
 
         @media only screen and (max-width: 1024px) {
           img {
             width: 100%;
-            margin-bottom: 160px;
+            margin-bottom: 20px;
+          }
+
+          .instruction-img {
+            height: 30vh;
+            display: block;
+            margin: auto;
+          }
+
+          .qrcode-wrapper {
+            width: 80%;
+            max-width: 250px;
           }
 
           .qrcode {

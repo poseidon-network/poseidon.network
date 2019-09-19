@@ -5,6 +5,7 @@ interface IProps {
   padding?: string;
   backgroundImage?: string;
   style?: string;
+  mStyle?: string;
 }
 
 const Layout = ({
@@ -14,6 +15,7 @@ const Layout = ({
   padding,
   backgroundImage,
   style = '',
+  mStyle = '',
 }: IProps) => (
   <div className="section">
     {children}
@@ -44,6 +46,7 @@ const Layout = ({
           padding-right: 30px;
           padding-top: 60px;
           padding-bottom: 60px;
+          ${mStyle}
         }
       }
     `}</style>
