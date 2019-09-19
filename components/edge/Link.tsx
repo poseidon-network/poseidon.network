@@ -40,9 +40,13 @@ const Link = ({ sn, t }: IProps & ITrans) => {
             <div className="qrcode">
               <div className="qrcode-wrapper">
                 <img
+                  className="qrcode-img"
                   src={`https://api.qrserver.com/v1/create-qr-code/?size=1000x1000&data=QN-TEST:${sn}`}
                 />
-                <p className="qrcode-text">Scan Me</p>
+                <p className="qrcode-text">
+                  <img className="icon" src="/static/ic-scan.svg" />
+                  Scan Me
+                </p>
               </div>
             </div>
           </ScrollAnimation>
@@ -68,13 +72,20 @@ const Link = ({ sn, t }: IProps & ITrans) => {
           background-color: #90cfbe;
         }
 
-        .qrcode img {
+        .qrcode-img {
           width: 100%;
           min-width: initial;
           background-color: white;
           padding: 12px;
           margin: auto;
           display: block;
+        }
+
+        .icon {
+          width: initial;
+          background-color: transparent;
+          padding: 0;
+          margin: 0 4px 0;
         }
 
         .qrcode-text {
