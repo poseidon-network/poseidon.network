@@ -1,7 +1,7 @@
 {
   "home.html.title": "首頁",
-  "home.title": "基於區塊鏈的分散式邊緣運算解決方案",
-  "home.description": "世界最大的去中心化資訊傳遞網路 (CDN + DSN)，藉由代幣經濟運作傳輸速度更快、更便宜，並且有效利用在全世界未被充分使用的頻寬和儲存空間裝置，例如：NAS、桌上型電腦、行動裝置......等等。我們的服務是非中心化且高效的，並與現有的網路和用作頻寬優化的區塊鏈基礎設施完全相容。",
+  "home.title": "可擴展性區塊鏈節點服務",
+  "home.description": "世界最大可擴展性節點網路 (Scalable Edge Solution Network)，利用區塊鏈 (Blockchain) 以及海神傳遞證明 (PoD) 協議，將節點服務及網路擴展性最佳化。節點服務將透過全世界連網設備裝置中，未被充分使用的頻寬、儲存空間、算力，與物聯網設備 (IoT) 和 5G 通信技術結合，打造霧端節點服務 (Fog Device Service) ，為大眾提供裝置效益最佳化並賺取收益的機會。",
   "home.whitepaper": "白皮書",
   "home.join": "加入社群",
   "home.whatposeidon": "Poseidon Network 是什麼?",
