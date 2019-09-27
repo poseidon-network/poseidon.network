@@ -6,6 +6,7 @@ const Button = ({
   title,
   width,
   margin,
+  style = '',
   mStyle = '',
   sStyle = '',
   ...props
@@ -15,6 +16,7 @@ const Button = ({
   target?: string;
   width?: string;
   margin?: string;
+  style?: string;
   mStyle?: string;
   sStyle?: string;
 }) => {
@@ -37,6 +39,7 @@ const Button = ({
           text-align: center;
           color: #90cfbe;
           transition: background-color 0.3s;
+          ${style}
           ${margin ? `margin: ${margin};` : ''}
         }
 

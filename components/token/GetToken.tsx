@@ -28,6 +28,17 @@ const GetToken = ({ t }: ITrans) => {
           <H3 margin="0 0 15px">{t('token.getqqq.exchanges')}</H3>
           <P margin="0 0 20px">{t('token.getqqq.exchanges.description')}</P>
           <Button
+            margin="0 0 30px;"
+            style="padding: 10px 20px 8px;"
+            title={
+              <img
+                style={{ width: 108, height: 34 }}
+                src="/static/logo-hotbit.png"
+              />
+            }
+            uri="https://www.hotbit.io/exchange?symbol=QQQ_USDT"
+          />
+          <Button
             margin="0 0 60px;"
             title={
               <img
