@@ -96,6 +96,7 @@ const Footer = ({ t }: ITrans) => (
         margin-right: auto;
         margin-bottom: 32px;
         height: 40px;
+        max-width: 100%;
       }
 
       @media only screen {
@@ -107,6 +108,16 @@ const Footer = ({ t }: ITrans) => (
 
       @media only screen and (max-width: 554px) {
         .links {
+          display: block;
+        }
+
+        .links > ul {
+          display: block;
+        }
+
+        .links li {
+          padding: 4px 0;
+          margin-left: 0;
           display: block;
         }
       }

@@ -20,16 +20,20 @@ const Gain = ({ t }: ITrans) => {
       mStyle="padding-top: 30px; padding-bottom: 30px;"
     >
       <Content direction="row">
-        <Col style="margin: 0 80px;">
+        <Col style="margin: 0 80px;" mStyle="margin: 0 auto;">
           <img className="instruction-img" src="/static/qedge-img-3@2x.png" />
         </Col>
         <Col>
-          <H1 margin="0 0 10px">3</H1>
+          <H1 margin="0 0 10px" sStyle="text-align: left; margin-top: 2.5rem;">
+            3
+          </H1>
           <ScrollAnimation animateOnce animateIn="fadeInUp">
-            <H2 margin="0 0 10px">{t('gain.title')}</H2>
+            <H2 margin="0 0 10px" sStyle="text-align: left;">
+              {t('gain.title')}
+            </H2>
           </ScrollAnimation>
           <ScrollAnimation animateOnce animateIn="fadeInUp" delay={400}>
-            <P>{t('gain.description')}</P>
+            <P sStyle="text-align: left;">{t('gain.description')}</P>
           </ScrollAnimation>
         </Col>
       </Content>
@@ -47,9 +51,11 @@ const Gain = ({ t }: ITrans) => {
           }
 
           .instruction-img {
+            min-width: 220px;
             height: 30vh;
             display: block;
             margin: auto;
+            margin-top: 3rem;
           }
         }
 
