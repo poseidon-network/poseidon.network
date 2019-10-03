@@ -20,16 +20,20 @@ const Download = ({ t }: ITrans) => {
       mStyle="padding-top: 30px; padding-bottom: 30px;"
     >
       <Content direction="row">
-        <Col style="margin: 0 80px;">
+        <Col style="margin: 0 80px;" mStyle="margin: 0 auto;">
           <img className="instruction-img" src="/static/qedge-img-1@2x.png" />
         </Col>
         <Col>
-          <H1 margin="0 0 10px">1</H1>
+          <H1 margin="0 0 10px" sStyle="text-align: left; margin-top: 2.5rem;">
+            1
+          </H1>
           <ScrollAnimation animateOnce animateIn="fadeInUp">
-            <H2 margin="0 0 10px">{t('download.title')}</H2>
+            <H2 margin="0 0 10px" sStyle="text-align: left;">
+              {t('download.title')}
+            </H2>
           </ScrollAnimation>
           <ScrollAnimation animateOnce animateIn="fadeInUp" delay={400}>
-            <P>{t('download.description')}</P>
+            <P sStyle="text-align: left;">{t('download.description')}</P>
           </ScrollAnimation>
           <ScrollAnimation animateOnce animateIn="fadeInUp" delay={800}>
             <div className="download">
@@ -54,25 +58,6 @@ const Download = ({ t }: ITrans) => {
           object-fit: contain;
         }
 
-        @media only screen and (max-width: 1024px) {
-          img {
-            width: 100%;
-            margin-bottom: 20px;
-          }
-
-          .instruction-img {
-            height: 30vh;
-            display: block;
-            margin: auto;
-          }
-        }
-
-        @media only screen and (max-width: 554px) {
-          img {
-            width: 100%;
-          }
-        }
-
         .download img {
           width: 48%;
           min-width: 40%;
@@ -80,6 +65,38 @@ const Download = ({ t }: ITrans) => {
 
         .download img:first-child {
           margin-right: 2%;
+        }
+
+        @media only screen and (max-width: 1024px) {
+          img {
+            width: 100%;
+            margin-bottom: 20px;
+          }
+
+          .instruction-img {
+            min-width: 220px;
+            height: 30vh;
+            display: block;
+            margin: auto;
+          }
+
+          .download img {
+            display: block;
+            margin-right: auto;
+            margin-left: auto;
+            width: 100%;
+            max-width: 350px;
+          }
+
+          .download img:first-child {
+            margin-right: auto;
+          }
+        }
+
+        @media only screen and (max-width: 554px) {
+          img {
+            width: 100%;
+          }
         }
       `}</style>
     </Section>

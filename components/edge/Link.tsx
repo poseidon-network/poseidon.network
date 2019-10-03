@@ -29,12 +29,16 @@ const Link = ({ sn, t }: IProps & ITrans) => {
         sStyle="flex-direction: column-reverse;"
       >
         <Col>
-          <H1 margin="0 0 10px">2</H1>
+          <H1 margin="0 0 10px" sStyle="text-align: left; margin-top: 2.5rem;">
+            2
+          </H1>
           <ScrollAnimation animateOnce animateIn="fadeInUp">
-            <H2 margin="0 0 10px">{t('link.title')}</H2>
+            <H2 margin="0 0 10px" sStyle="text-align: left;">
+              {t('link.title')}
+            </H2>
           </ScrollAnimation>
           <ScrollAnimation animateOnce animateIn="fadeInUp" delay={400}>
-            <P>{t('link.description')}</P>
+            <P sStyle="text-align: left;">{t('link.description')}</P>
           </ScrollAnimation>
           <ScrollAnimation animateOnce animateIn="fadeInUp" delay={800}>
             <div className="qrcode">
@@ -51,7 +55,7 @@ const Link = ({ sn, t }: IProps & ITrans) => {
             </div>
           </ScrollAnimation>
         </Col>
-        <Col style="margin: 0 80px;">
+        <Col style="margin: 0 80px;" mStyle="margin: 0 auto;">
           <img className="instruction-img" src="/static/qedge-img-2@2x.png" />
         </Col>
       </Content>
@@ -104,9 +108,11 @@ const Link = ({ sn, t }: IProps & ITrans) => {
           }
 
           .instruction-img {
+            min-width: 220px;
             height: 30vh;
             display: block;
             margin: auto;
+            margin-top: 3rem;
           }
 
           .qrcode-wrapper {
@@ -117,6 +123,7 @@ const Link = ({ sn, t }: IProps & ITrans) => {
           .qrcode {
             display: flex;
             justify-content: center;
+            margin-top: 2.5rem;
           }
         }
 
