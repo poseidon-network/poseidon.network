@@ -44,7 +44,10 @@ const Download = ({ t }: ITrans) => {
                 <img alt="apple store" src="/static/img-ios-badge@2x.png" />
               </a>
 
-              <a target="_blank" href="http://tiny.cc/kr7wbz">
+              <a
+                target="_blank"
+                href="https://play.google.com/store/apps/details?id=network.poseidon.qqq.app"
+              >
                 <img alt="google play" src="/static/img-google-badge@2x.png" />
               </a>
             </div>
