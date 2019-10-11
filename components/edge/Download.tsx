@@ -27,31 +27,25 @@ const Download = ({ t }: ITrans) => {
           <H1 margin="0 0 10px" sStyle="text-align: left; margin-top: 2.5rem;">
             1
           </H1>
-          <ScrollAnimation animateOnce animateIn="fadeInUp">
-            <H2 margin="0 0 10px" sStyle="text-align: left;">
-              {t('download.title')}
-            </H2>
-          </ScrollAnimation>
-          <ScrollAnimation animateOnce animateIn="fadeInUp" delay={400}>
-            <P sStyle="text-align: left;">{t('download.description')}</P>
-          </ScrollAnimation>
-          <ScrollAnimation animateOnce animateIn="fadeInUp" delay={800}>
-            <div className="download">
-              <a
-                target="_blank"
-                href="https://apps.apple.com/app/qqq-app/id1468063328"
-              >
-                <img alt="apple store" src="/static/img-ios-badge@2x.png" />
-              </a>
+          <H2 margin="0 0 10px" sStyle="text-align: left;">
+            {t('download.title')}
+          </H2>
+          <P sStyle="text-align: left;">{t('download.description')}</P>
+          <div className="download">
+            <a
+              target="_blank"
+              href="https://apps.apple.com/app/qqq-app/id1468063328"
+            >
+              <img alt="apple store" src="/static/img-ios-badge@2x.png" />
+            </a>
 
-              <a
-                target="_blank"
-                href="https://play.google.com/store/apps/details?id=network.poseidon.qqq.app"
-              >
-                <img alt="google play" src="/static/img-google-badge@2x.png" />
-              </a>
-            </div>
-          </ScrollAnimation>
+            <a
+              target="_blank"
+              href="https://play.google.com/store/apps/details?id=network.poseidon.qqq.app"
+            >
+              <img alt="google play" src="/static/img-google-badge@2x.png" />
+            </a>
+          </div>
         </Col>
       </Content>
       <style jsx>{`
