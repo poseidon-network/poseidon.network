@@ -27,14 +27,10 @@ const Gain = ({ t }: ITrans) => {
           <H1 margin="0 0 10px" sStyle="text-align: left; margin-top: 2.5rem;">
             3
           </H1>
-          <ScrollAnimation animateOnce animateIn="fadeInUp">
-            <H2 margin="0 0 10px" sStyle="text-align: left;">
-              {t('gain.title')}
-            </H2>
-          </ScrollAnimation>
-          <ScrollAnimation animateOnce animateIn="fadeInUp" delay={400}>
-            <P sStyle="text-align: left;">{t('gain.description')}</P>
-          </ScrollAnimation>
+          <H2 margin="0 0 10px" sStyle="text-align: left;">
+            {t('gain.title')}
+          </H2>
+          <P sStyle="text-align: left;">{t('gain.description')}</P>
         </Col>
       </Content>
       <style jsx>{`

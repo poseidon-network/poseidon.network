@@ -32,28 +32,22 @@ const Link = ({ sn, t }: IProps & ITrans) => {
           <H1 margin="0 0 10px" sStyle="text-align: left; margin-top: 2.5rem;">
             2
           </H1>
-          <ScrollAnimation animateOnce animateIn="fadeInUp">
-            <H2 margin="0 0 10px" sStyle="text-align: left;">
-              {t('link.title')}
-            </H2>
-          </ScrollAnimation>
-          <ScrollAnimation animateOnce animateIn="fadeInUp" delay={400}>
-            <P sStyle="text-align: left;">{t('link.description')}</P>
-          </ScrollAnimation>
-          <ScrollAnimation animateOnce animateIn="fadeInUp" delay={800}>
-            <div className="qrcode">
-              <div className="qrcode-wrapper">
-                <img
-                  className="qrcode-img"
-                  src={`https://api.qrserver.com/v1/create-qr-code/?size=1000x1000&data=QN-TEST:${sn}`}
-                />
-                <p className="qrcode-text">
-                  <img className="icon" src="/static/ic-scan.svg" />
-                  Scan Me
-                </p>
-              </div>
+          <H2 margin="0 0 10px" sStyle="text-align: left;">
+            {t('link.title')}
+          </H2>
+          <P sStyle="text-align: left;">{t('link.description')}</P>
+          <div className="qrcode">
+            <div className="qrcode-wrapper">
+              <img
+                className="qrcode-img"
+                src={`https://api.qrserver.com/v1/create-qr-code/?size=1000x1000&data=QN-TEST:${sn}`}
+              />
+              <p className="qrcode-text">
+                <img className="icon" src="/static/ic-scan.svg" />
+                Scan Me
+              </p>
             </div>
-          </ScrollAnimation>
+          </div>
         </Col>
         <Col style="margin: 0 80px;" mStyle="margin: 0 auto;">
           <img className="instruction-img" src="/static/qedge-img-2@2x.png" />
