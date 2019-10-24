@@ -40,7 +40,7 @@ const Link = ({ sn, t }: IProps & ITrans) => {
             <div className="qrcode-wrapper">
               <img
                 className="qrcode-img"
-                src={`https://api.qrserver.com/v1/create-qr-code/?size=1000x1000&data=NAS-QNAP:${sn}`}
+                src={`https://api.qrserver.com/v1/create-qr-code/?size=1000x1000&data=NAS-QNAP-${sn}`}
               />
               <p className="qrcode-text">
                 <img className="icon" src="/static/ic-scan.svg" />
