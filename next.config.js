@@ -12,6 +12,7 @@ module.exports = withTypescript({
     '/privacy': { page: '/privacy' },
     '/preview': { page: '/preview', query: { q: '' } },
     '/tron-dapp': { page: '/tron-dapp' },
+    '/edge': { page: '/edge', query: { sn: '' } },
   }),
   webpack(config) {
     config.plugins.push(
