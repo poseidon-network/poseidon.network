@@ -1,7 +1,7 @@
 {
   "technology.html.title": "技術",
-  "tech.title": "下個世代的網路資源分享平台",
-  "tech.description": "世界最大的去中心化加速內容網路(CDN + DSN)，藉由代幣經濟運作傳輸速度更快更便宜，有效利用、NAS(私有雲端)、主機、行動裝置等在全世界上未被充分使用的閒置頻寬和儲存空間。 \n 它分佈式，高效，並與現有的互聯網和區塊鏈架構為作為每種類型的網頁內容施行帶寬優化( 靜態文件 / 視頻點播 / 直播串流 ）",
+  "tech.title": "去中心化的網路資源共享平台",
+  "tech.description": "閒置資源的提供者可以透過 Poseidon Network 將物聯網裝置安裝 QLauncher 加入挖礦；QService 透過有效利用 NAS (私有雲端)、PC、行動裝置等在全世界上未被充分使用的閒置頻寬和儲存空間，提供世界最大的去中心化工作站，解決了現階段大多的去中心化區塊鏈及應用跑在中心化機房的窘境。",
   "tech.dapps.scenario": "Poseidon Network Dapps 架構",
   "tech.dapps.scenario.description": "圖表最上層，展示 App 及 Dapps 的應用場景，包括直播，視頻、照片共享，檔案共享，更新文件發送方式，以及未來的區塊鏈標籤，可信任執行環境(TEE)，更多不受限制的可能機會。 \n 中間的圖表演示智能合約及演算法。多樣性的演算維持了它的效率並形成監督層 \n 最下層的圖表展示整個底層架構，包括 QCDN、DSN及區塊鏈 QCDN 還包含 QEdge 作為分配器的節點和 Qontroller。",
   "tech.smartcontract": "Poseidon Network 智能合约",
