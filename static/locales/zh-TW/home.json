@@ -5,7 +5,7 @@
   "home.whitepaper": "白皮書",
   "home.join": "加入社群",
   "home.whatposeidon": "Poseidon Network 是什麼?",
-  "home.explain": "我們建造了可擴展性節點的網路，透過嚴謹的架構，實現打破了均值化節點裝置參與去中心化網路的限制。基於這個基礎技術下，我們實現FaaS以及IaaS的服務提供。因此也開發了QQQ token driven的 System Service：QLuancher、QService、QWallet。藉由我們各種靈活的解決方案，合作夥伴已經包括世界領先的 NAS 品牌、知名區塊鏈公司、電子商務、內容產業、知名手遊、社區論壇，直播等。",
+  "home.explain": "我們建造了可擴展性節點的網路，透過嚴謹的架構，實現打破了均值化節點裝置參與去中心化網路的限制。基於這個基礎技術下，我們實現 FaaS 以及 IaaS 的服務提供。因此也開發了 QQQ token driven 的 System Service：QLuancher、QService、QWallet。藉由我們各種靈活的解決方案，合作夥伴已經包括世界領先的 NAS 品牌、知名區塊鏈公司、電子商務、內容產業、知名手遊、社區論壇，直播等。",
   "home.explain.readmore": "更多技術細節",
   "home.solutions": "解決方案",
   "home.scalabe": "QQQ Token",
