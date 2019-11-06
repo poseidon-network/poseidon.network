@@ -293,8 +293,7 @@ export const whitepaperList = [
     lang: 'zh-TW',
     title: '白皮書',
     flag: 'tw',
-    uri:
-      'https://ipfs.poseidon.network/ipfs/QmaQcgGEzngTXgTH4hnLwCduTTwfHEvNpGanboeTypd3Qf',
+    uri: 'https://poseidon.network/whitepaper/poseidon_white_paper_zh_tw.pdf',
   },
   {
     lang: 'ko',
