@@ -30,7 +30,7 @@ const Nav = ({ bgColor = '#222633' }: IProps) => {
 
   const changeLanguage = (lang: string) => {
     return () => {
-      i18n.changeLanguage(lang, err => {
+      i18n.changeLanguage(lang, (err: any) => {
         if (err) return console.log('something went wrong loading', err);
         localStorage.setItem('i18nextLng', lang);
         setLangIconClass((langIconClassMap as any)[lang]);
