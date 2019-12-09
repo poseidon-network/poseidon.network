@@ -1,4 +1,4 @@
-import NextI18Next from 'next-i18next';
+const NextI18Next = require('next-i18next/dist/commonjs').default;
 
 const otherLanguages = ['zh-TW', 'zh-CN', 'ja', 'ko', 'vi', 'th', 'ru'];
 const NextI18NextInstance = new NextI18Next({
