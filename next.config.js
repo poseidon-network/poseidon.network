@@ -13,6 +13,7 @@ module.exports = withTypescript({
     '/preview': { page: '/preview', query: { q: '' } },
     '/tron-dapp': { page: '/tron-dapp' },
     '/edge': { page: '/edge', query: { sn: '' } },
+    '/qlauncher': { page: '/qlauncher', query: { sn: '' } },
   }),
   webpack(config) {
     config.plugins.push(
