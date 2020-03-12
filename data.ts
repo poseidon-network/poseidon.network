@@ -275,7 +275,7 @@ export const socialMediaList = [
   {
     title: 'Telegram',
     imgUri: '/static/telegram.svg',
-    link: 'https://t.me/QQQtoken',
+    link: 'https://t.me/QQQ_Poseidon_En',
     alt: 'telegram',
     followerNum: 27300,
   },
@@ -317,7 +317,7 @@ export const footer = {
   communities: [
     { title: 'Twitter', uri: 'https://twitter.com/QQQtoken' },
     { title: 'Facebook', uri: 'https://www.facebook.com/QQQtoken/' },
-    { title: 'Telegram', uri: 'https://t.me/QQQtoken' },
+    { title: 'Telegram', uri: 'https://t.me/QQQ_Poseidon_En' },
     { title: 'Medium', uri: 'https://medium.com/poseidonnetwork' },
     {
       title: 'Linkedin',
