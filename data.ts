@@ -275,7 +275,7 @@ export const socialMediaList = [
   {
     title: 'Telegram',
     imgUri: '/static/telegram.svg',
-    link: 'https://t.me/QQQtoken',
+    link: 'https://t.me/QQQ_Poseidon_En',
     alt: 'telegram',
     followerNum: 27300,
   },
