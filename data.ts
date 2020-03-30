@@ -109,9 +109,9 @@ export const team = [
     linkedin: 'https://www.linkedin.com/in/lightlin?originalSubdomain=tw',
   },
   {
-    name: 'Qing Wang',
-    title: 'CTO',
-    avatar: '/static/avatar-qing@2x.png',
+    name: 'Mike Lin',
+    title: 'COO',
+    avatar: '/static/avatar-mike@2x.png',
   },
   {
     name: 'Kensi Chang',
@@ -119,16 +119,9 @@ export const team = [
     avatar: '/static/avatar-kensi@2x.png',
   },
   {
-    name: 'Bill Sun',
-    title: 'Product Manager ',
-    avatar: '/static/avatar-bill@2x.png',
-    linkedin:
-      'https://www.linkedin.com/in/%E5%81%89%E5%80%AB-%E5%AD%AB-59ba20151/',
-  },
-  {
-    name: 'Mike Lin',
-    title: 'COO',
-    avatar: '/static/avatar-mike@2x.png',
+    name: 'Vicky Gao',
+    title: 'Product Manager',
+    avatar: '/static/avatar-vicky@2x.png',
   },
   {
     name: 'Bee Li',
@@ -148,6 +141,11 @@ export const team = [
     title: 'Software Engineer',
     avatar: '/static/avatar-andyhsu@2x.png',
     linkedin: 'https://www.linkedin.com/in/an-ting-hsu-b998a3180/',
+  },
+  {
+    name: 'Shawn Chang',
+    title: 'Software Engineer',
+    avatar: '/static/avatar-shawn@2x.png',
   },
   {
     name: 'Hugo',
