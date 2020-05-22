@@ -284,8 +284,7 @@ export const whitepaperList = [
     lang: 'en',
     title: 'Whitepaper',
     flag: 'us',
-    uri:
-      'https://ipfs.poseidon.network/ipfs/QmUzzcKXhturgVu8BgFhf7bmnf2ittC7d9T9bXwuX5NEXB',
+    uri: 'https://poseidon.network/whitepaper/poseidon_white_paper_en.pdf',
   },
   {
     lang: 'zh-TW',
@@ -297,15 +296,13 @@ export const whitepaperList = [
     lang: 'ko',
     title: '백서',
     flag: 'kr',
-    uri:
-      'https://ipfs.poseidon.network/ipfs/QmWsKC9itUBN743mcJMxezaG6uAufkpmNaZqGQ5rGgTonA',
+    uri: 'https://poseidon.network/whitepaper/poseidon_white_paper_kr.pdf',
   },
   {
     lang: 'vi',
     title: 'Giấy trắng',
     flag: 'vn',
-    uri:
-      'https://ipfs.poseidon.network/ipfs/QmR1uXcQ8eqhJFY1GBrbh4v9DxnLq1qoa9cY3Lm4tJRGCB',
+    uri: 'https://poseidon.network/whitepaper/poseidon_white_paper_viet.pdf',
   },
 ];
 
