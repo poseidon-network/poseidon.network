@@ -1,7 +1,8 @@
 // @ts-ignore
-import React, { FC, useEffect, useState } from 'react';
 import ScrollAnimation from 'react-animate-on-scroll';
 import QRCode from 'qrcode';
+
+import React, { useState } from 'react';
 
 import Section from '../Section';
 import Content from '../Content';
@@ -18,7 +19,7 @@ interface IProps {
 }
 
 const Link = ({ sn, t }: IProps & ITrans) => {
-  const [qrcode, setQRCode] = useState<string>();
+  const [qrcode, setQRCode] = useState<string>('');
 
   const generateQRCode = async () => {
     const data = `NAS-QNAP-${sn}`;
