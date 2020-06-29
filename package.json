@@ -30,6 +30,7 @@
     "ipfs-api": "^26.1.2",
     "next": "^7.0.2",
     "next-i18next": "^0.41.0",
+    "qrcode": "^1.4.4",
     "rc-progress": "^2.2.6",
     "react": "^16.8.6",
     "react-animate-on-scroll": "^2.1.5",
