@@ -1,5 +1,7 @@
 // @ts-ignore
+import React, { FC, useEffect, useState } from 'react';
 import ScrollAnimation from 'react-animate-on-scroll';
+import QRCode from 'qrcode';
 
 import Section from '../Section';
 import Content from '../Content';
@@ -16,6 +18,20 @@ interface IProps {
 }
 
 const Link = ({ sn, t }: IProps & ITrans) => {
+  const [qrcode, setQRCode] = useState<string>();
+
+  const generateQRCode = async () => {
+    const data = `NAS-QNAP-${sn}`;
+    setQRCode(
+      await QRCode.toDataURL(data, {
+        errorCorrectionLevel: 'H',
+        scale: 12,
+        margin: 0,
+      }),
+    );
+  };
+  generateQRCode();
+
   return (
     <Section
       bgColor={styles.darkLight}
@@ -38,10 +54,7 @@ const Link = ({ sn, t }: IProps & ITrans) => {
           <P sStyle="text-align: left;">{t('link.description')}</P>
           <div className="qrcode">
             <div className="qrcode-wrapper">
-              <img
-                className="qrcode-img"
-                src={`https://api.qrserver.com/v1/create-qr-code/?size=1000x1000&data=NAS-QNAP-${sn}`}
-              />
+              <img className="qrcode-img" src={qrcode} />
               <p className="qrcode-text">
                 <img className="icon" src="/static/ic-scan.svg" />
                 Scan Me
