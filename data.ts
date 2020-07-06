@@ -290,7 +290,8 @@ export const whitepaperList = [
     lang: 'zh-TW',
     title: '白皮書',
     flag: 'tw',
-    uri: 'https://poseidon.network/whitepaper/poseidon_white_paper_zh_tw.pdf',
+    uri:
+      'https://poseidon.network/whitepaper/Poseidon_White_Paper_v1.01_zh_tw.pdf',
   },
   {
     lang: 'ko',
