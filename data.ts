@@ -344,7 +344,7 @@ export const footer = {
     },
   ],
   email: 'service@poseidon.network',
-  copyright: 'Copyright © Poseidon Network 2019.',
+  copyright: 'Copyright © Poseidon Network PTE. LTD. 2020.',
 };
 
 export const mediaList = [
