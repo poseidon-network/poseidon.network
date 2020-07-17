@@ -7,7 +7,6 @@ import Solutions from '../components/home/Solutions';
 import Investors from '../components/home/Investors';
 import Team from '../components/home/Team';
 import Contact from '../components/Contact';
-import HelpCompany from '../components/home/HelpCompany';
 import SettingUp from '../components/home/SettingUp';
 import MediaList from '../components/home/MediaList';
 import { styles } from '../constants';
@@ -29,7 +28,6 @@ class Homepage extends React.Component<any> {
         <Header />
         <Intro />
         <Solutions />
-        <HelpCompany />
         <SettingUp />
         <Team />
         <Investors />
