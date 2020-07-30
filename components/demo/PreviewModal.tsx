@@ -18,26 +18,36 @@ const PreviewModal = ({ isLogin, onClickLogin, onClickApp }: IProps) => (
     <p className="modal-text">
       To continue to watch this video, please pay first.
     </p>
-    <a className="app-link" href={`poseidon://preview${window.location.search}`} onClick={onClickApp}>Pay on the APP</a>
-    { !isLogin &&
-      <small>Already paid?&nbsp;
+    <a
+      className="app-link"
+      href={`poseidon://preview${window.location.search}`}
+      onClick={onClickApp}
+    >
+      Pay on the APP
+    </a>
+    {!isLogin && (
+      <small>
+        Already paid?&nbsp;
         <FacebookLogin
           autoLoad
           appId={FACEBOOK_APP_ID}
           scope="public_profile, email"
           callback={onClickLogin}
           render={(renderProps: any) => (
-            <a href="" onClick={(event: React.SyntheticEvent) => {
-              event.preventDefault();
-              renderProps.onClick();
-            }}>login here</a>
+            <a
+              href=""
+              onClick={(event: React.SyntheticEvent) => {
+                event.preventDefault();
+                renderProps.onClick();
+              }}
+            >
+              login here
+            </a>
           )}
         />
       </small>
-    }
-    <style jsx>
-      { style }
-    </style>
+    )}
+    <style jsx>{style}</style>
   </Modal>
 );
 

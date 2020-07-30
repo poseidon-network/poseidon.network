@@ -33,7 +33,7 @@ const SettingUp = ({ t }: ITrans) => (
           <Button
             target="_open"
             title={t('home.mobile.download')}
-            uri="https://www.surveycake.com/s/W8GAD"
+            uri="https://github.com/poseidon-network/qlauncher-linux"
           />
         </Col>
         <style jsx>{`

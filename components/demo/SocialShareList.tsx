@@ -1,7 +1,7 @@
 import React from 'react';
 import CopyToClipboard from 'react-copy-to-clipboard';
 
-const SocialShareList = ({ link }: { link: string }) => ((
+const SocialShareList = ({ link }: { link: string }) => (
   <div className="container">
     <a href={`mailto:?subject=&body=${link}`}>
       <img src="/static/ic-mail@2x.png" />
@@ -41,6 +41,6 @@ const SocialShareList = ({ link }: { link: string }) => ((
       }
     `}</style>
   </div>
-));
+);
 
 export default SocialShareList;

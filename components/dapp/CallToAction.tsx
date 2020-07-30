@@ -2,16 +2,18 @@ import Section from '../Section';
 import Content from '../Content';
 
 const CallToAction = () => (
-  <Section
-    bgColor="#1d202b"
-    color="#fff"
-  >
+  <Section bgColor="#1d202b" color="#fff">
     <Content>
       <div className="main">
         <div className="left">
           <p className="title">Start earning TRX, TODAY!</p>
-          <p className="description">share your life or share your unused resources. Do both and double your earnings!</p>
-          <a href="https://www.pgyer.com/SszB" className="btn">Get the App</a>
+          <p className="description">
+            share your life or share your unused resources. Do both and double
+            your earnings!
+          </p>
+          <a href="https://www.pgyer.com/SszB" className="btn">
+            Get the App
+          </a>
         </div>
         <div>
           <img className="logo-dollar" src="/static/img-logo-dollar.png" />
@@ -79,7 +81,8 @@ const CallToAction = () => (
             font-size: 46px;
           }
 
-          .title, .description {
+          .title,
+          .description {
             width: 80%;
             height: initial;
           }

@@ -24,20 +24,24 @@ class FileTable extends React.Component<IProps, IState> {
   };
 
   componentDidMount() {
-    document.body.addEventListener('click', ({ target }: any) => {
-      if (target.tagName !== 'IMG') {
-        this.setState({
-          activeItemHash: undefined,
-        });
-      }
-    }, false);
+    document.body.addEventListener(
+      'click',
+      ({ target }: any) => {
+        if (target.tagName !== 'IMG') {
+          this.setState({
+            activeItemHash: undefined,
+          });
+        }
+      },
+      false,
+    );
   }
 
   handleClickAction = (activeItemHash: string) => {
     this.setState({
       activeItemHash,
     });
-  }
+  };
 
   getFileImage = (name: string) => {
     const ext = name.split('.').pop() || '';
@@ -48,9 +52,9 @@ class FileTable extends React.Component<IProps, IState> {
       return '/static/ic-mov@2x.png';
     }
     return '/static/ic-placholder@2x.png';
-  }
+  };
 
-  render () {
+  render() {
     return (
       <div className="container">
         <div className="header">
@@ -58,14 +62,16 @@ class FileTable extends React.Component<IProps, IState> {
           <div className="col2-title">Hash</div>
         </div>
         <div className="table">
-          { this.props.isLoading && <FileContentLoading /> }
-          { this.props.fileList.map(({ id, name, size, hash }, index) => (
+          {this.props.isLoading && <FileContentLoading />}
+          {this.props.fileList.map(({ id, name, size, hash }, index) => (
             <FileRow
               key={`${hash}${index}`}
               name={name}
               size={size}
               hash={hash}
-              uri={`${window.location.protocol}//${window.location.host}/preview?q=${id}`}
+              uri={`${window.location.protocol}//${
+                window.location.host
+              }/preview?q=${id}`}
               fileID={`${hash}${index}`}
               activeItemHash={this.state.activeItemHash}
               getFileImage={this.getFileImage}
@@ -73,9 +79,7 @@ class FileTable extends React.Component<IProps, IState> {
             />
           ))}
         </div>
-        <style jsx>
-        { fileStyle }
-        </style>
+        <style jsx>{fileStyle}</style>
       </div>
     );
   }
