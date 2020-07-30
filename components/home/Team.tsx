@@ -50,8 +50,8 @@ const Team = ({ t }: ITrans) => {
 
   return (
     <Section bgColor={styles.dark} color="#222633">
-      <Content>
-        <H2 center id="team" margin="120px 0 100px" size="32px">
+      <Content padding="0 0 130px 0">
+        <H2 center id="team" margin="90px 0 100px" size="32px">
           {t('home.team')}
         </H2>
         <div className="members">

@@ -3,21 +3,18 @@ import Content from '../Content';
 import ListItem from './ListItem';
 
 const Blockchain = () => (
-  <Section
-    bgColor="#d7f2ee"
-    color="#222633"
-    padding="0"
-  >
+  <Section bgColor="#d7f2ee" color="#222633" padding="0">
     <Content>
       <div className="main">
         <div className="left">
-          <p className="title">
-            Blockchain Integration
-          </p>
+          <p className="title">Blockchain Integration</p>
           <ul className="description">
             <ListItem>Atlas, good move.</ListItem>
             <ListItem>TRON smart contract and TRX Wallets</ListItem>
-            <ListItem>Layer 2 solution, NOT putting data on blockchain to ensure performance, scalability, and feasibility</ListItem>
+            <ListItem>
+              Layer 2 solution, NOT putting data on blockchain to ensure
+              performance, scalability, and feasibility
+            </ListItem>
           </ul>
           <a href="https://www.pgyer.com/SszB" className="btn">
             Try it out
@@ -95,7 +92,8 @@ const Blockchain = () => (
             align-items: center;
           }
 
-          .title, .description {
+          .title,
+          .description {
             width: 100%;
             text-align: center;
           }

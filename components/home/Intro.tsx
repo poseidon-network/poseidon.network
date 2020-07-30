@@ -9,7 +9,7 @@ import MoreLink from '../MoreLink';
 import Col from '../Col';
 import RParallax from '../RParallax';
 import { styles } from '../../constants';
-import { introLogoList } from '../../data';
+// import { introLogoList } from '../../data';
 import { withTranslation, i18n } from '../../i18n';
 
 const Intro = ({ t }: ITrans) => {
@@ -17,9 +17,9 @@ const Intro = ({ t }: ITrans) => {
     ? 'https://www.youtube.com/embed/R2ehmHkq4RI'
     : 'https://www.youtube.com/embed/Kdj5ZoSJqv0';
   return (
-    <Section bgColor={styles.darkLight} color="#fff" padding="149px 0 100px">
+    <Section bgColor={styles.darkLight} color="#fff" padding="120px 0 120px">
       <RParallax percentage={0.5} speed={-13}>
-        <Content
+        {/* <Content
           direction="row"
           style="display: grid; grid-template-columns: repeat(auto-fit, 165px); justify-content: space-between; margin-bottom: 120px;"
           mStyle="grid-template-columns: 30% 30% 30%; justify-items: center; grid-gap: 0 60px;"
@@ -30,7 +30,7 @@ const Intro = ({ t }: ITrans) => {
               <img className="logo" key={index.toString()} src={img} />
             </a>
           ))}
-        </Content>
+        </Content> */}
         <Content direction="row">
           <Col
             flex
