@@ -151,6 +151,11 @@ export const team = [
     avatar: '/static/avatar-shawn@2x.png',
   },
   {
+    name: 'YH Lai',
+    title: 'Software Engineer',
+    avatar: '/static/avatar-yh@2x.png',
+  },
+  {
     name: 'Hugo',
     title: 'Community',
     avatar: '/static/avatar-hugo@2x.png',
