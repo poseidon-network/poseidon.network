@@ -4,7 +4,7 @@ import Contact from '../components/Contact';
 import Intro from '../components/company/Intro';
 import Vaule from '../components/company/Value';
 import Team from '../components/company/Team';
-import Advisors from '../components/company/Advisors';
+// import Advisors from '../components/company/Advisors';
 import Roadmap from '../components/company/Roadmap';
 import { withTranslation } from '../i18n';
 import { styles } from '../constants';
@@ -25,7 +25,7 @@ class Company extends React.Component<any> {
         <Intro />
         <Vaule />
         <Team />
-        <Advisors />
+        {/* <Advisors /> */}
         <Roadmap />
         <Contact />
       </Page>
