@@ -3,12 +3,8 @@ import css from 'styled-jsx/css';
 
 const Modal = ({ children }: { children: React.ReactNode }) => (
   <div className="modal">
-    <div className="modal-content">
-      { children }
-    </div>
-    <style jsx>
-      { style }
-    </style>
+    <div className="modal-content">{children}</div>
+    <style jsx>{style}</style>
   </div>
 );
 

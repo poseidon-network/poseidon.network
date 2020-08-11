@@ -13,10 +13,13 @@ export const getUser = () => {
 
 export const saveLoginData = async (data: any) => {
   window.localStorage.setItem('authToken', data.token);
-  window.localStorage.setItem('user', JSON.stringify({
-    ...data,
-    isLogin: true,
-  }));
+  window.localStorage.setItem(
+    'user',
+    JSON.stringify({
+      ...data,
+      isLogin: true,
+    }),
+  );
 
   // expire time
   const userExpiredAt = new Date();

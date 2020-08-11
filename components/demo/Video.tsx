@@ -17,7 +17,13 @@ interface IProps {
   onDownload: (event: React.SyntheticEvent) => void;
 }
 
-const Video = ({ video, isModalOpened, videoRef, onTimeUpdate, onDownload }: IProps) => (
+const Video = ({
+  video,
+  isModalOpened,
+  videoRef,
+  onTimeUpdate,
+  onDownload,
+}: IProps) => (
   <div>
     <video
       ref={videoRef}
@@ -27,22 +33,24 @@ const Video = ({ video, isModalOpened, videoRef, onTimeUpdate, onDownload }: IPr
     >
       <source src={video.uri} type="video/mp4" />
     </video>
-    <p className="name">{ name }</p>
+    <p className="name">{name}</p>
     <div className="file-meta">
-      <p className="view">{ video.viewCount } views</p>
+      <p className="view">{video.viewCount} views</p>
       <div className="right-meta">
-        <p className="price">{ video.price > 0 ? `Price ${video.price} USD` : 'Free' }</p>
-        { video.price > 0 && (
-            video.isPaid
-            ? <span>(Paid)</span>
-            : <a href="" className="download" onClick={onDownload}>Pay</a>
-          )
-        }
+        <p className="price">
+          {video.price > 0 ? `Price ${video.price} USD` : 'Free'}
+        </p>
+        {video.price > 0 &&
+          (video.isPaid ? (
+            <span>(Paid)</span>
+          ) : (
+            <a href="" className="download" onClick={onDownload}>
+              Pay
+            </a>
+          ))}
       </div>
     </div>
-    <style jsx>
-      { style }
-    </style>
+    <style jsx>{style}</style>
   </div>
 );
 

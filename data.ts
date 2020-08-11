@@ -32,11 +32,6 @@ export const solutions = [
 
 export const partners = [
   {
-    name: 'Longhash Singapore',
-    title: 'home.investors.longhash',
-    avatar: '/static/avatar-longhsh@2x.png',
-  },
-  {
     name: 'Jamie Lin',
     title: 'home.investors.JamieLin',
     avatar: '/static/avatar-lin@2x.png',
@@ -124,17 +119,25 @@ export const team = [
     avatar: '/static/avatar-vicky@2x.png',
   },
   {
-    name: 'Bee Li',
-    title: 'Chief Design Officer ',
-    avatar: '/static/avatar-bee@2x.png',
-    linkedin: 'https://www.linkedin.com/in/jiajhenli/',
-    twitter: 'https://twitter.com/jiajhenbee ',
+    name: 'Zeph Chang',
+    title: 'Product Manager',
+    avatar: '/static/avatar-zeph@2x.png',
+  },
+  {
+    name: 'Yu-En Weng',
+    title: 'Product Designer',
+    avatar: '/static/avatar-yuen@2x.png',
   },
   {
     name: 'Chi-Hsuan Huang',
     title: 'Blockchain Engineer',
     avatar: '/static/avatar-chihsuan@2x.png',
     linkedin: 'https://www.linkedin.com/in/chihsuanhuang/',
+  },
+  {
+    name: 'Mavis Liu',
+    title: 'Backend Engineer',
+    avatar: '/static/avatar-marvis@2x.png',
   },
   {
     name: 'Andy Hsu',
@@ -146,6 +149,11 @@ export const team = [
     name: 'Shawn Chang',
     title: 'Software Engineer',
     avatar: '/static/avatar-shawn@2x.png',
+  },
+  {
+    name: 'YH Lai',
+    title: 'Software Engineer',
+    avatar: '/static/avatar-yh@2x.png',
   },
   {
     name: 'Hugo',

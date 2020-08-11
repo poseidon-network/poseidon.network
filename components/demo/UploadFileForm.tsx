@@ -11,7 +11,7 @@ interface IProps {
   isLoading: boolean;
   percentCompleted?: number;
 }
-const UploadFileForm = ({ onDrop, isLoading, percentCompleted  }: IProps) => (
+const UploadFileForm = ({ onDrop, isLoading, percentCompleted }: IProps) => (
   <div className="container">
     <div className="dropzone-wrapper">
       <Dropzone
@@ -20,19 +20,23 @@ const UploadFileForm = ({ onDrop, isLoading, percentCompleted  }: IProps) => (
         onDrop={onDrop}
       >
         <div className="upload-hint">
-          { isLoading
-            && <React.Fragment>
-                <FaSpinner className={spinResolveCSS.className} />
-                <Line percent={percentCompleted} strokeWidth="1" strokeColor="#90cfbe" />
-              </React.Fragment>
-          }
+          {isLoading && (
+            <React.Fragment>
+              <FaSpinner className={spinResolveCSS.className} />
+              <Line
+                percent={percentCompleted}
+                strokeWidth="1"
+                strokeColor="#90cfbe"
+              />
+            </React.Fragment>
+          )}
           <p>Firstly, try to drag and drop your file here!</p>
           <small>Once you...</small>
         </div>
       </Dropzone>
     </div>
 
-    { spinResolveCSS.styles  }
+    {spinResolveCSS.styles}
     <style jsx>{`
       .container {
         z-index: 0;

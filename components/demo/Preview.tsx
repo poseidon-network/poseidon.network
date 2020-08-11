@@ -70,7 +70,7 @@ export class Preview extends React.Component<IProps, IState> {
         file: data.file,
       });
     }
-  }
+  };
 
   handleLogin = async ({ accessToken }: ReactFacebookLoginInfo) => {
     const { data } = await this.props.client.mutate<{ socialLogin: any }>({
@@ -83,30 +83,30 @@ export class Preview extends React.Component<IProps, IState> {
     if (data && data.socialLogin) {
       saveLoginData(data.socialLogin);
     }
-  }
+  };
 
   handleUpdateTime = () => {
     const video = this.myVideo.current;
     const { file } = this.state;
     if (video && file && file.price > 0 && !file.isPaid) {
-      if (video.currentTime >= (video.duration) / 10) {
+      if (video.currentTime >= video.duration / 10) {
         video.pause();
         this.setState({
           isModalOpened: true,
         });
       }
     }
-  }
+  };
 
   handleClickOpenApp = () => {
-    const clickedAt = +new Date;
+    const clickedAt = +new Date();
     setTimeout(() => {
       // To avoid failing on return to MobileSafari, ensure freshness!
-      if ((+new Date - clickedAt) < 12000) {
+      if (+new Date() - clickedAt < 12000) {
         window.location.href = APP_URL;
       }
     }, REDIRECT_TIMEOUT_MS);
-  }
+  };
 
   handlePay = async (event: React.SyntheticEvent) => {
     event.preventDefault();
@@ -116,7 +116,10 @@ export class Preview extends React.Component<IProps, IState> {
       if (tronWeb) {
         try {
           const contract = await tronWeb.trx.getContract(CONTRACT_ADDRESS);
-          const instance = tronWeb.contract(contract.abi.entrys, CONTRACT_ADDRESS);
+          const instance = tronWeb.contract(
+            contract.abi.entrys,
+            CONTRACT_ADDRESS,
+          );
           const fileHexID = tronWeb.toHex(translator.fromUUID(file.id));
           const f = await instance.files(fileHexID).call();
           const price = f.price.toNumber();
@@ -124,7 +127,9 @@ export class Preview extends React.Component<IProps, IState> {
           const trxPrice = price / (trxToUSDPrice.toNumber() / 100000);
           const isBalanceEnough = await this.checkBalance(trxPrice);
           if (isBalanceEnough) {
-            const sharerAdddress = this.state.sharerAdddress || '410000000000000000000000000000000000000000';
+            const sharerAdddress =
+              this.state.sharerAdddress ||
+              '410000000000000000000000000000000000000000';
             await instance.pay(fileHexID, sharerAdddress).send({
               callValue: tronWeb.toSun(Math.round(trxPrice)),
             });
@@ -149,7 +154,7 @@ export class Preview extends React.Component<IProps, IState> {
     } else {
       this.setState({ isModalOpened: true });
     }
-  }
+  };
 
   checkBalance = async (balanceNeeded: number) => {
     const tronWeb = (window as any).tronWeb;
@@ -162,7 +167,7 @@ export class Preview extends React.Component<IProps, IState> {
       return false;
     }
     return false;
-  }
+  };
 
   renderFile = () => {
     const { file } = this.state;
@@ -182,41 +187,42 @@ export class Preview extends React.Component<IProps, IState> {
       );
     }
 
-    if (['image/png', 'image/jpg', 'image/jpeg', 'image/gif'].includes(file.mimetype)) {
+    if (
+      ['image/png', 'image/jpg', 'image/jpeg', 'image/gif'].includes(
+        file.mimetype,
+      )
+    ) {
       return (
         <div>
           <img src={file.uri} />
-          <style jsx>
-            { style }
-          </style>
+          <style jsx>{style}</style>
         </div>
       );
     }
-  }
+  };
 
   render() {
     return (
       <div className="container">
-        { this.renderFile() }
-        { this.state.isModalOpened &&
+        {this.renderFile()}
+        {this.state.isModalOpened && (
           <PreviewModal
             isLogin={this.props.user.isLogin}
             onClickLogin={this.handleLogin}
             onClickApp={this.handleClickOpenApp}
           />
-        }
-        { this.state.showTronLinkMsg &&
+        )}
+        {this.state.showTronLinkMsg && (
           <Modal>
-            <p>Could not find the Tron wallet. Please install the
+            <p>
+              Could not find the Tron wallet. Please install the
               <a href="https://chrome.google.com/webstore/detail/tronlink/ibnejdfjmmkpcnlpebklmnkoeoihofec">
                 TronLink
               </a>
             </p>
           </Modal>
-        }
-        <style jsx>
-          { style }
-        </style>
+        )}
+        <style jsx>{style}</style>
       </div>
     );
   }
@@ -233,8 +239,8 @@ const style = css`
     min-height: 80vh;
   }
 
-
-  img, iframe {
+  img,
+  iframe {
     width: 100%;
     max-width: 920px;
     max-height: 400px;
@@ -247,25 +253,25 @@ const style = css`
 `;
 
 const loadFileGQL = gql`
-query ($id: String!) {
-  file(id: $id) {
-    id
-    name
-    uri
-    mimetype
-    price
-    isPaid
-    viewCount
+  query($id: String!) {
+    file(id: $id) {
+      id
+      name
+      uri
+      mimetype
+      price
+      isPaid
+      viewCount
+    }
   }
-}
 `;
 
 const payGQL = gql`
-mutation ($fileID: String) {
-  pay(fileID: $fileID) {
-    id
+  mutation($fileID: String) {
+    pay(fileID: $fileID) {
+      id
+    }
   }
-}
 `;
 
 export const SOCIAL_LOGIN = gql`
@@ -275,7 +281,7 @@ export const SOCIAL_LOGIN = gql`
     $idToken: String
     $displayname: String
   ) {
-    socialLogin (
+    socialLogin(
       service: $service
       accessToken: $accessToken
       idToken: $idToken

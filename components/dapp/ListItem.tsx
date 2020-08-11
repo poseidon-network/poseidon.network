@@ -1,6 +1,6 @@
 const ListItem = ({ children }: { children: React.ReactNode }) => (
   <li>
-    { children }
+    {children}
     <style jsx>{`
       li {
         padding-left: 22px;

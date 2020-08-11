@@ -3,11 +3,7 @@ import Content from '../Content';
 import ListItem from './ListItem';
 
 const AdvancedTech = () => (
-  <Section
-    bgColor="#d7f2ee"
-    color="#222633"
-    padding="0"
-  >
+  <Section bgColor="#d7f2ee" color="#222633" padding="0">
     <Content>
       <div className="main">
         <div className="left">
@@ -16,7 +12,9 @@ const AdvancedTech = () => (
         <div className="right">
           <p className="title">Advanced Technology</p>
           <ul className="desc">
-            <ListItem>Global IoT devices as Edge for blockchain last mile (QNAP NAS)</ListItem>
+            <ListItem>
+              Global IoT devices as Edge for blockchain last mile (QNAP NAS)
+            </ListItem>
             <ListItem>Decentralized CDN for content delivering</ListItem>
             <ListItem>Support AWS S3、IPFS (decentralized storage)</ListItem>
           </ul>

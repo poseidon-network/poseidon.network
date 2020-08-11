@@ -15,9 +15,7 @@ const Index = () => {
     <ApolloProvider client={client}>
       <Page title="Poseidon Network | Preview">
         <UserContext.Consumer>
-          { user =>
-            <Preview user={user} />
-          }
+          {user => <Preview user={user} />}
         </UserContext.Consumer>
       </Page>
     </ApolloProvider>
