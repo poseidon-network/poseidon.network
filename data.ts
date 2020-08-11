@@ -135,7 +135,7 @@ export const team = [
     linkedin: 'https://www.linkedin.com/in/chihsuanhuang/',
   },
   {
-    name: 'Marvis Liu',
+    name: 'Mavis Liu',
     title: 'Backend Engineer',
     avatar: '/static/avatar-marvis@2x.png',
   },
