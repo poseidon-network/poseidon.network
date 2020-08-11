@@ -292,7 +292,7 @@ export const whitepaperList = [
     lang: 'en',
     title: 'Whitepaper',
     flag: 'us',
-    uri: 'https://poseidon.network/whitepaper/poseidon_white_paper_en.pdf',
+    uri: 'https://poseidon.network/whitepaper/Poseidon_White_Paper_v1.0_en.pdf',
   },
   {
     lang: 'zh-TW',
