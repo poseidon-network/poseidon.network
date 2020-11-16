@@ -32,6 +32,17 @@ const GetToken = ({ t }: ITrans) => {
             style="padding: 10px 20px 8px;"
             title={
               <img
+                style={{ width: 'auto', height: 34 }}
+                src="/static/logo-ace.png"
+              />
+            }
+            uri="https://www.ace.io/webtrade/TWD_QQQ"
+          />
+          <Button
+            margin="0 0 30px;"
+            style="padding: 10px 20px 8px;"
+            title={
+              <img
                 style={{ width: 108, height: 34 }}
                 src="/static/logo-hotbit.png"
               />
