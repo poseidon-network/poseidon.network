@@ -39,7 +39,7 @@ const GetToken = ({ t }: ITrans) => {
             uri="https://www.ace.io/webtrade/TWD_QQQ"
           />
           <Button
-            margin="0 0 60px;"
+            margin="0 0 30px;"
             title={
               <img
                 style={{ width: 115, height: 20 }}
@@ -49,7 +49,7 @@ const GetToken = ({ t }: ITrans) => {
             uri="https://www.bitforex.com/cn/spot/qqq_usdt"
           />
           <Button
-            margin="0 0 30px;"
+            margin="0 0 60px;"
             style="padding: 10px 20px 8px;"
             title={
               <img
