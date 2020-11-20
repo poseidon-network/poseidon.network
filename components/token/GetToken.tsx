@@ -46,7 +46,7 @@ const GetToken = ({ t }: ITrans) => {
                 src="/static/logo-bitforex@2x.png"
               />
             }
-            uri="https://www.bitforex.com/cn/spot/qqq_usdt"
+            uri="https://www.bitforex.com/en/spot/qqq_usdt"
           />
           <Button
             margin="0 0 60px;"
