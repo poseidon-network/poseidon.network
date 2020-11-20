@@ -32,14 +32,14 @@ const GetToken = ({ t }: ITrans) => {
             style="padding: 10px 20px 8px;"
             title={
               <img
-                style={{ width: 108, height: 34 }}
-                src="/static/logo-hotbit.png"
+                style={{ width: 'auto', height: 34 }}
+                src="/static/logo-ace.png"
               />
             }
-            uri="https://www.hotbit.io/exchange?symbol=QQQ_USDT"
+            uri="https://www.ace.io/webtrade/TWD_QQQ"
           />
           <Button
-            margin="0 0 60px;"
+            margin="0 0 30px;"
             title={
               <img
                 style={{ width: 115, height: 20 }}
@@ -47,6 +47,17 @@ const GetToken = ({ t }: ITrans) => {
               />
             }
             uri="https://www.bitforex.com/cn/spot/qqq_usdt"
+          />
+          <Button
+            margin="0 0 60px;"
+            style="padding: 10px 20px 8px;"
+            title={
+              <img
+                style={{ width: 108, height: 34 }}
+                src="/static/logo-hotbit.png"
+              />
+            }
+            uri="https://www.hotbit.io/exchange?symbol=QQQ_USDT"
           />
           <H3 margin="0 0 15px">{t('token.getqqq.community')}</H3>
           <P margin="0 0 60px">{t('token.getqqq.community.description')}</P>

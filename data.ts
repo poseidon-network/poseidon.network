@@ -135,6 +135,11 @@ export const team = [
     linkedin: 'https://www.linkedin.com/in/chihsuanhuang/',
   },
   {
+    name: 'YH Lai',
+    title: 'Site Reliability Engineer',
+    avatar: '/static/avatar-yh@2x.png',
+  },
+  {
     name: 'Mavis Liu',
     title: 'Backend Engineer',
     avatar: '/static/avatar-marvis@2x.png',
@@ -149,11 +154,6 @@ export const team = [
     name: 'Shawn Chang',
     title: 'Software Engineer',
     avatar: '/static/avatar-shawn@2x.png',
-  },
-  {
-    name: 'YH Lai',
-    title: 'Software Engineer',
-    avatar: '/static/avatar-yh@2x.png',
   },
   {
     name: 'Hugo',
