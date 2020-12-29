@@ -8,6 +8,7 @@ import { withTranslation } from '../i18n';
 class Qlauncher extends React.Component<any> {
   state = {
     sn: '',
+    version: '',
   };
 
   static async getInitialProps() {
@@ -19,6 +20,7 @@ class Qlauncher extends React.Component<any> {
   async componentDidMount() {
     this.setState({
       sn: new URLSearchParams(window.location.search).get('sn'),
+      version: new URLSearchParams(window.location.search).get('v'),
     });
   }
 
@@ -26,7 +28,7 @@ class Qlauncher extends React.Component<any> {
     return (
       <Page title={'Poseidon Network | QLauncher'}>
         <Download />
-        <Link sn={this.state.sn} />
+        <Link sn={this.state.sn} version={this.state.version} />
         <Gain />
       </Page>
     );
