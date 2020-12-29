@@ -16,13 +16,18 @@ import { styles } from '../../constants';
 
 interface IProps {
   sn: string;
+  version: string;
 }
 
-const Link = ({ sn, t }: IProps & ITrans) => {
+const Link = ({ sn, version, t }: IProps & ITrans) => {
   const [qrcode, setQRCode] = useState<string>('');
 
   const generateQRCode = async () => {
-    const data = `NAS-QNAP-${sn}`;
+    const data =
+      version === '2'
+        ? `qapp://edge.binding?sn=QL2-POSEIDON-${sn}`
+        : `NAS-QNAP-${sn}`;
+
     setQRCode(
       await QRCode.toDataURL(data, {
         errorCorrectionLevel: 'H',
