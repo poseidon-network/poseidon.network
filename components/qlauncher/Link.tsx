@@ -25,7 +25,7 @@ const Link = ({ sn, version, t }: IProps & ITrans) => {
   const generateQRCode = async () => {
     const data =
       version === '2'
-        ? `qapp://edge.binding?sn=QL2-POSEIDON-${sn}`
+        ? `qapp://edge.binding?type=QL2&brand=POSEIDON&sn=${sn}`
         : `NAS-QNAP-${sn}`;
 
     setQRCode(
