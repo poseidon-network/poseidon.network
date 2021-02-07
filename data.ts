@@ -139,7 +139,7 @@ export const team = [
     avatar: '/static/avatar-yuen@2x.png',
   },
   {
-    name: 'Aarun',
+    name: 'Arun Doraiswamy',
     title: 'Solution Architect',
     avatar: '/static/avatar-aarun@2x.png',
     linkedin: 'https://www.linkedin.com/in/arun-doraiswamy/',
@@ -304,7 +304,7 @@ export const whitepaperList = [
     lang: 'en',
     title: 'Whitepaper',
     flag: 'us',
-    uri: 'https://poseidon.network/whitepaper/poseidon_white_paper_en.pdf',
+    uri: 'https://poseidon.network/whitepaper/Poseidon_White_Paper_v1.0_en.pdf',
   },
   {
     lang: 'zh-TW',
@@ -329,7 +329,22 @@ export const whitepaperList = [
 
 export const footer = {
   socialMediaList,
-  gettingStarted: [{ title: 'footer.gettingstart.demo', uri: '/demo' }],
+  gettingStarted: [
+    {
+      title: 'QLauncher',
+      uri: 'https://github.com/poseidon-network/qlauncher-linux',
+    },
+    {
+      title: 'QApp (Android)',
+      uri:
+        'https://play.google.com/store/apps/details?id=network.poseidon.appqqq',
+    },
+    {
+      title: 'QApp (iOS)',
+      uri:
+        'https://apps.apple.com/tw/app/qqq-earn-tokens-by-sharing/id1517441531',
+    },
+  ],
   communities: [
     { title: 'Twitter', uri: 'https://twitter.com/QQQtoken' },
     { title: 'Facebook', uri: 'https://www.facebook.com/QQQtoken/' },
@@ -356,7 +371,11 @@ export const footer = {
     { title: 'footer.company.team', uri: '/company#team' },
     {
       title: 'footer.company.faq',
-      uri: 'https://poseidon.zendesk.com/hc/zh-tw',
+      uri: 'https://poseidon-network.gitbook.io/poseidon-network/',
+    },
+    {
+      title: 'footer.company.announcement',
+      uri: 'footer.company.announcement.uri',
     },
     {
       title: 'footer.company.contactus',
@@ -364,7 +383,7 @@ export const footer = {
     },
   ],
   email: 'service@poseidon.network',
-  copyright: 'Copyright © Poseidon Network PTE. LTD. 2020.',
+  copyright: 'Copyright © Poseidon Network PTE. LTD. 2021.',
 };
 
 export const mediaList = [

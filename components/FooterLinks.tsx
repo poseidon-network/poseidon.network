@@ -15,7 +15,7 @@ const FooterLinks = ({ title, links, t }: IProps) => {
       </H4>
       <div className="links">
         {links.map(({ uri, title }) => (
-          <a key={title} href={uri}>
+          <a key={title} href={t(uri)}>
             {t(title)}
           </a>
         ))}

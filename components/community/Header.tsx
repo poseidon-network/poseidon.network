@@ -41,7 +41,8 @@ const Header = ({ t }: ITrans) => {
           <Button
             margin="0"
             title={t('community.ambassador')}
-            uri="https://www.surveycake.com/s/w48yR"
+            // uri="https://lihi1.cc/zWBaC"
+            uri={t('community.ambassador.link')}
           />
         </Col>
         <Col flex style="align-items: center;" mStyle="display: none;">
