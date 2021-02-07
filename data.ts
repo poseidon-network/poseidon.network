@@ -99,19 +99,24 @@ export const roadmap2020 = [
 export const team = [
   {
     name: 'Light Lin',
-    title: 'CEO',
+    title: 'CEO / CTO',
     avatar: '/static/avatar-light@2x.png',
     linkedin: 'https://www.linkedin.com/in/lightlin?originalSubdomain=tw',
   },
   {
     name: 'Mike Lin',
-    title: 'COO',
+    title: 'COO / CMO',
     avatar: '/static/avatar-mike@2x.png',
   },
   {
     name: 'Kensi Chang',
-    title: 'VP of BD',
+    title: 'Business Developer',
     avatar: '/static/avatar-kensi@2x.png',
+  },
+  {
+    name: 'Joshua Dai',
+    title: 'Strategy Planner',
+    avatar: '/static/avatar-joshua@2x.png',
   },
   {
     name: 'Vicky Gao',
@@ -124,24 +129,36 @@ export const team = [
     avatar: '/static/avatar-zeph@2x.png',
   },
   {
+    name: 'GT Lin',
+    title: 'Product Assistant',
+    avatar: '/static/avatar-gt@2x.png',
+  },
+  {
     name: 'Yu-En Weng',
     title: 'Product Designer',
     avatar: '/static/avatar-yuen@2x.png',
   },
   {
+    name: 'Arun Doraiswamy',
+    title: 'Solution Architect',
+    avatar: '/static/avatar-aarun@2x.png',
+    linkedin: 'https://www.linkedin.com/in/arun-doraiswamy/',
+  },
+  {
     name: 'Chi-Hsuan Huang',
-    title: 'Blockchain Engineer',
+    title: 'Engineering Lead',
     avatar: '/static/avatar-chihsuan@2x.png',
     linkedin: 'https://www.linkedin.com/in/chihsuanhuang/',
   },
   {
     name: 'YH Lai',
-    title: 'Site Reliability Engineer',
+    title: 'Software Engineer',
     avatar: '/static/avatar-yh@2x.png',
+    linkedin: 'https://www.linkedin.com/in/yh-lai/',
   },
   {
-    name: 'Mavis Liu',
-    title: 'Backend Engineer',
+    name: 'Marvis Liu',
+    title: 'Software Engineer',
     avatar: '/static/avatar-marvis@2x.png',
   },
   {
@@ -160,11 +177,6 @@ export const team = [
     title: 'Community',
     avatar: '/static/avatar-hugo@2x.png',
     linkedin: 'https://www.linkedin.com/in/yu-kuo-b40847157/',
-  },
-  {
-    name: 'GT Lin',
-    title: 'Product Assistant',
-    avatar: '/static/avatar-gt@2x.png',
   },
   {
     name: 'Join Us',
