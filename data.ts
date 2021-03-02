@@ -368,6 +368,10 @@ export const footer = {
   ],
   company: [
     { title: 'footer.company.aboutus', uri: '/company' },
+    {
+      title: 'footer.company.businessplan',
+      uri: 'https://app.gitbook.com/@poseidon-network/s/business-plan/',
+    },
     { title: 'footer.company.team', uri: '/company#team' },
     {
       title: 'footer.company.faq',
