@@ -20,7 +20,12 @@ const Demo = ({ t }: ITrans) => {
             {t('tech.demo.description')}
           </P>
         </ScrollAnimation>
-        <Button margin="0 auto;" width="40%;" title="See Demo" uri="/demo" />
+        <Button
+          margin="0 auto;"
+          width="40%;"
+          title="See Demo"
+          uri="https://app.gitbook.com/@poseidon-network/s/business-plan/market-growth/use-cases"
+        />
       </Content>
     </Section>
   );
