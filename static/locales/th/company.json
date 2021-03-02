@@ -44,5 +44,6 @@
   "company.roadmap.2020q2q4": "2020 Q2 - Q4",
   "company.roadmap.2020q2q4.description": "POSEIDON V2:Decentralized Qontroller, Distributed Edges \n โหนดในเครือข่าย 11,000 โหนด, การส่งผ่านต่อเดือน 150 PT B/W , พื้นที่จัดเก็บทั้งหมด :  50PB",
   "company.nodesnetwork": "เครือข่ายที่มีโหนดจำนวนมากที่สุด",
-  "company.nodesnetwork.description": "POSEIDON NETWORK กำลังแสวงหาที่จะร่วมมือกับบริษัท หน่วยงานราชการ มหาวิทยาลัย ฯลฯ เป็นระยะยาว และจะเป็นโหนดใหญ่ที่มั่นคง"
-}
+  "company.nodesnetwork.description": "POSEIDON NETWORK กำลังแสวงหาที่จะร่วมมือกับบริษัท หน่วยงานราชการ มหาวิทยาลัย ฯลฯ เป็นระยะยาว และจะเป็นโหนดใหญ่ที่มั่นคง",
+  "company.businessplanbtn": "แผนธุรกิจ"
+  }

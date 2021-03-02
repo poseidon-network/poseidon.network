@@ -5,7 +5,8 @@ import Intro from '../components/company/Intro';
 import Value from '../components/company/Value';
 import Team from '../components/company/Team';
 // import Advisors from '../components/company/Advisors';
-import Roadmap from '../components/company/Roadmap';
+// import Roadmap from '../components/company/Roadmap';
+import BusinessPlan from '../components/company/BusinessPlan';
 import { withTranslation } from '../i18n';
 import { styles } from '../constants';
 
@@ -26,7 +27,8 @@ class Company extends React.Component<any> {
         <Value />
         <Team />
         {/* <Advisors /> */}
-        <Roadmap />
+        {/* <Roadmap /> */}
+        <BusinessPlan />
         <Contact />
       </Page>
     );
