@@ -110,7 +110,7 @@ export const team = [
   },
   {
     name: 'Kensi Chang',
-    title: 'Business Developer',
+    title: 'VP of BD',
     avatar: '/static/avatar-kensi@2x.png',
   },
   {
