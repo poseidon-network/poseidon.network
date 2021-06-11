@@ -21,7 +21,10 @@ const Gain = ({ t }: ITrans) => {
     >
       <Content direction="row">
         <Col style="margin: 0 80px;" mStyle="margin: 0 auto;">
-          <img className="instruction-img" src="/static/qedge-img-3@2x.png" />
+          <img
+            className="instruction-img"
+            src="/static/qlauncher_img_3@2x.png"
+          />
         </Col>
         <Col>
           <H1 margin="0 0 10px" sStyle="text-align: left; margin-top: 2.5rem;">
