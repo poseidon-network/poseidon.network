@@ -69,7 +69,10 @@ const Link = ({ sn, version, t }: IProps & ITrans) => {
           </div>
         </Col>
         <Col style="margin: 0 80px;" mStyle="margin: 0 auto;">
-          <img className="instruction-img" src="/static/qedge-img-2@2x.png" />
+          <img
+            className="instruction-img"
+            src="/static/qlauncher_img_2@2x.png"
+          />
         </Col>
       </Content>
       <style jsx>{`
