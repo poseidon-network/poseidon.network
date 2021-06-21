@@ -331,7 +331,7 @@ export const footer = {
   socialMediaList,
   gettingStarted: [
     {
-      title: 'Mining Program',
+      title: 'footer.gettingstart.testnet',
       uri: 'https://testnet.poseidon.network',
     },
     {
