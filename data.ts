@@ -331,6 +331,10 @@ export const footer = {
   socialMediaList,
   gettingStarted: [
     {
+      title: 'Mining Program',
+      uri: 'https://testnet.poseidon.network',
+    },
+    {
       title: 'QLauncher',
       uri: 'https://github.com/poseidon-network/qlauncher-linux',
     },
