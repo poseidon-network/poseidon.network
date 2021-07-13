@@ -311,6 +311,8 @@ export const footer = {
   socialMediaList,
   gettingStarted: [{ title: 'footer.gettingstart.demo', uri: '/demo' }],
   communities: [
+    { title: 'QQQ Miner', uri: 'https://m.3q.fi' },    
+    { title: 'Discord', uri: 'https://discord.com/invite/8DzbJG5WVt' },    
     { title: 'Twitter', uri: 'https://twitter.com/QQQtoken' },
     { title: 'Facebook', uri: 'https://www.facebook.com/QQQtoken/' },
     { title: 'Telegram', uri: 'https://t.me/QQQ_Poseidon_En' },
