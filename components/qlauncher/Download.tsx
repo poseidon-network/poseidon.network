@@ -21,7 +21,10 @@ const Download = ({ t }: ITrans) => {
     >
       <Content direction="row">
         <Col style="margin: 0 80px;" mStyle="margin: 0 auto;">
-          <img className="instruction-img" src="/static/qedge-img-1@2x.png" />
+          <img
+            className="instruction-img"
+            src="/static/qlauncher_img_1@2x.png"
+          />
         </Col>
         <Col>
           <H1 margin="0 0 10px" sStyle="text-align: left; margin-top: 2.5rem;">
@@ -34,14 +37,14 @@ const Download = ({ t }: ITrans) => {
           <div className="download">
             <a
               target="_blank"
-              href="https://apps.apple.com/app/qqq-app/id1468063328"
+              href="https://apps.apple.com/app/qqq-app/id1517441531"
             >
               <img alt="apple store" src="/static/img-ios-badge@2x.png" />
             </a>
 
             <a
               target="_blank"
-              href="https://play.google.com/store/apps/details?id=network.poseidon.qqq.app"
+              href="https://play.google.com/store/apps/details?id=network.poseidon.appqqq"
             >
               <img alt="google play" src="/static/img-google-badge@2x.png" />
             </a>

@@ -6,7 +6,7 @@ import P from '../P';
 import { withTranslation } from '../../i18n';
 import { styles } from '../../constants';
 
-const Vaule = ({ t }: ITrans) => {
+const Value = ({ t }: ITrans) => {
   return (
     <Section
       bgColor={styles.dark}
@@ -66,4 +66,4 @@ const Vaule = ({ t }: ITrans) => {
   );
 };
 
-export default withTranslation('company')(Vaule);
+export default withTranslation('company')(Value);

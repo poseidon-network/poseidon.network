@@ -16,13 +16,18 @@ import { styles } from '../../constants';
 
 interface IProps {
   sn: string;
+  version: string;
 }
 
-const Link = ({ sn, t }: IProps & ITrans) => {
+const Link = ({ sn, version, t }: IProps & ITrans) => {
   const [qrcode, setQRCode] = useState<string>('');
 
   const generateQRCode = async () => {
-    const data = `NAS-QNAP-${sn}`;
+    const data =
+      version === '2'
+        ? `qapp://edge.binding?type=QL2&brand=POSEIDON&sn=${sn}`
+        : `NAS-QNAP-${sn}`;
+
     setQRCode(
       await QRCode.toDataURL(data, {
         errorCorrectionLevel: 'H',
@@ -64,7 +69,10 @@ const Link = ({ sn, t }: IProps & ITrans) => {
           </div>
         </Col>
         <Col style="margin: 0 80px;" mStyle="margin: 0 auto;">
-          <img className="instruction-img" src="/static/qedge-img-2@2x.png" />
+          <img
+            className="instruction-img"
+            src="/static/qlauncher_img_2@2x.png"
+          />
         </Col>
       </Content>
       <style jsx>{`

@@ -6,10 +6,9 @@ interface IProps {
 
 const FeatureItem = (props: IProps) => (
   <div className="item">
-
     <img src={props.icon} />
-    <p className="title">{ props.title }</p>
-    <p className="desc">{ props.description }</p>
+    <p className="title">{props.title}</p>
+    <p className="desc">{props.description}</p>
 
     <style jsx>{`
       .item {

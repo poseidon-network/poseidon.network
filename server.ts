@@ -18,6 +18,7 @@ const handle = app.getRequestHandler();
 
   server.get('*', (req, res) => handle(req, res));
 
+  // @ts-ignore
   server.listen(port, (err: any) => {
     if (err) throw err;
     console.log(`> Ready on http://localhost:${port}`);

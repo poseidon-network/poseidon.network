@@ -1,6 +1,6 @@
 # poseidon.network
 
-[![Build Status](https://travis-ci.org/poseidon-network/poseidon.network.svg?branch=master)](https://travis-ci.org/poseidon-network/poseidon.network)
+[![Build Status](https://github.com/poseidon-network/poseidon.network/actions/workflows/deploy.yml/badge.svg)](https://github.com/poseidon-network/poseidon.network/actions)
 
 ## Install
 

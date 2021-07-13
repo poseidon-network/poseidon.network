@@ -2,6 +2,7 @@
   "company.html.title": "About us",
   "company.title": "Help us build a better Internet",
   "company.description": "We provide decentralized CDN service, the decentralized version of GCP, AWS Cloud Service. With IoT such as NAS, we achieve fog computing, it's closer to users than the cloud, several times faster, cheaper, and effective use of idle resources. With our variety of flexible solutions, partners have included the world's leading NAS brands, e-commerce, content industries, well-known gamer community forums, live streaming and so on.",
+  "company.roadmapbtn": "2021 Roadmap",
   "company.ourvalue": "Our Value",
   "company.ourvalue.spirit": "Spirit",
   "company.ourvalue.spirit.description": "We value our customers — which is why we respect privacy, and don’t exploit customer data or end user data. And our team is available to help along the way via our support center.",
@@ -44,5 +45,6 @@
   "company.roadmap.2020q2q4": "2020 Q2 - Q4",
   "company.roadmap.2020q2q4.description": "POSEIDON V2: Decentralized Qontroller, Distributed Edges 11,000 Nodes, 150 PT B/W Monthly, Total Supply Storage: 50PB",
   "company.nodesnetwork": "World’s Largest Nodes Network",
-  "company.nodesnetwork.description": "POSEIDON NETWORK will seek long-term cooperative partnership with companies, government agencies, universities, etc. as stable large nodes."
+  "company.nodesnetwork.description": "POSEIDON NETWORK will seek long-term cooperative partnership with companies, government agencies, universities, etc. as stable large nodes.",
+  "company.businessplanbtn": "Business Plan"
 }

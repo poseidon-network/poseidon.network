@@ -32,11 +32,6 @@ export const solutions = [
 
 export const partners = [
   {
-    name: 'Longhash Singapore',
-    title: 'home.investors.longhash',
-    avatar: '/static/avatar-longhsh@2x.png',
-  },
-  {
     name: 'Jamie Lin',
     title: 'home.investors.JamieLin',
     avatar: '/static/avatar-lin@2x.png',
@@ -104,13 +99,13 @@ export const roadmap2020 = [
 export const team = [
   {
     name: 'Light Lin',
-    title: 'CEO',
+    title: 'CEO / CTO',
     avatar: '/static/avatar-light@2x.png',
     linkedin: 'https://www.linkedin.com/in/lightlin?originalSubdomain=tw',
   },
   {
     name: 'Mike Lin',
-    title: 'COO',
+    title: 'COO / CMO',
     avatar: '/static/avatar-mike@2x.png',
   },
   {
@@ -119,22 +114,52 @@ export const team = [
     avatar: '/static/avatar-kensi@2x.png',
   },
   {
+    name: 'Joshua Dai',
+    title: 'Strategy Planner',
+    avatar: '/static/avatar-joshua@2x.png',
+  },
+  {
     name: 'Vicky Gao',
     title: 'Product Manager',
     avatar: '/static/avatar-vicky@2x.png',
   },
   {
-    name: 'Bee Li',
-    title: 'Chief Design Officer ',
-    avatar: '/static/avatar-bee@2x.png',
-    linkedin: 'https://www.linkedin.com/in/jiajhenli/',
-    twitter: 'https://twitter.com/jiajhenbee ',
+    name: 'Zeph Chang',
+    title: 'Product Manager',
+    avatar: '/static/avatar-zeph@2x.png',
+  },
+  {
+    name: 'GT Lin',
+    title: 'Product Assistant',
+    avatar: '/static/avatar-gt@2x.png',
+  },
+  {
+    name: 'Yu-En Weng',
+    title: 'Product Designer',
+    avatar: '/static/avatar-yuen@2x.png',
+  },
+  {
+    name: 'Arun Doraiswamy',
+    title: 'Solution Architect',
+    avatar: '/static/avatar-aarun@2x.png',
+    linkedin: 'https://www.linkedin.com/in/arun-doraiswamy/',
   },
   {
     name: 'Chi-Hsuan Huang',
-    title: 'Blockchain Engineer',
+    title: 'Engineering Lead',
     avatar: '/static/avatar-chihsuan@2x.png',
     linkedin: 'https://www.linkedin.com/in/chihsuanhuang/',
+  },
+  {
+    name: 'YH Lai',
+    title: 'Software Engineer',
+    avatar: '/static/avatar-yh@2x.png',
+    linkedin: 'https://www.linkedin.com/in/yh-lai/',
+  },
+  {
+    name: 'Marvis Liu',
+    title: 'Software Engineer',
+    avatar: '/static/avatar-marvis@2x.png',
   },
   {
     name: 'Andy Hsu',
@@ -152,11 +177,6 @@ export const team = [
     title: 'Community',
     avatar: '/static/avatar-hugo@2x.png',
     linkedin: 'https://www.linkedin.com/in/yu-kuo-b40847157/',
-  },
-  {
-    name: 'GT Lin',
-    title: 'Product Assistant',
-    avatar: '/static/avatar-gt@2x.png',
   },
   {
     name: 'Join Us',
@@ -284,7 +304,7 @@ export const whitepaperList = [
     lang: 'en',
     title: 'Whitepaper',
     flag: 'us',
-    uri: 'https://poseidon.network/whitepaper/poseidon_white_paper_en.pdf',
+    uri: 'https://poseidon.network/whitepaper/Poseidon_White_Paper_v1.0_en.pdf',
   },
   {
     lang: 'zh-TW',
@@ -309,7 +329,26 @@ export const whitepaperList = [
 
 export const footer = {
   socialMediaList,
-  gettingStarted: [{ title: 'footer.gettingstart.demo', uri: '/demo' }],
+  gettingStarted: [
+    {
+      title: 'footer.gettingstart.testnet',
+      uri: 'https://testnet.poseidon.network',
+    },
+    {
+      title: 'QLauncher',
+      uri: 'https://github.com/poseidon-network/qlauncher-linux',
+    },
+    {
+      title: 'QApp (Android)',
+      uri:
+        'https://play.google.com/store/apps/details?id=network.poseidon.appqqq',
+    },
+    {
+      title: 'QApp (iOS)',
+      uri:
+        'https://apps.apple.com/tw/app/qqq-earn-tokens-by-sharing/id1517441531',
+    },
+  ],
   communities: [
     { title: 'QQQ Miner', uri: 'https://m.3q.fi' },    
     { title: 'Discord', uri: 'https://discord.com/invite/8DzbJG5WVt' },    
@@ -335,10 +374,18 @@ export const footer = {
   ],
   company: [
     { title: 'footer.company.aboutus', uri: '/company' },
+    {
+      title: 'footer.company.businessplan',
+      uri: 'https://app.gitbook.com/@poseidon-network/s/business-plan/',
+    },
     { title: 'footer.company.team', uri: '/company#team' },
     {
       title: 'footer.company.faq',
-      uri: 'https://poseidon.zendesk.com/hc/zh-tw',
+      uri: 'https://poseidon-network.gitbook.io/poseidon-network/',
+    },
+    {
+      title: 'footer.company.announcement',
+      uri: 'footer.company.announcement.uri',
     },
     {
       title: 'footer.company.contactus',
@@ -346,7 +393,7 @@ export const footer = {
     },
   ],
   email: 'service@poseidon.network',
-  copyright: 'Copyright © Poseidon Network PTE. LTD. 2020.',
+  copyright: 'Copyright © Poseidon Network PTE. LTD. 2021.',
 };
 
 export const mediaList = [
