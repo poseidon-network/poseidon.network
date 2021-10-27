@@ -22,7 +22,7 @@ const Footer = ({ t }: ITrans) => (
               </a>
             </li>
             <li className="item">
-              <a target="_blank" href="https://poseidon.zendesk.com/hc/zh-tw">
+              <a target="_blank" href="https://testnet.poseidon.network">
                 {t('footer.faq')}
               </a>
             </li>

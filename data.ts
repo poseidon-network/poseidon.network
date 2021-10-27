@@ -379,10 +379,10 @@ export const footer = {
       uri: 'https://app.gitbook.com/@poseidon-network/s/business-plan/',
     },
     { title: 'footer.company.team', uri: '/company#team' },
-    {
-      title: 'footer.company.faq',
-      uri: 'https://poseidon-network.gitbook.io/poseidon-network/',
-    },
+    // {
+    //   title: 'footer.company.faq',
+    //   uri: 'https://poseidon-network.gitbook.io/poseidon-network/',
+    // },
     {
       title: 'footer.company.announcement',
       uri: 'footer.company.announcement.uri',
