@@ -29,7 +29,7 @@
     "graphql-tag": "^2.10.1",
     "i18next": "^15.1.0",
     "ipfs-api": "^26.1.2",
-    "next": "^7.0.2",
+    "next": "^13.0.2",
     "next-i18next": "^0.41.0",
     "qrcode": "^1.4.4",
     "rc-progress": "^2.2.6",
